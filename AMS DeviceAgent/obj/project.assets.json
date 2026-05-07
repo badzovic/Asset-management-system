@@ -2932,11 +2932,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS DeviceAgent\\AMS DeviceAgent.csproj",
+      "projectUniqueName": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\AMS DeviceAgent.csproj",
       "projectName": "AMS DeviceAgent",
-      "projectPath": "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS DeviceAgent\\AMS DeviceAgent.csproj",
+      "projectPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\AMS DeviceAgent.csproj",
       "packagesPath": "C:\\Users\\adzovic berin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS DeviceAgent\\obj\\",
+      "outputPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2958,11 +2958,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS data\\AMS data.csproj": {
-              "projectPath": "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS data\\AMS data.csproj"
+            "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\AMS data.csproj": {
+              "projectPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\AMS data.csproj"
             },
-            "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS services\\AMS services.csproj": {
-              "projectPath": "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS services\\AMS services.csproj"
+            "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS services\\AMS services.csproj": {
+              "projectPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS services\\AMS services.csproj"
             }
           }
         }

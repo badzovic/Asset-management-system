@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fjbq1XGsfT0=",
+  "dgSpecHash": "ST9gQlH235k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adzovic berin\\source\\repos\\Asset Management System\\AMS services\\AMS services.csproj",
+  "projectFilePath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS services\\AMS services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adzovic berin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\adzovic berin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
