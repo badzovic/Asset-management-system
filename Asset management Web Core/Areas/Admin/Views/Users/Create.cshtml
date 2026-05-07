@@ -4,93 +4,69 @@
     ViewData["Title"] = "Novi korisnik";
 }
 
-<div class="container mt-4">
+<div class="user-profile-inner">
+    <h4 class="title mb-4">Novi korisnik</h4>
 
-    <h2 class="mb-4">Novi korisnik</h2>
+    <div class="user-profile-main-wrapper">
+        <form asp-action="Create" method="post">
+            @Html.AntiForgeryToken()
 
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success">
-            @TempData["SuccessMessage"]
-        </div>
-    }
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
-    <form asp-action="Create" method="post">
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="UserName">Korisničko ime</label>
+                    <input asp-for="UserName" placeholder="Unesite korisničko ime" />
+                </div>
 
-        @Html.AntiForgeryToken()
-
-        <div asp-validation-summary="All" class="text-danger mb-3"></div>
-
-        <div class="row">
-
-            <div class="col-md-6 mb-3">
-                <label asp-for="UserName" class="form-label">Korisničko ime</label>
-                <input asp-for="UserName" class="form-control" />
+                <div class="single">
+                    <label asp-for="Password">Lozinka</label>
+                    <input asp-for="Password" placeholder="Unesite lozinku" />
+                </div>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label asp-for="Password" class="form-label">Lozinka</label>
-                <input asp-for="Password" class="form-control" />
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="Ime">Ime</label>
+                    <input asp-for="Ime" placeholder="Unesite ime" />
+                </div>
+
+                <div class="single">
+                    <label asp-for="Prezime">Prezime</label>
+                    <input asp-for="Prezime" placeholder="Unesite prezime" />
+                </div>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label asp-for="Ime" class="form-label">Ime</label>
-                <input asp-for="Ime" class="form-control" />
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="RoleName">Rola</label>
+                    <select asp-for="RoleName" asp-items="Model.Roles">
+                        <option value="">-- Odaberi rolu --</option>
+                    </select>
+                </div>
+
+                <div class="single">
+                    <label asp-for="OrganizacionaJedinicaId">Organizaciona jedinica</label>
+                    <select asp-for="OrganizacionaJedinicaId" asp-items="Model.OrganizacioneJedinice">
+                        <option value="">-- Bez organizacione jedinice --</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label asp-for="Prezime" class="form-label">Prezime</label>
-                <input asp-for="Prezime" class="form-control" />
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="SkladisteId">Skladište</label>
+                    <select asp-for="SkladisteId" asp-items="Model.Skladista">
+                        <option value="">-- Bez skladišta --</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label asp-for="RoleName" class="form-label">Rola</label>
-
-                <select asp-for="RoleName"
-                        asp-items="Model.Roles"
-                        class="form-select">
-
-                    <option value="">-- Odaberi rolu --</option>
-
-                </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-                <label asp-for="OrganizacionaJedinicaId" class="form-label">
-                    Organizaciona jedinica
-                </label>
-
-                <select asp-for="OrganizacionaJedinicaId"
-                        asp-items="Model.OrganizacioneJedinice"
-                        class="form-select">
-
-                    <option value="">-- Bez organizacione jedinice --</option>
-
-                </select>
-            </div>
-
-            <div class="col-md-6 mb-3">
-                <label asp-for="SkladisteId" class="form-label">
-                    Skladište
-                </label>
-
-                <select asp-for="SkladisteId"
-                        asp-items="Model.Skladista"
-                        class="form-select">
-
-                    <option value="">-- Bez skladišta --</option>
-
-                </select>
-            </div>
-
-        </div>
-
-        <button type="submit" class="btn btn-primary">
-            Kreiraj korisnika
-        </button>
-
-    </form>
-
+            <button type="submit" class="rts-btn btn-primary mt--20">
+                Kreiraj korisnika
+            </button>
+        </form>
+    </div>
 </div>
 
 @section Scripts {

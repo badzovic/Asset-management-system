@@ -1,50 +1,214 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using Microsoft.AspNetCore.Identity
+@using AMS_data.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html lang="bs">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Asset_management_Web_Core</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Asset_management_Web_Core.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - AMS</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/fav.png">
+    <link rel="stylesheet" href="~/assets/css/plugins/fontawesome-6.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/swiper.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/css/custom.css">
+
+    @RenderSection("Styles", required: false)
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Asset_management_Web_Core</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
+
+<body class="user-profile">
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="header-area-one">
+            <div class="container-30">
+                <div class="col-lg-12">
+                    <div class="header-inner-one">
+                        <div class="left-logo-area">
+                            <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
+                                <span style="font-weight:700; font-size:22px;">AMS</span>
+                            </a>
+                            <div class="left-side-open-clouse" id="collups-left">
+                                <img src="~/assets/images/icons/01.svg" alt="menu">
+                            </div>
+                        </div>
+
+                        <div class="header-right">
+                            <div class="action-interactive-area__header">
+
+                                <div class="single_action__haeader user_avatar__information openuptip" flow="down" tooltip="Profile">
+                                    <div class="avatar">
+                                        <img src="~/assets/images/avatar/01.png" alt="avatar">
+                                    </div>
+
+                                    <div class="user_information_main_wrapper slide-down__click">
+                                        <div class="user_header">
+                                            <div class="main-avatar">
+                                                <img src="~/assets/images/avatar/user-2.svg" alt="user">
+                                            </div>
+                                            <div class="user_naim-information">
+                                                <h3 class="title">@User.Identity?.Name</h3>
+                                                <span class="desig">AMS korisnik</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="user_body_content">
+                                            <ul class="items">
+                                                <li class="single_items">
+                                                    <a class="hader_popup_link" asp-area="Identity" asp-page="/Account/Manage/Index">
+                                                        <i class="fa-light fa-user"></i>
+                                                        Profil
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="popup-footer-btn">
+                                            <form asp-area="Identity" asp-page="/Account/Logout"
+                                                  asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
+                                                  method="post">
+                                                <button type="submit" class="geex-content__header__popup__footer__link border-0 bg-transparent">
+                                                    Logout <i class="fa-light fa-arrow-right"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Asset_management_Web_Core - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <div class="dash-board-main-wrapper">
+            <div class="left-side-bar">
+                <div class="overlay-mobile-area"></div>
+
+                <div class="inner">
+
+                    <div class="single-menu-wrapper">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="single-menu">
+                            <div class="icon">
+                                <img src="~/assets/images/icons/01.png" alt="home">
+                            </div>
+                            <p>Početna</p>
+                        </a>
+                    </div>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <div class="single-menu-wrapper">
+                            <a asp-area="Admin" asp-controller="Users" asp-action="Create" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/07.png" alt="users">
+                                </div>
+                                <p>Korisnici</p>
+                            </a>
+
+                            <a href="#" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/08.png" alt="settings">
+                                </div>
+                                <p>Šifarnici</p>
+                            </a>
+                        </div>
+                    }
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("Operator"))
+                    {
+                        <div class="single-menu-wrapper">
+                            <a href="#" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/04.png" alt="oruzje">
+                                </div>
+                                <p>Registracija oružja</p>
+                            </a>
+
+                            <a href="#" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/05.png" alt="identifikacija">
+                                </div>
+                                <p>Identifikacija</p>
+                            </a>
+                        </div>
+                    }
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("Skladiste"))
+                    {
+                        <div class="single-menu-wrapper">
+                            <a href="#" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/03.png" alt="skladiste">
+                                </div>
+                                <p>Skladište</p>
+                            </a>
+                        </div>
+                    }
+
+                    @if (User.IsInRole("Admin") || User.IsInRole("Dokazi"))
+                    {
+                        <div class="single-menu-wrapper">
+                            <a href="#" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/06.png" alt="dokazi">
+                                </div>
+                                <p>Dokazi</p>
+                            </a>
+                        </div>
+                    }
+
+                </div>
+
+                <div class="bottom-user">
+                    <div class="user-wrapper">
+                        <img src="~/assets/images/avatar/02.png" alt="avatar">
+                        <div class="info">
+                            <h6 class="title">@User.Identity?.Name</h6>
+                            <a href="#">AMS</a>
+                        </div>
+                        <span>Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-profile-area">
+                <div class="container-custom">
+                    @RenderBody()
+                </div>
+
+                <div class="copyright-area-bottom">
+                    <p>AMS © @DateTime.Now.Year. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        @RenderBody()
+    }
+
+    <script src="~/assets/js/plugins/jquery.min.js" defer></script>
+    <script src="~/assets/js/plugins/swiper.js" defer></script>
+    <script src="~/assets/js/plugins/bootstrap.min.js" defer></script>
+    <script src="~/assets/js/main.js" defer></script>
+
+    <script>
+        var storedTheme = localStorage.getItem('intellactai');
+        if (!storedTheme) {
+            storedTheme = "dark";
+            localStorage.setItem('intellactai', storedTheme);
+        }
+        document.documentElement.setAttribute('data-theme', storedTheme);
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

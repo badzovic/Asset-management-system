@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - AMS</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/fav.png">
+    <link rel="stylesheet" href="~/assets/css/plugins/fontawesome-6.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/swiper.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+</head>
+
+<body class="register page-login">
+
+    <div class="dash-board-main-wrapper pt--40">
+        <div class="main-center-content-m-left center-content">
+            <div class="rts-register-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/assets/js/plugins/jquery.min.js" defer></script>
+    <script src="~/assets/js/plugins/swiper.js" defer></script>
+    <script src="~/assets/js/plugins/bootstrap.min.js" defer></script>
+    <script src="~/assets/js/main.js" defer></script>
+
+    <script>
+        var storedTheme = localStorage.getItem('intellactai');
+        if (!storedTheme) {
+            storedTheme = "dark";
+            localStorage.setItem('intellactai', storedTheme);
+        }
+        document.documentElement.setAttribute('data-theme', storedTheme);
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

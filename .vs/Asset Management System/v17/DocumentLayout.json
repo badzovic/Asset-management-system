@@ -1,12 +1,105 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\views\\shared\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\views\\shared\\_authlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "custom.css",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
+              "RelativeDocumentMoniker": "Asset management Web Core\\wwwroot\\css\\custom.css",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
+              "RelativeToolTip": "Asset management Web Core\\wwwroot\\css\\custom.css",
+              "ViewState": "AgIAAEsAAAAAAAAAAADwv3wAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-07T11:43:22.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwEUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-07T11:38:27.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwCoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-07T11:35:00.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AuthLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_AuthLayout.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Views\\Shared\\_AuthLayout.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_AuthLayout.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Views\\Shared\\_AuthLayout.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAUwC8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-07T11:34:25.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-07T11:28:52.401Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
