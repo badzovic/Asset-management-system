@@ -1,0 +1,14 @@
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\bin\Debug\net8.0\AMS data.deps.json
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\bin\Debug\net8.0\AMS data.dll
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\bin\Debug\net8.0\AMS data.pdb
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.AssemblyInfoInputs.cache
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.AssemblyInfo.cs
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.csproj.CoreCompileInputs.cache
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.dll
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\refint\AMS data.dll
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.pdb
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\ref\AMS data.dll
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\bin\Debug\net8.0\AMS data.runtimeconfig.json
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.csproj.AssemblyReference.cache
+C:\Users\adzovic berin\source\repos\Asset Management System\AMS data\obj\Debug\net8.0\AMS data.genruntimeconfig.cache

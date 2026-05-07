@@ -1,0 +1,98 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.CreateUserViewModel
+
+@{
+    ViewData["Title"] = "Novi korisnik";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">Novi korisnik</h2>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <form asp-action="Create" method="post">
+
+        @Html.AntiForgeryToken()
+
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="UserName" class="form-label">Korisničko ime</label>
+                <input asp-for="UserName" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="Password" class="form-label">Lozinka</label>
+                <input asp-for="Password" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="Ime" class="form-label">Ime</label>
+                <input asp-for="Ime" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="Prezime" class="form-label">Prezime</label>
+                <input asp-for="Prezime" class="form-control" />
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="RoleName" class="form-label">Rola</label>
+
+                <select asp-for="RoleName"
+                        asp-items="Model.Roles"
+                        class="form-select">
+
+                    <option value="">-- Odaberi rolu --</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="OrganizacionaJedinicaId" class="form-label">
+                    Organizaciona jedinica
+                </label>
+
+                <select asp-for="OrganizacionaJedinicaId"
+                        asp-items="Model.OrganizacioneJedinice"
+                        class="form-select">
+
+                    <option value="">-- Bez organizacione jedinice --</option>
+
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label asp-for="SkladisteId" class="form-label">
+                    Skladište
+                </label>
+
+                <select asp-for="SkladisteId"
+                        asp-items="Model.Skladista"
+                        class="form-select">
+
+                    <option value="">-- Bez skladišta --</option>
+
+                </select>
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Kreiraj korisnika
+        </button>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
