@@ -1,7 +1,17 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using AMS_data.Entities
+@using Asset_management_Web_Core
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+
+@inject IViewLocalizer L
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+}
 
 <!DOCTYPE html>
 <html lang="bs">
@@ -24,13 +34,14 @@
 
     @if (SignInManager.IsSignedIn(User))
     {
+    
         <div class="header-area-one">
             <div class="container-30">
                 <div class="col-lg-12">
                     <div class="header-inner-one">
                         <div class="left-logo-area">
                             <a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
-                                <span style="font-weight:700; font-size:22px;">AMS</span>
+                                <span style="font-weight:700; font-size:22px;">Asset management system</span>
                             </a>
                             <div class="left-side-open-clouse" id="collups-left">
                                 <img src="~/assets/images/icons/01.svg" alt="menu">
@@ -39,7 +50,23 @@
 
                         <div class="header-right">
                             <div class="action-interactive-area__header">
+                                <div class="single_action__haeader language-switcher me-3">
+                                    <a asp-area=""
+                                       asp-controller="Language"
+                                       asp-action="ChangeLanguage"
+                                       asp-route-lang="bs"
+                                       class="btn btn-sm btn-outline-light @(lang == "bs" ? "active" : "")">
+                                        BHS
+                                    </a>
 
+                                    <a asp-area=""
+                                       asp-controller="Language"
+                                       asp-action="ChangeLanguage"
+                                       asp-route-lang="en"
+                                       class="btn btn-sm btn-outline-light ms-2 @(lang == "en" ? "active" : "")">
+                                        ENG
+                                    </a>
+                                </div>
                                 <div class="single_action__haeader user_avatar__information openuptip" flow="down" tooltip="Profile">
                                     <div class="avatar">
                                         <img src="~/assets/images/avatar/01.png" alt="avatar">
@@ -52,7 +79,7 @@
                                             </div>
                                             <div class="user_naim-information">
                                                 <h3 class="title">@User.Identity?.Name</h3>
-                                                <span class="desig">AMS korisnik</span>
+                                                <span class="desig">@L["AMSUser"]</span>
                                             </div>
                                         </div>
 
@@ -61,7 +88,7 @@
                                                 <li class="single_items">
                                                     <a class="hader_popup_link" asp-area="Identity" asp-page="/Account/Manage/Index">
                                                         <i class="fa-light fa-user"></i>
-                                                        Profil
+                                                        @L["Profile"]
                                                     </a>
                                                 </li>
                                             </ul>
@@ -98,7 +125,7 @@
                             <div class="icon">
                                 <img src="~/assets/images/icons/01.png" alt="home">
                             </div>
-                            <p>Početna</p>
+                            <p>@L["Home"]</p>
                         </a>
                     </div>
 
@@ -109,14 +136,14 @@
                                 <div class="icon">
                                     <img src="~/assets/images/icons/07.png" alt="users">
                                 </div>
-                                <p>Korisnici</p>
+                                <p>@L["Users"]</p>
                             </a>
 
                             <a href="#" class="single-menu">
                                 <div class="icon">
                                     <img src="~/assets/images/icons/08.png" alt="settings">
                                 </div>
-                                <p>Šifarnici</p>
+                                <p>@L["Settings"]</p>
                             </a>
                         </div>
                     }
@@ -128,7 +155,7 @@
                                 <div class="icon">
                                     <img src="~/assets/images/icons/04.png" alt="oruzje">
                                 </div>
-                                <p>Registracija oružja</p>
+                                <p>@L["WeaponsRegistration"]</p>
                             </a>
 
                             <a href="#" class="single-menu">
@@ -147,7 +174,7 @@
                                 <div class="icon">
                                     <img src="~/assets/images/icons/03.png" alt="skladiste">
                                 </div>
-                                <p>Skladište</p>
+                                <p>@ResourcesHelper.Translate("Warehouse", lang)</p>
                             </a>
                         </div>
                     }
@@ -159,7 +186,7 @@
                                 <div class="icon">
                                     <img src="~/assets/images/icons/06.png" alt="dokazi">
                                 </div>
-                                <p>Dokazi</p>
+                                <p>@L["Evidence"]</p>
                             </a>
                         </div>
                     }
@@ -184,7 +211,7 @@
                 </div>
 
                 <div class="copyright-area-bottom">
-                    <p>AMS © @DateTime.Now.Year. All Rights Reserved.</p>
+                    <p>@L["Copyright"] © @DateTime.Now.Year</p>
                 </div>
             </div>
         </div>

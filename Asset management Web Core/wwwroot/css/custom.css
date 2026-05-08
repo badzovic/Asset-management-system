@@ -123,3 +123,22 @@
     font-size: 15px;
     font-weight: 500;
 }
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+    .language-switcher .btn {
+        min-width: 45px;
+        border-radius: 8px;
+        border: 1px solid #334155;
+        color: #fff;
+        background: #0f172a;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+        .language-switcher .btn:hover {
+            background: #4f8cff;
+            border-color: #4f8cff;
+        }
