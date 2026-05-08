@@ -13,5 +13,7 @@ namespace AMS_data
 
         public DbSet<OrganizacionaJedinica> OrganizacioneJedinice { get; set; }
         public DbSet<Skladiste> Skladista { get; set; }
+
+        public DbSet<AuditLog> AuditLogs { get; set; }
     }
 }

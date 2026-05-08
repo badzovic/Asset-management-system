@@ -127,3 +127,5 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.genruntimeconfig.cache
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\ref\AMS DeviceAgent.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.AspNetCore.Http.Features.dll

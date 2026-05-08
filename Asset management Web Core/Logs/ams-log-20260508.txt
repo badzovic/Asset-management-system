@@ -1,0 +1,225 @@
+2026-05-08 15:05:20 [INF] AMS Home page opened {"ActionId":"4f115323-a275-4f7c-8b7f-3ec5d4d9ec48","ActionName":"Asset_management_Web_Core.Controllers.HomeController.Index (Asset management Web Core)","RequestId":"0HNLD09Q0OOKB:00000001","RequestPath":"/","ConnectionId":"0HNLD09Q0OOKB","MachineName":"BERINNOTEBOOK","ProcessId":40620,"ThreadId":18}
+2026-05-08 15:05:20 [INF] HTTP GET / responded 200 in 763.4418 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD09Q0OOKB:00000001","ConnectionId":"0HNLD09Q0OOKB","MachineName":"BERINNOTEBOOK","ProcessId":40620,"ThreadId":19}
+2026-05-08 15:12:59 [INF] AMS Home page opened {"ActionId":"9842ad6f-7d38-467f-a5bd-465958765d4e","ActionName":"Asset_management_Web_Core.Controllers.HomeController.Index (Asset management Web Core)","RequestId":"0HNLD0E2PTIUJ:00000001","RequestPath":"/","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":18}
+2026-05-08 15:12:59 [INF] HTTP GET / responded 200 in 440.7449 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0E2PTIUJ:00000001","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":19}
+2026-05-08 15:13:19 [ERR] HTTP GET /Admin/Users/Create responded 500 in 689.3486 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0E2PTIUJ:00000007","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":18}
+System.IO.FileNotFoundException: Could not load file or assembly 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.<InternalLoad>g____PInvoke|49_0(NativeAssemblyNameParts* __pAssemblyNameParts_native, ObjectHandleOnStack __requestingAssembly_native, StackCrawlMarkHandle __stackMark_native, Int32 __throwOnFileNotFound_native, ObjectHandleOnStack __assemblyLoadContext_native, ObjectHandleOnStack __retAssembly_native)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.<>c__DisplayClass9_0.<Create>b__0(String _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Users_Create.ExecuteAsync() in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Areas\Admin\Views\Users\Create.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Asset_management_Web_Core.Helpers.CultureMiddleware.InvokeAsync(HttpContext context) in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Helpers\CultureMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-08 15:13:19 [ERR] An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNLD0E2PTIUJ:00000007","RequestPath":"/Admin/Users/Create","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":18}
+System.IO.FileNotFoundException: Could not load file or assembly 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.<InternalLoad>g____PInvoke|49_0(NativeAssemblyNameParts* __pAssemblyNameParts_native, ObjectHandleOnStack __requestingAssembly_native, StackCrawlMarkHandle __stackMark_native, Int32 __throwOnFileNotFound_native, ObjectHandleOnStack __assemblyLoadContext_native, ObjectHandleOnStack __retAssembly_native)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.<>c__DisplayClass9_0.<Create>b__0(String _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Users_Create.ExecuteAsync() in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Areas\Admin\Views\Users\Create.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Asset_management_Web_Core.Helpers.CultureMiddleware.InvokeAsync(HttpContext context) in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Helpers\CultureMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-08 15:13:42 [ERR] HTTP GET /Admin/Users/Create responded 500 in 307.2411 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0E2PTIUJ:0000000D","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":19}
+System.IO.FileNotFoundException: Could not load file or assembly 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.<InternalLoad>g____PInvoke|49_0(NativeAssemblyNameParts* __pAssemblyNameParts_native, ObjectHandleOnStack __requestingAssembly_native, StackCrawlMarkHandle __stackMark_native, Int32 __throwOnFileNotFound_native, ObjectHandleOnStack __assemblyLoadContext_native, ObjectHandleOnStack __retAssembly_native)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.<>c__DisplayClass9_0.<Create>b__0(String _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Users_Create.ExecuteAsync() in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Areas\Admin\Views\Users\Create.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Asset_management_Web_Core.Helpers.CultureMiddleware.InvokeAsync(HttpContext context) in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Helpers\CultureMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-08 15:13:42 [ERR] An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNLD0E2PTIUJ:0000000D","RequestPath":"/Admin/Users/Create","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":19}
+System.IO.FileNotFoundException: Could not load file or assembly 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.<InternalLoad>g____PInvoke|49_0(NativeAssemblyNameParts* __pAssemblyNameParts_native, ObjectHandleOnStack __requestingAssembly_native, StackCrawlMarkHandle __stackMark_native, Int32 __throwOnFileNotFound_native, ObjectHandleOnStack __assemblyLoadContext_native, ObjectHandleOnStack __retAssembly_native)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.<>c__DisplayClass9_0.<Create>b__0(String _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Users_Create.ExecuteAsync() in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Areas\Admin\Views\Users\Create.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Asset_management_Web_Core.Helpers.CultureMiddleware.InvokeAsync(HttpContext context) in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Helpers\CultureMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-08 15:13:42 [INF] HTTP GET /favicon.ico responded 304 in 9.3260 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0E2PTIUJ:00000013","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":22}
+2026-05-08 15:14:49 [ERR] HTTP GET /Admin/Users/Create responded 500 in 229.7218 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0E2PTIUJ:00000015","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":26}
+System.IO.FileNotFoundException: Could not load file or assembly 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.<InternalLoad>g____PInvoke|49_0(NativeAssemblyNameParts* __pAssemblyNameParts_native, ObjectHandleOnStack __requestingAssembly_native, StackCrawlMarkHandle __stackMark_native, Int32 __throwOnFileNotFound_native, ObjectHandleOnStack __assemblyLoadContext_native, ObjectHandleOnStack __retAssembly_native)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.<>c__DisplayClass9_0.<Create>b__0(String _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Users_Create.ExecuteAsync() in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Areas\Admin\Views\Users\Create.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Asset_management_Web_Core.Helpers.CultureMiddleware.InvokeAsync(HttpContext context) in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Helpers\CultureMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-08 15:14:49 [ERR] An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNLD0E2PTIUJ:00000015","RequestPath":"/Admin/Users/Create","ConnectionId":"0HNLD0E2PTIUJ","MachineName":"BERINNOTEBOOK","ProcessId":50292,"ThreadId":26}
+System.IO.FileNotFoundException: Could not load file or assembly 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Asset_management_Web_Core, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.<InternalLoad>g____PInvoke|49_0(NativeAssemblyNameParts* __pAssemblyNameParts_native, ObjectHandleOnStack __requestingAssembly_native, StackCrawlMarkHandle __stackMark_native, Int32 __throwOnFileNotFound_native, ObjectHandleOnStack __assemblyLoadContext_native, ObjectHandleOnStack __retAssembly_native)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.Extensions.Localization.ResourceManagerStringLocalizerFactory.<>c__DisplayClass9_0.<Create>b__0(String _)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at AspNetCoreGeneratedDocument.Areas_Admin_Views_Users_Create.ExecuteAsync() in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Areas\Admin\Views\Users\Create.cshtml:line 6
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Asset_management_Web_Core.Helpers.CultureMiddleware.InvokeAsync(HttpContext context) in C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\Helpers\CultureMiddleware.cs:line 28
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-08 15:15:04 [INF] AMS Home page opened {"ActionId":"d5ffea60-bc90-44ec-ac58-bd7999c163dc","ActionName":"Asset_management_Web_Core.Controllers.HomeController.Index (Asset management Web Core)","RequestId":"0HNLD0F86P8D7:00000001","RequestPath":"/","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":19}
+2026-05-08 15:15:04 [INF] HTTP GET / responded 200 in 427.8389 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D7:00000001","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":17}
+2026-05-08 15:15:11 [INF] HTTP GET /Admin/Users/Create responded 200 in 387.0115 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D7:00000007","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":17}
+2026-05-08 15:15:11 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 304 in 26.6322 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D7:0000000B","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":17}
+2026-05-08 15:15:11 [INF] HTTP GET /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js responded 304 in 24.6875 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D7:0000000D","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":18}
+2026-05-08 15:15:35 [INF] HTTP POST /Admin/Users/Create responded 302 in 952.7765 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D7:00000011","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":5}
+2026-05-08 15:15:35 [INF] HTTP GET /Admin/Users/Create responded 200 in 35.6599 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D7:00000013","ConnectionId":"0HNLD0F86P8D7","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":17}
+2026-05-08 15:16:15 [INF] HTTP POST /Identity/Account/Logout responded 302 in 44.6173 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D8:00000001","ConnectionId":"0HNLD0F86P8D8","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":5}
+2026-05-08 15:16:15 [INF] AMS Home page opened {"ActionId":"d5ffea60-bc90-44ec-ac58-bd7999c163dc","ActionName":"Asset_management_Web_Core.Controllers.HomeController.Index (Asset management Web Core)","RequestId":"0HNLD0F86P8D8:00000003","RequestPath":"/","ConnectionId":"0HNLD0F86P8D8","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":17}
+2026-05-08 15:16:15 [INF] HTTP GET / responded 200 in 2.4805 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD0F86P8D8:00000003","ConnectionId":"0HNLD0F86P8D8","MachineName":"BERINNOTEBOOK","ProcessId":55884,"ThreadId":17}
+2026-05-08 16:04:25 [INF] AMS Home page opened {"ActionId":"6346bbed-e476-4256-a4c4-9d4060050b8d","ActionName":"Asset_management_Web_Core.Controllers.HomeController.Index (Asset management Web Core)","RequestId":"0HNLD1AQK0OJ0:00000001","RequestPath":"/","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":10}
+2026-05-08 16:04:25 [INF] HTTP GET / responded 200 in 317.8521 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:00000001","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":10}
+2026-05-08 16:04:30 [INF] HTTP GET /Admin/Users/Create responded 302 in 22.5739 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:00000007","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":20}
+2026-05-08 16:04:30 [INF] HTTP GET /Identity/Account/Login responded 200 in 230.4803 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:00000009","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":7}
+2026-05-08 16:04:32 [INF] User logged in. {"SourceContext":"Asset_management_Web_Core.Areas.Identity.Pages.Account.LoginModel","ActionId":"77b8e07f-0c39-4144-b714-7b12dc9084db","ActionName":"/Account/Login","RequestId":"0HNLD1AQK0OJ0:0000000F","RequestPath":"/Identity/Account/Login","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":5}
+2026-05-08 16:04:32 [INF] HTTP POST /Identity/Account/Login responded 302 in 486.5587 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:0000000F","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":5}
+2026-05-08 16:04:32 [INF] HTTP GET /Admin/Users/Create responded 200 in 253.0265 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:00000011","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":21}
+2026-05-08 16:04:44 [INF] HTTP GET /Language/ChangeLanguage responded 302 in 9.1939 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:00000017","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":5}
+2026-05-08 16:04:44 [INF] HTTP GET /Admin/Users/Create responded 200 in 67.3740 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNLD1AQK0OJ0:00000019","ConnectionId":"0HNLD1AQK0OJ0","MachineName":"BERINNOTEBOOK","ProcessId":45540,"ThreadId":17}

@@ -1,75 +1,130 @@
 ﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.CreateUserViewModel
-@using Microsoft.Extensions.Localization
-@inject IStringLocalizerFactory LocalizerFactory
+@using Asset_management_Web_Core.Helpers
 
 @{
-    var L = LocalizerFactory.Create("AppText", "Asset_management_Web_Core");
-    ViewData["Title"] = L["NewUser"];
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+
+    ViewData["Title"] = ResourcesHelper.Translate("NewUser", lang);
 }
 
 <div class="user-profile-inner">
-    <h4 class="title mb-4">@L["NewUser"]</h4>
+
+    <h4 class="title mb-4">
+        @ResourcesHelper.Translate("NewUser", lang)
+    </h4>
 
     <div class="user-profile-main-wrapper">
+
         <form asp-action="Create" method="post">
+
             @Html.AntiForgeryToken()
 
             <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
             <div class="half-input-wrapper">
+
                 <div class="single">
-                    <label asp-for="UserName">@L["Username"]</label>
-                    <input asp-for="UserName" placeholder="@L["EnterUsername"]" />
+                    <label asp-for="UserName">
+                        @ResourcesHelper.Translate("Username", lang)
+                    </label>
+
+                    <input asp-for="UserName"
+                           placeholder="@ResourcesHelper.Translate("EnterUsername", lang)" />
                 </div>
 
                 <div class="single">
-                    <label asp-for="Password">@L["Password"]</label>
-                    <input asp-for="Password" placeholder="@L["EnterPassword"]" />
+                    <label asp-for="Password">
+                        @ResourcesHelper.Translate("Password", lang)
+                    </label>
+
+                    <input asp-for="Password"
+                           placeholder="@ResourcesHelper.Translate("EnterPassword", lang)" />
                 </div>
+
             </div>
 
             <div class="half-input-wrapper">
+
                 <div class="single">
-                    <label asp-for="Ime">@L["FirstName"]</label>
-                    <input asp-for="Ime" placeholder="@L["EnterFirstName"]" />
+                    <label asp-for="Ime">
+                        @ResourcesHelper.Translate("FirstName", lang)
+                    </label>
+
+                    <input asp-for="Ime"
+                           placeholder="@ResourcesHelper.Translate("EnterFirstName", lang)" />
                 </div>
 
                 <div class="single">
-                    <label asp-for="Prezime">@L["LastName"]</label>
-                    <input asp-for="Prezime" placeholder="@L["EnterLastName"]" />
+                    <label asp-for="Prezime">
+                        @ResourcesHelper.Translate("LastName", lang)
+                    </label>
+
+                    <input asp-for="Prezime"
+                           placeholder="@ResourcesHelper.Translate("EnterLastName", lang)" />
                 </div>
+
             </div>
 
             <div class="half-input-wrapper">
+
                 <div class="single">
-                    <label asp-for="RoleName">@L["Role"]</label>
+                    <label asp-for="RoleName">
+                        @ResourcesHelper.Translate("Role", lang)
+                    </label>
+
                     <select asp-for="RoleName" asp-items="Model.Roles">
-                        <option value="">@L["SelectRole"]</option>
+
+                        <option value="">
+                            @ResourcesHelper.Translate("SelectRole", lang)
+                        </option>
+
                     </select>
                 </div>
 
                 <div class="single">
-                    <label asp-for="OrganizacionaJedinicaId">@L["OrganizationalUnit"]</label>
-                    <select asp-for="OrganizacionaJedinicaId" asp-items="Model.OrganizacioneJedinice">
-                        <option value="">@L["NoOrganizationalUnit"]</option>
+                    <label asp-for="OrganizacionaJedinicaId">
+                        @ResourcesHelper.Translate("OrganizationalUnit", lang)
+                    </label>
+
+                    <select asp-for="OrganizacionaJedinicaId"
+                            asp-items="Model.OrganizacioneJedinice">
+
+                        <option value="">
+                            @ResourcesHelper.Translate("NoOrganizationalUnit", lang)
+                        </option>
+
                     </select>
                 </div>
+
             </div>
 
             <div class="half-input-wrapper">
+
                 <div class="single">
-                    <label asp-for="SkladisteId">@L["Warehouse"]</label>
-                    <select asp-for="SkladisteId" asp-items="Model.Skladista">
-                        <option value="">@L["NoWarehouse"]</option>
+                    <label asp-for="SkladisteId">
+                        @ResourcesHelper.Translate("Warehouse", lang)
+                    </label>
+
+                    <select asp-for="SkladisteId"
+                            asp-items="Model.Skladista">
+
+                        <option value="">
+                            @ResourcesHelper.Translate("NoWarehouse", lang)
+                        </option>
+
                     </select>
                 </div>
+
             </div>
 
             <button type="submit" class="rts-btn btn-primary mt--20">
-                @L["CreateUser"]
+                @ResourcesHelper.Translate("CreateUser", lang)
             </button>
+
         </form>
+
     </div>
+
 </div>
 
 @section Scripts {

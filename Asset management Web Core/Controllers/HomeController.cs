@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Asset_management_Web_Core.Models;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace Asset_management_Web_Core.Controllers
 {
@@ -15,6 +16,7 @@ namespace Asset_management_Web_Core.Controllers
 
         public IActionResult Index()
         {
+            Log.Information("AMS Home page opened");
             return View();
         }
 

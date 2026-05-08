@@ -117,6 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreateUser" xml:space="preserve">
+    <value>Kreiraj korisnika</value>
+  </data>
+  <data name="EnterFirstName" xml:space="preserve">
+    <value>Unesite ime</value>
+  </data>
+  <data name="EnterLastName" xml:space="preserve">
+    <value>Unesite prezime</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Unesite lozinku</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Unesite korisničko ime</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>Novi korisnik</value>
+  </data>
+  <data name="NoOrganizationalUnit" xml:space="preserve">
+    <value>-- Bez organizacione jedinice --</value>
+  </data>
+  <data name="NoWarehouse" xml:space="preserve">
+    <value>-- Bez skladišta --</value>
+  </data>
+  <data name="OrganizationalUnit" xml:space="preserve">
+    <value>Organizaciona jedinica</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Lozinka</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rola</value>
+  </data>
+  <data name="SelectRole" xml:space="preserve">
+    <value>-- Odaberi rolu --</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
   <data name="Warehouse" xml:space="preserve">
     <value>Skladište</value>
   </data>

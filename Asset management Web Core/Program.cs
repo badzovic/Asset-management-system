@@ -6,8 +6,30 @@ using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Asset_management_Web_Core.Helpers;
+using Serilog;
+using AMS_services.Audit;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Warning)
+    .MinimumLevel.Override("Microsoft.EntityFrameworkCore", Serilog.Events.LogEventLevel.Warning)
+    .Enrich.FromLogContext()
+    .Enrich.WithMachineName()
+    .Enrich.WithProcessId()
+    .Enrich.WithThreadId()
+    .WriteTo.File(
+        path: "Logs/ams-log-.txt",
+        rollingInterval: RollingInterval.Day,
+        retainedFileCountLimit: 30,
+        shared: true,
+        outputTemplate:
+            "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj} " +
+            "{Properties:j}{NewLine}{Exception}")
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -38,7 +60,12 @@ builder.Services.AddRazorPages()
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<AuditLogService>();
+
 var app = builder.Build();
+
+app.UseSerilogRequestLogging();
 
 var supportedCultures = new[]
 {

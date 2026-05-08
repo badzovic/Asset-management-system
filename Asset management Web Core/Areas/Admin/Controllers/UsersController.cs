@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using AMS_services.Audit;
 
 namespace Asset_management_Web_Core.Areas.Admin.Controllers
 {
@@ -16,15 +17,17 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ApplicationDbContext _db;
-
+        private readonly AuditLogService _auditLogService;
         public UsersController(
-            UserManager<ApplicationUser> userManager,
-            RoleManager<IdentityRole> roleManager,
-            ApplicationDbContext db)
+         UserManager<ApplicationUser> userManager,
+         RoleManager<IdentityRole> roleManager,
+         ApplicationDbContext db,
+         AuditLogService auditLogService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _db = db;
+            _auditLogService = auditLogService;
         }
 
         public async Task<IActionResult> Create()
@@ -71,6 +74,20 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             }
 
             await _userManager.AddToRoleAsync(user, model.RoleName);
+
+            await _auditLogService.LogAsync(
+            action: "CREATE_USER",
+            entityName: "ApplicationUser",
+            entityId: user.Id,
+            newValues: new
+            {
+                user.UserName,
+                user.Ime,
+                user.Prezime,
+                Role = model.RoleName,
+                user.OrganizacionaJedinicaId,
+                user.SkladisteId
+            });
 
             TempData["SuccessMessage"] = "Korisnik uspješno kreiran.";
 
