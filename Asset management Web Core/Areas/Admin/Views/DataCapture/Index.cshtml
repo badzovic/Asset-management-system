@@ -1,0 +1,65 @@
+﻿@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("DataCapture", lang);
+}
+
+<div class="user-profile-inner">
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("DataCapture", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("DataCaptureDescription", lang)</p>
+        </div>
+    </div>
+
+    <div class="ams-card-grid">
+
+        <div class="ams-module-card">
+            <div class="ams-module-icon">
+                <i class="fa-solid fa-gun"></i>
+            </div>
+            <h5>@ResourcesHelper.Translate("WeaponData", lang)</h5>
+            <p>@ResourcesHelper.Translate("WeaponDataDescription", lang)</p>
+
+            <div class="ams-module-links">
+                <a asp-area="Admin" asp-controller="WeaponTypes" asp-action="Index">
+                    @ResourcesHelper.Translate("WeaponTypes", lang)
+                </a>
+                <a href="#">@ResourcesHelper.Translate("Manufacturers", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("Calibers", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("WeaponModels", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("WeaponStatuses", lang)</a>
+            </div>
+        </div>
+
+        <div class="ams-module-card">
+            <div class="ams-module-icon">
+                <i class="fa-solid fa-building-shield"></i>
+            </div>
+            <h5>@ResourcesHelper.Translate("OrganizationData", lang)</h5>
+            <p>@ResourcesHelper.Translate("OrganizationDataDescription", lang)</p>
+
+            <div class="ams-module-links">
+                <a href="#">@ResourcesHelper.Translate("OrganizationalUnits", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("Warehouses", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("GovernmentAgencies", lang)</a>
+            </div>
+        </div>
+
+        <div class="ams-module-card">
+            <div class="ams-module-icon">
+                <i class="fa-solid fa-right-left"></i>
+            </div>
+            <h5>@ResourcesHelper.Translate("MovementData", lang)</h5>
+            <p>@ResourcesHelper.Translate("MovementDataDescription", lang)</p>
+
+            <div class="ams-module-links">
+                <a href="#">@ResourcesHelper.Translate("MovementActions", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("MovementReasons", lang)</a>
+                <a href="#">@ResourcesHelper.Translate("Locations", lang)</a>
+            </div>
+        </div>
+
+    </div>
+</div>

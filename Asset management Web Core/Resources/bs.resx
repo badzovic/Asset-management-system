@@ -117,8 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Actions" xml:space="preserve">
+    <value>Akcije</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktivan</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Dodaj novo</value>
+  </data>
+  <data name="AddWeaponType" xml:space="preserve">
+    <value>Dodaj tip oružja</value>
+  </data>
+  <data name="AllStatuses" xml:space="preserve">
+    <value>Svi statusi</value>
+  </data>
+  <data name="AMSUser" xml:space="preserve">
+    <value>Korisnik</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Asset Management System</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Nazad na listu</value>
+  </data>
+  <data name="Calibers" xml:space="preserve">
+    <value>Kalibri</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Šifra</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Sva prava zadržana.</value>
+  </data>
   <data name="CreateUser" xml:space="preserve">
     <value>Kreiraj korisnika</value>
+  </data>
+  <data name="DataCapture" xml:space="preserve">
+    <value>Unos podataka</value>
+  </data>
+  <data name="DataCaptureDescription" xml:space="preserve">
+    <value>Centralno mjesto za upravljanje šifarnicima i podacima koje sistem koristi u formama.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Izmijeni</value>
+  </data>
+  <data name="EditWeaponType" xml:space="preserve">
+    <value>Izmjena tipa oružja</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Unesite šifru</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>Unesite opis</value>
   </data>
   <data name="EnterFirstName" xml:space="preserve">
     <value>Unesite ime</value>
@@ -126,17 +180,62 @@
   <data name="EnterLastName" xml:space="preserve">
     <value>Unesite prezime</value>
   </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Unesite naziv</value>
+  </data>
   <data name="EnterPassword" xml:space="preserve">
     <value>Unesite lozinku</value>
   </data>
   <data name="EnterUsername" xml:space="preserve">
     <value>Unesite korisničko ime</value>
   </data>
+  <data name="Evidence" xml:space="preserve">
+    <value>Dokazi</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtriraj</value>
+  </data>
   <data name="FirstName" xml:space="preserve">
     <value>Ime</value>
   </data>
+  <data name="GovernmentAgencies" xml:space="preserve">
+    <value>Vladine agencije</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Početna</value>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>Identifikacija</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Aktivan</value>
+  </data>
   <data name="LastName" xml:space="preserve">
     <value>Prezime</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>Lokacije</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Odjava</value>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Proizvođači</value>
+  </data>
+  <data name="MovementActions" xml:space="preserve">
+    <value>Akcije kretanja</value>
+  </data>
+  <data name="MovementData" xml:space="preserve">
+    <value>Podaci o kretanju</value>
+  </data>
+  <data name="MovementDataDescription" xml:space="preserve">
+    <value>Razlozi, akcije i lokacije za prenos oružja.</value>
+  </data>
+  <data name="MovementReasons" xml:space="preserve">
+    <value>Razlozi kretanja</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Naziv</value>
   </data>
   <data name="NewUser" xml:space="preserve">
     <value>Novi korisnik</value>
@@ -144,25 +243,88 @@
   <data name="NoOrganizationalUnit" xml:space="preserve">
     <value>-- Bez organizacione jedinice --</value>
   </data>
+  <data name="NoRecordsFound" xml:space="preserve">
+    <value>Nema pronađenih zapisa</value>
+  </data>
   <data name="NoWarehouse" xml:space="preserve">
     <value>-- Bez skladišta --</value>
   </data>
   <data name="OrganizationalUnit" xml:space="preserve">
     <value>Organizaciona jedinica</value>
   </data>
+  <data name="OrganizationalUnits" xml:space="preserve">
+    <value>Organizacione jedinice</value>
+  </data>
+  <data name="OrganizationData" xml:space="preserve">
+    <value>Organizacioni podaci</value>
+  </data>
+  <data name="OrganizationDataDescription" xml:space="preserve">
+    <value>Organizacione jedinice, skladišta i agencije.</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Lozinka</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Resetuj</value>
   </data>
   <data name="Role" xml:space="preserve">
     <value>Rola</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Sačuvaj</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Sačuvaj izmjene</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pretraga</value>
+  </data>
   <data name="SelectRole" xml:space="preserve">
     <value>-- Odaberi rolu --</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Podešavanja</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Korisničko ime</value>
   </data>
+  <data name="Users" xml:space="preserve">
+    <value>Korisnici</value>
+  </data>
   <data name="Warehouse" xml:space="preserve">
     <value>Skladište</value>
+  </data>
+  <data name="Warehouses" xml:space="preserve">
+    <value>Skladišta</value>
+  </data>
+  <data name="WeaponData" xml:space="preserve">
+    <value>Podaci o oružju</value>
+  </data>
+  <data name="WeaponDataDescription" xml:space="preserve">
+    <value>Tipovi, proizvođači, kalibri, modeli i statusi oružja.</value>
+  </data>
+  <data name="WeaponModels" xml:space="preserve">
+    <value>Modeli oružja</value>
+  </data>
+  <data name="WeaponsRegistration" xml:space="preserve">
+    <value>Registracija oružja</value>
+  </data>
+  <data name="WeaponStatuses" xml:space="preserve">
+    <value> Statusi oružja</value>
+  </data>
+  <data name="WeaponTypeFormDescription" xml:space="preserve">
+    <value>Unesite osnovne podatke o tipu oružja</value>
+  </data>
+  <data name="WeaponTypes" xml:space="preserve">
+    <value>Tipovi oružja</value>
+  </data>
+  <data name="WeaponTypesDescription" xml:space="preserve">
+    <value>Upravljanje šifarnikom tipova oružja</value>
   </data>
 </root>

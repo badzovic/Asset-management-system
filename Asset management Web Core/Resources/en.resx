@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Warehouse" xml:space="preserve">
-    <value>Warehouse</value>
-  </data>
   <data name="NewUser" xml:space="preserve">
     <value>New User</value>
   </data>
@@ -164,5 +161,174 @@
   </data>
   <data name="CreateUser" xml:space="preserve">
     <value>Create User</value>
+  </data>
+  <data name="WeaponTypes" xml:space="preserve">
+    <value>Weapon Types</value>
+  </data>
+  <data name="WeaponTypesDescription" xml:space="preserve">
+    <value>Weapon Types Description</value>
+  </data>
+  <data name="AddWeaponType" xml:space="preserve">
+    <value>Add Weapon Type</value>
+    <comment>Add Weapon Type</comment>
+  </data>
+  <data name="EditWeaponType" xml:space="preserve">
+    <value>Edit Weapon Type</value>
+  </data>
+  <data name="WeaponTypeFormDescription" xml:space="preserve">
+    <value>Weapon Type Form Description</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back To List</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Enter Name</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Enter Code</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>Enter Description</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="NoRecordsFound" xml:space="preserve">
+    <value>No Records Found</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="AllStatuses" xml:space="preserve">
+    <value>All Statuses</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="DataCapture" xml:space="preserve">
+    <value>Data Capture</value>
+  </data>
+  <data name="DataCaptureDescription" xml:space="preserve">
+    <value>Data Capture Description</value>
+  </data>
+  <data name="WeaponData" xml:space="preserve">
+    <value>Weapon Data</value>
+  </data>
+  <data name="WeaponDataDescription" xml:space="preserve">
+    <value>Weapon Data Description </value>
+  </data>
+  <data name="OrganizationData" xml:space="preserve">
+    <value>Organization Data</value>
+  </data>
+  <data name="OrganizationDataDescription" xml:space="preserve">
+    <value>Organization Data Description</value>
+  </data>
+  <data name="MovementData" xml:space="preserve">
+    <value>Movement Data</value>
+  </data>
+  <data name="MovementDataDescription" xml:space="preserve">
+    <value>Movement Data Description</value>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Manufacturers</value>
+  </data>
+  <data name="Calibers" xml:space="preserve">
+    <value>Calibers</value>
+  </data>
+  <data name="WeaponModels" xml:space="preserve">
+    <value>Weapon Models</value>
+  </data>
+  <data name="WeaponStatuses" xml:space="preserve">
+    <value>Weapon Statuses</value>
+  </data>
+  <data name="OrganizationalUnits" xml:space="preserve">
+    <value>Organizational Units</value>
+  </data>
+  <data name="Warehouses" xml:space="preserve">
+    <value>Warehouses</value>
+  </data>
+  <data name="GovernmentAgencies" xml:space="preserve">
+    <value>Government Agencies</value>
+  </data>
+  <data name="MovementActions" xml:space="preserve">
+    <value>Movement Actions</value>
+  </data>
+  <data name="MovementReasons" xml:space="preserve">
+    <value>Movement Reasons</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Asset Management System</value>
+  </data>
+  <data name="AMSUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="WeaponsRegistration" xml:space="preserve">
+    <value>Weapon Registration</value>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>Identification</value>
+  </data>
+  <data name="Warehouse" xml:space="preserve">
+    <value>Warehouse</value>
+  </data>
+  <data name="Evidence" xml:space="preserve">
+    <value>Evidence</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>All Rights Reserved.</value>
   </data>
 </root>

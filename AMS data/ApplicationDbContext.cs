@@ -1,6 +1,8 @@
 ﻿using AMS_data.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using AMS_data.Entities.Weapons;
+using AMS_data.Entities.Lookups;
 
 namespace AMS_data
 {
@@ -15,5 +17,13 @@ namespace AMS_data
         public DbSet<Skladiste> Skladista { get; set; }
 
         public DbSet<AuditLog> AuditLogs { get; set; }
+        public DbSet<WeaponType> WeaponTypes { get; set; }
+        public DbSet<Caliber> Calibers { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
+        public DbSet<WeaponStatus> WeaponStatuses { get; set; }
+        public DbSet<WeaponModel> WeaponModels { get; set; }
+        public DbSet<Weapon> Weapons { get; set; }
+        public DbSet<LookupCategory> LookupCategories { get; set; }
+        public DbSet<LookupItem> LookupItems { get; set; }
     }
 }

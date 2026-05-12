@@ -14,6 +14,9 @@
     <WebStackScaffolding_ViewDialogWidth>800</WebStackScaffolding_ViewDialogWidth>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Resources\bs.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\en.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
