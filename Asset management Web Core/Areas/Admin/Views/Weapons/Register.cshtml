@@ -1,5 +1,419 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons.WeaponRegisterViewModel
+@using AMS_data.Entities.Weapons
+@using Asset_management_Web_Core.Helpers
+
 @{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("RegisterWeapon", lang);
+
+    var activeWeapons = ViewBag.ActiveWeapons as List<Weapon> ?? new List<Weapon>();
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("RegisterWeapon", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("RegisterWeaponDescription", lang)</p>
+        </div>
+    </div>
+
+    <form asp-action="Register" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="ams-register-grid">
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("RegistrationData", lang)</h5>
+                <div class="ams-checkbox-row mb-3">
+                    <label class="ams-switch">
+                        <input asp-for="IsMarked" />
+                        <span class="ams-slider"></span>
+                    </label>
+
+                    <span class="ams-checkbox-label">
+                        @ResourcesHelper.Translate("RegMarked", lang)
+                    </span>
+                </div>
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="RegistrationNo">@ResourcesHelper.Translate("RegistrationNo", lang)</label>
+                        <input asp-for="RegistrationNo" readonly />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="RegistrationDate">@ResourcesHelper.Translate("RegistrationDate", lang)</label>
+                        <input asp-for="RegistrationDate" type="date" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="MarkLocationLookupId">@ResourcesHelper.Translate("MarkLocation", lang)</label>
+                        <select asp-for="MarkLocationLookupId" asp-items="Model.MarkLocations">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="CountryLookupId">@ResourcesHelper.Translate("Country", lang)</label>
+                        <select asp-for="CountryLookupId" asp-items="Model.Countries">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="RegionLookupId">@ResourcesHelper.Translate("Region", lang)</label>
+                        <select asp-for="RegionLookupId" asp-items="Model.Regions">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="GovernmentAgencyLookupId">@ResourcesHelper.Translate("GovernmentAgency", lang)</label>
+                        <select asp-for="GovernmentAgencyLookupId" asp-items="Model.GovernmentAgencies">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ams-checkbox-row">
+                    <label class="ams-switch">
+                        <input asp-for="IsProspective" />
+                        <span class="ams-slider"></span>
+                    </label>
+                    <span class="ams-checkbox-label">@ResourcesHelper.Translate("Prospective", lang)</span>
+                </div>
+            </div>
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("WeaponIdentity", lang)</h5>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="FactorySerial">@ResourcesHelper.Translate("FactorySerial", lang)</label>
+                        <input asp-for="FactorySerial" />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="ConfirmSerial">@ResourcesHelper.Translate("ConfirmSerial", lang)</label>
+                        <input asp-for="ConfirmSerial" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="WeaponModelId">@ResourcesHelper.Translate("WeaponModel", lang)</label>
+                        <select asp-for="WeaponModelId" asp-items="Model.WeaponModels" id="WeaponModelId">
+                            <option value="">@ResourcesHelper.Translate("SelectWeaponModel", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="WeaponTypeId">@ResourcesHelper.Translate("WeaponType", lang)</label>
+                        <select asp-for="WeaponTypeId" asp-items="Model.WeaponTypes" id="WeaponTypeId">
+                            <option value="">@ResourcesHelper.Translate("SelectWeaponType", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="ManufacturerId">@ResourcesHelper.Translate("Manufacturer", lang)</label>
+                        <select asp-for="ManufacturerId" asp-items="Model.Manufacturers" id="ManufacturerId">
+                            <option value="">@ResourcesHelper.Translate("SelectManufacturer", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="CaliberId">@ResourcesHelper.Translate("Caliber", lang)</label>
+                        <select asp-for="CaliberId" asp-items="Model.Calibers" id="CaliberId">
+                            <option value="">@ResourcesHelper.Translate("SelectCaliber", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="ManufactureCountryLookupId">@ResourcesHelper.Translate("ManufacturerCountry", lang)</label>
+                        <select asp-for="ManufactureCountryLookupId" asp-items="Model.ManufactureCountries">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="ManufactureDate">@ResourcesHelper.Translate("ManufactureDate", lang)</label>
+                        <input asp-for="ManufactureDate" />
+                    </div>
+                </div>
+
+                <div class="ams-image-preview-wrap" id="modelImageWrap" style="display:none;">
+                    <span>@ResourcesHelper.Translate("ModelImage", lang)</span>
+                    <img id="modelImagePreview" class="ams-image-preview" alt="weapon model" />
+                </div>
+            </div>
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("OriginOwnership", lang)</h5>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="OriginalLocationLookupId">@ResourcesHelper.Translate("OriginalLocation", lang)</label>
+                        <select asp-for="OriginalLocationLookupId" asp-items="Model.OriginalLocations">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="OriginIndicatorLookupId">@ResourcesHelper.Translate("OriginIndicator", lang)</label>
+                        <select asp-for="OriginIndicatorLookupId" asp-items="Model.OriginIndicators">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="OriginalStateLookupId">@ResourcesHelper.Translate("OriginalState", lang)</label>
+                        <select asp-for="OriginalStateLookupId" asp-items="Model.OriginalStates">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="UnitLookupId">@ResourcesHelper.Translate("Unit", lang)</label>
+                        <select asp-for="UnitLookupId" asp-items="Model.Units">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="StockLookupId">@ResourcesHelper.Translate("Stock", lang)</label>
+                        <select asp-for="StockLookupId" asp-items="Model.Stocks">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="BookkeepingByLookupId">@ResourcesHelper.Translate("BookkeepingBy", lang)</label>
+                        <select asp-for="BookkeepingByLookupId" asp-items="Model.BookkeepingByList">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("PhysicalMarks", lang)</h5>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="BarrelMark">@ResourcesHelper.Translate("BarrelMark", lang)</label>
+                        <input asp-for="BarrelMark" />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="SlideMark">@ResourcesHelper.Translate("SlideMark", lang)</label>
+                        <input asp-for="SlideMark" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="ButtstockMark">@ResourcesHelper.Translate("ButtstockMark", lang)</label>
+                        <input asp-for="ButtstockMark" />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="IdTypeLookupId">@ResourcesHelper.Translate("IdType", lang)</label>
+                        <select asp-for="IdTypeLookupId" asp-items="Model.IdTypes">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="IdNo">@ResourcesHelper.Translate("IdNo", lang)</label>
+                        <input asp-for="IdNo" />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="DateOfOwnership">@ResourcesHelper.Translate("DateOfOwnership", lang)</label>
+                        <input asp-for="DateOfOwnership" type="date" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="HolderInfo">@ResourcesHelper.Translate("HolderInfo", lang)</label>
+                        <textarea asp-for="HolderInfo"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("StatusAndAdditional", lang)</h5>
+
+                
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="InventoryNo">@ResourcesHelper.Translate("InventoryNo", lang)</label>
+                        <input asp-for="InventoryNo" />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="ImageFile">@ResourcesHelper.Translate("Image", lang)</label>
+                        <input asp-for="ImageFile" type="file" accept=".jpg,.jpeg,.png,.webp" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="Notes">@ResourcesHelper.Translate("Notes", lang)</label>
+                        <textarea asp-for="Notes"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("DonationTemporaryStock", lang)</h5>
+
+                <div class="ams-checkbox-row mb-3">
+                    <label class="ams-switch">
+                        <input asp-for="TempStock" />
+                        <span class="ams-slider"></span>
+                    </label>
+                    <span class="ams-checkbox-label">@ResourcesHelper.Translate("TempStock", lang)</span>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="DonationDate">@ResourcesHelper.Translate("DonationDate", lang)</label>
+                        <input asp-for="DonationDate" type="date" />
+                    </div>
+
+                    <div class="single">
+                        <label asp-for="DonorAgencyLookupId">@ResourcesHelper.Translate("DonorAgency", lang)</label>
+                        <select asp-for="DonorAgencyLookupId" asp-items="Model.DonorAgencies">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="DonorContractNo">@ResourcesHelper.Translate("DonorContractNo", lang)</label>
+                        <input asp-for="DonorContractNo" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ams-form-actions">
+            <button type="submit" class="rts-btn btn-primary">
+                @ResourcesHelper.Translate("SaveWeapon", lang)
+            </button>
+        </div>
+    </form>
+
+    <div class="user-profile-main-wrapper mt--30">
+        <h5 class="ams-section-title">@ResourcesHelper.Translate("ActiveWeapons", lang)</h5>
+
+        <div class="table-responsive">
+            <table class="table ams-table">
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                        <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
+                        <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
+                        <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
+                        <th>@ResourcesHelper.Translate("Manufacturer", lang)</th>
+                        <th>@ResourcesHelper.Translate("Caliber", lang)</th>
+                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in activeWeapons)
+                    {
+                        <tr>
+                            <td>@item.RegistrationNo</td>
+                            <td>@item.FactorySerial</td>
+                            <td>@item.WeaponModel?.Name</td>
+                            <td>@item.WeaponType?.Name</td>
+                            <td>@item.Manufacturer?.Name</td>
+                            <td>@item.Caliber?.Name</td>
+                            <td>@item.CurrentStatus?.Name</td>
+                        </tr>
+                    }
+
+                    @if (!activeWeapons.Any())
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoRecordsFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modelSelect = document.getElementById("WeaponModelId");
+            const typeSelect = document.getElementById("WeaponTypeId");
+            const manufacturerSelect = document.getElementById("ManufacturerId");
+            const caliberSelect = document.getElementById("CaliberId");
+            const manufacturerCountrySelect = document.getElementById("ManufactureCountryLookupId");
+            const imageWrap = document.getElementById("modelImageWrap");
+            const imagePreview = document.getElementById("modelImagePreview");
+
+            if (!modelSelect) return;
+
+            modelSelect.addEventListener("change", function () {
+                const modelId = this.value;
+
+                if (!modelId) {
+                    imageWrap.style.display = "none";
+                    imagePreview.removeAttribute("src");
+                    return;
+                }
+
+                fetch(`/Admin/Weapons/GetModelDetails?id=${modelId}`)
+                    .then(response => response.json())
+                          .then(data => {
+                    if (data.weaponTypeId) typeSelect.value = data.weaponTypeId;
+                    if (data.manufacturerId) manufacturerSelect.value = data.manufacturerId;
+                    if (data.caliberId) caliberSelect.value = data.caliberId;
+
+                    if (data.manufacturerCountryLookupId && manufacturerCountrySelect) {
+                        manufacturerCountrySelect.value = data.manufacturerCountryLookupId;
+                    }
+
+                    if (data.imagePath) {
+                        imagePreview.src = data.imagePath;
+                        imageWrap.style.display = "block";
+                    } else {
+                        imageWrap.style.display = "none";
+                        imagePreview.removeAttribute("src");
+                    }
+                });
+            });
+        });
+    </script>
 }

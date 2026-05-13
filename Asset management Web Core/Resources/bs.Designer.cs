@@ -79,6 +79,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aktivna oružja.
+        /// </summary>
+        public static string ActiveWeapons {
+            get {
+                return ResourceManager.GetString("ActiveWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dodaj kalibar.
         /// </summary>
         public static string AddCaliber {
@@ -205,6 +214,33 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Oznaka cijevi.
+        /// </summary>
+        public static string BarrelMark {
+            get {
+                return ResourceManager.GetString("BarrelMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Knjigovodstveno vodi.
+        /// </summary>
+        public static string BookkeepingBy {
+            get {
+                return ResourceManager.GetString("BookkeepingBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Oznaka kundaka.
+        /// </summary>
+        public static string ButtstockMark {
+            get {
+                return ResourceManager.GetString("ButtstockMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kalibar.
         /// </summary>
         public static string Caliber {
@@ -277,6 +313,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Potvrda serijskog broja.
+        /// </summary>
+        public static string ConfirmSerial {
+            get {
+                return ResourceManager.GetString("ConfirmSerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copyright.
         /// </summary>
         public static string Copyright {
@@ -331,6 +376,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Datum vlasništva.
+        /// </summary>
+        public static string DateOfOwnership {
+            get {
+                return ResourceManager.GetString("DateOfOwnership", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opis.
         /// </summary>
         public static string Description {
@@ -345,6 +399,42 @@ namespace Asset_management_Web_Core.Resources {
         public static string DisplayOrder {
             get {
                 return ResourceManager.GetString("DisplayOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datum donacije.
+        /// </summary>
+        public static string DonationDate {
+            get {
+                return ResourceManager.GetString("DonationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Donacija / privremena zaliha.
+        /// </summary>
+        public static string DonationTemporaryStock {
+            get {
+                return ResourceManager.GetString("DonationTemporaryStock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Donatorska agencija.
+        /// </summary>
+        public static string DonorAgency {
+            get {
+                return ResourceManager.GetString("DonorAgency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Broj ugovora donatora.
+        /// </summary>
+        public static string DonorContractNo {
+            get {
+                return ResourceManager.GetString("DonorContractNo", resourceCulture);
             }
         }
         
@@ -556,6 +646,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fabrički serijski broj.
+        /// </summary>
+        public static string FactorySerial {
+            get {
+                return ResourceManager.GetString("FactorySerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filtriraj.
         /// </summary>
         public static string Filter {
@@ -583,6 +682,24 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vladina agencija.
+        /// </summary>
+        public static string GovernmentAgency {
+            get {
+                return ResourceManager.GetString("GovernmentAgency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informacije o držaocu.
+        /// </summary>
+        public static string HolderInfo {
+            get {
+                return ResourceManager.GetString("HolderInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Početna.
         /// </summary>
         public static string Home {
@@ -601,11 +718,38 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID broj.
+        /// </summary>
+        public static string IdNo {
+            get {
+                return ResourceManager.GetString("IdNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Tip ID-a.
+        /// </summary>
+        public static string IdType {
+            get {
+                return ResourceManager.GetString("IdType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Slika.
         /// </summary>
         public static string Image {
             get {
                 return ResourceManager.GetString("Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inventurni broj.
+        /// </summary>
+        public static string InventoryNo {
+            get {
+                return ResourceManager.GetString("InventoryNo", resourceCulture);
             }
         }
         
@@ -664,11 +808,29 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Datum/godina proizvodnje.
+        /// </summary>
+        public static string ManufactureDate {
+            get {
+                return ResourceManager.GetString("ManufactureDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Proizvođač.
         /// </summary>
         public static string Manufacturer {
             get {
                 return ResourceManager.GetString("Manufacturer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Država proizvođača.
+        /// </summary>
+        public static string ManufacturerCountry {
+            get {
+                return ResourceManager.GetString("ManufacturerCountry", resourceCulture);
             }
         }
         
@@ -705,6 +867,24 @@ namespace Asset_management_Web_Core.Resources {
         public static string ManufactureYear {
             get {
                 return ResourceManager.GetString("ManufactureYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lokacije obilježavanja.
+        /// </summary>
+        public static string MarkLocations {
+            get {
+                return ResourceManager.GetString("MarkLocations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slika modela.
+        /// </summary>
+        public static string ModelImage {
+            get {
+                return ResourceManager.GetString("ModelImage", resourceCulture);
             }
         }
         
@@ -817,6 +997,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Napomene.
+        /// </summary>
+        public static string Notes {
+            get {
+                return ResourceManager.GetString("Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Bez skladišta --.
         /// </summary>
         public static string NoWarehouse {
@@ -862,11 +1051,74 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Originalna lokacija.
+        /// </summary>
+        public static string OriginalLocation {
+            get {
+                return ResourceManager.GetString("OriginalLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Originalne lokacije.
+        /// </summary>
+        public static string OriginalLocations {
+            get {
+                return ResourceManager.GetString("OriginalLocations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Originalno stanje.
+        /// </summary>
+        public static string OriginalState {
+            get {
+                return ResourceManager.GetString("OriginalState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Originalna stanja.
+        /// </summary>
+        public static string OriginalStates {
+            get {
+                return ResourceManager.GetString("OriginalStates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indikator porijekla.
+        /// </summary>
+        public static string OriginIndicator {
+            get {
+                return ResourceManager.GetString("OriginIndicator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Porijeklo i vlasništvo.
+        /// </summary>
+        public static string OriginOwnership {
+            get {
+                return ResourceManager.GetString("OriginOwnership", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lozinka.
         /// </summary>
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fizičke oznake.
+        /// </summary>
+        public static string PhysicalMarks {
+            get {
+                return ResourceManager.GetString("PhysicalMarks", resourceCulture);
             }
         }
         
@@ -889,6 +1141,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prospektivno.
+        /// </summary>
+        public static string Prospective {
+            get {
+                return ResourceManager.GetString("Prospective", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Svrha korištenja.
         /// </summary>
         public static string PurposeOfUse {
@@ -907,11 +1168,56 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Regija.
+        /// </summary>
+        public static string Region {
+            get {
+                return ResourceManager.GetString("Region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registruj oružje.
         /// </summary>
         public static string RegisterWeapon {
             get {
                 return ResourceManager.GetString("RegisterWeapon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prva registracija i obilježavanje službenog oružja..
+        /// </summary>
+        public static string RegisterWeaponDescription {
+            get {
+                return ResourceManager.GetString("RegisterWeaponDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podaci registracije.
+        /// </summary>
+        public static string RegistrationData {
+            get {
+                return ResourceManager.GetString("RegistrationData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datum registracije.
+        /// </summary>
+        public static string RegistrationDate {
+            get {
+                return ResourceManager.GetString("RegistrationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Broj registracije.
+        /// </summary>
+        public static string RegistrationNo {
+            get {
+                return ResourceManager.GetString("RegistrationNo", resourceCulture);
             }
         }
         
@@ -952,6 +1258,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sačuvaj oružje.
+        /// </summary>
+        public static string SaveWeapon {
+            get {
+                return ResourceManager.GetString("SaveWeapon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pretraga.
         /// </summary>
         public static string Search {
@@ -988,11 +1303,29 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -- Odaberi --.
+        /// </summary>
+        public static string SelectOption {
+            get {
+                return ResourceManager.GetString("SelectOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Odaberi rolu --.
         /// </summary>
         public static string SelectRole {
             get {
                 return ResourceManager.GetString("SelectRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Odaberi model oružja --.
+        /// </summary>
+        public static string SelectWeaponModel {
+            get {
+                return ResourceManager.GetString("SelectWeaponModel", resourceCulture);
             }
         }
         
@@ -1024,11 +1357,56 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Oznaka zatvarača.
+        /// </summary>
+        public static string SlideMark {
+            get {
+                return ResourceManager.GetString("SlideMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status i dodatni podaci.
+        /// </summary>
+        public static string StatusAndAdditional {
+            get {
+                return ResourceManager.GetString("StatusAndAdditional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zaliha.
+        /// </summary>
+        public static string Stock {
+            get {
+                return ResourceManager.GetString("Stock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privremena zaliha.
+        /// </summary>
+        public static string TempStock {
+            get {
+                return ResourceManager.GetString("TempStock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jedinica.
+        /// </summary>
+        public static string Unit {
+            get {
+                return ResourceManager.GetString("Unit", resourceCulture);
             }
         }
         
@@ -1087,11 +1465,38 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identitet oružja.
+        /// </summary>
+        public static string WeaponIdentity {
+            get {
+                return ResourceManager.GetString("WeaponIdentity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tip oružja.
+        /// </summary>
+        public static string WeaponItemType {
+            get {
+                return ResourceManager.GetString("WeaponItemType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Legalnost oružja.
         /// </summary>
         public static string WeaponLegality {
             get {
                 return ResourceManager.GetString("WeaponLegality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model oružja.
+        /// </summary>
+        public static string WeaponModel {
+            get {
+                return ResourceManager.GetString("WeaponModel", resourceCulture);
             }
         }
         
@@ -1137,6 +1542,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string WeaponState {
             get {
                 return ResourceManager.GetString("WeaponState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status oružja.
+        /// </summary>
+        public static string WeaponStatus {
+            get {
+                return ResourceManager.GetString("WeaponStatus", resourceCulture);
             }
         }
         

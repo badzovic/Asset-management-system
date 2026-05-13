@@ -468,3 +468,29 @@
     border: 1px solid #334155;
     padding: 8px;
 }
+.ams-register-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.ams-section-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.75);
+}
+
+.ams-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+    .ams-register-grid {
+        grid-template-columns: 1fr;
+    }
+}

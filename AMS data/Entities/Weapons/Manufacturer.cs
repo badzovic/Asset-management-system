@@ -14,7 +14,6 @@ namespace AMS_data.Entities.Weapons
         public string? Code { get; set; }
         public string? Country { get; set; }
         public string? Description { get; set; }
-
         public bool IsActive { get; set; } = true;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

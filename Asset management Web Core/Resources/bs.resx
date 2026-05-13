@@ -498,4 +498,142 @@
   <data name="CurrentImage" xml:space="preserve">
     <value>Trenutna slika</value>
   </data>
+  <data name="RegisterWeaponDescription" xml:space="preserve">
+    <value>Prva registracija i obilježavanje službenog oružja.</value>
+  </data>
+  <data name="RegistrationData" xml:space="preserve">
+    <value>Podaci registracije</value>
+  </data>
+  <data name="RegistrationNo" xml:space="preserve">
+    <value>Broj registracije</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Datum registracije</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Regija</value>
+  </data>
+  <data name="GovernmentAgency" xml:space="preserve">
+    <value>Vladina agencija</value>
+  </data>
+  <data name="Prospective" xml:space="preserve">
+    <value>Prospektivno</value>
+  </data>
+  <data name="WeaponIdentity" xml:space="preserve">
+    <value>Identitet oružja</value>
+  </data>
+  <data name="FactorySerial" xml:space="preserve">
+    <value>Fabrički serijski broj</value>
+  </data>
+  <data name="ConfirmSerial" xml:space="preserve">
+    <value>Potvrda serijskog broja</value>
+  </data>
+  <data name="WeaponModel" xml:space="preserve">
+    <value>Model oružja</value>
+  </data>
+  <data name="SelectWeaponModel" xml:space="preserve">
+    <value>-- Odaberi model oružja --</value>
+  </data>
+  <data name="ManufacturerCountry" xml:space="preserve">
+    <value>Država proizvođača</value>
+  </data>
+  <data name="ManufactureDate" xml:space="preserve">
+    <value>Datum/godina proizvodnje</value>
+  </data>
+  <data name="ModelImage" xml:space="preserve">
+    <value>Slika modela</value>
+  </data>
+  <data name="OriginOwnership" xml:space="preserve">
+    <value>Porijeklo i vlasništvo</value>
+  </data>
+  <data name="OriginalLocation" xml:space="preserve">
+    <value>Originalna lokacija</value>
+  </data>
+  <data name="OriginIndicator" xml:space="preserve">
+    <value>Indikator porijekla</value>
+  </data>
+  <data name="OriginalState" xml:space="preserve">
+    <value>Originalno stanje</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Jedinica</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Zaliha</value>
+  </data>
+  <data name="BookkeepingBy" xml:space="preserve">
+    <value>Knjigovodstveno vodi</value>
+  </data>
+  <data name="PhysicalMarks" xml:space="preserve">
+    <value>Fizičke oznake</value>
+  </data>
+  <data name="BarrelMark" xml:space="preserve">
+    <value>Oznaka cijevi</value>
+  </data>
+  <data name="SlideMark" xml:space="preserve">
+    <value>Oznaka zatvarača</value>
+  </data>
+  <data name="ButtstockMark" xml:space="preserve">
+    <value>Oznaka kundaka</value>
+  </data>
+  <data name="IdType" xml:space="preserve">
+    <value> Tip ID-a</value>
+  </data>
+  <data name="IdNo" xml:space="preserve">
+    <value>ID broj</value>
+  </data>
+  <data name="DateOfOwnership" xml:space="preserve">
+    <value>Datum vlasništva</value>
+  </data>
+  <data name="HolderInfo" xml:space="preserve">
+    <value>Informacije o držaocu</value>
+  </data>
+  <data name="StatusAndAdditional" xml:space="preserve">
+    <value>Status i dodatni podaci</value>
+  </data>
+  <data name="WeaponStatus" xml:space="preserve">
+    <value>Status oružja</value>
+  </data>
+  <data name="InventoryNo" xml:space="preserve">
+    <value>Inventurni broj</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Napomene</value>
+  </data>
+  <data name="DonationTemporaryStock" xml:space="preserve">
+    <value>Donacija / privremena zaliha</value>
+  </data>
+  <data name="TempStock" xml:space="preserve">
+    <value>Privremena zaliha</value>
+  </data>
+  <data name="DonationDate" xml:space="preserve">
+    <value>Datum donacije</value>
+  </data>
+  <data name="DonorAgency" xml:space="preserve">
+    <value>Donatorska agencija</value>
+  </data>
+  <data name="DonorContractNo" xml:space="preserve">
+    <value>Broj ugovora donatora</value>
+  </data>
+  <data name="SaveWeapon" xml:space="preserve">
+    <value>Sačuvaj oružje</value>
+  </data>
+  <data name="ActiveWeapons" xml:space="preserve">
+    <value>Aktivna oružja</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>-- Odaberi --</value>
+  </data>
+  <data name="MarkLocations" xml:space="preserve">
+    <value>Lokacije obilježavanja</value>
+  </data>
+  <data name="OriginalLocations" xml:space="preserve">
+    <value>Originalne lokacije</value>
+  </data>
+  <data name="OriginalStates" xml:space="preserve">
+    <value>Originalna stanja</value>
+  </data>
+  <data name="WeaponItemType" xml:space="preserve">
+    <value>Tip oružja</value>
+  </data>
 </root>

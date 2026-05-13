@@ -86,6 +86,10 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             if (category == null)
                 return NotFound();
 
+            ModelState.Remove("LookupCategory");
+            ModelState.Remove("ParentLookupItem");
+            ModelState.Remove("Children");
+
             if (!ModelState.IsValid)
             {
                 ViewBag.Category = category;
@@ -141,6 +145,10 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
             if (item == null)
                 return NotFound();
+
+            ModelState.Remove("LookupCategory");
+            ModelState.Remove("ParentLookupItem");
+            ModelState.Remove("Children");
 
             if (!ModelState.IsValid)
             {

@@ -127,6 +127,7 @@ wwwroot\assets\images\icons\11.png
 wwwroot\assets\images\icons\12.png
 wwwroot\assets\images\icons\14.png
 wwwroot\assets\images\icons\15.png
+wwwroot\assets\images\icons\16.png
 wwwroot\assets\images\logo\logo-01.png
 wwwroot\assets\images\logo\logo-02.png
 wwwroot\assets\js\main.js

@@ -502,4 +502,145 @@
   <data name="CurrentImage" xml:space="preserve">
     <value>Current image</value>
   </data>
+  <data name="RegisterWeaponDescription" xml:space="preserve">
+    <value>Register Weapon Description </value>
+  </data>
+  <data name="RegistrationData" xml:space="preserve">
+    <value>Registration Data </value>
+  </data>
+  <data name="RegistrationNo" xml:space="preserve">
+    <value>Registration No </value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Registration Date</value>
+  </data>
+  <data name="MarkLocation" xml:space="preserve">
+    <value>Mark Location</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="GovernmentAgency" xml:space="preserve">
+    <value>GovernmentAgency</value>
+  </data>
+  <data name="Prospective" xml:space="preserve">
+    <value>Prospective</value>
+  </data>
+  <data name="WeaponIdentity" xml:space="preserve">
+    <value>WeaponIdentity</value>
+  </data>
+  <data name="FactorySerial" xml:space="preserve">
+    <value>FactorySerial</value>
+  </data>
+  <data name="ConfirmSerial" xml:space="preserve">
+    <value>ConfirmSerial</value>
+  </data>
+  <data name="WeaponModel" xml:space="preserve">
+    <value>WeaponModel</value>
+  </data>
+  <data name="SelectWeaponModel" xml:space="preserve">
+    <value>Select Weapon Model</value>
+  </data>
+  <data name="ManufacturerCountry" xml:space="preserve">
+    <value>Manufacturer Country </value>
+  </data>
+  <data name="ManufactureDate" xml:space="preserve">
+    <value>Manufacture Date</value>
+  </data>
+  <data name="ModelImage" xml:space="preserve">
+    <value>Model Image</value>
+  </data>
+  <data name="OriginOwnership" xml:space="preserve">
+    <value>Origin Ownership</value>
+  </data>
+  <data name="OriginalLocation" xml:space="preserve">
+    <value>Original Location</value>
+  </data>
+  <data name="OriginIndicator" xml:space="preserve">
+    <value>Origin Indicator</value>
+  </data>
+  <data name="OriginalState" xml:space="preserve">
+    <value>Original State</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="BookkeepingBy" xml:space="preserve">
+    <value>Bookkeeping By</value>
+  </data>
+  <data name="PhysicalMarks" xml:space="preserve">
+    <value>Physical Marks </value>
+  </data>
+  <data name="BarrelMark" xml:space="preserve">
+    <value>Barrel Mark</value>
+  </data>
+  <data name="SlideMark" xml:space="preserve">
+    <value>Slide Mark</value>
+  </data>
+  <data name="ButtstockMark" xml:space="preserve">
+    <value>Buttstock Mark</value>
+  </data>
+  <data name="IdType" xml:space="preserve">
+    <value>Id Type </value>
+  </data>
+  <data name="IdNo" xml:space="preserve">
+    <value>Id No</value>
+  </data>
+  <data name="DateOfOwnership" xml:space="preserve">
+    <value>Date Of Ownership </value>
+  </data>
+  <data name="HolderInfo" xml:space="preserve">
+    <value>Holder Info </value>
+  </data>
+  <data name="StatusAndAdditional" xml:space="preserve">
+    <value>Status And Additional</value>
+  </data>
+  <data name="WeaponStatus" xml:space="preserve">
+    <value>Weapon Status</value>
+  </data>
+  <data name="InventoryNo" xml:space="preserve">
+    <value>Inventory No </value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="DonationTemporaryStock" xml:space="preserve">
+    <value>Donation Temporary Stock </value>
+  </data>
+  <data name="TempStock" xml:space="preserve">
+    <value>Temp Stock</value>
+  </data>
+  <data name="DonationDate" xml:space="preserve">
+    <value>Donation Date</value>
+  </data>
+  <data name="DonorAgency" xml:space="preserve">
+    <value>Donor Agency</value>
+  </data>
+  <data name="DonorContractNo" xml:space="preserve">
+    <value>Donor Contract No</value>
+  </data>
+  <data name="SaveWeapon" xml:space="preserve">
+    <value>Save Weapon</value>
+  </data>
+  <data name="ActiveWeapons" xml:space="preserve">
+    <value>Active Weapons</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>-- Select option --</value>
+  </data>
+  <data name="MarkLocations" xml:space="preserve">
+    <value>Mark Locations</value>
+  </data>
+  <data name="OriginalLocations" xml:space="preserve">
+    <value>Original Locations</value>
+  </data>
+  <data name="OriginIndicators" xml:space="preserve">
+    <value>Origin Indicators</value>
+  </data>
+  <data name="OriginalStates" xml:space="preserve">
+    <value>Original States</value>
+  </data>
 </root>

@@ -103,6 +103,26 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == "/")
+    {
+        if (context.User.Identity != null &&
+            context.User.Identity.IsAuthenticated)
+        {
+            context.Response.Redirect("/Home");
+        }
+        else
+        {
+            context.Response.Redirect("/Identity/Account/Login");
+        }
+
+        return;
+    }
+
+    await next();
+});
+
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");

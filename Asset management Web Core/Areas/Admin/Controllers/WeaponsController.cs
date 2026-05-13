@@ -34,7 +34,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             {
                 RegistrationNo = await GenerateRegistrationNo(),
                 RegistrationDate = DateTime.Today,
-                IsMarked = true
+                IsMarked = false
             };
 
             model = await PopulateDropdowns(model);
@@ -141,6 +141,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             return RedirectToAction(nameof(Register));
         }
 
+
         [HttpGet]
         public async Task<IActionResult> GetModelDetails(int id)
         {
@@ -153,14 +154,33 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             if (model == null)
                 return NotFound();
 
+            int? manufacturerCountryLookupId = null;
+
+            if (!string.IsNullOrWhiteSpace(model.Manufacturer?.Country))
+            {
+                manufacturerCountryLookupId = await _db.LookupItems
+                    .Include(x => x.LookupCategory)
+                    .Where(x =>
+                        x.IsActive &&
+                        x.LookupCategory.Key == "ManufacturerCountry" &&
+                        x.Name == model.Manufacturer.Country)
+                    .Select(x => (int?)x.Id)
+                    .FirstOrDefaultAsync();
+            }
+
             return Json(new
             {
                 weaponTypeId = model.WeaponTypeId,
                 weaponTypeName = model.WeaponType?.Name,
+
                 manufacturerId = model.ManufacturerId,
                 manufacturerName = model.Manufacturer?.Name,
+                manufacturerCountry = model.Manufacturer?.Country,
+                manufacturerCountryLookupId,
+
                 caliberId = model.CaliberId,
                 caliberName = model.Caliber?.Name,
+
                 imagePath = model.ImagePath
             });
         }

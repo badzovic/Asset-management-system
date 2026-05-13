@@ -79,6 +79,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active Weapons.
+        /// </summary>
+        public static string ActiveWeapons {
+            get {
+                return ResourceManager.GetString("ActiveWeapons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add caliber.
         /// </summary>
         public static string AddCaliber {
@@ -196,6 +205,33 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Barrel Mark.
+        /// </summary>
+        public static string BarrelMark {
+            get {
+                return ResourceManager.GetString("BarrelMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bookkeeping By.
+        /// </summary>
+        public static string BookkeepingBy {
+            get {
+                return ResourceManager.GetString("BookkeepingBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Buttstock Mark.
+        /// </summary>
+        public static string ButtstockMark {
+            get {
+                return ResourceManager.GetString("ButtstockMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Caliber.
         /// </summary>
         public static string Caliber {
@@ -268,6 +304,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ConfirmSerial.
+        /// </summary>
+        public static string ConfirmSerial {
+            get {
+                return ResourceManager.GetString("ConfirmSerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Rights Reserved..
         /// </summary>
         public static string Copyright {
@@ -322,6 +367,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date Of Ownership .
+        /// </summary>
+        public static string DateOfOwnership {
+            get {
+                return ResourceManager.GetString("DateOfOwnership", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description {
@@ -336,6 +390,42 @@ namespace Asset_management_Web_Core.Resources {
         public static string DisplayOrder {
             get {
                 return ResourceManager.GetString("DisplayOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Donation Date.
+        /// </summary>
+        public static string DonationDate {
+            get {
+                return ResourceManager.GetString("DonationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Donation Temporary Stock .
+        /// </summary>
+        public static string DonationTemporaryStock {
+            get {
+                return ResourceManager.GetString("DonationTemporaryStock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Donor Agency.
+        /// </summary>
+        public static string DonorAgency {
+            get {
+                return ResourceManager.GetString("DonorAgency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Donor Contract No.
+        /// </summary>
+        public static string DonorContractNo {
+            get {
+                return ResourceManager.GetString("DonorContractNo", resourceCulture);
             }
         }
         
@@ -547,6 +637,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FactorySerial.
+        /// </summary>
+        public static string FactorySerial {
+            get {
+                return ResourceManager.GetString("FactorySerial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Filter.
         /// </summary>
         public static string Filter {
@@ -574,6 +673,24 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GovernmentAgency.
+        /// </summary>
+        public static string GovernmentAgency {
+            get {
+                return ResourceManager.GetString("GovernmentAgency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Holder Info .
+        /// </summary>
+        public static string HolderInfo {
+            get {
+                return ResourceManager.GetString("HolderInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
@@ -592,6 +709,24 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Id No.
+        /// </summary>
+        public static string IdNo {
+            get {
+                return ResourceManager.GetString("IdNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id Type .
+        /// </summary>
+        public static string IdType {
+            get {
+                return ResourceManager.GetString("IdType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Image.
         /// </summary>
         public static string Image {
@@ -606,6 +741,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string Inactive {
             get {
                 return ResourceManager.GetString("Inactive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inventory No .
+        /// </summary>
+        public static string InventoryNo {
+            get {
+                return ResourceManager.GetString("InventoryNo", resourceCulture);
             }
         }
         
@@ -664,11 +808,29 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manufacture Date.
+        /// </summary>
+        public static string ManufactureDate {
+            get {
+                return ResourceManager.GetString("ManufactureDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Manufacturer.
         /// </summary>
         public static string Manufacturer {
             get {
                 return ResourceManager.GetString("Manufacturer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manufacturer Country .
+        /// </summary>
+        public static string ManufacturerCountry {
+            get {
+                return ResourceManager.GetString("ManufacturerCountry", resourceCulture);
             }
         }
         
@@ -705,6 +867,33 @@ namespace Asset_management_Web_Core.Resources {
         public static string ManufactureYear {
             get {
                 return ResourceManager.GetString("ManufactureYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark Location.
+        /// </summary>
+        public static string MarkLocation {
+            get {
+                return ResourceManager.GetString("MarkLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mark Locations.
+        /// </summary>
+        public static string MarkLocations {
+            get {
+                return ResourceManager.GetString("MarkLocations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model Image.
+        /// </summary>
+        public static string ModelImage {
+            get {
+                return ResourceManager.GetString("ModelImage", resourceCulture);
             }
         }
         
@@ -817,6 +1006,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Notes.
+        /// </summary>
+        public static string Notes {
+            get {
+                return ResourceManager.GetString("Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- No warehouse --.
         /// </summary>
         public static string NoWarehouse {
@@ -862,11 +1060,83 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Original Location.
+        /// </summary>
+        public static string OriginalLocation {
+            get {
+                return ResourceManager.GetString("OriginalLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Original Locations.
+        /// </summary>
+        public static string OriginalLocations {
+            get {
+                return ResourceManager.GetString("OriginalLocations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Original State.
+        /// </summary>
+        public static string OriginalState {
+            get {
+                return ResourceManager.GetString("OriginalState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Original States.
+        /// </summary>
+        public static string OriginalStates {
+            get {
+                return ResourceManager.GetString("OriginalStates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin Indicator.
+        /// </summary>
+        public static string OriginIndicator {
+            get {
+                return ResourceManager.GetString("OriginIndicator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin Indicators.
+        /// </summary>
+        public static string OriginIndicators {
+            get {
+                return ResourceManager.GetString("OriginIndicators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Origin Ownership.
+        /// </summary>
+        public static string OriginOwnership {
+            get {
+                return ResourceManager.GetString("OriginOwnership", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physical Marks .
+        /// </summary>
+        public static string PhysicalMarks {
+            get {
+                return ResourceManager.GetString("PhysicalMarks", resourceCulture);
             }
         }
         
@@ -889,6 +1159,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prospective.
+        /// </summary>
+        public static string Prospective {
+            get {
+                return ResourceManager.GetString("Prospective", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Purpose of use.
         /// </summary>
         public static string PurposeOfUse {
@@ -907,11 +1186,56 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Region.
+        /// </summary>
+        public static string Region {
+            get {
+                return ResourceManager.GetString("Region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register Weapon.
         /// </summary>
         public static string RegisterWeapon {
             get {
                 return ResourceManager.GetString("RegisterWeapon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register Weapon Description .
+        /// </summary>
+        public static string RegisterWeaponDescription {
+            get {
+                return ResourceManager.GetString("RegisterWeaponDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration Data .
+        /// </summary>
+        public static string RegistrationData {
+            get {
+                return ResourceManager.GetString("RegistrationData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration Date.
+        /// </summary>
+        public static string RegistrationDate {
+            get {
+                return ResourceManager.GetString("RegistrationDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration No .
+        /// </summary>
+        public static string RegistrationNo {
+            get {
+                return ResourceManager.GetString("RegistrationNo", resourceCulture);
             }
         }
         
@@ -952,6 +1276,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Save Weapon.
+        /// </summary>
+        public static string SaveWeapon {
+            get {
+                return ResourceManager.GetString("SaveWeapon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search.
         /// </summary>
         public static string Search {
@@ -988,11 +1321,29 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -- Select option --.
+        /// </summary>
+        public static string SelectOption {
+            get {
+                return ResourceManager.GetString("SelectOption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to -- Select role --.
         /// </summary>
         public static string SelectRole {
             get {
                 return ResourceManager.GetString("SelectRole", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Weapon Model.
+        /// </summary>
+        public static string SelectWeaponModel {
+            get {
+                return ResourceManager.GetString("SelectWeaponModel", resourceCulture);
             }
         }
         
@@ -1024,11 +1375,56 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Slide Mark.
+        /// </summary>
+        public static string SlideMark {
+            get {
+                return ResourceManager.GetString("SlideMark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status And Additional.
+        /// </summary>
+        public static string StatusAndAdditional {
+            get {
+                return ResourceManager.GetString("StatusAndAdditional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stock.
+        /// </summary>
+        public static string Stock {
+            get {
+                return ResourceManager.GetString("Stock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Temp Stock.
+        /// </summary>
+        public static string TempStock {
+            get {
+                return ResourceManager.GetString("TempStock", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit.
+        /// </summary>
+        public static string Unit {
+            get {
+                return ResourceManager.GetString("Unit", resourceCulture);
             }
         }
         
@@ -1087,6 +1483,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to WeaponIdentity.
+        /// </summary>
+        public static string WeaponIdentity {
+            get {
+                return ResourceManager.GetString("WeaponIdentity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Weapon item type.
         /// </summary>
         public static string WeaponItemType {
@@ -1101,6 +1506,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string WeaponLegality {
             get {
                 return ResourceManager.GetString("WeaponLegality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WeaponModel.
+        /// </summary>
+        public static string WeaponModel {
+            get {
+                return ResourceManager.GetString("WeaponModel", resourceCulture);
             }
         }
         
@@ -1146,6 +1560,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string WeaponState {
             get {
                 return ResourceManager.GetString("WeaponState", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weapon Status.
+        /// </summary>
+        public static string WeaponStatus {
+            get {
+                return ResourceManager.GetString("WeaponStatus", resourceCulture);
             }
         }
         
