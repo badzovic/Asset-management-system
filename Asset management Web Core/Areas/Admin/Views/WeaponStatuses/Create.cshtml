@@ -1,0 +1,50 @@
+﻿@model AMS_data.Entities.Weapons.WeaponStatus
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("AddWeaponStatus", lang);
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+
+        <div>
+            <h4 class="title mb-1">
+                @ResourcesHelper.Translate("AddWeaponStatus", lang)
+            </h4>
+
+            <p class="ams-page-subtitle">
+                @ResourcesHelper.Translate("WeaponStatusFormDescription", lang)
+            </p>
+        </div>
+
+        <a asp-action="Index"
+           class="ams-btn-secondary">
+            @ResourcesHelper.Translate("BackToList", lang)
+        </a>
+
+    </div>
+
+    <div class="user-profile-main-wrapper">
+
+        <form asp-action="Create" method="post">
+
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="All"
+                 class="text-danger mb-3"></div>
+
+            <partial name="_WeaponStatusForm" model="Model" />
+
+            <button type="submit"
+                    class="rts-btn btn-primary mt--20">
+                @ResourcesHelper.Translate("Save", lang)
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

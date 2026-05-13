@@ -1,0 +1,113 @@
+﻿@model List<AMS_data.Entities.Weapons.WeaponModel>
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("WeaponModels", lang);
+}
+
+<div class="user-profile-inner">
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("WeaponModels", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("WeaponModelsDescription", lang)</p>
+        </div>
+
+        <a asp-action="Create" class="rts-btn btn-primary">
+            @ResourcesHelper.Translate("AddNew", lang)
+        </a>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+        <form method="get" class="ams-filter-bar">
+            <div class="ams-filter-item">
+                <input type="text"
+                       name="search"
+                       value="@ViewBag.Search"
+                       placeholder="@ResourcesHelper.Translate("Search", lang)" />
+            </div>
+
+            <div class="ams-filter-item">
+                <select name="status">
+                    <option value="">@ResourcesHelper.Translate("AllStatuses", lang)</option>
+                    <option value="active" selected="@(ViewBag.Status == "active")">@ResourcesHelper.Translate("Active", lang)</option>
+                    <option value="inactive" selected="@(ViewBag.Status == "inactive")">@ResourcesHelper.Translate("Inactive", lang)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="ams-btn-secondary">
+                @ResourcesHelper.Translate("Filter", lang)
+            </button>
+
+            <a asp-action="Index" class="ams-btn-small">
+                @ResourcesHelper.Translate("Reset", lang)
+            </a>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table ams-table">
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("Image", lang)</th>
+                        <th>@ResourcesHelper.Translate("Name", lang)</th>
+                        <th>@ResourcesHelper.Translate("Code", lang)</th>
+                        <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
+                        <th>@ResourcesHelper.Translate("Manufacturer", lang)</th>
+                        <th>@ResourcesHelper.Translate("Caliber", lang)</th>
+                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                        <th class="text-end">@ResourcesHelper.Translate("Actions", lang)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (!string.IsNullOrWhiteSpace(item.ImagePath))
+                                {
+                                    <img src="@item.ImagePath" class="ams-table-thumb" alt="@item.Name" />
+                                }
+                                else
+                                {
+                                    <div class="ams-table-thumb-placeholder">
+                                        <i class="fa-solid fa-image"></i>
+                                    </div>
+                                }
+                            </td>
+                            <td>@item.Name</td>
+                            <td>@item.Code</td>
+                            <td>@item.WeaponType?.Name</td>
+                            <td>@item.Manufacturer?.Name</td>
+                            <td>@item.Caliber?.Name</td>
+                            <td>
+                                @if (item.IsActive)
+                                {
+                                    <span class="ams-badge ams-badge-success">@ResourcesHelper.Translate("Active", lang)</span>
+                                }
+                                else
+                                {
+                                    <span class="ams-badge ams-badge-muted">@ResourcesHelper.Translate("Inactive", lang)</span>
+                                }
+                            </td>
+                            <td class="text-end">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="ams-btn-small">
+                                    @ResourcesHelper.Translate("Edit", lang)
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoRecordsFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -331,4 +331,175 @@
   <data name="Copyright" xml:space="preserve">
     <value>All Rights Reserved.</value>
   </data>
+  <data name="LookupItems" xml:space="preserve">
+    <value>Lookup Items </value>
+  </data>
+  <data name="LookupItemsDescription" xml:space="preserve">
+    <value>Manage values for the selected lookup category.</value>
+  </data>
+  <data name="AddLookupItem" xml:space="preserve">
+    <value>Add item</value>
+  </data>
+  <data name="EditLookupItem" xml:space="preserve">
+    <value>Edit item</value>
+  </data>
+  <data name="BackToDataCapture" xml:space="preserve">
+    <value>Back to data capture</value>
+  </data>
+  <data name="DisplayOrder" xml:space="preserve">
+    <value>Display order</value>
+  </data>
+  <data name="EnterDisplayOrder" xml:space="preserve">
+    <value>Enter display order</value>
+  </data>
+  <data name="WeaponState" xml:space="preserve">
+    <value>Weapon state</value>
+  </data>
+  <data name="WeaponLegality" xml:space="preserve">
+    <value>Weapon legality</value>
+  </data>
+  <data name="WeaponItemType" xml:space="preserve">
+    <value>Weapon item type</value>
+  </data>
+  <data name="ManufactureYear" xml:space="preserve">
+    <value>Manufacture year</value>
+  </data>
+  <data name="PurposeOfUse" xml:space="preserve">
+    <value>Purpose of use</value>
+  </data>
+  <data name="CheckState" xml:space="preserve">
+    <value>Check state</value>
+  </data>
+  <data name="MoveStatus" xml:space="preserve">
+    <value>Move status</value>
+  </data>
+  <data name="MovedWeaponLocation" xml:space="preserve">
+    <value>Moved weapon locations</value>
+  </data>
+  <data name="MoveAuthoriserNames" xml:space="preserve">
+    <value>Move authoriser names</value>
+  </data>
+  <data name="MoveEvidencePurpose" xml:space="preserve">
+    <value>Move evidence purpose</value>
+  </data>
+  <data name="SearchOptions" xml:space="preserve">
+    <value>Search options</value>
+  </data>
+  <data name="EvidenceData" xml:space="preserve">
+    <value>Evidence data</value>
+  </data>
+  <data name="EvidenceDataDescription" xml:space="preserve">
+    <value>Lookup data for evidence, items, weapons, deposit locations and case types.</value>
+  </data>
+  <data name="EvidenceWeaponType" xml:space="preserve">
+    <value>Evidence weapon types</value>
+  </data>
+  <data name="EvidenceWeapon" xml:space="preserve">
+    <value>Evidence weapons</value>
+  </data>
+  <data name="EvidenceIndicator" xml:space="preserve">
+    <value>Evidence indicators</value>
+  </data>
+  <data name="EvidenceDepositLocation" xml:space="preserve">
+    <value>Evidence deposit locations</value>
+  </data>
+  <data name="CaseType" xml:space="preserve">
+    <value>Case type</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="RegisterWeapon" xml:space="preserve">
+    <value>Register Weapon</value>
+  </data>
+  <data name="CheckWeaponStatus" xml:space="preserve">
+    <value>Check Weapon Status</value>
+  </data>
+  <data name="PrepareWeaponMove" xml:space="preserve">
+    <value>Prepare weapon move</value>
+  </data>
+  <data name="AuthoriseWeaponMove" xml:space="preserve">
+    <value>Authorise weapon move</value>
+  </data>
+  <data name="QueryGenerator" xml:space="preserve">
+    <value>Query generator</value>
+  </data>
+  <data name="ManufacturersDescription" xml:space="preserve">
+    <value>Manage weapon manufacturer lookup data.</value>
+  </data>
+  <data name="AddManufacturer" xml:space="preserve">
+    <value>Add manufacturer</value>
+  </data>
+  <data name="EditManufacturer" xml:space="preserve">
+    <value>Edit manufacturer</value>
+  </data>
+  <data name="ManufacturerFormDescription" xml:space="preserve">
+    <value>Enter basic manufacturer information.</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="EnterCountry" xml:space="preserve">
+    <value>Enter Country</value>
+  </data>
+  <data name="CalibersDescription" xml:space="preserve">
+    <value>Manage caliber lookup data.</value>
+  </data>
+  <data name="AddCaliber" xml:space="preserve">
+    <value>Add caliber</value>
+  </data>
+  <data name="EditCaliber" xml:space="preserve">
+    <value>Edit Caliber</value>
+  </data>
+  <data name="CaliberFormDescription" xml:space="preserve">
+    <value>Enter basic caliber information.</value>
+  </data>
+  <data name="WeaponStatusesDescription" xml:space="preserve">
+    <value>Manage weapon status lookup data.</value>
+  </data>
+  <data name="AddWeaponStatus" xml:space="preserve">
+    <value>Add weapon status</value>
+  </data>
+  <data name="EditWeaponStatus" xml:space="preserve">
+    <value>Edit weapon status</value>
+  </data>
+  <data name="WeaponStatusFormDescription" xml:space="preserve">
+    <value>Enter basic weapon status information.</value>
+  </data>
+  <data name="WeaponModelsDescription" xml:space="preserve">
+    <value>Manage weapon models, manufacturers, calibers and images.</value>
+  </data>
+  <data name="AddWeaponModel" xml:space="preserve">
+    <value>Add weapon model</value>
+  </data>
+  <data name="EditWeaponModel" xml:space="preserve">
+    <value>Edit weapon model</value>
+  </data>
+  <data name="WeaponModelFormDescription" xml:space="preserve">
+    <value>Enter basic weapon model information.</value>
+  </data>
+  <data name="WeaponType" xml:space="preserve">
+    <value>Weapon type</value>
+  </data>
+  <data name="SelectWeaponType" xml:space="preserve">
+    <value>-- Select weapon type --</value>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Manufacturer</value>
+  </data>
+  <data name="SelectManufacturer" xml:space="preserve">
+    <value>-- Select manufacturer --</value>
+  </data>
+  <data name="Caliber" xml:space="preserve">
+    <value>Caliber</value>
+  </data>
+  <data name="SelectCaliber" xml:space="preserve">
+    <value>-- Select caliber --</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="CurrentImage" xml:space="preserve">
+    <value>Current image</value>
+  </data>
 </root>

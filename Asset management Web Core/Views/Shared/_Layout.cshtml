@@ -170,13 +170,71 @@
                     {
                         <div class="single-menu-wrapper">
 
-                            <a href="#" class="single-menu">
+                            <a class="collapse-btn collapsed single-menu"
+                               data-bs-toggle="collapse"
+                               href="#weaponsMenu"
+                               role="button"
+                               aria-expanded="false"
+                               aria-controls="weaponsMenu">
+
                                 <div class="icon">
                                     <img src="~/assets/images/icons/04.png" alt="weapons">
                                 </div>
 
                                 <p>@ResourcesHelper.Translate("WeaponsRegistration", lang)</p>
                             </a>
+
+                            <div class="collapse" id="weaponsMenu">
+
+                                <ul class="submenu rts-default-sidebar-list">
+
+                                    <li>
+                                        <a asp-area="Admin"
+                                           asp-controller="DataCapture"
+                                           asp-action="Index">
+                                            <i class="fa-solid fa-database"></i>
+                                            <span>@ResourcesHelper.Translate("DataCapture", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-gun"></i>
+                                            <span>@ResourcesHelper.Translate("RegisterWeapon", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <span>@ResourcesHelper.Translate("CheckWeaponStatus", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-right-left"></i>
+                                            <span>@ResourcesHelper.Translate("PrepareWeaponMove", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-shield"></i>
+                                            <span>@ResourcesHelper.Translate("AuthoriseWeaponMove", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>@ResourcesHelper.Translate("QueryGenerator", lang)</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
 
                             <a href="#" class="single-menu">
                                 <div class="icon">

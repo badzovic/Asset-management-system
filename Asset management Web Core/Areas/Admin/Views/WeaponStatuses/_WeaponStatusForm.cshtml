@@ -1,0 +1,65 @@
+﻿@model AMS_data.Entities.Weapons.WeaponStatus
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+}
+
+<div class="half-input-wrapper">
+
+    <div class="single">
+        <label asp-for="Name">
+            @ResourcesHelper.Translate("Name", lang)
+        </label>
+
+        <input asp-for="Name"
+               placeholder="@ResourcesHelper.Translate("EnterName", lang)" />
+
+        <span asp-validation-for="Name"
+              class="text-danger"></span>
+    </div>
+
+    <div class="single">
+        <label asp-for="Code">
+            @ResourcesHelper.Translate("Code", lang)
+        </label>
+
+        <input asp-for="Code"
+               placeholder="@ResourcesHelper.Translate("EnterCode", lang)" />
+
+        <span asp-validation-for="Code"
+              class="text-danger"></span>
+    </div>
+
+</div>
+
+<div class="half-input-wrapper">
+
+    <div class="single">
+
+        <label asp-for="Description">
+            @ResourcesHelper.Translate("Description", lang)
+        </label>
+
+        <textarea asp-for="Description"
+                  placeholder="@ResourcesHelper.Translate("EnterDescription", lang)"></textarea>
+
+        <span asp-validation-for="Description"
+              class="text-danger"></span>
+
+    </div>
+
+</div>
+
+<div class="ams-checkbox-row">
+
+    <label class="ams-switch">
+        <input asp-for="IsActive" />
+        <span class="ams-slider"></span>
+    </label>
+
+    <span class="ams-checkbox-label">
+        @ResourcesHelper.Translate("IsActive", lang)
+    </span>
+
+</div>

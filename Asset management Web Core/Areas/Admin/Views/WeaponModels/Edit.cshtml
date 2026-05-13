@@ -1,0 +1,41 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.WeaponModelFormViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("EditWeaponModel", lang);
+}
+
+<div class="user-profile-inner">
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("EditWeaponModel", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("WeaponModelFormDescription", lang)</p>
+        </div>
+
+        <a asp-action="Index" class="ams-btn-secondary">
+            @ResourcesHelper.Translate("BackToList", lang)
+        </a>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ExistingImagePath" />
+
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <partial name="_WeaponModelForm" model="Model" />
+
+            <button type="submit" class="rts-btn btn-primary mt--20">
+                @ResourcesHelper.Translate("SaveChanges", lang)
+            </button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

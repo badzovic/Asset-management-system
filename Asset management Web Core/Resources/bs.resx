@@ -148,7 +148,7 @@
     <value>Šifra</value>
   </data>
   <data name="Copyright" xml:space="preserve">
-    <value>Sva prava zadržana.</value>
+    <value>Copyright</value>
   </data>
   <data name="CreateUser" xml:space="preserve">
     <value>Kreiraj korisnika</value>
@@ -164,9 +164,6 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>Izmijeni</value>
-  </data>
-  <data name="EditWeaponType" xml:space="preserve">
-    <value>Izmjena tipa oružja</value>
   </data>
   <data name="EnterCode" xml:space="preserve">
     <value>Unesite šifru</value>
@@ -218,9 +215,6 @@
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Odjava</value>
-  </data>
-  <data name="Manufacturers" xml:space="preserve">
-    <value>Proizvođači</value>
   </data>
   <data name="MovementActions" xml:space="preserve">
     <value>Akcije kretanja</value>
@@ -326,5 +320,182 @@
   </data>
   <data name="WeaponTypesDescription" xml:space="preserve">
     <value>Upravljanje šifarnikom tipova oružja</value>
+  </data>
+  <data name="EditWeaponType" xml:space="preserve">
+    <value>Izmjena tipa oružja</value>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Proizvođači</value>
+  </data>
+  <data name="EditLookupItem" xml:space="preserve">
+    <value>Izmjena stavke</value>
+  </data>
+  <data name="AddLookupItem" xml:space="preserve">
+    <value>Dodaj stavku</value>
+  </data>
+  <data name="LookupItemsDescription" xml:space="preserve">
+    <value>Upravljanje vrijednostima za odabrani šifarnik.</value>
+  </data>
+  <data name="LookupItems" xml:space="preserve">
+    <value>Stavke šifarnika</value>
+  </data>
+  <data name="BackToDataCapture" xml:space="preserve">
+    <value>Nazad na šifarnike</value>
+  </data>
+  <data name="DisplayOrder" xml:space="preserve">
+    <value>Redoslijed prikaza</value>
+  </data>
+  <data name="EnterDisplayOrder" xml:space="preserve">
+    <value>Unesite redoslijed prikaza</value>
+  </data>
+  <data name="WeaponState" xml:space="preserve">
+    <value>Stanje oružja</value>
+  </data>
+  <data name="WeaponLegality" xml:space="preserve">
+    <value>Legalnost oružja</value>
+  </data>
+  <data name="ManufactureYear" xml:space="preserve">
+    <value>Godina proizvodnje</value>
+  </data>
+  <data name="PurposeOfUse" xml:space="preserve">
+    <value>Svrha korištenja</value>
+  </data>
+  <data name="CheckState" xml:space="preserve">
+    <value>Stanje provjere</value>
+  </data>
+  <data name="MoveStatus" xml:space="preserve">
+    <value>Status pomjeranja</value>
+  </data>
+  <data name="MovedWeaponLocation" xml:space="preserve">
+    <value>Lokacije pomjerenog oružja</value>
+  </data>
+  <data name="MoveAuthoriserNames" xml:space="preserve">
+    <value>Ovlaštene osobe za pomjeranje</value>
+  </data>
+  <data name="MoveEvidencePurpose" xml:space="preserve">
+    <value>Svrha pomjeranja dokaza</value>
+  </data>
+  <data name="SearchOptions" xml:space="preserve">
+    <value>Opcije pretrage</value>
+  </data>
+  <data name="EvidenceData" xml:space="preserve">
+    <value>Podaci o dokazima</value>
+  </data>
+  <data name="EvidenceDataDescription" xml:space="preserve">
+    <value>Šifarnici za dokaze, predmete, oružje, lokacije depozita i vrste slučajeva.</value>
+  </data>
+  <data name="EvidenceWeaponType" xml:space="preserve">
+    <value>Vrste dokaznog oružja</value>
+  </data>
+  <data name="EvidenceWeapon" xml:space="preserve">
+    <value>Dokazno oružje</value>
+  </data>
+  <data name="EvidenceIndicator" xml:space="preserve">
+    <value>Indikatori dokaza</value>
+  </data>
+  <data name="EvidenceDepositLocation" xml:space="preserve">
+    <value>Lokacije depozita dokaza</value>
+  </data>
+  <data name="CaseType" xml:space="preserve">
+    <value>Vrsta slučaja</value>
+  </data>
+  <data name="AgeBand" xml:space="preserve">
+    <value>Starosna grupa</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Spol</value>
+  </data>
+  <data name="RegisterWeapon" xml:space="preserve">
+    <value>Registruj oružje</value>
+  </data>
+  <data name="CheckWeaponStatus" xml:space="preserve">
+    <value>Provjera statusa oružja</value>
+  </data>
+  <data name="PrepareWeaponMove" xml:space="preserve">
+    <value>Priprema pomjeranja oružja</value>
+  </data>
+  <data name="AuthoriseWeaponMove" xml:space="preserve">
+    <value>Autorizacija pomjeranja oružja</value>
+  </data>
+  <data name="QueryGenerator" xml:space="preserve">
+    <value>Generator izvještaja</value>
+  </data>
+  <data name="ManufacturersDescription" xml:space="preserve">
+    <value>Upravljanje šifarnikom proizvođača oružja.</value>
+  </data>
+  <data name="AddManufacturer" xml:space="preserve">
+    <value>Dodaj proizvođača</value>
+  </data>
+  <data name="EditManufacturer" xml:space="preserve">
+    <value>Izmjena proizvođača</value>
+  </data>
+  <data name="ManufacturerFormDescription" xml:space="preserve">
+    <value>Unesite osnovne podatke o proizvođaču.</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Država</value>
+  </data>
+  <data name="EnterCountry" xml:space="preserve">
+    <value>Unesite državu</value>
+  </data>
+  <data name="CalibersDescription" xml:space="preserve">
+    <value>Upravljanje šifarnikom kalibara.</value>
+  </data>
+  <data name="AddCaliber" xml:space="preserve">
+    <value>Dodaj kalibar</value>
+  </data>
+  <data name="EditCaliber" xml:space="preserve">
+    <value>Izmjena kalibra</value>
+  </data>
+  <data name="CaliberFormDescription" xml:space="preserve">
+    <value>Unesite osnovne podatke o kalibru.</value>
+  </data>
+  <data name="WeaponStatusesDescription" xml:space="preserve">
+    <value>Upravljanje statusima oružja.</value>
+  </data>
+  <data name="AddWeaponStatus" xml:space="preserve">
+    <value>Dodaj status oružja</value>
+  </data>
+  <data name="EditWeaponStatus" xml:space="preserve">
+    <value>Izmjena statusa oružja</value>
+  </data>
+  <data name="WeaponStatusFormDescription" xml:space="preserve">
+    <value>Unesite osnovne podatke o statusu oružja.</value>
+  </data>
+  <data name="WeaponModelsDescription" xml:space="preserve">
+    <value>Upravljanje modelima oružja, proizvođačima, kalibrima i slikama.</value>
+  </data>
+  <data name="AddWeaponModel" xml:space="preserve">
+    <value>Dodaj model oružja</value>
+  </data>
+  <data name="EditWeaponModel" xml:space="preserve">
+    <value>Izmjena modela oružja</value>
+  </data>
+  <data name="WeaponModelFormDescription" xml:space="preserve">
+    <value>Unesite osnovne podatke o modelu oružja.</value>
+  </data>
+  <data name="WeaponType" xml:space="preserve">
+    <value>Tip oružja</value>
+  </data>
+  <data name="SelectWeaponType" xml:space="preserve">
+    <value>-- Odaberi tip oružja --</value>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Proizvođač</value>
+  </data>
+  <data name="SelectManufacturer" xml:space="preserve">
+    <value>-- Odaberi proizvođača --</value>
+  </data>
+  <data name="Caliber" xml:space="preserve">
+    <value>Kalibar</value>
+  </data>
+  <data name="SelectCaliber" xml:space="preserve">
+    <value>-- Odaberi kalibar --</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Slika</value>
+  </data>
+  <data name="CurrentImage" xml:space="preserve">
+    <value>Trenutna slika</value>
   </data>
 </root>

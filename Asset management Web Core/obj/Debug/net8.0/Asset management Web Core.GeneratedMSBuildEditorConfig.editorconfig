@@ -30,12 +30,96 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Calibers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FsaWJlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Calibers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FsaWJlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Calibers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FsaWJlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Calibers/_CaliberForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FsaWJlcnNcX0NhbGliZXJGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/DataCapture/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGF0YUNhcHR1cmVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Lookups/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9va3Vwc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Lookups/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9va3Vwc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Lookups/Items.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9va3Vwc1xJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Lookups/_LookupItemForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9va3Vwc1xfTG9va3VwSXRlbUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Manufacturers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFudWZhY3R1cmVyc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Manufacturers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFudWZhY3R1cmVyc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Manufacturers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFudWZhY3R1cmVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Manufacturers/_ManufacturerForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFudWZhY3R1cmVyc1xfTWFudWZhY3R1cmVyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponModels/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uTW9kZWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponModels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uTW9kZWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponModels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uTW9kZWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponModels/_WeaponModelForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uTW9kZWxzXF9XZWFwb25Nb2RlbEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponStatuses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uU3RhdHVzZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponStatuses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uU3RhdHVzZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponStatuses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uU3RhdHVzZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponStatuses/_WeaponStatusForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uU3RhdHVzZXNcX1dlYXBvblN0YXR1c0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponTypes/Create.cshtml]

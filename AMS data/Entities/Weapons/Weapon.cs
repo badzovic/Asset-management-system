@@ -1,4 +1,4 @@
-﻿using AMS_data.Entities;
+﻿using AMS_data.Entities.Lookups;
 
 namespace AMS_data.Entities.Weapons
 {
@@ -24,26 +24,47 @@ namespace AMS_data.Entities.Weapons
         public int? ManufacturerId { get; set; }
         public Manufacturer? Manufacturer { get; set; }
 
-        public string? MarkLocation { get; set; }
-        public string? Country { get; set; }
-        public string? Region { get; set; }
-        public string? GovernmentAgency { get; set; }
+        public int? MarkLocationLookupId { get; set; }
+        public LookupItem? MarkLocationLookup { get; set; }
 
-        public string? OriginalLocation { get; set; }
-        public string? OriginIndicator { get; set; }
-        public string? OriginalState { get; set; }
+        public int? CountryLookupId { get; set; }
+        public LookupItem? CountryLookup { get; set; }
 
-        public int? OrganizacionaJedinicaId { get; set; }
-        public OrganizacionaJedinica? OrganizacionaJedinica { get; set; }
+        public int? RegionLookupId { get; set; }
+        public LookupItem? RegionLookup { get; set; }
 
-        public int? SkladisteId { get; set; }
-        public Skladiste? Skladiste { get; set; }
+        public int? GovernmentAgencyLookupId { get; set; }
+        public LookupItem? GovernmentAgencyLookup { get; set; }
 
-        public string? BookkeepingBy { get; set; }
+        public int? ManufactureCountryLookupId { get; set; }
+        public LookupItem? ManufactureCountryLookup { get; set; }
+
+        public string? ManufactureDate { get; set; }
+
+        public int? OriginalLocationLookupId { get; set; }
+        public LookupItem? OriginalLocationLookup { get; set; }
+
+        public int? OriginIndicatorLookupId { get; set; }
+        public LookupItem? OriginIndicatorLookup { get; set; }
+
+        public int? OriginalStateLookupId { get; set; }
+        public LookupItem? OriginalStateLookup { get; set; }
+
+        public int? UnitLookupId { get; set; }
+        public LookupItem? UnitLookup { get; set; }
+
+        public int? StockLookupId { get; set; }
+        public LookupItem? StockLookup { get; set; }
+
+        public int? BookkeepingByLookupId { get; set; }
+        public LookupItem? BookkeepingByLookup { get; set; }
 
         public string? BarrelMark { get; set; }
         public string? SlideMark { get; set; }
         public string? ButtstockMark { get; set; }
+
+        public int? IdTypeLookupId { get; set; }
+        public LookupItem? IdTypeLookup { get; set; }
 
         public string? IdNo { get; set; }
         public string? HolderInfo { get; set; }
@@ -53,14 +74,19 @@ namespace AMS_data.Entities.Weapons
         public string? InventoryNo { get; set; }
 
         public bool TempStock { get; set; }
+
         public DateTime? DonationDate { get; set; }
-        public string? DonorAgency { get; set; }
+
+        public int? DonorAgencyLookupId { get; set; }
+        public LookupItem? DonorAgencyLookup { get; set; }
+
         public string? DonorContractNo { get; set; }
 
         public int? CurrentStatusId { get; set; }
         public WeaponStatus? CurrentStatus { get; set; }
 
-        public string? FunctionalStatus { get; set; }
+        public int? WeaponStateLookupId { get; set; }
+        public LookupItem? WeaponStateLookup { get; set; }
 
         public bool IsMarked { get; set; }
         public bool IsProspective { get; set; }

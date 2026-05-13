@@ -1,0 +1,142 @@
+﻿@model List<AMS_data.Entities.Lookups.LookupItem>
+@using AMS_data.Entities.Lookups
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    var category = ViewBag.Category as LookupCategory;
+
+    ViewData["Title"] = category?.Name ?? ResourcesHelper.Translate("LookupItems", lang);
+}
+
+<div class="user-profile-inner">
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ViewData["Title"]</h4>
+            <p class="ams-page-subtitle">
+                @ResourcesHelper.Translate("LookupItemsDescription", lang)
+            </p>
+        </div>
+
+        <div class="d-flex gap-2">
+            <a asp-area="Admin"
+               asp-controller="DataCapture"
+               asp-action="Index"
+               class="ams-btn-secondary">
+                @ResourcesHelper.Translate("BackToDataCapture", lang)
+            </a>
+
+            <a asp-action="Create"
+               asp-route-categoryKey="@category?.Key"
+               class="rts-btn btn-primary">
+                @ResourcesHelper.Translate("AddNew", lang)
+            </a>
+        </div>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+
+        <form method="get" class="ams-filter-bar">
+            <input type="hidden" name="categoryKey" value="@category?.Key" />
+
+            <div class="ams-filter-item">
+                <input type="text"
+                       name="search"
+                       value="@ViewBag.Search"
+                       placeholder="@ResourcesHelper.Translate("Search", lang)" />
+            </div>
+
+            <div class="ams-filter-item">
+                <select name="status">
+                    <option value="">@ResourcesHelper.Translate("AllStatuses", lang)</option>
+
+                    @if (ViewBag.Status == "active")
+                    {
+                        <option value="active" selected>@ResourcesHelper.Translate("Active", lang)</option>
+                    }
+                    else
+                    {
+                        <option value="active">@ResourcesHelper.Translate("Active", lang)</option>
+                    }
+
+                    @if (ViewBag.Status == "inactive")
+                    {
+                        <option value="inactive" selected>@ResourcesHelper.Translate("Inactive", lang)</option>
+                    }
+                    else
+                    {
+                        <option value="inactive">@ResourcesHelper.Translate("Inactive", lang)</option>
+                    }
+                </select>
+            </div>
+
+            <button type="submit" class="ams-btn-secondary">
+                @ResourcesHelper.Translate("Filter", lang)
+            </button>
+
+            <a asp-action="Items"
+               asp-route-categoryKey="@category?.Key"
+               class="ams-btn-small">
+                @ResourcesHelper.Translate("Reset", lang)
+            </a>
+        </form>
+
+        <div class="table-responsive">
+            <table class="table ams-table">
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("Name", lang)</th>
+                        <th>@ResourcesHelper.Translate("Code", lang)</th>
+                        <th>@ResourcesHelper.Translate("DisplayOrder", lang)</th>
+                        <th>@ResourcesHelper.Translate("Description", lang)</th>
+                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                        <th class="text-end">@ResourcesHelper.Translate("Actions", lang)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Code</td>
+                            <td>@item.DisplayOrder</td>
+                            <td>@item.Description</td>
+                            <td>
+                                @if (item.IsActive)
+                                {
+                                    <span class="ams-badge ams-badge-success">
+                                        @ResourcesHelper.Translate("Active", lang)
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="ams-badge ams-badge-muted">
+                                        @ResourcesHelper.Translate("Inactive", lang)
+                                    </span>
+                                }
+                            </td>
+                            <td class="text-end">
+                                <a asp-action="Edit"
+                                   asp-route-id="@item.Id"
+                                   class="ams-btn-small">
+                                    @ResourcesHelper.Translate("Edit", lang)
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoRecordsFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

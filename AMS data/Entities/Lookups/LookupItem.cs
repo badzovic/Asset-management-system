@@ -18,6 +18,17 @@ namespace AMS_data.Entities.Lookups
         public string? Description { get; set; }
 
         public int DisplayOrder { get; set; } = 0;
+
+        public int? ParentLookupItemId { get; set; }
+        public LookupItem? ParentLookupItem { get; set; }
+
+        public ICollection<LookupItem> Children { get; set; } = new List<LookupItem>();
+
+        public string? ImagePath { get; set; }
+
+        public bool DoNotDelete { get; set; }
+        public bool UserDefinedSort { get; set; }
+
         public bool IsActive { get; set; } = true;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

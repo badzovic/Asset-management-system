@@ -6,60 +6,323 @@
 }
 
 <div class="user-profile-inner">
+
     <div class="ams-page-header">
         <div>
-            <h4 class="title mb-1">@ResourcesHelper.Translate("DataCapture", lang)</h4>
-            <p class="ams-page-subtitle">@ResourcesHelper.Translate("DataCaptureDescription", lang)</p>
+            <h4 class="title mb-1">
+                @ResourcesHelper.Translate("DataCapture", lang)
+            </h4>
+
+            <p class="ams-page-subtitle">
+                @ResourcesHelper.Translate("DataCaptureDescription", lang)
+            </p>
         </div>
     </div>
 
     <div class="ams-card-grid">
 
+        <!-- WEAPON DATA -->
+
         <div class="ams-module-card">
+
             <div class="ams-module-icon">
                 <i class="fa-solid fa-gun"></i>
             </div>
-            <h5>@ResourcesHelper.Translate("WeaponData", lang)</h5>
-            <p>@ResourcesHelper.Translate("WeaponDataDescription", lang)</p>
+
+            <h5>
+                @ResourcesHelper.Translate("WeaponData", lang)
+            </h5>
+
+            <p>
+                @ResourcesHelper.Translate("WeaponDataDescription", lang)
+            </p>
 
             <div class="ams-module-links">
-                <a asp-area="Admin" asp-controller="WeaponTypes" asp-action="Index">
+                <a asp-area="Admin" asp-controller="Lookups" asp-action="Items" asp-route-categoryKey="WeaponState">
+                    @ResourcesHelper.Translate("WeaponState", lang)
+                </a>
+
+                <a asp-area="Admin" asp-controller="Lookups" asp-action="Items" asp-route-categoryKey="WeaponLegality">
+                    @ResourcesHelper.Translate("WeaponLegality", lang)
+                </a>
+
+                <a asp-area="Admin" asp-controller="Lookups" asp-action="Items" asp-route-categoryKey="WeaponItemType">
+                    @ResourcesHelper.Translate("WeaponItemType", lang)
+                </a>
+
+                <a asp-area="Admin" asp-controller="Lookups" asp-action="Items" asp-route-categoryKey="ManufactureYear">
+                    @ResourcesHelper.Translate("ManufactureYear", lang)
+                </a>
+
+                <a asp-area="Admin" asp-controller="Lookups" asp-action="Items" asp-route-categoryKey="PurposeOfUse">
+                    @ResourcesHelper.Translate("PurposeOfUse", lang)
+                </a>
+
+                <a asp-area="Admin" asp-controller="Lookups" asp-action="Items" asp-route-categoryKey="CheckState">
+                    @ResourcesHelper.Translate("CheckState", lang)
+                </a>
+                <a asp-area="Admin"
+                   asp-controller="WeaponTypes"
+                   asp-action="Index">
                     @ResourcesHelper.Translate("WeaponTypes", lang)
                 </a>
-                <a href="#">@ResourcesHelper.Translate("Manufacturers", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("Calibers", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("WeaponModels", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("WeaponStatuses", lang)</a>
+
+                <a asp-area="Admin" asp-controller="Manufacturers" asp-action="Index">
+                    @ResourcesHelper.Translate("Manufacturers", lang)
+                </a>
+
+                <a asp-area="Admin" asp-controller="Calibers" asp-action="Index">
+                    @ResourcesHelper.Translate("Calibers", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="WeaponModels"
+                   asp-action="Index">
+                    @ResourcesHelper.Translate("WeaponModels", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="WeaponStatuses"
+                   asp-action="Index">
+                    @ResourcesHelper.Translate("WeaponStatuses", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MarkLocation">
+                    @ResourcesHelper.Translate("MarkLocations", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="OriginalLocation">
+                    @ResourcesHelper.Translate("OriginalLocations", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="OriginIndicator">
+                    @ResourcesHelper.Translate("OriginIndicators", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="OriginalState">
+                    @ResourcesHelper.Translate("OriginalStates", lang)
+                </a>
+
             </div>
         </div>
 
+        <!-- ORGANIZATION DATA -->
+
         <div class="ams-module-card">
+
             <div class="ams-module-icon">
                 <i class="fa-solid fa-building-shield"></i>
             </div>
-            <h5>@ResourcesHelper.Translate("OrganizationData", lang)</h5>
-            <p>@ResourcesHelper.Translate("OrganizationDataDescription", lang)</p>
+
+            <h5>
+                @ResourcesHelper.Translate("OrganizationData", lang)
+            </h5>
+
+            <p>
+                @ResourcesHelper.Translate("OrganizationDataDescription", lang)
+            </p>
 
             <div class="ams-module-links">
-                <a href="#">@ResourcesHelper.Translate("OrganizationalUnits", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("Warehouses", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("GovernmentAgencies", lang)</a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Country">
+                    @ResourcesHelper.Translate("Countries", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Region">
+                    @ResourcesHelper.Translate("Regions", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="GovernmentAgency">
+                    @ResourcesHelper.Translate("GovernmentAgencies", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Unit">
+                    @ResourcesHelper.Translate("Units", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Stock">
+                    @ResourcesHelper.Translate("Stocks", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="BookkeepingBy">
+                    @ResourcesHelper.Translate("BookkeepingBy", lang)
+                </a>
+
             </div>
         </div>
+        <!-- MOVEMENT DATA -->
 
         <div class="ams-module-card">
+
             <div class="ams-module-icon">
                 <i class="fa-solid fa-right-left"></i>
             </div>
-            <h5>@ResourcesHelper.Translate("MovementData", lang)</h5>
-            <p>@ResourcesHelper.Translate("MovementDataDescription", lang)</p>
+
+            <h5>
+                @ResourcesHelper.Translate("MovementData", lang)
+            </h5>
+
+            <p>
+                @ResourcesHelper.Translate("MovementDataDescription", lang)
+            </p>
 
             <div class="ams-module-links">
-                <a href="#">@ResourcesHelper.Translate("MovementActions", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("MovementReasons", lang)</a>
-                <a href="#">@ResourcesHelper.Translate("Locations", lang)</a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MoveStatus">
+                    @ResourcesHelper.Translate("MoveStatus", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MovedWeaponLocation">
+                    @ResourcesHelper.Translate("MovedWeaponLocation", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MoveAuthoriserNames">
+                    @ResourcesHelper.Translate("MoveAuthoriserNames", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MoveEvidencePurpose">
+                    @ResourcesHelper.Translate("MoveEvidencePurpose", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="SearchOptions">
+                    @ResourcesHelper.Translate("SearchOptions", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MovementAction">
+                    @ResourcesHelper.Translate("MovementActions", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="MovementReason">
+                    @ResourcesHelper.Translate("MovementReasons", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Location">
+                    @ResourcesHelper.Translate("Locations", lang)
+                </a>
+
             </div>
         </div>
+        <div class="ams-module-card">
 
+            <div class="ams-module-icon">
+                <i class="fa-solid fa-box-archive"></i>
+            </div>
+
+            <h5>
+                @ResourcesHelper.Translate("EvidenceData", lang)
+            </h5>
+
+            <p>
+                @ResourcesHelper.Translate("EvidenceDataDescription", lang)
+            </p>
+
+            <div class="ams-module-links">
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="EvidenceWeaponType">
+                    @ResourcesHelper.Translate("EvidenceWeaponType", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="EvidenceWeapon">
+                    @ResourcesHelper.Translate("EvidenceWeapon", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="EvidenceIndicator">
+                    @ResourcesHelper.Translate("EvidenceIndicator", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="EvidenceDepositLocation">
+                    @ResourcesHelper.Translate("EvidenceDepositLocation", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="CaseType">
+                    @ResourcesHelper.Translate("CaseType", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="AgeBand">
+                    @ResourcesHelper.Translate("AgeBand", lang)
+                </a>
+
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Sex">
+                    @ResourcesHelper.Translate("Sex", lang)
+                </a>
+
+            </div>
+        </div>
     </div>
+
 </div>

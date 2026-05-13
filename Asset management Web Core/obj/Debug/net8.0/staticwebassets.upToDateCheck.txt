@@ -194,5 +194,6 @@ wwwroot\lib\jquery\LICENSE.txt
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\uploads\weapon-models\bb21e6d6-962e-4bf2-8cdb-60b4c5681a85.jpg
 wwwroot\version\index-2.html
 wwwroot\version\index.html

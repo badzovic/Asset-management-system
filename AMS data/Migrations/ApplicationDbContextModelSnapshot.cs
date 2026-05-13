@@ -194,6 +194,12 @@ namespace AMS_data.Migrations
                     b.Property<int>("DisplayOrder")
                         .HasColumnType("int");
 
+                    b.Property<bool>("DoNotDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -204,9 +210,17 @@ namespace AMS_data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ParentLookupItemId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("UserDefinedSort")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("LookupCategoryId");
+
+                    b.HasIndex("ParentLookupItemId");
 
                     b.ToTable("LookupItems");
                 });
@@ -334,8 +348,8 @@ namespace AMS_data.Migrations
                     b.Property<string>("BarrelMark")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BookkeepingBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("BookkeepingByLookupId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ButtstockMark")
                         .HasColumnType("nvarchar(max)");
@@ -346,8 +360,8 @@ namespace AMS_data.Migrations
                     b.Property<string>("ConfirmSerial")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Country")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("CountryLookupId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -364,8 +378,8 @@ namespace AMS_data.Migrations
                     b.Property<DateTime?>("DonationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DonorAgency")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("DonorAgencyLookupId")
+                        .HasColumnType("int");
 
                     b.Property<string>("DonorContractNo")
                         .HasColumnType("nvarchar(max)");
@@ -373,17 +387,17 @@ namespace AMS_data.Migrations
                     b.Property<string>("FactorySerial")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FunctionalStatus")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GovernmentAgency")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("GovernmentAgencyLookupId")
+                        .HasColumnType("int");
 
                     b.Property<string>("HolderInfo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdNo")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("IdTypeLookupId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
@@ -400,29 +414,32 @@ namespace AMS_data.Migrations
                     b.Property<bool>("IsProspective")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("ManufactureCountryLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ManufactureDate")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("ManufacturerId")
                         .HasColumnType("int");
 
-                    b.Property<string>("MarkLocation")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("MarkLocationLookupId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OrganizacionaJedinicaId")
+                    b.Property<int?>("OriginIndicatorLookupId")
                         .HasColumnType("int");
 
-                    b.Property<string>("OriginIndicator")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("OriginalLocationLookupId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("OriginalLocation")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("OriginalStateLookupId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("OriginalState")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Region")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("RegionLookupId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("RegistrationDate")
                         .HasColumnType("datetime2");
@@ -431,14 +448,17 @@ namespace AMS_data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SkladisteId")
-                        .HasColumnType("int");
-
                     b.Property<string>("SlideMark")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("StockLookupId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("TempStock")
                         .HasColumnType("bit");
+
+                    b.Property<int?>("UnitLookupId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
@@ -449,22 +469,49 @@ namespace AMS_data.Migrations
                     b.Property<int?>("WeaponModelId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("WeaponStateLookupId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("WeaponTypeId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BookkeepingByLookupId");
+
                     b.HasIndex("CaliberId");
+
+                    b.HasIndex("CountryLookupId");
 
                     b.HasIndex("CurrentStatusId");
 
+                    b.HasIndex("DonorAgencyLookupId");
+
+                    b.HasIndex("GovernmentAgencyLookupId");
+
+                    b.HasIndex("IdTypeLookupId");
+
+                    b.HasIndex("ManufactureCountryLookupId");
+
                     b.HasIndex("ManufacturerId");
 
-                    b.HasIndex("OrganizacionaJedinicaId");
+                    b.HasIndex("MarkLocationLookupId");
 
-                    b.HasIndex("SkladisteId");
+                    b.HasIndex("OriginIndicatorLookupId");
+
+                    b.HasIndex("OriginalLocationLookupId");
+
+                    b.HasIndex("OriginalStateLookupId");
+
+                    b.HasIndex("RegionLookupId");
+
+                    b.HasIndex("StockLookupId");
+
+                    b.HasIndex("UnitLookupId");
 
                     b.HasIndex("WeaponModelId");
+
+                    b.HasIndex("WeaponStateLookupId");
 
                     b.HasIndex("WeaponTypeId");
 
@@ -721,7 +768,13 @@ namespace AMS_data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "ParentLookupItem")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentLookupItemId");
+
                     b.Navigation("LookupCategory");
+
+                    b.Navigation("ParentLookupItem");
                 });
 
             modelBuilder.Entity("AMS_data.Entities.Skladiste", b =>
@@ -735,45 +788,117 @@ namespace AMS_data.Migrations
 
             modelBuilder.Entity("AMS_data.Entities.Weapons.Weapon", b =>
                 {
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "BookkeepingByLookup")
+                        .WithMany()
+                        .HasForeignKey("BookkeepingByLookupId");
+
                     b.HasOne("AMS_data.Entities.Weapons.Caliber", "Caliber")
                         .WithMany()
                         .HasForeignKey("CaliberId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "CountryLookup")
+                        .WithMany()
+                        .HasForeignKey("CountryLookupId");
 
                     b.HasOne("AMS_data.Entities.Weapons.WeaponStatus", "CurrentStatus")
                         .WithMany()
                         .HasForeignKey("CurrentStatusId");
 
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "DonorAgencyLookup")
+                        .WithMany()
+                        .HasForeignKey("DonorAgencyLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "GovernmentAgencyLookup")
+                        .WithMany()
+                        .HasForeignKey("GovernmentAgencyLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "IdTypeLookup")
+                        .WithMany()
+                        .HasForeignKey("IdTypeLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "ManufactureCountryLookup")
+                        .WithMany()
+                        .HasForeignKey("ManufactureCountryLookupId");
+
                     b.HasOne("AMS_data.Entities.Weapons.Manufacturer", "Manufacturer")
                         .WithMany()
                         .HasForeignKey("ManufacturerId");
 
-                    b.HasOne("AMS_data.Entities.OrganizacionaJedinica", "OrganizacionaJedinica")
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "MarkLocationLookup")
                         .WithMany()
-                        .HasForeignKey("OrganizacionaJedinicaId");
+                        .HasForeignKey("MarkLocationLookupId");
 
-                    b.HasOne("AMS_data.Entities.Skladiste", "Skladiste")
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "OriginIndicatorLookup")
                         .WithMany()
-                        .HasForeignKey("SkladisteId");
+                        .HasForeignKey("OriginIndicatorLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "OriginalLocationLookup")
+                        .WithMany()
+                        .HasForeignKey("OriginalLocationLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "OriginalStateLookup")
+                        .WithMany()
+                        .HasForeignKey("OriginalStateLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "RegionLookup")
+                        .WithMany()
+                        .HasForeignKey("RegionLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "StockLookup")
+                        .WithMany()
+                        .HasForeignKey("StockLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "UnitLookup")
+                        .WithMany()
+                        .HasForeignKey("UnitLookupId");
 
                     b.HasOne("AMS_data.Entities.Weapons.WeaponModel", "WeaponModel")
                         .WithMany()
                         .HasForeignKey("WeaponModelId");
 
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "WeaponStateLookup")
+                        .WithMany()
+                        .HasForeignKey("WeaponStateLookupId");
+
                     b.HasOne("AMS_data.Entities.Weapons.WeaponType", "WeaponType")
                         .WithMany()
                         .HasForeignKey("WeaponTypeId");
 
+                    b.Navigation("BookkeepingByLookup");
+
                     b.Navigation("Caliber");
+
+                    b.Navigation("CountryLookup");
 
                     b.Navigation("CurrentStatus");
 
+                    b.Navigation("DonorAgencyLookup");
+
+                    b.Navigation("GovernmentAgencyLookup");
+
+                    b.Navigation("IdTypeLookup");
+
+                    b.Navigation("ManufactureCountryLookup");
+
                     b.Navigation("Manufacturer");
 
-                    b.Navigation("OrganizacionaJedinica");
+                    b.Navigation("MarkLocationLookup");
 
-                    b.Navigation("Skladiste");
+                    b.Navigation("OriginIndicatorLookup");
+
+                    b.Navigation("OriginalLocationLookup");
+
+                    b.Navigation("OriginalStateLookup");
+
+                    b.Navigation("RegionLookup");
+
+                    b.Navigation("StockLookup");
+
+                    b.Navigation("UnitLookup");
 
                     b.Navigation("WeaponModel");
+
+                    b.Navigation("WeaponStateLookup");
 
                     b.Navigation("WeaponType");
                 });
@@ -853,6 +978,11 @@ namespace AMS_data.Migrations
             modelBuilder.Entity("AMS_data.Entities.Lookups.LookupCategory", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Lookups.LookupItem", b =>
+                {
+                    b.Navigation("Children");
                 });
 #pragma warning restore 612, 618
         }
