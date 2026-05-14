@@ -1,5 +1,341 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons.WeaponMoveViewModel
+@using Asset_management_Web_Core.Helpers
+
 @{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("PrepareWeaponMove", lang);
+}
+
+<style>
+    .container-custom,
+    .user-profile-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ams-move-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1.8fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+</style>
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("PrepareWeaponMove", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("PrepareWeaponMoveDescription", lang)</p>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success ams-alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="ams-move-grid">
+
+        <div>
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("SelectedWeapon", lang)</h5>
+
+                <div class="mb-3">
+                    <select id="weaponMoveSearchSelect" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("SearchWeaponPlaceholder", lang)</option>
+
+                        @foreach (var item in Model.ActiveWeapons)
+                        {
+                            <option value="@item.Id">
+                                @item.RegistrationNo - @item.FactorySerial - @item.WeaponModel?.Name
+                            </option>
+                        }
+                    </select>
+                </div>
+
+                @if (Model.SelectedWeapon != null)
+                {
+                    <div class="ams-weapon-summary">
+                        <div>
+                            <strong>@ResourcesHelper.Translate("RegistrationNo", lang)</strong>
+                            <span>@Model.SelectedWeapon.RegistrationNo</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("RegistrationDate", lang)</strong>
+                            <span>@Model.SelectedWeapon.RegistrationDate.ToString("dd.MM.yyyy")</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("FactorySerial", lang)</strong>
+                            <span>@Model.SelectedWeapon.FactorySerial</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("WeaponModel", lang)</strong>
+                            <span>@Model.SelectedWeapon.WeaponModel?.Name</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("WeaponType", lang)</strong>
+                            <span>@Model.SelectedWeapon.WeaponType?.Name</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("Manufacturer", lang)</strong>
+                            <span>@Model.SelectedWeapon.Manufacturer?.Name</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("ManufacturerCountry", lang)</strong>
+                            <span>@Model.SelectedWeapon.ManufactureCountryLookup?.Name</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("Caliber", lang)</strong>
+                            <span>@Model.SelectedWeapon.Caliber?.Name</span>
+                        </div>
+
+                        <div>
+                            <strong>@ResourcesHelper.Translate("CurrentLocation", lang)</strong>
+                            <span>@Model.SelectedWeapon.OriginalLocationLookup?.Name</span>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info ams-alert">
+                        @ResourcesHelper.Translate("SelectWeaponFromList", lang)
+                    </div>
+                }
+            </div>
+
+            <div class="user-profile-main-wrapper mt--30">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("MoveHistory", lang)</h5>
+
+                <div class="table-responsive ams-active-weapons-scroll">
+                    <table class="table ams-table">
+                        <thead>
+                            <tr>
+                                <th>@ResourcesHelper.Translate("MoveDate", lang)</th>
+                                <th>@ResourcesHelper.Translate("MoveAction", lang)</th>
+                                <th>@ResourcesHelper.Translate("NewLocation", lang)</th>
+                                <th>@ResourcesHelper.Translate("Status", lang)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.MoveHistory)
+                            {
+                                <tr>
+                                    <td>@item.MoveDate.ToString("dd.MM.yyyy")</td>
+                                    <td>@item.MovementActionLookup?.Name</td>
+                                    <td>@item.NewLocationLookup?.Name</td>
+                                    <td>
+                                        <span class="ams-badge ams-badge-muted">@item.Status</span>
+                                    </td>
+                                </tr>
+                            }
+
+                            @if (!Model.MoveHistory.Any())
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted py-4">
+                                        @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("MoveData", lang)</h5>
+
+                <form asp-action="PrepareMove" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" asp-for="SelectedWeaponId" />
+
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="MoveDate">
+                                @ResourcesHelper.Translate("MoveDate", lang) <span class="ams-required">*</span>
+                            </label>
+                            <input asp-for="MoveDate" type="date" />
+                            <span asp-validation-for="MoveDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="MovementActionLookupId">
+                                @ResourcesHelper.Translate("MoveAction", lang) <span class="ams-required">*</span>
+                            </label>
+                            <select asp-for="MovementActionLookupId"
+                                    asp-items="Model.MovementActions"
+                                    class="ams-select2">
+                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                            </select>
+                            <span asp-validation-for="MovementActionLookupId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="NewLocationLookupId">
+                                @ResourcesHelper.Translate("NewLocation", lang) <span class="ams-required">*</span>
+                            </label>
+                            <select asp-for="NewLocationLookupId"
+                                    asp-items="Model.NewLocations"
+                                    class="ams-select2">
+                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                            </select>
+                            <span asp-validation-for="NewLocationLookupId" class="text-danger"></span>
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="OrderNo">@ResourcesHelper.Translate("OrderNo", lang)</label>
+                            <input asp-for="OrderNo" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="AuthMoveNo">@ResourcesHelper.Translate("AuthMoveNo", lang)</label>
+                            <input asp-for="AuthMoveNo" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="MoveOrdinalNo">@ResourcesHelper.Translate("MoveOrdinalNo", lang)</label>
+                            <input asp-for="MoveOrdinalNo" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="EndUserCertificate">@ResourcesHelper.Translate("EndUserCertificate", lang)</label>
+                            <input asp-for="EndUserCertificate" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="UserOrgName">@ResourcesHelper.Translate("UserOrgName", lang)</label>
+                            <input asp-for="UserOrgName" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="AuthorisedByName">@ResourcesHelper.Translate("AuthorisedBy", lang)</label>
+                            <input asp-for="AuthorisedByName" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="Notes">@ResourcesHelper.Translate("Notes", lang)</label>
+                            <textarea asp-for="Notes"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="ams-form-actions">
+                        <button type="submit"
+                                class="rts-btn btn-primary"
+                                @(Model.SelectedWeapon == null ? "disabled" : "")>
+                            @ResourcesHelper.Translate("SaveOnly", lang)
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="user-profile-main-wrapper mt--30">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("ActiveWeapons", lang)</h5>
+
+                <div class="ams-table-toolbar">
+                    <input type="text"
+                           id="moveWeaponsTableSearch"
+                           class="ams-table-search"
+                           placeholder="@ResourcesHelper.Translate("Search", lang)" />
+                </div>
+
+                <div class="table-responsive ams-active-weapons-scroll">
+                    <table class="table ams-table" id="moveWeaponsTable">
+                        <thead>
+                            <tr>
+                                <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                                <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
+                                <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
+                                <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.ActiveWeapons)
+                            {
+                                <tr class="ams-clickable-row"
+                                    data-url="@Url.Action("PrepareMove", "Weapons", new { area = "Admin", weaponId = item.Id, searchTerm = Model.SearchTerm })">
+                                    <td>@item.RegistrationNo</td>
+                                    <td>@item.FactorySerial</td>
+                                    <td>@item.WeaponModel?.Name</td>
+                                    <td>@item.WeaponType?.Name</td>
+                                </tr>
+                            }
+
+                            @if (!Model.ActiveWeapons.Any())
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted py-4">
+                                        @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+            $('.ams-select2').select2({
+                width: '100%',
+                placeholder: '-- Select --',
+                allowClear: true
+            });
+
+            $('#weaponMoveSearchSelect').on('change', function () {
+                const weaponId = $(this).val();
+
+                if (!weaponId)
+                    return;
+
+                window.location.href = '/Admin/Weapons/PrepareMove?weaponId=' + weaponId;
+            });
+
+            $('.ams-clickable-row').on('click', function () {
+                const url = $(this).data('url');
+
+                if (url)
+                    window.location.href = url;
+            });
+
+            $('#moveWeaponsTableSearch').on('keyup', function () {
+                const value = $(this).val().toLowerCase();
+
+                $('#moveWeaponsTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
 }

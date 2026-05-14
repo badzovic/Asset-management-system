@@ -126,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uU3RhdHVzZXNcX1dlYXBvblN0YXR1c0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/AuthoriseMove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xBdXRob3Jpc2VNb3ZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/Check.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xDaGVjay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

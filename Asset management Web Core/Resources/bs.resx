@@ -702,4 +702,73 @@
   <data name="EditUserDescription" xml:space="preserve">
     <value>Izmjena osnovnih podataka, role i pristupa korisnika.</value>
   </data>
+  <data name="PrepareWeaponMoveDescription" xml:space="preserve">
+    <value>Priprema prijenosa, izvoza, deaktivacije ili pomjeranja registrovanog oružja.</value>
+  </data>
+  <data name="MoveHistory" xml:space="preserve">
+    <value>Historija pomjeranja</value>
+  </data>
+  <data name="MoveData" xml:space="preserve">
+    <value>Podaci o pomjeranju</value>
+  </data>
+  <data name="MoveDate" xml:space="preserve">
+    <value>Datum pomjeranja</value>
+  </data>
+  <data name="MoveAction" xml:space="preserve">
+    <value>Akcija pomjeranja</value>
+  </data>
+  <data name="NewLocation" xml:space="preserve">
+    <value>Nova lokacija</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>Broj naredbe</value>
+  </data>
+  <data name="AuthMoveNo" xml:space="preserve">
+    <value>Broj odobrenja pomjeranja</value>
+  </data>
+  <data name="MoveOrdinalNo" xml:space="preserve">
+    <value>Redni broj pomjeranja</value>
+  </data>
+  <data name="EndUserCertificate" xml:space="preserve">
+    <value>Certifikat krajnjeg korisnika</value>
+  </data>
+  <data name="UserOrgName" xml:space="preserve">
+    <value>Korisnik / organizacija</value>
+  </data>
+  <data name="AuthorisedBy" xml:space="preserve">
+    <value>Ovlastio</value>
+  </data>
+  <data name="SaveOnly" xml:space="preserve">
+    <value>Sačuvaj</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Trenutna lokacija</value>
+  </data>
+  <data name="AuthoriseWeaponMoveDescription" xml:space="preserve">
+    <value>Autorizacija prethodno pripremljenih prijenosa i pomjeranja oružja.</value>
+  </data>
+  <data name="SelectedWeaponMove" xml:space="preserve">
+    <value>Odabrani prijenos oružja</value>
+  </data>
+  <data name="SelectMoveFromList" xml:space="preserve">
+    <value>Odaberite pripremljeni prijenos iz liste.</value>
+  </data>
+  <data name="AuthorisationData" xml:space="preserve">
+    <value>Podaci autorizacije</value>
+  </data>
+  <data name="Authorise" xml:space="preserve">
+    <value>Autorizuj</value>
+  </data>
+  <data name="Reopen" xml:space="preserve">
+    <value>Vrati na pripremu</value>
+  </data>
+  <data name="WeaponsAwaitingAuthorisation" xml:space="preserve">
+    <value>Oružje koje čeka autorizaciju</value>
+  </data>
+  <data name="RecentlyAuthorisedMoves" xml:space="preserve">
+    <value>Nedavno autorizovani prijenosi</value>
+  </data>
+  <data name="AuthorisedAt" xml:space="preserve">
+    <value>Vrijeme autorizacije</value>
+  </data>
 </root>

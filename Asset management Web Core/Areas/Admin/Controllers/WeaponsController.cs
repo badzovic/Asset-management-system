@@ -332,6 +332,157 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(PrepareMove), new { weaponId = weapon.Id });
         }
+
+        public async Task<IActionResult> AuthoriseMove(int? moveId)
+        {
+            var model = new WeaponMoveAuthoriseViewModel
+            {
+                SelectedMoveId = moveId
+            };
+
+            model = await PopulateAuthoriseMoveModel(model);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AuthoriseMove(WeaponMoveAuthoriseViewModel model)
+        {
+            if (model.SelectedMoveId == null)
+            {
+                ModelState.AddModelError(nameof(model.SelectedMoveId), "Please select a weapon move.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                model = await PopulateAuthoriseMoveModel(model);
+                return View(model);
+            }
+
+            var move = await _db.WeaponMoves
+                .Include(x => x.Weapon)
+                .FirstOrDefaultAsync(x =>
+                    x.Id == model.SelectedMoveId &&
+                    !x.IsDeleted &&
+                    x.Status == "Prepared");
+
+            if (move == null)
+                return NotFound();
+
+            move.AuthorisedByName = model.AuthorisedByName;
+            move.AuthorisedAt = DateTime.UtcNow;
+            move.AuthorisedByUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            move.Status = "Authorised";
+
+            await _db.SaveChangesAsync();
+
+            await _auditLogService.LogAsync(
+                action: "AUTHORISE_WEAPON_MOVE",
+                entityName: "WeaponMove",
+                entityId: move.Id.ToString(),
+                newValues: new
+                {
+                    move.WeaponId,
+                    move.Weapon?.RegistrationNo,
+                    move.Weapon?.FactorySerial,
+                    move.AuthorisedByName,
+                    move.AuthorisedAt,
+                    move.Status
+                });
+
+            TempData["SuccessMessage"] = "Prijenos oružja je uspješno autorizovan.";
+
+            return RedirectToAction(nameof(AuthoriseMove));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ReopenMove(int id)
+        {
+            var move = await _db.WeaponMoves
+                .FirstOrDefaultAsync(x =>
+                    x.Id == id &&
+                    !x.IsDeleted &&
+                    x.Status == "Authorised");
+
+            if (move == null)
+                return NotFound();
+
+            move.Status = "Prepared";
+            move.AuthorisedByName = null;
+            move.AuthorisedAt = null;
+            move.AuthorisedByUserId = null;
+
+            await _db.SaveChangesAsync();
+
+            await _auditLogService.LogAsync(
+                action: "REOPEN_WEAPON_MOVE",
+                entityName: "WeaponMove",
+                entityId: move.Id.ToString(),
+                newValues: new
+                {
+                    move.Id,
+                    move.WeaponId,
+                    move.Status
+                });
+
+            TempData["SuccessMessage"] = "Prijenos oružja je vraćen na pripremu.";
+
+            return RedirectToAction(nameof(AuthoriseMove), new { moveId = move.Id });
+        }
+
+        private async Task<WeaponMoveAuthoriseViewModel> PopulateAuthoriseMoveModel(WeaponMoveAuthoriseViewModel model)
+        {
+            model.PreparedMoves = await _db.WeaponMoves
+                .Include(x => x.Weapon)
+                    .ThenInclude(x => x.WeaponModel)
+                .Include(x => x.Weapon)
+                    .ThenInclude(x => x.WeaponType)
+                .Include(x => x.Weapon)
+                    .ThenInclude(x => x.Manufacturer)
+                .Include(x => x.Weapon)
+                    .ThenInclude(x => x.Caliber)
+                .Include(x => x.Weapon)
+                    .ThenInclude(x => x.OriginalStateLookup)
+                .Include(x => x.MovementActionLookup)
+                .Include(x => x.NewLocationLookup)
+                .Where(x => !x.IsDeleted && x.Status == "Prepared")
+                .OrderByDescending(x => x.PreparedAt)
+                .ToListAsync();
+
+            model.AuthorisedMoves = await _db.WeaponMoves
+                .Include(x => x.Weapon)
+                    .ThenInclude(x => x.WeaponModel)
+                .Include(x => x.MovementActionLookup)
+                .Include(x => x.NewLocationLookup)
+                .Where(x => !x.IsDeleted && x.Status == "Authorised")
+                .OrderByDescending(x => x.AuthorisedAt)
+                .Take(50)
+                .ToListAsync();
+
+            if (model.SelectedMoveId != null)
+            {
+                model.SelectedMove = await _db.WeaponMoves
+                    .Include(x => x.Weapon)
+                        .ThenInclude(x => x.WeaponModel)
+                    .Include(x => x.Weapon)
+                        .ThenInclude(x => x.WeaponType)
+                    .Include(x => x.Weapon)
+                        .ThenInclude(x => x.Manufacturer)
+                    .Include(x => x.Weapon)
+                        .ThenInclude(x => x.Caliber)
+                    .Include(x => x.Weapon)
+                        .ThenInclude(x => x.OriginalStateLookup)
+                    .Include(x => x.MovementActionLookup)
+                    .Include(x => x.NewLocationLookup)
+                    .FirstOrDefaultAsync(x =>
+                        x.Id == model.SelectedMoveId &&
+                        !x.IsDeleted);
+            }
+
+            return model;
+        }
         private async Task<WeaponMoveViewModel> PopulateMoveModel(WeaponMoveViewModel model)
         {
             model.MovementActions = await SelectLookup("MovementAction");

@@ -709,4 +709,73 @@
   <data name="EditUserDescription" xml:space="preserve">
     <value>Edit User Description</value>
   </data>
+  <data name="PrepareWeaponMoveDescription" xml:space="preserve">
+    <value>Prepare Weapon Move Description </value>
+  </data>
+  <data name="MoveHistory" xml:space="preserve">
+    <value>Move History</value>
+  </data>
+  <data name="MoveData" xml:space="preserve">
+    <value>Move Data</value>
+  </data>
+  <data name="MoveDate" xml:space="preserve">
+    <value>Move Date</value>
+  </data>
+  <data name="MoveAction" xml:space="preserve">
+    <value>Move Action</value>
+  </data>
+  <data name="NewLocation" xml:space="preserve">
+    <value>New Location</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>Order No</value>
+  </data>
+  <data name="AuthMoveNo" xml:space="preserve">
+    <value>Auth Move No </value>
+  </data>
+  <data name="MoveOrdinalNo" xml:space="preserve">
+    <value>Move Ordinal No</value>
+  </data>
+  <data name="EndUserCertificate" xml:space="preserve">
+    <value>End User Certificate</value>
+  </data>
+  <data name="UserOrgName" xml:space="preserve">
+    <value>User Org Name</value>
+  </data>
+  <data name="AuthorisedBy" xml:space="preserve">
+    <value>Authorised By</value>
+  </data>
+  <data name="SaveOnly" xml:space="preserve">
+    <value>Save Only</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Current Location</value>
+  </data>
+  <data name="AuthoriseWeaponMoveDescription" xml:space="preserve">
+    <value>Authorise Weapon Move Description</value>
+  </data>
+  <data name="SelectedWeaponMove" xml:space="preserve">
+    <value>Selected Weapon Move </value>
+  </data>
+  <data name="SelectMoveFromList" xml:space="preserve">
+    <value>Select Move From List</value>
+  </data>
+  <data name="AuthorisationData" xml:space="preserve">
+    <value>Authorisation Data</value>
+  </data>
+  <data name="Authorise" xml:space="preserve">
+    <value>Authorise</value>
+  </data>
+  <data name="Reopen" xml:space="preserve">
+    <value>Reopen</value>
+  </data>
+  <data name="WeaponsAwaitingAuthorisation" xml:space="preserve">
+    <value>Weapons Awaiting Authorisation</value>
+  </data>
+  <data name="RecentlyAuthorisedMoves" xml:space="preserve">
+    <value>Recently Authorised Moves</value>
+  </data>
+  <data name="AuthorisedAt" xml:space="preserve">
+    <value>Authorised At</value>
+  </data>
 </root>
