@@ -422,8 +422,8 @@ namespace AMS_data.Migrations
                     b.Property<int?>("ManufactureCountryLookupId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ManufactureDate")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime?>("ManufactureDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int?>("ManufacturerId")
                         .HasColumnType("int");
@@ -523,6 +523,47 @@ namespace AMS_data.Migrations
                     b.ToTable("Weapons");
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponCheck", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CheckDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CheckStateLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CheckStateLookupId");
+
+                    b.HasIndex("WeaponId");
+
+                    b.ToTable("WeaponChecks");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponModel", b =>
                 {
                     b.Property<int>("Id")
@@ -568,6 +609,77 @@ namespace AMS_data.Migrations
                     b.HasIndex("WeaponTypeId");
 
                     b.ToTable("WeaponModels");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponMove", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AuthMoveNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("AuthorisedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AuthorisedByName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AuthorisedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndUserCertificate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("MoveDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MoveOrdinalNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("MovementActionLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("NewLocationLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PreparedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PreparedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserOrgName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovementActionLookupId");
+
+                    b.HasIndex("NewLocationLookupId");
+
+                    b.HasIndex("WeaponId");
+
+                    b.ToTable("WeaponMoves");
                 });
 
             modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponStatus", b =>
@@ -917,6 +1029,23 @@ namespace AMS_data.Migrations
                     b.Navigation("WeaponType");
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponCheck", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "CheckStateLookup")
+                        .WithMany()
+                        .HasForeignKey("CheckStateLookupId");
+
+                    b.HasOne("AMS_data.Entities.Weapons.Weapon", "Weapon")
+                        .WithMany()
+                        .HasForeignKey("WeaponId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CheckStateLookup");
+
+                    b.Navigation("Weapon");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponModel", b =>
                 {
                     b.HasOne("AMS_data.Entities.Weapons.Caliber", "Caliber")
@@ -936,6 +1065,29 @@ namespace AMS_data.Migrations
                     b.Navigation("Manufacturer");
 
                     b.Navigation("WeaponType");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponMove", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "MovementActionLookup")
+                        .WithMany()
+                        .HasForeignKey("MovementActionLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "NewLocationLookup")
+                        .WithMany()
+                        .HasForeignKey("NewLocationLookupId");
+
+                    b.HasOne("AMS_data.Entities.Weapons.Weapon", "Weapon")
+                        .WithMany()
+                        .HasForeignKey("WeaponId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MovementActionLookup");
+
+                    b.Navigation("NewLocationLookup");
+
+                    b.Navigation("Weapon");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -639,4 +639,67 @@
   <data name="SelectCountry" xml:space="preserve">
     <value>-- Odaberi državu --</value>
   </data>
+  <data name="CheckWeaponStatusDescription" xml:space="preserve">
+    <value>Provjera, održavanje i historija stanja registrovanog oružja.</value>
+  </data>
+  <data name="SelectedWeapon" xml:space="preserve">
+    <value>Odabrano oružje</value>
+  </data>
+  <data name="SearchWeaponPlaceholder" xml:space="preserve">
+    <value>Pretraga po registraciji, serijskom broju, inventaru ili modelu</value>
+  </data>
+  <data name="SelectWeaponFromList" xml:space="preserve">
+    <value>Odaberite oružje iz liste za unos provjere.</value>
+  </data>
+  <data name="WeaponCheckForm" xml:space="preserve">
+    <value>Unos provjere</value>
+  </data>
+  <data name="CheckDate" xml:space="preserve">
+    <value>Datum provjere</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Stanje</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Komentar</value>
+  </data>
+  <data name="CheckHistory" xml:space="preserve">
+    <value>Historija provjera</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Odaberi</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DashboardDescription" xml:space="preserve">
+    <value>Pregled ključnih informacija i brzih akcija sistema.</value>
+  </data>
+  <data name="TotalWeapons" xml:space="preserve">
+    <value>Ukupno oružja</value>
+  </data>
+  <data name="MarkedWeapons" xml:space="preserve">
+    <value>Označeno oružje</value>
+  </data>
+  <data name="UnmarkedWeapons" xml:space="preserve">
+    <value>Neoznačeno oružje</value>
+  </data>
+  <data name="TotalChecks" xml:space="preserve">
+    <value>Ukupno provjera</value>
+  </data>
+  <data name="RecentWeapons" xml:space="preserve">
+    <value>Zadnje registracije oružja</value>
+  </data>
+  <data name="RecentChecks" xml:space="preserve">
+    <value>Zadnje provjere</value>
+  </data>
+  <data name="QuickActions" xml:space="preserve">
+    <value>Brze akcije</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Izmjena korisnika</value>
+  </data>
+  <data name="EditUserDescription" xml:space="preserve">
+    <value>Izmjena osnovnih podataka, role i pristupa korisnika.</value>
+  </data>
 </root>

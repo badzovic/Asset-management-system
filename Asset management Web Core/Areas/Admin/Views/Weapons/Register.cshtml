@@ -39,12 +39,12 @@
                 </div>
                 <div class="half-input-wrapper">
                     <div class="single">
-                        <label asp-for="RegistrationNo">@ResourcesHelper.Translate("RegistrationNo", lang)</label>
+                        <label asp-for="RegistrationNo">@ResourcesHelper.Translate("RegistrationNo", lang)  <span class="ams-required">*</span> </label>
                         <input asp-for="RegistrationNo" readonly />
                     </div>
 
                     <div class="single">
-                        <label asp-for="RegistrationDate">@ResourcesHelper.Translate("RegistrationDate", lang)</label>
+                        <label asp-for="RegistrationDate">@ResourcesHelper.Translate("RegistrationDate", lang)  <span class="ams-required">*</span></label>
                         <input asp-for="RegistrationDate" type="date" />
                     </div>
                 </div>
@@ -95,19 +95,19 @@
 
                 <div class="half-input-wrapper">
                     <div class="single">
-                        <label asp-for="FactorySerial">@ResourcesHelper.Translate("FactorySerial", lang)</label>
+                        <label asp-for="FactorySerial">@ResourcesHelper.Translate("FactorySerial", lang) <span class="ams-required">*</span></label>
                         <input asp-for="FactorySerial" />
                     </div>
 
                     <div class="single">
-                        <label asp-for="ConfirmSerial">@ResourcesHelper.Translate("ConfirmSerial", lang)</label>
+                        <label asp-for="ConfirmSerial">@ResourcesHelper.Translate("ConfirmSerial", lang) <span class="ams-required">*</span></label>
                         <input asp-for="ConfirmSerial" />
                     </div>
                 </div>
 
                 <div class="half-input-wrapper">
                     <div class="single">
-                        <label asp-for="WeaponModelId">@ResourcesHelper.Translate("WeaponModel", lang)</label>
+                        <label asp-for="WeaponModelId">@ResourcesHelper.Translate("WeaponModel", lang) <span class="ams-required">*</span></label>
                         <select asp-for="WeaponModelId"
                                 asp-items="Model.WeaponModels"
                                 id="WeaponModelId"
@@ -121,7 +121,7 @@
                     </div>
 
                     <div class="single">
-                        <label asp-for="WeaponTypeId">@ResourcesHelper.Translate("WeaponType", lang)</label>
+                        <label asp-for="WeaponTypeId">@ResourcesHelper.Translate("WeaponType", lang) <span class="ams-required">*</span></label>
                         <select asp-for="WeaponTypeId" asp-items="Model.WeaponTypes" id="WeaponTypeId">
                             <option value="">@ResourcesHelper.Translate("SelectWeaponType", lang)</option>
                         </select>
@@ -130,14 +130,14 @@
 
                 <div class="half-input-wrapper">
                     <div class="single">
-                        <label asp-for="ManufacturerId">@ResourcesHelper.Translate("Manufacturer", lang)</label>
+                        <label asp-for="ManufacturerId">@ResourcesHelper.Translate("Manufacturer", lang) <span class="ams-required">*</span></label>
                         <select asp-for="ManufacturerId" asp-items="Model.Manufacturers" id="ManufacturerId">
                             <option value="">@ResourcesHelper.Translate("SelectManufacturer", lang)</option>
                         </select>
                     </div>
 
                     <div class="single">
-                        <label asp-for="CaliberId">@ResourcesHelper.Translate("Caliber", lang)</label>
+                        <label asp-for="CaliberId">@ResourcesHelper.Translate("Caliber", lang) <span class="ams-required">*</span></label>
                         <select asp-for="CaliberId" asp-items="Model.Calibers" id="CaliberId">
                             <option value="">@ResourcesHelper.Translate("SelectCaliber", lang)</option>
                         </select>
@@ -154,7 +154,7 @@
 
                     <div class="single">
                         <label asp-for="ManufactureDate">@ResourcesHelper.Translate("ManufactureDate", lang)</label>
-                        <input asp-for="ManufactureDate" />
+                        <input asp-for="ManufactureDate" type="date" />
                     </div>
                 </div>
 
@@ -335,8 +335,15 @@
     <div class="user-profile-main-wrapper mt--30">
         <h5 class="ams-section-title">@ResourcesHelper.Translate("ActiveWeapons", lang)</h5>
 
-        <div class="table-responsive">
-            <table class="table ams-table">
+        <div class="ams-table-toolbar">
+            <input type="text"
+                   id="activeWeaponsSearch"
+                   placeholder="@ResourcesHelper.Translate("Search", lang)"
+                   class="ams-table-search" />
+        </div>
+
+        <div class="table-responsive ams-active-weapons-scroll">
+            <table class="table ams-table" id="activeWeaponsTable">
                 <thead>
                     <tr>
                         <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
@@ -424,6 +431,14 @@
                             imagePreview.removeAttribute("src");
                         }
                     });
+            });
+        });
+
+        $('#activeWeaponsSearch').on('keyup', function () {
+            const value = $(this).val().toLowerCase();
+
+            $('#activeWeaponsTable tbody tr').filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
             });
         });
     </script>

@@ -86,6 +86,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Users/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlcnNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponModels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uTW9kZWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -116,6 +124,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/WeaponStatuses/_WeaponStatusForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uU3RhdHVzZXNcX1dlYXBvblN0YXR1c0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/Check.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xDaGVjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/PrepareMove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xQcmVwYXJlTW92ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/Register.cshtml]

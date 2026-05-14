@@ -568,3 +568,211 @@
     background: #111827 !important;
     color: #fff !important;
 }
+.ams-required {
+    color: #ff6b6b;
+    font-weight: 800;
+    margin-left: 4px;
+}
+
+.ams-table-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+}
+
+.ams-table-search {
+    width: 320px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #334155 !important;
+    background: #0f172a !important;
+    color: #fff !important;
+    padding: 0 14px;
+    outline: none;
+}
+
+.ams-active-weapons-scroll {
+    max-height: 420px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.ams-check-grid {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
+    gap: 24px;
+    width: 100% !important;
+}
+
+    .ams-check-grid > div:first-child {
+        min-width: 0;
+    }
+
+.user-profile-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+/* Full width samo za admin content */
+.user-profile-area .container-custom {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+/* Check page grid šire */
+.ams-check-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr) !important;
+    gap: 24px !important;
+    align-items: start;
+}
+
+    /* Da kartice ne ograničavaju širinu */
+    .ams-check-grid .user-profile-main-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Tabela desno da normalno koristi prostor */
+    .ams-check-grid .table-responsive {
+        width: 100% !important;
+    }
+.ams-clickable-row {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .ams-clickable-row:hover {
+        background: rgba(79, 70, 229, 0.15) !important;
+    }
+
+.ams-row-select-text {
+    color: #8b5cf6;
+    font-weight: 600;
+}
+.ams-dashboard-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.ams-kpi-card {
+    background: #151c2c;
+    border: 1px solid rgba(51, 65, 85, 0.75);
+    border-radius: 18px;
+    padding: 22px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+    .ams-kpi-card span {
+        color: #94a3b8;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .ams-kpi-card h3 {
+        color: #fff;
+        font-size: 34px;
+        margin: 4px 0 0;
+        font-weight: 900;
+    }
+
+.ams-kpi-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: rgba(59, 130, 246, .15);
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+    .ams-kpi-icon.success {
+        background: rgba(34, 197, 94, .15);
+        color: #22c55e;
+    }
+
+    .ams-kpi-icon.warning {
+        background: rgba(245, 158, 11, .15);
+        color: #f59e0b;
+    }
+
+    .ams-kpi-icon.purple {
+        background: rgba(139, 92, 246, .15);
+        color: #8b5cf6;
+    }
+
+.ams-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ams-card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+    .ams-card-title-row .ams-section-title {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+.ams-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+    .ams-quick-actions:has(a:only-child) {
+        grid-template-columns: 1fr;
+    }
+
+    .ams-quick-actions a {
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 14px;
+        padding: 18px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 800;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+        .ams-quick-actions a:hover {
+            border-color: #4f8cff;
+            background: rgba(79, 140, 255, .12);
+        }
+
+@media (max-width: 1200px) {
+    .ams-dashboard-kpis {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ams-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ams-dashboard-kpis,
+    .ams-quick-actions {
+        grid-template-columns: 1fr;
+    }
+}
+.alert.alert-success.ams-alert {
+    font-size: 14px !important;
+    font-weight: 600;
+}

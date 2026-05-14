@@ -39,7 +39,7 @@ namespace AMS_data.Entities.Weapons
         public int? ManufactureCountryLookupId { get; set; }
         public LookupItem? ManufactureCountryLookup { get; set; }
 
-        public string? ManufactureDate { get; set; }
+        public DateTime? ManufactureDate { get; set; }
 
         public int? OriginalLocationLookupId { get; set; }
         public LookupItem? OriginalLocationLookup { get; set; }

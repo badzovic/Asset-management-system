@@ -199,14 +199,18 @@
                                     </li>
 
                                     <li>
-                                        <a href="#">
+                                        <a asp-area="Admin"
+                                           asp-controller="Weapons"
+                                           asp-action="Check">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                             <span>@ResourcesHelper.Translate("CheckWeaponStatus", lang)</span>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="#">
+                                        <a asp-area="Admin"
+                                           asp-controller="Weapons"
+                                           asp-action="PrepareMove">
                                             <i class="fa-solid fa-right-left"></i>
                                             <span>@ResourcesHelper.Translate("PrepareWeaponMove", lang)</span>
                                         </a>
@@ -234,6 +238,20 @@
 
                         </div>
                     }
+                    @if (User.IsInRole("Admin") || User.IsInRole("Dokazi"))
+                    {
+                        <div class="single-menu-wrapper">
+
+                            <a href="#" class="single-menu">
+                                <div class="icon">
+                                    <img src="~/assets/images/icons/06.png" alt="evidence">
+                                </div>
+
+                                <p>@ResourcesHelper.Translate("Evidence", lang)</p>
+                            </a>
+
+                        </div>
+                    }
 
                     @if (User.IsInRole("Admin") || User.IsInRole("Skladiste"))
                     {
@@ -250,20 +268,7 @@
                         </div>
                     }
 
-                    @if (User.IsInRole("Admin") || User.IsInRole("Dokazi"))
-                    {
-                        <div class="single-menu-wrapper">
-
-                            <a href="#" class="single-menu">
-                                <div class="icon">
-                                    <img src="~/assets/images/icons/06.png" alt="evidence">
-                                </div>
-
-                                <p>@ResourcesHelper.Translate("Evidence", lang)</p>
-                            </a>
-
-                        </div>
-                    }
+                 
 
                 </div>
 

@@ -1,6 +1,162 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Asset_management_Web_Core.Models.DashboardViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("Dashboard", lang);
 }
 
-<div class="text-center">
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <p> </p>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("Dashboard", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("DashboardDescription", lang)</p>
+        </div>
+    </div>
+
+    <div class="ams-dashboard-kpis">
+
+        <div class="ams-kpi-card">
+            <div class="ams-kpi-icon"><i class="fa-solid fa-gun"></i></div>
+            <div>
+                <span>@ResourcesHelper.Translate("TotalWeapons", lang)</span>
+                <h3>@Model.TotalWeapons</h3>
+            </div>
+        </div>
+
+        <div class="ams-kpi-card">
+            <div class="ams-kpi-icon success"><i class="fa-solid fa-check"></i></div>
+            <div>
+                <span>@ResourcesHelper.Translate("MarkedWeapons", lang)</span>
+                <h3>@Model.MarkedWeapons</h3>
+            </div>
+        </div>
+
+        <div class="ams-kpi-card">
+            <div class="ams-kpi-icon warning"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div>
+                <span>@ResourcesHelper.Translate("UnmarkedWeapons", lang)</span>
+                <h3>@Model.UnmarkedWeapons</h3>
+            </div>
+        </div>
+
+        <div class="ams-kpi-card">
+            <div class="ams-kpi-icon purple"><i class="fa-solid fa-clipboard-check"></i></div>
+            <div>
+                <span>@ResourcesHelper.Translate("TotalChecks", lang)</span>
+                <h3>@Model.TotalChecks</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ams-dashboard-grid">
+
+        <div class="user-profile-main-wrapper">
+            <div class="ams-card-title-row">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("RecentWeapons", lang)</h5>
+
+                <a asp-area="Admin" asp-controller="Weapons" asp-action="Register" class="ams-btn-small">
+                    @ResourcesHelper.Translate("RegisterWeapon", lang)
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table ams-table">
+                    <thead>
+                        <tr>
+                            <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                            <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
+                            <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
+                            <th>@ResourcesHelper.Translate("Manufacturer", lang)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.RecentWeapons)
+                        {
+                            <tr>
+                                <td>@item.RegistrationNo</td>
+                                <td>@item.FactorySerial</td>
+                                <td>@item.WeaponModel?.Name</td>
+                                <td>@item.Manufacturer?.Name</td>
+                            </tr>
+                        }
+
+                        @if (!Model.RecentWeapons.Any())
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center text-muted py-4">
+                                    @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="user-profile-main-wrapper">
+            <div class="ams-card-title-row">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("RecentChecks", lang)</h5>
+
+                <a asp-area="Admin" asp-controller="Weapons" asp-action="Check" class="ams-btn-small">
+                    @ResourcesHelper.Translate("CheckWeaponStatus", lang)
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table ams-table">
+                    <thead>
+                        <tr>
+                            <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
+                            <th>@ResourcesHelper.Translate("State", lang)</th>
+                            <th>@ResourcesHelper.Translate("CheckDate", lang)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.RecentChecks)
+                        {
+                            <tr>
+                                <td>@item.Weapon?.WeaponModel?.Name</td>
+                                <td>@item.CheckStateLookup?.Name</td>
+                                <td>@item.CheckDate.ToString("dd.MM.yyyy")</td>
+                            </tr>
+                        }
+
+                        @if (!Model.RecentChecks.Any())
+                        {
+                            <tr>
+                                <td colspan="3" class="text-center text-muted py-4">
+                                    @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="user-profile-main-wrapper mt--30">
+        <h5 class="ams-section-title">@ResourcesHelper.Translate("QuickActions", lang)</h5>
+
+        <div class="ams-quick-actions">
+
+            <a asp-area="Admin" asp-controller="Weapons" asp-action="Register">
+                <i class="fa-solid fa-plus"></i>
+                <span>@ResourcesHelper.Translate("RegisterWeapon", lang)</span>
+            </a>
+
+            <a asp-area="Admin" asp-controller="Weapons" asp-action="Check">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>@ResourcesHelper.Translate("CheckWeaponStatus", lang)</span>
+            </a>
+
+           
+
+        </div>
+    </div>
+
 </div>

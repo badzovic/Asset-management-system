@@ -1,0 +1,96 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.EditUserViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("EditUser", lang);
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("EditUser", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("EditUserDescription", lang)</p>
+        </div>
+
+        <a asp-action="Create" class="ams-btn-secondary">
+            @ResourcesHelper.Translate("BackToList", lang)
+        </a>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" asp-for="Id" />
+
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="UserName">@ResourcesHelper.Translate("Username", lang)</label>
+                    <input asp-for="UserName" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+                <div class="single">
+                    <label asp-for="RoleName">@ResourcesHelper.Translate("Role", lang)</label>
+                    <select asp-for="RoleName" asp-items="Model.Roles">
+                        <option value="">@ResourcesHelper.Translate("SelectRole", lang)</option>
+                    </select>
+                    <span asp-validation-for="RoleName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="Ime">@ResourcesHelper.Translate("FirstName", lang)</label>
+                    <input asp-for="Ime" />
+                    <span asp-validation-for="Ime" class="text-danger"></span>
+                </div>
+
+                <div class="single">
+                    <label asp-for="Prezime">@ResourcesHelper.Translate("LastName", lang)</label>
+                    <input asp-for="Prezime" />
+                    <span asp-validation-for="Prezime" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="OrganizacionaJedinicaId">@ResourcesHelper.Translate("OrganizationalUnit", lang)</label>
+                    <select asp-for="OrganizacionaJedinicaId" asp-items="Model.OrganizacioneJedinice">
+                        <option value="">@ResourcesHelper.Translate("NoOrganizationalUnit", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single">
+                    <label asp-for="SkladisteId">@ResourcesHelper.Translate("Warehouse", lang)</label>
+                    <select asp-for="SkladisteId" asp-items="Model.Skladista">
+                        <option value="">@ResourcesHelper.Translate("NoWarehouse", lang)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="ams-checkbox-row">
+                <label class="ams-switch">
+                    <input asp-for="Aktivan" />
+                    <span class="ams-slider"></span>
+                </label>
+
+                <span class="ams-checkbox-label">
+                    @ResourcesHelper.Translate("Active", lang)
+                </span>
+            </div>
+
+            <button type="submit" class="rts-btn btn-primary mt--20">
+                @ResourcesHelper.Translate("SaveChanges", lang)
+            </button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

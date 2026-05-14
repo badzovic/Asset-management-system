@@ -646,4 +646,67 @@
   <data name="SelectCountry" xml:space="preserve">
     <value>-- Select country --</value>
   </data>
+  <data name="CheckWeaponStatusDescription" xml:space="preserve">
+    <value>Check Weapon Status Description </value>
+  </data>
+  <data name="SelectedWeapon" xml:space="preserve">
+    <value>Selected Weapon</value>
+  </data>
+  <data name="SearchWeaponPlaceholder" xml:space="preserve">
+    <value>Search Weapon Placeholder</value>
+  </data>
+  <data name="SelectWeaponFromList" xml:space="preserve">
+    <value>Select Weapon From List</value>
+  </data>
+  <data name="WeaponCheckForm" xml:space="preserve">
+    <value>Weapon Check Form</value>
+  </data>
+  <data name="CheckDate" xml:space="preserve">
+    <value>Check Date</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="CheckHistory" xml:space="preserve">
+    <value>Check History</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DashboardDescription" xml:space="preserve">
+    <value>Dashboard Description</value>
+  </data>
+  <data name="TotalWeapons" xml:space="preserve">
+    <value>Total Weapons</value>
+  </data>
+  <data name="MarkedWeapons" xml:space="preserve">
+    <value>Marked Weapons</value>
+  </data>
+  <data name="UnmarkedWeapons" xml:space="preserve">
+    <value>Unmarked Weapons</value>
+  </data>
+  <data name="TotalChecks" xml:space="preserve">
+    <value>Total Checks</value>
+  </data>
+  <data name="RecentWeapons" xml:space="preserve">
+    <value>Recent Weapons</value>
+  </data>
+  <data name="RecentChecks" xml:space="preserve">
+    <value>Recent Checks</value>
+  </data>
+  <data name="QuickActions" xml:space="preserve">
+    <value>Brze akcije</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="EditUserDescription" xml:space="preserve">
+    <value>Edit User Description</value>
+  </data>
 </root>

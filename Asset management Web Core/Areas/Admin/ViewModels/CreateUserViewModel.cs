@@ -28,5 +28,7 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels
         public List<SelectListItem> OrganizacioneJedinice { get; set; } = new();
 
         public List<SelectListItem> Skladista { get; set; } = new();
+
+        public List<UserListItemViewModel> Users { get; set; } = new();
     }
 }

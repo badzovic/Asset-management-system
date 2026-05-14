@@ -186,7 +186,202 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 imagePath = model.ImagePath
             });
         }
+        public async Task<IActionResult> Check(int? weaponId, string? searchTerm)
+        {
+            var model = new WeaponCheckViewModel
+            {
+                SelectedWeaponId = weaponId,
+                SearchTerm = searchTerm,
+                CheckDate = DateTime.Today
+            };
 
+            model = await PopulateCheckModel(model);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Check(WeaponCheckViewModel model)
+        {
+            if (model.SelectedWeaponId == null)
+            {
+                ModelState.AddModelError(nameof(model.SelectedWeaponId), "Please select a weapon.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                model = await PopulateCheckModel(model);
+                return View(model);
+            }
+
+            var weapon = await _db.Weapons
+                .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
+
+            if (weapon == null)
+                return NotFound();
+
+            var check = new WeaponCheck
+            {
+                WeaponId = weapon.Id,
+                CheckDate = model.CheckDate,
+                CheckStateLookupId = model.CheckStateLookupId,
+                IdNo = model.IdNo,
+                Comments = model.Comments,
+                CreatedAt = DateTime.UtcNow,
+                CreatedBy = User.FindFirstValue(ClaimTypes.NameIdentifier)
+            };
+
+            _db.WeaponChecks.Add(check);
+            await _db.SaveChangesAsync();
+
+            await _auditLogService.LogAsync(
+                action: "CREATE_WEAPON_CHECK",
+                entityName: "WeaponCheck",
+                entityId: check.Id.ToString(),
+                newValues: new
+                {
+                    check.WeaponId,
+                    weapon.RegistrationNo,
+                    weapon.FactorySerial,
+                    check.CheckDate,
+                    check.CheckStateLookupId,
+                    check.IdNo,
+                    check.Comments
+                });
+
+            return RedirectToAction(nameof(Check), new { weaponId = weapon.Id });
+        }
+
+        public async Task<IActionResult> PrepareMove(int? weaponId, string? searchTerm)
+        {
+            var model = new WeaponMoveViewModel
+            {
+                SelectedWeaponId = weaponId,
+                SearchTerm = searchTerm,
+                MoveDate = DateTime.Today,
+                MoveOrdinalNo = "001"
+            };
+
+            model = await PopulateMoveModel(model);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> PrepareMove(WeaponMoveViewModel model)
+        {
+            if (model.SelectedWeaponId == null)
+            {
+                ModelState.AddModelError(nameof(model.SelectedWeaponId), "Please select a weapon.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                model = await PopulateMoveModel(model);
+                return View(model);
+            }
+
+            var weapon = await _db.Weapons
+                .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
+
+            if (weapon == null)
+                return NotFound();
+
+            var move = new WeaponMove
+            {
+                WeaponId = weapon.Id,
+                MoveDate = model.MoveDate,
+                MovementActionLookupId = model.MovementActionLookupId,
+                NewLocationLookupId = model.NewLocationLookupId,
+                OrderNo = model.OrderNo,
+                AuthMoveNo = model.AuthMoveNo,
+                MoveOrdinalNo = model.MoveOrdinalNo,
+                EndUserCertificate = model.EndUserCertificate,
+                UserOrgName = model.UserOrgName,
+                Notes = model.Notes,
+                AuthorisedByName = model.AuthorisedByName,
+                Status = "Prepared",
+                PreparedAt = DateTime.UtcNow,
+                PreparedByUserId = User.FindFirstValue(ClaimTypes.NameIdentifier)
+            };
+
+            _db.WeaponMoves.Add(move);
+            await _db.SaveChangesAsync();
+
+            await _auditLogService.LogAsync(
+                action: "PREPARE_WEAPON_MOVE",
+                entityName: "WeaponMove",
+                entityId: move.Id.ToString(),
+                newValues: new
+                {
+                    move.WeaponId,
+                    weapon.RegistrationNo,
+                    weapon.FactorySerial,
+                    move.MoveDate,
+                    move.MovementActionLookupId,
+                    move.NewLocationLookupId,
+                    move.OrderNo,
+                    move.AuthMoveNo,
+                    move.MoveOrdinalNo,
+                    move.Status
+                });
+
+            TempData["SuccessMessage"] = "Prijenos oružja je uspješno pripremljen.";
+
+            return RedirectToAction(nameof(PrepareMove), new { weaponId = weapon.Id });
+        }
+        private async Task<WeaponMoveViewModel> PopulateMoveModel(WeaponMoveViewModel model)
+        {
+            model.MovementActions = await SelectLookup("MovementAction");
+            model.NewLocations = await SelectLookup("MovedWeaponLocation");
+
+            var query = _db.Weapons
+                .Include(x => x.WeaponType)
+                .Include(x => x.WeaponModel)
+                .Include(x => x.Manufacturer)
+                .Include(x => x.Caliber)
+                .Include(x => x.OriginalLocationLookup)
+                .Include(x => x.ManufactureCountryLookup)
+                .Where(x => !x.IsDeleted)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(model.SearchTerm))
+            {
+                query = query.Where(x =>
+                    x.RegistrationNo.Contains(model.SearchTerm) ||
+                    (x.FactorySerial != null && x.FactorySerial.Contains(model.SearchTerm)) ||
+                    (x.InventoryNo != null && x.InventoryNo.Contains(model.SearchTerm)) ||
+                    (x.WeaponModel != null && x.WeaponModel.Name.Contains(model.SearchTerm)));
+            }
+
+            model.ActiveWeapons = await query
+                .OrderByDescending(x => x.CreatedAt)
+                .Take(100)
+                .ToListAsync();
+
+            if (model.SelectedWeaponId != null)
+            {
+                model.SelectedWeapon = await _db.Weapons
+                    .Include(x => x.WeaponType)
+                    .Include(x => x.WeaponModel)
+                    .Include(x => x.Manufacturer)
+                    .Include(x => x.Caliber)
+                    .Include(x => x.OriginalLocationLookup)
+                    .Include(x => x.ManufactureCountryLookup)
+                    .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
+
+                model.MoveHistory = await _db.WeaponMoves
+                    .Include(x => x.MovementActionLookup)
+                    .Include(x => x.NewLocationLookup)
+                    .Where(x => x.WeaponId == model.SelectedWeaponId && !x.IsDeleted)
+                    .OrderByDescending(x => x.PreparedAt)
+                    .ToListAsync();
+            }
+
+            return model;
+        }
         private async Task<List<Weapon>> GetActiveWeapons()
         {
             return await _db.Weapons
@@ -201,6 +396,53 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 .ToListAsync();
         }
 
+        private async Task<WeaponCheckViewModel> PopulateCheckModel(WeaponCheckViewModel model)
+        {
+            model.CheckStates = await SelectLookup("CheckState");
+
+            var query = _db.Weapons
+                .Include(x => x.WeaponType)
+                .Include(x => x.WeaponModel)
+                .Include(x => x.Manufacturer)
+                .Include(x => x.Caliber)
+                .Include(x => x.OriginalStateLookup)
+                .Where(x => !x.IsDeleted)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(model.SearchTerm))
+            {
+                query = query.Where(x =>
+                    x.RegistrationNo.Contains(model.SearchTerm) ||
+                    (x.FactorySerial != null && x.FactorySerial.Contains(model.SearchTerm)) ||
+                    (x.InventoryNo != null && x.InventoryNo.Contains(model.SearchTerm)) ||
+                    (x.WeaponModel != null && x.WeaponModel.Name.Contains(model.SearchTerm)));
+            }
+
+            model.ActiveWeapons = await query
+                .OrderByDescending(x => x.CreatedAt)
+                .Take(100)
+                .ToListAsync();
+
+            if (model.SelectedWeaponId != null)
+            {
+                model.SelectedWeapon = await _db.Weapons
+                    .Include(x => x.WeaponType)
+                    .Include(x => x.WeaponModel)
+                    .Include(x => x.Manufacturer)
+                    .Include(x => x.Caliber)
+                    .Include(x => x.OriginalStateLookup)
+                    .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
+
+                model.CheckHistory = await _db.WeaponChecks
+                    .Include(x => x.CheckStateLookup)
+                    .Where(x => x.WeaponId == model.SelectedWeaponId && !x.IsDeleted)
+                    .OrderByDescending(x => x.CheckDate)
+                    .ThenByDescending(x => x.CreatedAt)
+                    .ToListAsync();
+            }
+
+            return model;
+        }
         private async Task<WeaponRegisterViewModel> PopulateDropdowns(WeaponRegisterViewModel model)
         {
             model.WeaponTypes = await SelectWeaponTypes();

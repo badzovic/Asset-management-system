@@ -10,6 +10,12 @@
 <div class="user-profile-inner">
 
     <h4 class="title mb-4">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success ams-alert">
+                @TempData["SuccessMessage"]
+            </div>
+        }
         @ResourcesHelper.Translate("NewUser", lang)
     </h4>
 
@@ -124,7 +130,69 @@
         </form>
 
     </div>
+    <div class="user-profile-main-wrapper mt--30">
+        <h5 class="ams-section-title">
+            @ResourcesHelper.Translate("Users", lang)
+        </h5>
 
+        <div class="table-responsive ams-active-weapons-scroll">
+            <table class="table ams-table">
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("Username", lang)</th>
+                        <th>@ResourcesHelper.Translate("FirstName", lang)</th>
+                        <th>@ResourcesHelper.Translate("LastName", lang)</th>
+                        <th>@ResourcesHelper.Translate("Role", lang)</th>
+                        <th>@ResourcesHelper.Translate("OrganizationalUnit", lang)</th>
+                        <th>@ResourcesHelper.Translate("Warehouse", lang)</th>
+                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                        <th class="text-end">@ResourcesHelper.Translate("Actions", lang)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model.Users)
+                    {
+                        <tr>
+                            <td>@user.UserName</td>
+                            <td>@user.Ime</td>
+                            <td>@user.Prezime</td>
+                            <td>@user.RoleName</td>
+                            <td>@user.OrganizacionaJedinica</td>
+                            <td>@user.Skladiste</td>
+                            <td>
+                                @if (user.Aktivan)
+                                {
+                                    <span class="ams-badge ams-badge-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="ams-badge ams-badge-muted">Inactive</span>
+                                }
+                            </td>
+                            <td class="text-end">
+                                <a asp-action="Edit" asp-route-id="@user.Id" class="ams-btn-small">
+                                    @ResourcesHelper.Translate("Edit", lang)
+                                </a>
+
+                                <a asp-action="ResetPassword" asp-route-id="@user.Id" class="ams-btn-small ms-2">
+                                    Reset password
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                    @if (!Model.Users.Any())
+                    {
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoRecordsFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

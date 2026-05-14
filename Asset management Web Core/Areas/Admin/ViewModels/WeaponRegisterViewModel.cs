@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons
 {
@@ -7,24 +8,32 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons
     {
         public int? Id { get; set; }
 
+        [Required]
         public string RegistrationNo { get; set; } = string.Empty;
 
+        [Required]
         public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
 
         public bool IsMarked { get; set; }
 
         public bool IsProspective { get; set; }
 
+        [Required]
         public string? FactorySerial { get; set; }
 
+        [Required]
         public string? ConfirmSerial { get; set; }
 
+        [Required]
         public int? WeaponTypeId { get; set; }
 
+        [Required]
         public int? WeaponModelId { get; set; }
 
+        [Required]
         public int? CaliberId { get; set; }
 
+        [Required]
         public int? ManufacturerId { get; set; }
 
         public int? MarkLocationLookupId { get; set; }
@@ -37,7 +46,7 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons
 
         public int? ManufactureCountryLookupId { get; set; }
 
-        public string? ManufactureDate { get; set; }
+        public DateTime? ManufactureDate { get; set; }
 
         public int? OriginalLocationLookupId { get; set; }
 

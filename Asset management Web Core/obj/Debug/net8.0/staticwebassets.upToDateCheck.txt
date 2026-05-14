@@ -197,7 +197,10 @@ wwwroot\lib\jquery\LICENSE.txt
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\uploads\weapon-models\4061ace6-a8d3-4737-b136-5cc41effd784.webp
+wwwroot\uploads\weapon-models\444c0bb1-8231-4305-8847-978ae094ed21.jpg
 wwwroot\uploads\weapon-models\7057d092-7732-47bd-a8d8-87105b4a722c.jpg
+wwwroot\uploads\weapon-models\8524f98c-3efe-499e-9f48-6037783473a7.jpg
 wwwroot\uploads\weapon-models\bb21e6d6-962e-4bf2-8cdb-60b4c5681a85.jpg
 wwwroot\version\index-2.html
 wwwroot\version\index.html
