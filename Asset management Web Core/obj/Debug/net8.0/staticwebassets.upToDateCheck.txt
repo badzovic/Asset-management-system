@@ -128,6 +128,8 @@ wwwroot\assets\images\icons\12.png
 wwwroot\assets\images\icons\14.png
 wwwroot\assets\images\icons\15.png
 wwwroot\assets\images\icons\16.png
+wwwroot\assets\images\logo.jpg
+wwwroot\assets\images\logo2.png
 wwwroot\assets\images\logo\logo-01.png
 wwwroot\assets\images\logo\logo-02.png
 wwwroot\assets\js\main.js
@@ -195,6 +197,7 @@ wwwroot\lib\jquery\LICENSE.txt
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\uploads\weapon-models\7057d092-7732-47bd-a8d8-87105b4a722c.jpg
 wwwroot\uploads\weapon-models\bb21e6d6-962e-4bf2-8cdb-60b4c5681a85.jpg
 wwwroot\version\index-2.html
 wwwroot\version\index.html

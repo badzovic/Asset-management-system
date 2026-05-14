@@ -4,6 +4,7 @@ using AMS_services.Audit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Asset_management_Web_Core.Areas.Admin.Controllers
 {
@@ -22,14 +23,16 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(string? search, string? status)
         {
-            var query = _db.Manufacturers.AsQueryable();
+            var query = _db.Manufacturers
+            .Include(x => x.CountryLookup)
+            .AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(search))
             {
                 query = query.Where(x =>
                     x.Name.Contains(search) ||
                     (x.Code != null && x.Code.Contains(search)) ||
-                    (x.Country != null && x.Country.Contains(search)) ||
+                    (x.CountryLookup != null && x.CountryLookup.Name.Contains(search)) ||
                     (x.Description != null && x.Description.Contains(search)));
             }
 
@@ -45,9 +48,23 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
             return View(items);
         }
-
-        public IActionResult Create()
+        private async Task LoadDropdowns()
         {
+            ViewBag.Countries = await _db.LookupItems
+                .Include(x => x.LookupCategory)
+                .Where(x => x.LookupCategory.Key == "ManufacturerCountry" && x.IsActive)
+                .OrderBy(x => x.DisplayOrder)
+                .ThenBy(x => x.Name)
+                .Select(x => new SelectListItem
+                {
+                    Value = x.Id.ToString(),
+                    Text = x.Name
+                })
+                .ToListAsync();
+        }
+        public async Task<IActionResult> Create()
+        {
+            await LoadDropdowns();
             return View(new Manufacturer());
         }
 
@@ -56,7 +73,10 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
         public async Task<IActionResult> Create(Manufacturer model)
         {
             if (!ModelState.IsValid)
+            {
+                await LoadDropdowns();
                 return View(model);
+            }
 
             model.CreatedAt = DateTime.UtcNow;
 
@@ -71,7 +91,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 {
                     model.Name,
                     model.Code,
-                    model.Country,
+                    model.CountryLookupId,
                     model.Description,
                     model.IsActive
                 });
@@ -81,10 +101,14 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
-            var item = await _db.Manufacturers.FindAsync(id);
+            var item = await _db.Manufacturers
+                .Include(x => x.CountryLookup)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
             if (item == null)
                 return NotFound();
+
+            await LoadDropdowns();
 
             return View(item);
         }
@@ -97,7 +121,10 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 return BadRequest();
 
             if (!ModelState.IsValid)
+            {
+                await LoadDropdowns();
                 return View(model);
+            }
 
             var item = await _db.Manufacturers.FindAsync(id);
 
@@ -109,6 +136,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 item.Name,
                 item.Code,
                 item.Country,
+                item.CountryLookupId,
                 item.Description,
                 item.IsActive
             };
@@ -118,6 +146,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             item.Country = model.Country;
             item.Description = model.Description;
             item.IsActive = model.IsActive;
+            item.CountryLookupId = model.CountryLookupId;
 
             await _db.SaveChangesAsync();
 

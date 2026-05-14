@@ -22,7 +22,10 @@
 <div class="half-input-wrapper">
     <div class="single">
         <label asp-for="Country">@ResourcesHelper.Translate("Country", lang)</label>
-        <input asp-for="Country" placeholder="@ResourcesHelper.Translate("EnterCountry", lang)" />
+        <select asp-for="CountryLookupId" asp-items="ViewBag.Countries">
+            <option value="">@ResourcesHelper.Translate("SelectCountry", lang)</option>
+        </select>
+        <span asp-validation-for="CountryLookupId" class="text-danger"></span>
         <span asp-validation-for="Country" class="text-danger"></span>
     </div>
 </div>

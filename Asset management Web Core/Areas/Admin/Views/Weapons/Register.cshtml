@@ -108,8 +108,15 @@
                 <div class="half-input-wrapper">
                     <div class="single">
                         <label asp-for="WeaponModelId">@ResourcesHelper.Translate("WeaponModel", lang)</label>
-                        <select asp-for="WeaponModelId" asp-items="Model.WeaponModels" id="WeaponModelId">
-                            <option value="">@ResourcesHelper.Translate("SelectWeaponModel", lang)</option>
+                        <select asp-for="WeaponModelId"
+                                asp-items="Model.WeaponModels"
+                                id="WeaponModelId"
+                                class="ams-select2">
+
+                            <option value="">
+                                @ResourcesHelper.Translate("SelectWeaponModel", lang)
+                            </option>
+
                         </select>
                     </div>
 
@@ -374,46 +381,51 @@
     <partial name="_ValidationScriptsPartial" />
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const modelSelect = document.getElementById("WeaponModelId");
-            const typeSelect = document.getElementById("WeaponTypeId");
-            const manufacturerSelect = document.getElementById("ManufacturerId");
-            const caliberSelect = document.getElementById("CaliberId");
-            const manufacturerCountrySelect = document.getElementById("ManufactureCountryLookupId");
+        $(document).ready(function () {
+
+            $('.ams-select2').select2({
+                width: '100%',
+                placeholder: '-- Select --',
+                allowClear: true
+            });
+
             const imageWrap = document.getElementById("modelImageWrap");
             const imagePreview = document.getElementById("modelImagePreview");
 
-            if (!modelSelect) return;
-
-            modelSelect.addEventListener("change", function () {
+            $('#WeaponModelId').on('change', function () {
                 const modelId = this.value;
 
                 if (!modelId) {
-                    imageWrap.style.display = "none";
-                    imagePreview.removeAttribute("src");
+                    if (imageWrap) imageWrap.style.display = "none";
+                    if (imagePreview) imagePreview.removeAttribute("src");
                     return;
                 }
 
                 fetch(`/Admin/Weapons/GetModelDetails?id=${modelId}`)
                     .then(response => response.json())
-                          .then(data => {
-                    if (data.weaponTypeId) typeSelect.value = data.weaponTypeId;
-                    if (data.manufacturerId) manufacturerSelect.value = data.manufacturerId;
-                    if (data.caliberId) caliberSelect.value = data.caliberId;
+                    .then(data => {
+                        if (data.weaponTypeId)
+                            $('#WeaponTypeId').val(data.weaponTypeId).trigger('change');
 
-                    if (data.manufacturerCountryLookupId && manufacturerCountrySelect) {
-                        manufacturerCountrySelect.value = data.manufacturerCountryLookupId;
-                    }
+                        if (data.manufacturerId)
+                            $('#ManufacturerId').val(data.manufacturerId).trigger('change');
 
-                    if (data.imagePath) {
-                        imagePreview.src = data.imagePath;
-                        imageWrap.style.display = "block";
-                    } else {
-                        imageWrap.style.display = "none";
-                        imagePreview.removeAttribute("src");
-                    }
-                });
+                        if (data.caliberId)
+                            $('#CaliberId').val(data.caliberId).trigger('change');
+
+                        if (data.manufacturerCountryLookupId)
+                            $('#ManufactureCountryLookupId').val(data.manufacturerCountryLookupId).trigger('change');
+
+                        if (data.imagePath) {
+                            imagePreview.src = data.imagePath;
+                            imageWrap.style.display = "block";
+                        } else {
+                            imageWrap.style.display = "none";
+                            imagePreview.removeAttribute("src");
+                        }
+                    });
             });
         });
     </script>
+
 }

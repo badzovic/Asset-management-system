@@ -169,7 +169,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Asset Management System.
+        ///   Looks up a localized string similar to Safe Stock.
         /// </summary>
         public static string ApplicationName {
             get {
@@ -1308,6 +1308,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string SelectCaliber {
             get {
                 return ResourceManager.GetString("SelectCaliber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -- Select country --.
+        /// </summary>
+        public static string SelectCountry {
+            get {
+                return ResourceManager.GetString("SelectCountry", resourceCulture);
             }
         }
         

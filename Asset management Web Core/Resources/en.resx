@@ -296,7 +296,7 @@
     <value>Locations</value>
   </data>
   <data name="ApplicationName" xml:space="preserve">
-    <value>Asset Management System</value>
+    <value>Safe Stock</value>
   </data>
   <data name="AMSUser" xml:space="preserve">
     <value>User</value>
@@ -642,5 +642,8 @@
   </data>
   <data name="OriginalStates" xml:space="preserve">
     <value>Original States</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>-- Select country --</value>
   </data>
 </root>

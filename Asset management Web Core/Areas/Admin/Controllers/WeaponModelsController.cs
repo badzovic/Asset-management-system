@@ -31,7 +31,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
         {
             var query = _db.WeaponModels
                 .Include(x => x.WeaponType)
-                .Include(x => x.Manufacturer)
+                .Include(x => x.Manufacturer).ThenInclude(x => x.CountryLookup)
                 .Include(x => x.Caliber)
                 .AsQueryable();
 

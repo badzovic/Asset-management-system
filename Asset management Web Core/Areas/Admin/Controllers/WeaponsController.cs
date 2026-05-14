@@ -146,10 +146,11 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
         public async Task<IActionResult> GetModelDetails(int id)
         {
             var model = await _db.WeaponModels
-                .Include(x => x.WeaponType)
-                .Include(x => x.Manufacturer)
-                .Include(x => x.Caliber)
-                .FirstOrDefaultAsync(x => x.Id == id);
+              .Include(x => x.WeaponType)
+              .Include(x => x.Manufacturer)
+                  .ThenInclude(x => x.CountryLookup)
+              .Include(x => x.Caliber)
+              .FirstOrDefaultAsync(x => x.Id == id);
 
             if (model == null)
                 return NotFound();
@@ -175,8 +176,9 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
                 manufacturerId = model.ManufacturerId,
                 manufacturerName = model.Manufacturer?.Name,
-                manufacturerCountry = model.Manufacturer?.Country,
-                manufacturerCountryLookupId,
+
+                manufacturerCountryLookupId = model.Manufacturer?.CountryLookupId,
+                manufacturerCountry = model.Manufacturer?.CountryLookup?.Name,
 
                 caliberId = model.CaliberId,
                 caliberName = model.Caliber?.Name,

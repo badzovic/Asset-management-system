@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AMS_data.Entities.Lookups;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace AMS_data.Entities.Weapons
         public string? Code { get; set; }
         public string? Country { get; set; }
         public string? Description { get; set; }
+        public int? CountryLookupId { get; set; }
+        public LookupItem? CountryLookup { get; set; }
         public bool IsActive { get; set; } = true;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

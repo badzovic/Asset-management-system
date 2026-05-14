@@ -136,7 +136,7 @@
     <value>Korisnik</value>
   </data>
   <data name="ApplicationName" xml:space="preserve">
-    <value>Asset Management System</value>
+    <value>Safe Stock</value>
   </data>
   <data name="BackToList" xml:space="preserve">
     <value>Nazad na listu</value>
@@ -635,5 +635,8 @@
   </data>
   <data name="WeaponItemType" xml:space="preserve">
     <value>Tip oružja</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>-- Odaberi državu --</value>
   </data>
 </root>
