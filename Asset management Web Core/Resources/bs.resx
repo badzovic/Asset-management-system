@@ -771,4 +771,67 @@
   <data name="AuthorisedAt" xml:space="preserve">
     <value>Vrijeme autorizacije</value>
   </data>
+  <data name="QueryGeneratorDescription" xml:space="preserve">
+    <value>Kreiranje izvještaja i pretraga oružja po filterima i odabranim kolonama.</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filteri</value>
+  </data>
+  <data name="VisibleColumns" xml:space="preserve">
+    <value>Vidljive kolone</value>
+  </data>
+  <data name="QueryResults" xml:space="preserve">
+    <value>Rezultati upita</value>
+  </data>
+  <data name="RunQuery" xml:space="preserve">
+    <value>Pokreni upit</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>Datum od</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>Datum do</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Sve</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="UseFiltersToRunQuery" xml:space="preserve">
+    <value>Odaberite filtere i pokrenite upit.</value>
+  </data>
+  <data name="MarkWeapon" xml:space="preserve">
+    <value>Markiranje oružja</value>
+  </data>
+  <data name="MarkWeaponDescription" xml:space="preserve">
+    <value>Priprema označavanja oružja za graverku, laser ili label printer.</value>
+  </data>
+  <data name="MarkingHistory" xml:space="preserve">
+    <value>Historija označavanja</value>
+  </data>
+  <data name="MarkingData" xml:space="preserve">
+    <value>Podaci za označavanje</value>
+  </data>
+  <data name="MarkingText1" xml:space="preserve">
+    <value>Tekst 1</value>
+  </data>
+  <data name="MarkingText2" xml:space="preserve">
+    <value>Tekst 2</value>
+  </data>
+  <data name="MarkingText3" xml:space="preserve">
+    <value>Tekst 3</value>
+  </data>
+  <data name="PrepareMarkingJob" xml:space="preserve">
+    <value>Pripremi marking job</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
 </root>

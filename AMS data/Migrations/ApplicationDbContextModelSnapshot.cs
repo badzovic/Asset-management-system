@@ -342,6 +342,153 @@ namespace AMS_data.Migrations
                     b.ToTable("Manufacturers");
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Weapons.MarkingLayout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("BackgroundFilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("HeightMm")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LayoutJson")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LayoutType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PreviewImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TemplateFilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("WidthMm")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MarkingLayouts");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Weapons.MarkingLayoutObject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("FontSize")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Height")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsBold")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MarkingLayoutId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ObjectType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PropertiesJson")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Rotation")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("StrokeWidth")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("TextValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VariableName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Width")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("X")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Y")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MarkingLayoutId");
+
+                    b.ToTable("MarkingLayoutObjects");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Weapons.SavedWeaponQuery", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsPublic")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QueryJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SavedWeaponQueries");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Weapons.Weapon", b =>
                 {
                     b.Property<int>("Id")
@@ -562,6 +709,90 @@ namespace AMS_data.Migrations
                     b.HasIndex("WeaponId");
 
                     b.ToTable("WeaponChecks");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponMarkingJob", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Caliber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CompletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedByUserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DataMatrixValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ErrorMessage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FactorySerial")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("JobDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Manufacturer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("MarkingLayoutId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MarkingText1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MarkingText2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MarkingText3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OutputJson")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QrValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegistrationNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("SentAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("WeaponModel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WeaponType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MarkingLayoutId");
+
+                    b.HasIndex("WeaponId");
+
+                    b.ToTable("WeaponMarkingJobs");
                 });
 
             modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponModel", b =>
@@ -912,6 +1143,17 @@ namespace AMS_data.Migrations
                     b.Navigation("CountryLookup");
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Weapons.MarkingLayoutObject", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Weapons.MarkingLayout", "MarkingLayout")
+                        .WithMany("Objects")
+                        .HasForeignKey("MarkingLayoutId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MarkingLayout");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Weapons.Weapon", b =>
                 {
                     b.HasOne("AMS_data.Entities.Lookups.LookupItem", "BookkeepingByLookup")
@@ -1046,6 +1288,23 @@ namespace AMS_data.Migrations
                     b.Navigation("Weapon");
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponMarkingJob", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Weapons.MarkingLayout", "MarkingLayout")
+                        .WithMany()
+                        .HasForeignKey("MarkingLayoutId");
+
+                    b.HasOne("AMS_data.Entities.Weapons.Weapon", "Weapon")
+                        .WithMany()
+                        .HasForeignKey("WeaponId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MarkingLayout");
+
+                    b.Navigation("Weapon");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Weapons.WeaponModel", b =>
                 {
                     b.HasOne("AMS_data.Entities.Weapons.Caliber", "Caliber")
@@ -1149,6 +1408,11 @@ namespace AMS_data.Migrations
             modelBuilder.Entity("AMS_data.Entities.Lookups.LookupItem", b =>
                 {
                     b.Navigation("Children");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Weapons.MarkingLayout", b =>
+                {
+                    b.Navigation("Objects");
                 });
 #pragma warning restore 612, 618
         }

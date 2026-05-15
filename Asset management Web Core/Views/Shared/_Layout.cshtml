@@ -226,12 +226,37 @@
                                     </li>
 
                                     <li>
-                                        <a href="#">
+                                        <a asp-area="Admin"
+                                           asp-controller="Weapons"
+                                           asp-action="QueryGenerator">
                                             <i class="fa-solid fa-file-lines"></i>
                                             <span>@ResourcesHelper.Translate("QueryGenerator", lang)</span>
                                         </a>
                                     </li>
-
+                                    <li>
+                                    <a asp-area="Admin"
+                                       asp-controller="Weapons"
+                                       asp-action="Mark">
+                                        <i class="fa-solid fa-barcode"></i>
+                                        <span>@ResourcesHelper.Translate("MarkWeapon", lang)</span>
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a asp-area="Admin"
+                                       asp-controller="Weapons"
+                                       asp-action="MarkingLayouts">
+                                        <i class="fa-solid fa-layer-group"></i>
+                                        <span>Marking Layouts</span>
+                                    </a>
+                                    </li>
+                                    <li>
+                                    <a asp-area="Admin"
+                                       asp-controller="Weapons"
+                                       asp-action="MarkingQueue">
+                                        <i class="fa-solid fa-list-check"></i>
+                                        <span>Marking Queue</span>
+                                    </a>
+                                    </li>
                                 </ul>
 
                             </div>

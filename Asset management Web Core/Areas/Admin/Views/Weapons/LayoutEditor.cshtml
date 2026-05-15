@@ -1,0 +1,318 @@
+﻿@model AMS_data.Entities.Weapons.MarkingLayout
+
+@{
+    ViewData["Title"] = "Layout Editor";
+    var existingJson = string.IsNullOrWhiteSpace(Model.LayoutJson) ? "[]" : Model.LayoutJson;
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">Layout Editor: @Model.Name</h4>
+            <p class="ams-page-subtitle">
+                @Model.LayoutType | @Model.WidthMm x @Model.HeightMm @Model.Unit
+            </p>
+        </div>
+
+        <a asp-action="MarkingLayouts" class="ams-btn-secondary">
+            Back
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success ams-alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <form asp-action="SaveLayoutEditor" method="post" id="layoutEditorForm">
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="id" value="@Model.Id" />
+        <input type="hidden" name="layoutJson" id="layoutJson" />
+
+        <div class="ams-layout-editor">
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">Tools</h5>
+
+                <div class="ams-editor-tools">
+                    <button type="button" class="ams-btn-secondary" onclick="addObject('Text')">Text</button>
+                    <button type="button" class="ams-btn-secondary" onclick="addObject('VariableText')">Variable</button>
+                    <button type="button" class="ams-btn-secondary" onclick="addObject('QRCode')">QR</button>
+                    <button type="button" class="ams-btn-secondary" onclick="addObject('DataMatrix')">DataMatrix</button>
+                    <button type="button" class="ams-btn-secondary" onclick="addObject('Rectangle')">Rectangle</button>
+                    <button type="button" class="ams-btn-secondary" onclick="deleteSelected()">Delete</button>
+                </div>
+
+                <hr />
+
+                <h5 class="ams-section-title">Properties</h5>
+
+                <div id="propertiesPanel" class="ams-properties-panel">
+                    <p class="text-muted">Select object on canvas.</p>
+                </div>
+
+                <button type="submit" class="rts-btn btn-primary mt--20 w-100">
+                    Save Layout
+                </button>
+            </div>
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">Canvas Preview</h5>
+
+                <div class="ams-canvas-wrap">
+                    <svg id="layoutCanvas"
+                         viewBox="0 0 @Model.WidthMm @Model.HeightMm"
+                         preserveAspectRatio="xMidYMid meet"
+                         class="ams-layout-svg">
+
+                        <rect x="0"
+                              y="0"
+                              width="@Model.WidthMm"
+                              height="@Model.HeightMm"
+                              fill="#ffffff"
+                              stroke="#111827"
+                              stroke-width="0.3" />
+
+                        @if (!string.IsNullOrWhiteSpace(Model.BackgroundFilePath) &&
+                                                (Model.BackgroundFilePath.EndsWith(".png") ||
+                                                Model.BackgroundFilePath.EndsWith(".jpg") ||
+                                                Model.BackgroundFilePath.EndsWith(".jpeg") ||
+                                                Model.BackgroundFilePath.EndsWith(".svg")))
+                        {
+                            <image href="@Model.BackgroundFilePath"
+                                   x="0"
+                                   y="0"
+                                   width="@Model.WidthMm"
+                                   height="@Model.HeightMm"
+                                   opacity="0.35" />
+                        }
+
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        let objects = @Html.Raw(existingJson);
+        let selectedIndex = null;
+
+        const canvas = document.getElementById('layoutCanvas');
+        const layoutJsonInput = document.getElementById('layoutJson');
+        const propertiesPanel = document.getElementById('propertiesPanel');
+
+        let dragging = false;
+        let dragOffset = { x: 0, y: 0 };
+
+        function addObject(type) {
+            const obj = {
+                objectType: type,
+                name: type + '_' + (objects.length + 1),
+                x: 10,
+                y: 10,
+                width: type === 'QRCode' || type === 'DataMatrix' ? 14 : 30,
+                height: type === 'QRCode' || type === 'DataMatrix' ? 14 : 8,
+                rotation: 0,
+                textValue: type === 'Text' ? 'TEXT' : '',
+                variableName: type === 'VariableText' ? 'RegistrationNo' : '',
+                fontSize: 4,
+                isBold: false,
+                strokeWidth: 0.2,
+                propertiesJson: '',
+                displayOrder: objects.length + 1,
+                isActive: true
+            };
+
+            objects.push(obj);
+            selectedIndex = objects.length - 1;
+            render();
+        }
+
+        function deleteSelected() {
+            if (selectedIndex === null) return;
+
+            objects.splice(selectedIndex, 1);
+            selectedIndex = null;
+            render();
+        }
+
+        function render() {
+            const existing = canvas.querySelectorAll('.editor-object');
+            existing.forEach(x => x.remove());
+
+            objects.forEach((obj, index) => {
+                let el;
+
+                if (obj.objectType === 'Text' || obj.objectType === 'VariableText') {
+                    el = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    el.setAttribute('x', obj.x);
+                    el.setAttribute('y', obj.y);
+                    el.setAttribute('font-size', obj.fontSize);
+                    el.setAttribute('fill', '#111827');
+                    el.setAttribute('font-weight', obj.isBold ? '700' : '400');
+                    el.textContent = obj.objectType === 'VariableText'
+                        ? `[${obj.variableName || 'Variable'}]`
+                        : (obj.textValue || 'TEXT');
+                }
+                else if (obj.objectType === 'QRCode') {
+                    el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                    el.setAttribute('x', obj.x);
+                    el.setAttribute('y', obj.y);
+                    el.setAttribute('width', obj.width);
+                    el.setAttribute('height', obj.height);
+                    el.setAttribute('fill', 'url(#qrPattern)');
+                    el.setAttribute('stroke', '#111827');
+                    el.setAttribute('stroke-width', obj.strokeWidth);
+                }
+                else if (obj.objectType === 'DataMatrix') {
+                    el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                    el.setAttribute('x', obj.x);
+                    el.setAttribute('y', obj.y);
+                    el.setAttribute('width', obj.width);
+                    el.setAttribute('height', obj.height);
+                    el.setAttribute('fill', '#111827');
+                    el.setAttribute('opacity', '0.85');
+                }
+                else {
+                    el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                    el.setAttribute('x', obj.x);
+                    el.setAttribute('y', obj.y);
+                    el.setAttribute('width', obj.width);
+                    el.setAttribute('height', obj.height);
+                    el.setAttribute('fill', 'transparent');
+                    el.setAttribute('stroke', '#111827');
+                    el.setAttribute('stroke-width', obj.strokeWidth);
+                }
+
+                el.classList.add('editor-object');
+                el.dataset.index = index;
+                el.style.cursor = 'move';
+
+                if (index === selectedIndex) {
+                    el.setAttribute('stroke', '#2563eb');
+                    el.setAttribute('stroke-width', Math.max(obj.strokeWidth, 0.6));
+                }
+
+                el.addEventListener('mousedown', startDrag);
+                el.addEventListener('click', selectObject);
+
+                canvas.appendChild(el);
+            });
+
+            updateJson();
+            renderProperties();
+        }
+
+        function selectObject(e) {
+            selectedIndex = parseInt(e.target.dataset.index);
+            render();
+            e.stopPropagation();
+        }
+
+        function startDrag(e) {
+            selectedIndex = parseInt(e.target.dataset.index);
+            const pt = getSvgPoint(e);
+            dragOffset.x = pt.x - Number(objects[selectedIndex].x);
+            dragOffset.y = pt.y - Number(objects[selectedIndex].y);
+            dragging = true;
+            e.preventDefault();
+        }
+
+        canvas.addEventListener('mousemove', function (e) {
+            if (!dragging || selectedIndex === null) return;
+
+            const pt = getSvgPoint(e);
+            objects[selectedIndex].x = +(pt.x - dragOffset.x).toFixed(2);
+            objects[selectedIndex].y = +(pt.y - dragOffset.y).toFixed(2);
+            render();
+        });
+
+        window.addEventListener('mouseup', function () {
+            dragging = false;
+        });
+
+        canvas.addEventListener('click', function () {
+            selectedIndex = null;
+            render();
+        });
+
+        function getSvgPoint(evt) {
+            const pt = canvas.createSVGPoint();
+            pt.x = evt.clientX;
+            pt.y = evt.clientY;
+            return pt.matrixTransform(canvas.getScreenCTM().inverse());
+        }
+
+        function renderProperties() {
+            if (selectedIndex === null) {
+                propertiesPanel.innerHTML = '<p class="text-muted">Select object on canvas.</p>';
+                return;
+            }
+
+            const obj = objects[selectedIndex];
+
+            propertiesPanel.innerHTML = `
+                <div class="single mb-2">
+                    <label>Name</label>
+                    <input value="${obj.name || ''}" onchange="setProp('name', this.value)" />
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label>X</label>
+                        <input type="number" step="0.1" value="${obj.x}" onchange="setProp('x', parseFloat(this.value))" />
+                    </div>
+                    <div class="single">
+                        <label>Y</label>
+                        <input type="number" step="0.1" value="${obj.y}" onchange="setProp('y', parseFloat(this.value))" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label>Width</label>
+                        <input type="number" step="0.1" value="${obj.width}" onchange="setProp('width', parseFloat(this.value))" />
+                    </div>
+                    <div class="single">
+                        <label>Height</label>
+                        <input type="number" step="0.1" value="${obj.height}" onchange="setProp('height', parseFloat(this.value))" />
+                    </div>
+                </div>
+
+                <div class="single mb-2">
+                    <label>Font size</label>
+                    <input type="number" step="0.1" value="${obj.fontSize}" onchange="setProp('fontSize', parseFloat(this.value))" />
+                </div>
+
+                <div class="single mb-2">
+                    <label>Text value</label>
+                    <input value="${obj.textValue || ''}" onchange="setProp('textValue', this.value)" />
+                </div>
+
+                <div class="single mb-2">
+                    <label>Variable name</label>
+                    <input value="${obj.variableName || ''}" onchange="setProp('variableName', this.value)" />
+                </div>
+            `;
+        }
+
+        function setProp(prop, value) {
+            if (selectedIndex === null) return;
+            objects[selectedIndex][prop] = value;
+            render();
+        }
+
+        function updateJson() {
+            layoutJsonInput.value = JSON.stringify(objects);
+        }
+
+        render();
+    </script>
+}

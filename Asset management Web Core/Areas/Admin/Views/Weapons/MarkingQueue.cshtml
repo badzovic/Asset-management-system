@@ -1,0 +1,187 @@
+﻿@model List<AMS_data.Entities.Weapons.WeaponMarkingJob>
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = "Marking Queue";
+    var currentStatus = ViewBag.Status as string;
+    var search = ViewBag.Search as string;
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">Marking Queue</h4>
+            <p class="ams-page-subtitle">
+                Pregled i upravljanje pripremljenim poslovima za graverku, laser i label printer.
+            </p>
+        </div>
+
+        <a asp-action="Mark" class="rts-btn btn-primary">
+            New Marking Job
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success ams-alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="user-profile-main-wrapper">
+
+        <form method="get" asp-action="MarkingQueue" class="ams-filter-bar mb-4">
+
+            <div class="ams-filter-item">
+                <input type="text"
+                       name="search"
+                       value="@search"
+                       placeholder="Search by registration, serial, model or layout" />
+            </div>
+
+            <div class="ams-filter-item">
+                <select name="status">
+                    <option value="">All statuses</option>
+                    <option value="Prepared" selected="@(currentStatus == "Prepared")">Prepared</option>
+                    <option value="SentToMarker" selected="@(currentStatus == "SentToMarker")">Sent To Marker</option>
+                    <option value="Completed" selected="@(currentStatus == "Completed")">Completed</option>
+                    <option value="Failed" selected="@(currentStatus == "Failed")">Failed</option>
+                    <option value="Cancelled" selected="@(currentStatus == "Cancelled")">Cancelled</option>
+                </select>
+            </div>
+
+            <button type="submit" class="rts-btn btn-primary">
+                Filter
+            </button>
+
+            <a asp-action="MarkingQueue" class="ams-btn-secondary">
+                Reset
+            </a>
+
+        </form>
+
+        <div class="ams-marking-status-grid mb-4">
+            <div class="ams-mini-status-card">
+                <span>Prepared</span>
+                <strong>@Model.Count(x => x.Status == "Prepared")</strong>
+            </div>
+
+            <div class="ams-mini-status-card">
+                <span>Sent</span>
+                <strong>@Model.Count(x => x.Status == "SentToMarker")</strong>
+            </div>
+
+            <div class="ams-mini-status-card">
+                <span>Completed</span>
+                <strong>@Model.Count(x => x.Status == "Completed")</strong>
+            </div>
+
+            <div class="ams-mini-status-card">
+                <span>Failed</span>
+                <strong>@Model.Count(x => x.Status == "Failed")</strong>
+            </div>
+        </div>
+
+        <div class="table-responsive ams-active-weapons-scroll">
+            <table class="table ams-table">
+                <thead>
+                    <tr>
+                        <th>Job</th>
+                        <th>Registration</th>
+                        <th>Serial</th>
+                        <th>Model</th>
+                        <th>Layout</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>#@item.Id</td>
+                            <td>@item.RegistrationNo</td>
+                            <td>@item.FactorySerial</td>
+                            <td>@item.WeaponModel</td>
+                            <td>@item.MarkingLayout?.Name</td>
+                            <td>@item.MarkingLayout?.LayoutType</td>
+                            <td>
+                                <span class="ams-badge @(item.Status == "Completed" ? "ams-badge-success" : item.Status == "Failed" ? "ams-badge-danger" : "ams-badge-muted")">
+                                    @item.Status
+                                </span>
+                            </td>
+                            <td>@item.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
+
+                            <td class="text-end">
+
+                                <a asp-action="Mark"
+                                   asp-route-weaponId="@item.WeaponId"
+                                   class="ams-btn-small">
+                                    Open
+                                </a>
+
+                                @if (item.Status == "Prepared")
+                                {
+                                    <form asp-action="SendMarkingJob" method="post" style="display:inline-block;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="ams-btn-small ms-2">Send</button>
+                                    </form>
+                                }
+
+                                @if (item.Status == "Prepared" || item.Status == "SentToMarker")
+                                {
+                                    <form asp-action="CompleteMarkingJob" method="post" style="display:inline-block;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="ams-btn-small ms-2">Complete</button>
+                                    </form>
+
+                                    <form asp-action="FailMarkingJob" method="post" style="display:inline-block;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="ams-btn-small ms-2">Fail</button>
+                                    </form>
+                                }
+
+                                @if (item.Status == "Failed" || item.Status == "Cancelled")
+                                {
+                                    <form asp-action="RetryMarkingJob" method="post" style="display:inline-block;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="ams-btn-small ms-2">Retry</button>
+                                    </form>
+                                }
+
+                                @if (item.Status != "Completed" && item.Status != "Cancelled")
+                                {
+                                    <form asp-action="CancelMarkingJob" method="post" style="display:inline-block;">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <button type="submit" class="ams-btn-small ms-2">Cancel</button>
+                                    </form>
+                                }
+
+                            </td>
+                        </tr>
+                    }
+
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="9" class="text-center text-muted py-4">
+                                No records found.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

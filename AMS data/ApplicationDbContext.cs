@@ -27,5 +27,9 @@ namespace AMS_data
         public DbSet<LookupItem> LookupItems { get; set; }
         public DbSet<WeaponCheck> WeaponChecks { get; set; }
         public DbSet<WeaponMove> WeaponMoves { get; set; }
+        public DbSet<SavedWeaponQuery> SavedWeaponQueries { get; set; }
+        public DbSet<MarkingLayout> MarkingLayouts { get; set; }
+        public DbSet<WeaponMarkingJob> WeaponMarkingJobs { get; set; }
+        public DbSet<MarkingLayoutObject> MarkingLayoutObjects { get; set; }
     }
 }

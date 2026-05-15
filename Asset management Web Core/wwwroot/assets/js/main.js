@@ -144,34 +144,35 @@
             });
         },
 
-        darkLightSwitcher: function(e){
-            $(document).ready(function() {
+        darkLightSwitcher: function (e) {
+            $(document).ready(function () {
 
                 var toggle = document.getElementById("rts-data-toggle");
-                    
-                // Check if user has already set a theme preference
+
                 var storedTheme = localStorage.getItem('intellactai');
-        
-                // If no preference is found, default to dark mode
+
                 if (!storedTheme) {
                     storedTheme = "dark";
                     localStorage.setItem('intellactai', storedTheme);
                 }
-        
+
                 document.documentElement.setAttribute('data-theme', storedTheme);
-                
-                toggle.onclick = function() {
-                    var currentTheme = document.documentElement.getAttribute("data-theme");
-                    var targetTheme = "light";
-        
-                    if (currentTheme === "light") {
-                        targetTheme = "dark";
-                    }
-                    
-                    document.documentElement.setAttribute('data-theme', targetTheme);
-                    localStorage.setItem('intellactai', targetTheme);
-                };
-                
+
+                if (toggle) {
+                    toggle.onclick = function () {
+
+                        var currentTheme = document.documentElement.getAttribute("data-theme");
+                        var targetTheme = "light";
+
+                        if (currentTheme === "light") {
+                            targetTheme = "dark";
+                        }
+
+                        document.documentElement.setAttribute('data-theme', targetTheme);
+                        localStorage.setItem('intellactai', targetTheme);
+                    };
+                }
+
             });
         },
 

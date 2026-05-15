@@ -1,0 +1,96 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons.WeaponQueryViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Weapon Query Report</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #111;
+            padding: 24px;
+        }
+
+        h2 {
+            margin-bottom: 4px;
+        }
+
+        .meta {
+            color: #555;
+            margin-bottom: 24px;
+            font-size: 13px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 7px;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f1f1;
+        }
+
+        @@media print {
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="window.print()">Print / Save as PDF</button>
+
+    <h2>Weapon Query Report</h2>
+    <div class="meta">
+        Generated: @DateTime.Now.ToString("dd.MM.yyyy HH:mm") |
+        Records: @Model.Results.Count
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Registration No</th>
+                <th>Factory Serial</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Manufacturer</th>
+                <th>Caliber</th>
+                <th>Registration Date</th>
+                <th>Marked</th>
+                <th>Original Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Results)
+            {
+                <tr>
+                    <td>@item.RegistrationNo</td>
+                    <td>@item.FactorySerial</td>
+                    <td>@item.WeaponModel?.Name</td>
+                    <td>@item.WeaponType?.Name</td>
+                    <td>@item.Manufacturer?.Name</td>
+                    <td>@item.Caliber?.Name</td>
+                    <td>@item.RegistrationDate.ToString("dd.MM.yyyy")</td>
+                    <td>@(item.IsMarked ? "Yes" : "No")</td>
+                    <td>@item.OriginalLocationLookup?.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

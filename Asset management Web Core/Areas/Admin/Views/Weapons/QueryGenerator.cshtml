@@ -1,0 +1,464 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons.WeaponQueryViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("QueryGenerator", lang);
+}
+
+<style>
+    .container-custom,
+    .user-profile-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ams-query-layout {
+        display: grid;
+        grid-template-columns: 380px minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+    }
+
+    @@media (max-width: 1200px) {
+        .ams-query-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("QueryGenerator", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("QueryGeneratorDescription", lang)</p>
+        </div>
+    </div>
+
+    <form asp-action="QueryGenerator" method="get">
+
+        <div class="ams-query-layout">
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("Filters", lang)</h5>
+
+                <div class="single mb-3">
+                    <label asp-for="RegistrationNo">@ResourcesHelper.Translate("RegistrationNo", lang)</label>
+                    <input asp-for="RegistrationNo" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="FactorySerial">@ResourcesHelper.Translate("FactorySerial", lang)</label>
+                    <input asp-for="FactorySerial" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="WeaponModelId">@ResourcesHelper.Translate("WeaponModel", lang)</label>
+                    <select asp-for="WeaponModelId" asp-items="Model.WeaponModels" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="WeaponTypeId">@ResourcesHelper.Translate("WeaponType", lang)</label>
+                    <select asp-for="WeaponTypeId" asp-items="Model.WeaponTypes" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="ManufacturerId">@ResourcesHelper.Translate("Manufacturer", lang)</label>
+                    <select asp-for="ManufacturerId" asp-items="Model.Manufacturers" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="CaliberId">@ResourcesHelper.Translate("Caliber", lang)</label>
+                    <select asp-for="CaliberId" asp-items="Model.Calibers" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="RegistrationDateFrom">@ResourcesHelper.Translate("FromDate", lang)</label>
+                    <input asp-for="RegistrationDateFrom" type="date" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="RegistrationDateTo">@ResourcesHelper.Translate("ToDate", lang)</label>
+                    <input asp-for="RegistrationDateTo" type="date" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="IsMarked">@ResourcesHelper.Translate("RegMarked", lang)</label>
+                    <select asp-for="IsMarked">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                        <option value="true">@ResourcesHelper.Translate("Yes", lang)</option>
+                        <option value="false">@ResourcesHelper.Translate("No", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="IsProspective">@ResourcesHelper.Translate("Prospective", lang)</label>
+                    <select asp-for="IsProspective">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                        <option value="true">@ResourcesHelper.Translate("Yes", lang)</option>
+                        <option value="false">@ResourcesHelper.Translate("No", lang)</option>
+                    </select>
+                </div>
+
+                <div class="ams-query-actions-vertical">
+                    <button type="submit" class="rts-btn btn-primary ams-query-action-btn">
+                        @ResourcesHelper.Translate("RunQuery", lang)
+                    </button>
+                   
+                    <button type="button"
+                            class="ams-btn-secondary ams-query-action-btn"
+                            onclick="window.location.href='@Url.Action("QueryGenerator", "Weapons", new { area = "Admin" })'">
+                        @ResourcesHelper.Translate("Reset", lang)
+                    </button>
+                </div>
+
+                @if (Model.HasSearched)
+                {
+                    <p> </p>
+                    <div class="ams-query-export-actions">
+                        <button type="submit"
+                                formaction="@Url.Action("ExportQueryCsv", "Weapons", new { area = "Admin" })"
+                                formmethod="get"
+                                class="ams-btn-secondary">
+                            <i class="fa-solid fa-file-csv"></i>
+                            Export CSV
+                        </button>
+
+                        <button type="submit"
+                                formaction="@Url.Action("ExportQueryPdf", "Weapons", new { area = "Admin" })"
+                                formmethod="get"
+                                class="ams-btn-secondary">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Export PDF
+                        </button>
+
+                        <button type="button"
+                                class="ams-btn-secondary"
+                                data-bs-toggle="modal"
+                                data-bs-target="#saveQueryModal">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Save Query
+                        </button>
+                    </div>
+                }
+            </div>
+
+            <div>
+                <div class="user-profile-main-wrapper">
+                    @if (Model.SavedQueries.Any())
+                    {
+                        <div class="user-profile-main-wrapper mt--30">
+
+                            <div class="ams-card-title-row">
+                                <h5 class="ams-section-title">
+                                    Saved Queries
+                                </h5>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table ams-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Visibility</th>
+                                            <th>Created</th>
+                                            <th class="text-end">Actions</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        @foreach (var item in Model.SavedQueries)
+                                        {
+                                            <tr>
+                                                <td>@item.Name</td>
+
+                                                <td>
+                                                    @if (item.IsPublic)
+                                                    {
+                                                        <span class="ams-badge ams-badge-success">
+                                                            Public
+                                                        </span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="ams-badge ams-badge-muted">
+                                                            Private
+                                                        </span>
+                                                    }
+                                                </td>
+
+                                                <td>
+                                                    @item.CreatedAt.ToString("dd.MM.yyyy HH:mm")
+                                                </td>
+
+                                                <td class="text-end">
+
+                                                    <a asp-action="OpenSavedQuery"
+                                                       asp-route-id="@item.Id"
+                                                       class="ams-btn-small">
+                                                        Open
+                                                    </a>
+
+                                                    <form asp-action="DeleteSavedQuery"
+                                                          method="post"
+                                                          style="display:inline-block">
+
+                                                        @Html.AntiForgeryToken()
+
+                                                        <input type="hidden"
+                                                               name="id"
+                                                               value="@item.Id" />
+
+                                                        <button type="submit"
+                                                                class="ams-btn-small ms-2">
+                                                            Delete
+                                                        </button>
+
+                                                    </form>
+
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    }
+                    <div class="ams-card-title-row">
+                        <h5 class="ams-section-title">@ResourcesHelper.Translate("VisibleColumns", lang)</h5>
+                    </div>
+
+                    <div class="ams-column-picker">
+                        <label><input asp-for="ShowRegistrationNo" /> @ResourcesHelper.Translate("RegistrationNo", lang)</label>
+                        <label><input asp-for="ShowFactorySerial" /> @ResourcesHelper.Translate("FactorySerial", lang)</label>
+                        <label><input asp-for="ShowModel" /> @ResourcesHelper.Translate("WeaponModel", lang)</label>
+                        <label><input asp-for="ShowType" /> @ResourcesHelper.Translate("WeaponType", lang)</label>
+                        <label><input asp-for="ShowManufacturer" /> @ResourcesHelper.Translate("Manufacturer", lang)</label>
+                        <label><input asp-for="ShowCaliber" /> @ResourcesHelper.Translate("Caliber", lang)</label>
+                        <label><input asp-for="ShowRegistrationDate" /> @ResourcesHelper.Translate("RegistrationDate", lang)</label>
+                        <label><input asp-for="ShowMarked" /> @ResourcesHelper.Translate("RegMarked", lang)</label>
+                        <label><input asp-for="ShowLocation" /> @ResourcesHelper.Translate("OriginalLocation", lang)</label>
+                    </div>
+                </div>
+
+                <div class="user-profile-main-wrapper mt--30">
+                    <div class="ams-card-title-row">
+                        <h5 class="ams-section-title">
+                            @ResourcesHelper.Translate("QueryResults", lang)
+                            @if (Model.HasSearched)
+                            {
+                                <span class="ams-result-count">(@Model.Results.Count)</span>
+                            }
+                        </h5>
+
+                        <div class="ams-table-toolbar">
+                            <input type="text"
+                                   id="queryResultsSearch"
+                                   class="ams-table-search"
+                                   placeholder="@ResourcesHelper.Translate("Search", lang)" />
+                        </div>
+                    </div>
+
+                    <div class="table-responsive ams-active-weapons-scroll">
+                        <table class="table ams-table" id="queryResultsTable">
+                            <thead>
+                                <tr>
+                                    @if (Model.ShowRegistrationNo)
+                                    {
+                                        <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                                    }
+                                    @if (Model.ShowFactorySerial)
+                                    {
+                                        <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
+                                    }
+                                    @if (Model.ShowModel)
+                                    {
+                                        <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
+                                    }
+                                    @if (Model.ShowType)
+                                    {
+                                        <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
+                                    }
+                                    @if (Model.ShowManufacturer)
+                                    {
+                                        <th>@ResourcesHelper.Translate("Manufacturer", lang)</th>
+                                    }
+                                    @if (Model.ShowCaliber)
+                                    {
+                                        <th>@ResourcesHelper.Translate("Caliber", lang)</th>
+                                    }
+                                    @if (Model.ShowRegistrationDate)
+                                    {
+                                        <th>@ResourcesHelper.Translate("RegistrationDate", lang)</th>
+                                    }
+                                    @if (Model.ShowMarked)
+                                    {
+                                        <th>@ResourcesHelper.Translate("RegMarked", lang)</th>
+                                    }
+                                    @if (Model.ShowLocation)
+                                    {
+                                        <th>@ResourcesHelper.Translate("OriginalLocation", lang)</th>
+                                    }
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.Results)
+                                {
+                                    <tr>
+                                        @if (Model.ShowRegistrationNo)
+                                        {
+                                            <td>@item.RegistrationNo</td>
+                                        }
+                                        @if (Model.ShowFactorySerial)
+                                        {
+                                            <td>@item.FactorySerial</td>
+                                        }
+                                        @if (Model.ShowModel)
+                                        {
+                                            <td>@item.WeaponModel?.Name</td>
+                                        }
+                                        @if (Model.ShowType)
+                                        {
+                                            <td>@item.WeaponType?.Name</td>
+                                        }
+                                        @if (Model.ShowManufacturer)
+                                        {
+                                            <td>@item.Manufacturer?.Name</td>
+                                        }
+                                        @if (Model.ShowCaliber)
+                                        {
+                                            <td>@item.Caliber?.Name</td>
+                                        }
+                                        @if (Model.ShowRegistrationDate)
+                                        {
+                                            <td>@item.RegistrationDate.ToString("dd.MM.yyyy")</td>
+                                        }
+                                        @if (Model.ShowMarked)
+                                        {
+                                            <td>
+                                                @if (item.IsMarked)
+                                                {
+                                                    <span class="ams-badge ams-badge-success">@ResourcesHelper.Translate("Yes", lang)</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="ams-badge ams-badge-muted">@ResourcesHelper.Translate("No", lang)</span>
+                                                }
+                                            </td>
+                                        }
+                                        @if (Model.ShowLocation)
+                                        {
+                                            <td>@item.OriginalLocationLookup?.Name</td>
+                                        }
+                                    </tr>
+                                }
+
+                                @if (Model.HasSearched && !Model.Results.Any())
+                                {
+                                    <tr>
+                                        <td colspan="9" class="text-center text-muted py-4">
+                                            @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                        </td>
+                                    </tr>
+                                }
+
+                                @if (!Model.HasSearched)
+                                {
+                                    <tr>
+                                        <td colspan="9" class="text-center text-muted py-4">
+                                            @ResourcesHelper.Translate("UseFiltersToRunQuery", lang)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</div>
+<div class="modal fade" id="saveQueryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ams-modal">
+            <div class="modal-header">
+                <h5 class="modal-title">Save Query</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form asp-action="SaveWeaponQuery" method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="modal-body">
+                    <input type="hidden" name="RegistrationNo" value="@Model.RegistrationNo" />
+                    <input type="hidden" name="FactorySerial" value="@Model.FactorySerial" />
+                    <input type="hidden" name="WeaponTypeId" value="@Model.WeaponTypeId" />
+                    <input type="hidden" name="WeaponModelId" value="@Model.WeaponModelId" />
+                    <input type="hidden" name="ManufacturerId" value="@Model.ManufacturerId" />
+                    <input type="hidden" name="CaliberId" value="@Model.CaliberId" />
+                    <input type="hidden" name="IsMarked" value="@Model.IsMarked" />
+                    <input type="hidden" name="IsProspective" value="@Model.IsProspective" />
+                    <input type="hidden" name="RegistrationDateFrom" value="@Model.RegistrationDateFrom?.ToString("yyyy-MM-dd")" />
+                    <input type="hidden" name="RegistrationDateTo" value="@Model.RegistrationDateTo?.ToString("yyyy-MM-dd")" />
+
+                    <div class="single">
+                        <label>Query name</label>
+                        <input type="text" name="QueryName" required placeholder="Example: Glock active weapons" />
+                    </div>
+
+                    <div class="ams-checkbox-row mt-3">
+                        <label class="ams-switch">
+                            <input type="checkbox" name="IsPublic" value="true" />
+                            <span class="ams-slider"></span>
+                        </label>
+                        <span class="ams-checkbox-label">Public query</span>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="ams-btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                    <button type="submit" class="rts-btn btn-primary">
+                        Save Query
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.ams-select2').select2({
+                width: '100%',
+                placeholder: '-- Select --',
+                allowClear: true
+            });
+
+            $('#queryResultsSearch').on('keyup', function () {
+                const value = $(this).val().toLowerCase();
+
+                $('#queryResultsTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}

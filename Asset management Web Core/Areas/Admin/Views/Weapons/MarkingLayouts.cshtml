@@ -1,0 +1,83 @@
+﻿@model List<AMS_data.Entities.Weapons.MarkingLayout>
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = "Marking Layouts";
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">Marking Layouts</h4>
+            <p class="ams-page-subtitle">Templates/layouts for laser, dot peen and label marking.</p>
+        </div>
+
+        <a asp-action="CreateMarkingLayout" class="rts-btn btn-primary">
+            Add Layout
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success ams-alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="user-profile-main-wrapper">
+        <div class="table-responsive">
+            <table class="table ams-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Template Path</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.LayoutType</td>
+                            <td>@item.Description</td>
+                            <td>@item.TemplateFilePath</td>
+                            <td>
+                                @if (item.IsActive)
+                                {
+                                    <span class="ams-badge ams-badge-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="ams-badge ams-badge-muted">Inactive</span>
+                                }
+                            </td>
+                            <td class="text-end">
+                                <a asp-action="LayoutEditor"
+                                   asp-route-id="@item.Id"
+                                   class="ams-btn-small">
+                                    Editor
+                                </a>
+                            </td>
+                        </tr>
+                    }
+
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-4">
+                                No records found.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

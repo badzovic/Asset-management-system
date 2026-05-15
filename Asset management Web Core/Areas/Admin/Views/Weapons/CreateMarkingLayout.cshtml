@@ -1,0 +1,93 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons.MarkingLayoutFormViewModel
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">Add Marking Layout</h4>
+            <p class="ams-page-subtitle">Create layout template with dimensions, files and preview.</p>
+        </div>
+
+        <a asp-action="MarkingLayouts" class="ams-btn-secondary">
+            Back
+        </a>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+        <form asp-action="CreateMarkingLayout" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" />
+                </div>
+
+                <div class="single">
+                    <label asp-for="LayoutType">Layout Type</label>
+                    <select asp-for="LayoutType">
+                        <option value="Laser">Laser</option>
+                        <option value="DotPeen">Dot Peen</option>
+                        <option value="ZebraLabel">Zebra Label</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="WidthMm">Width (mm)</label>
+                    <input asp-for="WidthMm" type="number" step="0.01" />
+                </div>
+
+                <div class="single">
+                    <label asp-for="HeightMm">Height (mm)</label>
+                    <input asp-for="HeightMm" type="number" step="0.01" />
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="TemplateFile">Template file</label>
+                    <input asp-for="TemplateFile" type="file" accept=".dxf,.xml,.layout,.lbl,.json" />
+                </div>
+
+                <div class="single">
+                    <label asp-for="BackgroundFile">Background / DXF / image</label>
+                    <input asp-for="BackgroundFile" type="file" accept=".dxf,.svg,.png,.jpg,.jpeg" />
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="PreviewImage">Preview image</label>
+                    <input asp-for="PreviewImage" type="file" accept=".png,.jpg,.jpeg,.svg" />
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="Description">Description</label>
+                    <textarea asp-for="Description"></textarea>
+                </div>
+            </div>
+
+            <div class="ams-checkbox-row">
+                <label class="ams-switch">
+                    <input asp-for="IsActive" />
+                    <span class="ams-slider"></span>
+                </label>
+                <span class="ams-checkbox-label">Active</span>
+            </div>
+
+            <button type="submit" class="rts-btn btn-primary mt--20">
+                Save Layout
+            </button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

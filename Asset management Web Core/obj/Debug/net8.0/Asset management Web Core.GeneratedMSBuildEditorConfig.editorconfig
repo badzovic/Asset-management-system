@@ -134,8 +134,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xDaGVjay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/CreateMarkingLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xDcmVhdGVNYXJraW5nTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/LayoutEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xMYXlvdXRFZGl0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/Mark.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xNYXJrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/MarkingLayouts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xNYXJraW5nTGF5b3V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/MarkingQueue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xNYXJraW5nUXVldWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/PrepareMove.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xQcmVwYXJlTW92ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/QueryGenerator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xRdWVyeUdlbmVyYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/QueryPdf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcV2VhcG9uc1xRdWVyeVBkZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Weapons/Register.cshtml]

@@ -778,4 +778,67 @@
   <data name="AuthorisedAt" xml:space="preserve">
     <value>Authorised At</value>
   </data>
+  <data name="QueryGeneratorDescription" xml:space="preserve">
+    <value>Query Generator Description</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="VisibleColumns" xml:space="preserve">
+    <value>Visible Columns</value>
+  </data>
+  <data name="QueryResults" xml:space="preserve">
+    <value>Query Results</value>
+  </data>
+  <data name="RunQuery" xml:space="preserve">
+    <value>Run Query</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="UseFiltersToRunQuery" xml:space="preserve">
+    <value>Use Filters To Run Query</value>
+  </data>
+  <data name="MarkWeapon" xml:space="preserve">
+    <value>Mark Weapon</value>
+  </data>
+  <data name="MarkWeaponDescription" xml:space="preserve">
+    <value>Mark Weapon Description</value>
+  </data>
+  <data name="MarkingHistory" xml:space="preserve">
+    <value>Marking History</value>
+  </data>
+  <data name="MarkingData" xml:space="preserve">
+    <value>MarkingData</value>
+  </data>
+  <data name="MarkingText1" xml:space="preserve">
+    <value>Marking Text 1</value>
+  </data>
+  <data name="MarkingText2" xml:space="preserve">
+    <value>Marking Text 2</value>
+  </data>
+  <data name="MarkingText3" xml:space="preserve">
+    <value>Marking Text 3</value>
+  </data>
+  <data name="PrepareMarkingJob" xml:space="preserve">
+    <value>Prepare Marking Job</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
 </root>
