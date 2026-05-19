@@ -1,13 +1,15 @@
 using AMS_data;
 using AMS_data.Entities;
-using Asset_management_Web_Core.Seeders;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using System.Globalization;
-using Microsoft.AspNetCore.Localization;
-using Asset_management_Web_Core.Helpers;
-using Serilog;
+using AMS_services;
 using AMS_services.Audit;
+using Asset_management_Web_Core.Helpers;
+using Asset_management_Web_Core.Seeders;
+using AMS_services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.EntityFrameworkCore;
+using Serilog;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +52,8 @@ builder.Services.AddLocalization(options =>
 {
     options.ResourcesPath = "Resources";
 });
+
+builder.Services.AddScoped<EvidencePdfService>();
 
 builder.Services
     .AddControllersWithViews()

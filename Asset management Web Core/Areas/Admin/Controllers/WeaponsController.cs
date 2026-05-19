@@ -967,12 +967,9 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             if (layout == null)
                 return NotFound();
 
-            var objects = layout.Objects
-                .Where(x => x.IsActive)
-                .OrderBy(x => x.DisplayOrder)
-                .ToList();
+            var objects = new List<MarkingLayoutObject>();
 
-            if (!objects.Any() && !string.IsNullOrWhiteSpace(layout.LayoutJson))
+            if (!string.IsNullOrWhiteSpace(layout.LayoutJson))
             {
                 objects = System.Text.Json.JsonSerializer.Deserialize<List<MarkingLayoutObject>>(
                     layout.LayoutJson,
@@ -981,6 +978,13 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                         PropertyNameCaseInsensitive = true
                     }
                 ) ?? new List<MarkingLayoutObject>();
+            }
+            else
+            {
+                objects = layout.Objects
+                    .Where(x => x.IsActive)
+                    .OrderBy(x => x.DisplayOrder)
+                    .ToList();
             }
 
             return Json(new

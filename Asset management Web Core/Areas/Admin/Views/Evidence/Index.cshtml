@@ -1,0 +1,116 @@
+﻿@model List<AMS_data.Entities.Evidence.EvidenceDeposit>
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("EvidenceDeposits", lang);
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("EvidenceDeposits", lang)</h4>
+            <p class="ams-page-subtitle">
+                @ResourcesHelper.Translate("EvidenceDepositsDescription", lang)
+            </p>
+        </div>
+
+        <a asp-action="Deposit" class="rts-btn btn-primary">
+            @ResourcesHelper.Translate("NewDeposit", lang)
+        </a>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+
+        <div class="table-responsive">
+            <table class="table ams-table" id="evidenceTable">
+
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("Registration", lang)</th>
+                        <th>@ResourcesHelper.Translate("CaseNo", lang)</th>
+                        <th>@ResourcesHelper.Translate("CaseType", lang)</th>
+                        <th>@ResourcesHelper.Translate("Location", lang)</th>
+                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                        <th>@ResourcesHelper.Translate("Date", lang)</th>
+                        <th class="text-end">@ResourcesHelper.Translate("Actions", lang)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="ams-clickable-row"
+                            data-url="@Url.Action("Deposit", "Evidence", new { area = "Admin", id = item.Id })">
+
+                            <td>@item.RegistrationNo</td>
+                            <td>@item.CaseNo</td>
+                            <td>@item.CaseTypeLookup?.Name</td>
+                            <td>@item.DepositLocationLookup?.Name</td>
+                            <td>
+                                <span class="ams-badge ams-badge-success">
+                                    @item.Status
+                                </span>
+                            </td>
+                            <td>@item.RegistrationDate.ToString("dd.MM.yyyy")</td>
+                            <td class="text-end">
+                                <a asp-action="Deposit"
+                                   asp-route-id="@item.Id"
+                                   class="ams-btn-small">
+                                    @ResourcesHelper.Translate("Open", lang)
+                                </a>
+
+                                <form asp-action="DeleteDeposit"
+                                      method="post"
+                                      style="display:inline-block;"
+                                      onsubmit="return confirm('@ResourcesHelper.Translate("DeleteEvidenceDepositQuestion", lang)');">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="id" value="@item.Id" />
+                                    <button type="submit" class="ams-btn-small ms-1">
+                                        @ResourcesHelper.Translate("Delete", lang)
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoRecordsFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            if ($('#evidenceTable tbody tr').length > 1) {
+                $('#evidenceTable').DataTable({
+                    pageLength: 25,
+                    responsive: true
+                });
+            }
+
+            $('.ams-clickable-row').on('click', function (e) {
+                if ($(e.target).closest('a, button, form').length) {
+                    return;
+                }
+
+                window.location = $(this).data('url');
+            });
+
+        });
+    </script>
+}

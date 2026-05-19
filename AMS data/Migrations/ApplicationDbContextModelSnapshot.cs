@@ -150,6 +150,239 @@ namespace AMS_data.Migrations
                     b.ToTable("AuditLogs");
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceDeposit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("AgeBandLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CaseInfoFolderPath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CaseNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CaseTypeLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("DepositLocationLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EvidenceIndicatorLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HandlingOfficer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCoCriminalOffence")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsGenderBasedViolence")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSuspended")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PersonalIdNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ReceivedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("RegistrationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("RegistrationNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SexLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("StorageOrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StorageOrderNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubmittedByOfficer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AgeBandLookupId");
+
+                    b.HasIndex("CaseTypeLookupId");
+
+                    b.HasIndex("DepositLocationLookupId");
+
+                    b.HasIndex("EvidenceIndicatorLookupId");
+
+                    b.HasIndex("SexLookupId");
+
+                    b.ToTable("EvidenceDeposits");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceDepositItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EvidenceDepositId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EvidenceWeaponLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EvidenceWeaponTypeLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LinkedWeaponId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MarkingText")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("Quantity")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("SerialNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Unit")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("WeaponItemTypeLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("WeaponLegalityLookupId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EvidenceDepositId");
+
+                    b.HasIndex("EvidenceWeaponLookupId");
+
+                    b.HasIndex("EvidenceWeaponTypeLookupId");
+
+                    b.HasIndex("LinkedWeaponId");
+
+                    b.HasIndex("WeaponItemTypeLookupId");
+
+                    b.HasIndex("WeaponLegalityLookupId");
+
+                    b.ToTable("EvidenceDepositItems");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceMoveHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApprovedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EvidenceDepositId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EvidenceDepositItemId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FromLocationLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("MoveDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("MovePurposeLookupId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MovedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ToLocationLookupId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EvidenceDepositId");
+
+                    b.HasIndex("EvidenceDepositItemId");
+
+                    b.HasIndex("FromLocationLookupId");
+
+                    b.HasIndex("MovePurposeLookupId");
+
+                    b.HasIndex("ToLocationLookupId");
+
+                    b.ToTable("EvidenceMoveHistories");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Lookups.LookupCategory", b =>
                 {
                     b.Property<int>("Id")
@@ -1108,6 +1341,115 @@ namespace AMS_data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceDeposit", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "AgeBandLookup")
+                        .WithMany()
+                        .HasForeignKey("AgeBandLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "CaseTypeLookup")
+                        .WithMany()
+                        .HasForeignKey("CaseTypeLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "DepositLocationLookup")
+                        .WithMany()
+                        .HasForeignKey("DepositLocationLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "EvidenceIndicatorLookup")
+                        .WithMany()
+                        .HasForeignKey("EvidenceIndicatorLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "SexLookup")
+                        .WithMany()
+                        .HasForeignKey("SexLookupId");
+
+                    b.Navigation("AgeBandLookup");
+
+                    b.Navigation("CaseTypeLookup");
+
+                    b.Navigation("DepositLocationLookup");
+
+                    b.Navigation("EvidenceIndicatorLookup");
+
+                    b.Navigation("SexLookup");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceDepositItem", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Evidence.EvidenceDeposit", "EvidenceDeposit")
+                        .WithMany("Items")
+                        .HasForeignKey("EvidenceDepositId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "EvidenceWeaponLookup")
+                        .WithMany()
+                        .HasForeignKey("EvidenceWeaponLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "EvidenceWeaponTypeLookup")
+                        .WithMany()
+                        .HasForeignKey("EvidenceWeaponTypeLookupId");
+
+                    b.HasOne("AMS_data.Entities.Weapons.Weapon", "LinkedWeapon")
+                        .WithMany()
+                        .HasForeignKey("LinkedWeaponId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "WeaponItemTypeLookup")
+                        .WithMany()
+                        .HasForeignKey("WeaponItemTypeLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "WeaponLegalityLookup")
+                        .WithMany()
+                        .HasForeignKey("WeaponLegalityLookupId");
+
+                    b.Navigation("EvidenceDeposit");
+
+                    b.Navigation("EvidenceWeaponLookup");
+
+                    b.Navigation("EvidenceWeaponTypeLookup");
+
+                    b.Navigation("LinkedWeapon");
+
+                    b.Navigation("WeaponItemTypeLookup");
+
+                    b.Navigation("WeaponLegalityLookup");
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceMoveHistory", b =>
+                {
+                    b.HasOne("AMS_data.Entities.Evidence.EvidenceDeposit", "EvidenceDeposit")
+                        .WithMany()
+                        .HasForeignKey("EvidenceDepositId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AMS_data.Entities.Evidence.EvidenceDepositItem", "EvidenceDepositItem")
+                        .WithMany()
+                        .HasForeignKey("EvidenceDepositItemId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "FromLocationLookup")
+                        .WithMany()
+                        .HasForeignKey("FromLocationLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "MovePurposeLookup")
+                        .WithMany()
+                        .HasForeignKey("MovePurposeLookupId");
+
+                    b.HasOne("AMS_data.Entities.Lookups.LookupItem", "ToLocationLookup")
+                        .WithMany()
+                        .HasForeignKey("ToLocationLookupId");
+
+                    b.Navigation("EvidenceDeposit");
+
+                    b.Navigation("EvidenceDepositItem");
+
+                    b.Navigation("FromLocationLookup");
+
+                    b.Navigation("MovePurposeLookup");
+
+                    b.Navigation("ToLocationLookup");
+                });
+
             modelBuilder.Entity("AMS_data.Entities.Lookups.LookupItem", b =>
                 {
                     b.HasOne("AMS_data.Entities.Lookups.LookupCategory", "LookupCategory")
@@ -1398,6 +1740,11 @@ namespace AMS_data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("AMS_data.Entities.Evidence.EvidenceDeposit", b =>
+                {
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("AMS_data.Entities.Lookups.LookupCategory", b =>

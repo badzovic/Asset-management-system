@@ -269,17 +269,46 @@
                     {
                         <div class="single-menu-wrapper">
 
-                            <a href="#" class="single-menu">
+                            <a class="collapse-btn collapsed single-menu"
+                               data-bs-toggle="collapse"
+                               href="#evidenceMenu"
+                               role="button"
+                               aria-expanded="false"
+                               aria-controls="evidenceMenu">
+
                                 <div class="icon">
-                                    <img src="~/assets/images/icons/06.png" alt="evidence">
+                                    <i class="fa-solid fa-box-archive" style="color: rgb(240, 240, 240);"></i>
                                 </div>
 
-                                <p>@ResourcesHelper.Translate("Evidence", lang)</p>
+                                <p>@ResourcesHelper.Translate("EvidenceManagement", lang)</p>
                             </a>
+
+                            <div class="collapse" id="evidenceMenu">
+                                <ul class="submenu rts-default-sidebar-list">
+
+                                    <li>
+                                        <a asp-area="Admin"
+                                           asp-controller="Evidence"
+                                           asp-action="Index">
+                                            <i class="fa-solid fa-box-open"></i>
+                                            <span>@ResourcesHelper.Translate("EvidenceDeposit", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a asp-area="Admin"
+                                           asp-controller="Evidence"
+                                           asp-action="QueryGenerator">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>@ResourcesHelper.Translate("QueryGenerator", lang)</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
 
                         </div>
                     }
-
                     @if (User.IsInRole("Admin") || User.IsInRole("Skladiste"))
                     {
                         <div class="single-menu-wrapper">

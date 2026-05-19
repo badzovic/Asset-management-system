@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using AMS_data.Entities.Weapons;
 using AMS_data.Entities.Lookups;
+using AMS_data.Entities.Evidence;
 
 namespace AMS_data
 {
@@ -31,5 +32,8 @@ namespace AMS_data
         public DbSet<MarkingLayout> MarkingLayouts { get; set; }
         public DbSet<WeaponMarkingJob> WeaponMarkingJobs { get; set; }
         public DbSet<MarkingLayoutObject> MarkingLayoutObjects { get; set; }
+        public DbSet<EvidenceDeposit> EvidenceDeposits { get; set; }
+        public DbSet<EvidenceDepositItem> EvidenceDepositItems { get; set; }
+        public DbSet<EvidenceMoveHistory> EvidenceMoveHistories { get; set; }
     }
 }

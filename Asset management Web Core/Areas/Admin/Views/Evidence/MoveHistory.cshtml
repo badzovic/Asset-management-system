@@ -1,0 +1,185 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Evidence.EvidenceMoveViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("EvidenceMoveHistory", lang);
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">
+                @ResourcesHelper.Translate("EvidenceMoveHistory", lang)
+            </h4>
+
+            <p class="ams-page-subtitle">
+                @ViewBag.DepositRegistrationNo
+                @if (ViewBag.CaseNo != null)
+                {
+                    <span> | @ResourcesHelper.Translate("CaseNo", lang): @ViewBag.CaseNo</span>
+                }
+            </p>
+        </div>
+
+        <a asp-action="Deposit"
+           asp-route-id="@Model.EvidenceDepositId"
+           class="ams-btn-secondary">
+            @ResourcesHelper.Translate("BackToDeposit", lang)
+        </a>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success ams-alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="user-profile-main-wrapper">
+        <h5 class="ams-section-title">
+            @ResourcesHelper.Translate("AddMovement", lang)
+        </h5>
+
+        <form asp-action="AddMove" method="post">
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" asp-for="EvidenceDepositId" />
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="FromLocationLookupId">
+                        @ResourcesHelper.Translate("FromLocation", lang)
+                    </label>
+                    <select asp-for="FromLocationLookupId"
+                            asp-items="Model.Locations"
+                            class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single">
+                    <label asp-for="ToLocationLookupId">
+                        @ResourcesHelper.Translate("ToLocation", lang)
+                    </label>
+                    <select asp-for="ToLocationLookupId"
+                            asp-items="Model.Locations"
+                            class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="MovePurposeLookupId">
+                        @ResourcesHelper.Translate("MovePurpose", lang)
+                    </label>
+                    <select asp-for="MovePurposeLookupId"
+                            asp-items="Model.MovePurposes"
+                            class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single">
+                    <label asp-for="MoveDate">
+                        @ResourcesHelper.Translate("MoveDate", lang)
+                    </label>
+                    <input asp-for="MoveDate" type="datetime-local" />
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="MovedBy">
+                        @ResourcesHelper.Translate("MovedBy", lang)
+                    </label>
+                    <input asp-for="MovedBy" />
+                </div>
+
+                <div class="single">
+                    <label asp-for="ApprovedBy">
+                        @ResourcesHelper.Translate("ApprovedBy", lang)
+                    </label>
+                    <input asp-for="ApprovedBy" />
+                </div>
+            </div>
+
+            <div class="half-input-wrapper">
+                <div class="single">
+                    <label asp-for="Remarks">
+                        @ResourcesHelper.Translate("Remarks", lang)
+                    </label>
+                    <textarea asp-for="Remarks"></textarea>
+                </div>
+            </div>
+
+            <div class="ams-form-actions mt--20">
+                <button type="submit" class="rts-btn btn-primary">
+                    @ResourcesHelper.Translate("AddMovement", lang)
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="user-profile-main-wrapper mt--30">
+        <h5 class="ams-section-title">
+            @ResourcesHelper.Translate("MovementHistory", lang)
+        </h5>
+
+        <div class="table-responsive">
+            <table class="table ams-table" id="moveHistoryTable">
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("Date", lang)</th>
+                        <th>@ResourcesHelper.Translate("Item", lang)</th>
+                        <th>@ResourcesHelper.Translate("FromLocation", lang)</th>
+                        <th>@ResourcesHelper.Translate("ToLocation", lang)</th>
+                        <th>@ResourcesHelper.Translate("MovePurpose", lang)</th>
+                        <th>@ResourcesHelper.Translate("MovedBy", lang)</th>
+                        <th>@ResourcesHelper.Translate("ApprovedBy", lang)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model.History)
+                    {
+                        <tr>
+                            <td>@item.MoveDate.ToString("dd.MM.yyyy HH:mm")</td>
+                            <td>@item.Item</td>
+                            <td>@item.FromLocation</td>
+                            <td>@item.ToLocation</td>
+                            <td>@item.Purpose</td>
+                            <td>@item.MovedBy</td>
+                            <td>@item.ApprovedBy</td>
+                        </tr>
+                    }
+
+                    @if (!Model.History.Any())
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoMovementHistoryFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.ams-select2').select2({
+                width: '100%',
+                placeholder: '@ResourcesHelper.Translate("SelectOption", lang)',
+                allowClear: true
+            });
+        });
+    </script>
+}

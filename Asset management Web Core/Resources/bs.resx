@@ -834,4 +834,163 @@
   <data name="Date" xml:space="preserve">
     <value>Datum</value>
   </data>
+  <data name="Narcotics" xml:space="preserve">
+    <value>Narkotici</value>
+  </data>
+  <data name="EvidenceManagement" xml:space="preserve">
+    <value>Upravljanje dokazima</value>
+  </data>
+  <data name="EvidenceDeposit" xml:space="preserve">
+    <value>Depozit dokaza</value>
+  </data>
+  <data name="EvidenceMoveHistory" xml:space="preserve">
+    <value>Historija pomjeranja dokaza</value>
+  </data>
+  <data name="BackToDeposit" xml:space="preserve">
+    <value>Nazad na depozit</value>
+  </data>
+  <data name="AddMovement" xml:space="preserve">
+    <value>Dodaj pomjeranje</value>
+  </data>
+  <data name="MovementHistory" xml:space="preserve">
+    <value>Historija pomjeranja</value>
+  </data>
+  <data name="FromLocation" xml:space="preserve">
+    <value>Sa lokacije</value>
+  </data>
+  <data name="ToLocation" xml:space="preserve">
+    <value>Na lokaciju</value>
+  </data>
+  <data name="MovePurpose" xml:space="preserve">
+    <value>Svrha pomjeranja</value>
+  </data>
+  <data name="MovedBy" xml:space="preserve">
+    <value>Premjestio</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>Odobrio</value>
+  </data>
+  <data name="NoMovementHistoryFound" xml:space="preserve">
+    <value>Nema evidentiranih pomjeranja.</value>
+  </data>
+  <data name="CaseNo" xml:space="preserve">
+    <value>Broj predmeta</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Predmet</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Napomena</value>
+  </data>
+  <data name="EvidenceDepositDescription" xml:space="preserve">
+    <value>Registracija i upravljanje dokaznim predmetima.</value>
+  </data>
+  <data name="NewEvidenceDeposit" xml:space="preserve">
+    <value>Novi depozit dokaza</value>
+  </data>
+  <data name="DepositData" xml:space="preserve">
+    <value>Podaci depozita</value>
+  </data>
+  <data name="DepositLocation" xml:space="preserve">
+    <value>Lokacija depozita</value>
+  </data>
+  <data name="ReceivedDate" xml:space="preserve">
+    <value>Datum prijema</value>
+  </data>
+  <data name="StorageOrderNo" xml:space="preserve">
+    <value>Broj naredbe za čuvanje</value>
+  </data>
+  <data name="StorageOrderDate" xml:space="preserve">
+    <value>Datum naredbe za čuvanje</value>
+  </data>
+  <data name="SubmittedByOfficer" xml:space="preserve">
+    <value>Službenik koji predaje</value>
+  </data>
+  <data name="HandlingOfficer" xml:space="preserve">
+    <value>Službenik koji rukuje</value>
+  </data>
+  <data name="PersonData" xml:space="preserve">
+    <value>Podaci osobe</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Prezime</value>
+  </data>
+  <data name="PersonalIdNo" xml:space="preserve">
+    <value>Lični broj</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="IsCoCriminalOffence" xml:space="preserve">
+    <value>Povezano sa krivičnim djelom</value>
+  </data>
+  <data name="IsGenderBasedViolence" xml:space="preserve">
+    <value>Rodno zasnovano nasilje</value>
+  </data>
+  <data name="SaveDeposit" xml:space="preserve">
+    <value>Sačuvaj depozit</value>
+  </data>
+  <data name="AddEvidenceItem" xml:space="preserve">
+    <value>Dodaj dokazni predmet</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Tip predmeta</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Količina</value>
+  </data>
+  <data name="UnitPlaceholder" xml:space="preserve">
+    <value>kom, gr, kg...</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>Serijski broj</value>
+  </data>
+  <data name="MarkingLabelText" xml:space="preserve">
+    <value>Tekst oznake / labela</value>
+  </data>
+  <data name="EvidenceItems" xml:space="preserve">
+    <value>Dokazni predmeti</value>
+  </data>
+  <data name="Serial" xml:space="preserve">
+    <value>Serijski broj</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Obriši</value>
+  </data>
+  <data name="RecentEvidenceDeposits" xml:space="preserve">
+    <value>Nedavni depoziti dokaza</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Registracija</value>
+  </data>
+  <data name="Case" xml:space="preserve">
+    <value>Predmet</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tip</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Lokacija</value>
+  </data>
+  <data name="PrintDeposit" xml:space="preserve">
+    <value>Štampaj depozit</value>
+  </data>
+  <data name="PrintLabel" xml:space="preserve">
+    <value>Štampaj labelu</value>
+  </data>
+  <data name="EvidenceDeposits" xml:space="preserve">
+    <value> Depoziti dokaza</value>
+  </data>
+  <data name="EvidenceDepositsDescription" xml:space="preserve">
+    <value>Pregled svih depozita dokaza.</value>
+  </data>
+  <data name="NewDeposit" xml:space="preserve">
+    <value>Novi depozit</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Otvori</value>
+  </data>
+  <data name="CaseInfoFolderPath" xml:space="preserve">
+    <value>Folder / putanja predmeta</value>
+  </data>
 </root>

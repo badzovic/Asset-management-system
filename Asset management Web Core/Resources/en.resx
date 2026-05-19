@@ -841,4 +841,172 @@
   <data name="Date" xml:space="preserve">
     <value>Date</value>
   </data>
+  <data name="Narcotics" xml:space="preserve">
+    <value>Narcotics</value>
+  </data>
+  <data name="EvidenceManagement" xml:space="preserve">
+    <value>Evidence Management</value>
+  </data>
+  <data name="EvidenceDeposit" xml:space="preserve">
+    <value>Evidence Deposit</value>
+  </data>
+  <data name="EvidenceMoveHistory" xml:space="preserve">
+    <value>Evidence Move History</value>
+  </data>
+  <data name="BackToDeposit" xml:space="preserve">
+    <value>Back To Deposit</value>
+  </data>
+  <data name="AddMovement" xml:space="preserve">
+    <value>Add Movement</value>
+  </data>
+  <data name="MovementHistory" xml:space="preserve">
+    <value>Movement History</value>
+  </data>
+  <data name="FromLocation" xml:space="preserve">
+    <value>From Location</value>
+  </data>
+  <data name="ToLocation" xml:space="preserve">
+    <value>To Location</value>
+  </data>
+  <data name="MovePurpose" xml:space="preserve">
+    <value>Move Purpose</value>
+  </data>
+  <data name="MovedBy" xml:space="preserve">
+    <value>Moved By</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>Approved By</value>
+  </data>
+  <data name="NoMovementHistoryFound" xml:space="preserve">
+    <value>No Movement History Found</value>
+  </data>
+  <data name="CaseNo" xml:space="preserve">
+    <value>Case No</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="EvidenceDepositDescription" xml:space="preserve">
+    <value>Evidence Deposit Description</value>
+  </data>
+  <data name="NewEvidenceDeposit" xml:space="preserve">
+    <value>New Evidence Deposit</value>
+  </data>
+  <data name="DepositData" xml:space="preserve">
+    <value>Deposit Data</value>
+  </data>
+  <data name="DepositLocation" xml:space="preserve">
+    <value>Deposit Location</value>
+  </data>
+  <data name="ReceivedDate" xml:space="preserve">
+    <value>Received Date</value>
+  </data>
+  <data name="StorageOrderNo" xml:space="preserve">
+    <value>Storage Order No</value>
+  </data>
+  <data name="StorageOrderDate" xml:space="preserve">
+    <value>Storage Order Date</value>
+  </data>
+  <data name="SubmittedByOfficer" xml:space="preserve">
+    <value>Submitted By Officer</value>
+  </data>
+  <data name="HandlingOfficer" xml:space="preserve">
+    <value>Handling Officer</value>
+  </data>
+  <data name="CaseInfoFolderPath" xml:space="preserve">
+    <value>Case Info Folder Path</value>
+  </data>
+  <data name="PersonData" xml:space="preserve">
+    <value>Person Data</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="PersonalIdNo" xml:space="preserve">
+    <value>Personal Id No </value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AgeBand" xml:space="preserve">
+    <value>Age Band</value>
+  </data>
+  <data name="IsCoCriminalOffence" xml:space="preserve">
+    <value>Is CoCriminal Offence</value>
+  </data>
+  <data name="IsGenderBasedViolence" xml:space="preserve">
+    <value>Is Gender Based Violence </value>
+  </data>
+  <data name="SaveDeposit" xml:space="preserve">
+    <value>Save Deposit</value>
+  </data>
+  <data name="AddEvidenceItem" xml:space="preserve">
+    <value>Add Evidence Item</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Item Type</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="UnitPlaceholder" xml:space="preserve">
+    <value>UnitPlaceholder</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>Serial No</value>
+  </data>
+  <data name="MarkingLabelText" xml:space="preserve">
+    <value>Marking Label Text</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>Add Item</value>
+  </data>
+  <data name="EvidenceItems" xml:space="preserve">
+    <value>Evidence Items</value>
+  </data>
+  <data name="Serial" xml:space="preserve">
+    <value>Serial</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="RecentEvidenceDeposits" xml:space="preserve">
+    <value>Recent Evidence Deposits</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="Case" xml:space="preserve">
+    <value>Case</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="PrintDeposit" xml:space="preserve">
+    <value>Print Deposit</value>
+  </data>
+  <data name="PrintLabel" xml:space="preserve">
+    <value>Print Label</value>
+  </data>
+  <data name="EvidenceDeposits" xml:space="preserve">
+    <value>Evidence Deposits</value>
+  </data>
+  <data name="EvidenceDepositsDescription" xml:space="preserve">
+    <value>Evidence Deposits Description</value>
+  </data>
+  <data name="NewDeposit" xml:space="preserve">
+    <value>New Deposit</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="DeleteEvidenceDepositQuestion" xml:space="preserve">
+    <value>Delete Evidence Deposit Question</value>
+  </data>
 </root>
