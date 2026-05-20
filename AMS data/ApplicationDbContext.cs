@@ -1,9 +1,10 @@
 ﻿using AMS_data.Entities;
+using AMS_data.Entities.Evidence;
+using AMS_data.Entities.Lookups;
+using AMS_data.Entities.Narcotics;
+using AMS_data.Entities.Weapons;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using AMS_data.Entities.Weapons;
-using AMS_data.Entities.Lookups;
-using AMS_data.Entities.Evidence;
 
 namespace AMS_data
 {
@@ -35,5 +36,8 @@ namespace AMS_data
         public DbSet<EvidenceDeposit> EvidenceDeposits { get; set; }
         public DbSet<EvidenceDepositItem> EvidenceDepositItems { get; set; }
         public DbSet<EvidenceMoveHistory> EvidenceMoveHistories { get; set; }
+        public DbSet<NarcoticsDeposit> NarcoticsDeposits { get; set; }
+        public DbSet<NarcoticsDepositItem> NarcoticsDepositItems { get; set; }
+        public DbSet<NarcoticsMoveHistory> NarcoticsMoveHistories { get; set; }
     }
 }

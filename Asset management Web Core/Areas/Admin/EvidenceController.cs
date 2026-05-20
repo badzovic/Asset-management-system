@@ -1,14 +1,15 @@
 ﻿using AMS_data;
 using AMS_data.Entities.Evidence;
 using AMS_services;
+using AMS_services;
 using AMS_services.Audit;
 using Asset_management_Web_Core.Areas.Admin.ViewModels.Evidence;
-using AMS_services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text;
 
 namespace Asset_management_Web_Core.Areas.Admin.Controllers
 {
@@ -215,6 +216,118 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 $"EvidenceDeposit_{deposit.RegistrationNo}.pdf");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ExportEvidenceQueryPdf(EvidenceQueryGeneratorViewModel model)
+        {
+            var data = await BuildEvidenceQuery(model)
+                .OrderByDescending(x => x.RegistrationDate)
+                .Take(5000)
+                .ToListAsync();
+
+            var pdfBytes = _evidencePdfService.GenerateEvidenceQueryPdf(data);
+
+            return File(
+                pdfBytes,
+                "application/pdf",
+                $"EvidenceQuery_{DateTime.Now:yyyyMMdd_HHmm}.pdf");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> QueryGenerator(EvidenceQueryGeneratorViewModel model)
+        {
+            model.CaseTypes = await SelectLookup("CaseType");
+            model.DepositLocations = await SelectLookup("EvidenceDepositLocation");
+
+            var hasAnyFilter =
+                !string.IsNullOrWhiteSpace(model.RegistrationNo) ||
+                !string.IsNullOrWhiteSpace(model.CaseNo) ||
+                model.CaseTypeLookupId.HasValue ||
+                model.DepositLocationLookupId.HasValue ||
+                model.RegistrationDateFrom.HasValue ||
+                model.RegistrationDateTo.HasValue;
+
+            model.HasSearched = hasAnyFilter;
+
+            if (!hasAnyFilter)
+                return View(model);
+
+            var query = _db.EvidenceDeposits
+                .Include(x => x.CaseTypeLookup)
+                .Include(x => x.DepositLocationLookup)
+                .Include(x => x.EvidenceIndicatorLookup)
+                .Where(x => !x.IsDeleted)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(model.RegistrationNo))
+                query = query.Where(x => x.RegistrationNo.Contains(model.RegistrationNo));
+
+            if (!string.IsNullOrWhiteSpace(model.CaseNo))
+                query = query.Where(x => x.CaseNo != null && x.CaseNo.Contains(model.CaseNo));
+
+            if (model.CaseTypeLookupId.HasValue)
+                query = query.Where(x => x.CaseTypeLookupId == model.CaseTypeLookupId.Value);
+
+            if (model.DepositLocationLookupId.HasValue)
+                query = query.Where(x => x.DepositLocationLookupId == model.DepositLocationLookupId.Value);
+
+            if (model.RegistrationDateFrom.HasValue)
+                query = query.Where(x => x.RegistrationDate >= model.RegistrationDateFrom.Value);
+
+            if (model.RegistrationDateTo.HasValue)
+                query = query.Where(x => x.RegistrationDate <= model.RegistrationDateTo.Value);
+
+            model.Results = await BuildEvidenceQuery(model)
+             .OrderByDescending(x => x.RegistrationDate)
+             .Take(1000)
+             .ToListAsync();
+
+            return View(model);
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> ExportEvidenceQueryCsv(EvidenceQueryGeneratorViewModel model)
+        {
+            var data = await BuildEvidenceQuery(model)
+                .OrderByDescending(x => x.RegistrationDate)
+                .Take(5000)
+                .ToListAsync();
+
+            var sb = new StringBuilder();
+
+            sb.AppendLine("Registration No;Case No;Case Type;Registration Date;Received Date;Deposit Location;Evidence Indicator;First Name;Surname;Personal ID No;Status");
+
+            foreach (var x in data)
+            {
+                sb.AppendLine(string.Join(";",
+                    Csv(x.RegistrationNo),
+                    Csv(x.CaseNo),
+                    Csv(x.CaseTypeLookup?.Name),
+                    Csv(x.RegistrationDate.ToString("dd.MM.yyyy")),
+                    Csv(x.ReceivedDate?.ToString("dd.MM.yyyy")),
+                    Csv(x.DepositLocationLookup?.Name),
+                    Csv(x.EvidenceIndicatorLookup?.Name),
+                    Csv(x.FirstName),
+                    Csv(x.Surname),
+                    Csv(x.PersonalIdNo),
+                    Csv(x.Status)
+                ));
+            }
+
+            var bytes = Encoding.UTF8.GetPreamble()
+                .Concat(Encoding.UTF8.GetBytes(sb.ToString()))
+                .ToArray();
+
+            return File(bytes, "text/csv", $"EvidenceQuery_{DateTime.Now:yyyyMMdd_HHmm}.csv");
+        }
+
+        private static string Csv(string? value)
+        {
+            value ??= "";
+            value = value.Replace("\"", "\"\"");
+            return $"\"{value}\"";
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddMove(EvidenceMoveViewModel model)
@@ -386,6 +499,36 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
             return View(deposits);
         }
+        private IQueryable<EvidenceDeposit> BuildEvidenceQuery(EvidenceQueryGeneratorViewModel model)
+        {
+            var query = _db.EvidenceDeposits
+                .Include(x => x.CaseTypeLookup)
+                .Include(x => x.DepositLocationLookup)
+                .Include(x => x.EvidenceIndicatorLookup)
+                .Where(x => !x.IsDeleted)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(model.RegistrationNo))
+                query = query.Where(x => x.RegistrationNo.Contains(model.RegistrationNo));
+
+            if (!string.IsNullOrWhiteSpace(model.CaseNo))
+                query = query.Where(x => x.CaseNo != null && x.CaseNo.Contains(model.CaseNo));
+
+            if (model.CaseTypeLookupId.HasValue)
+                query = query.Where(x => x.CaseTypeLookupId == model.CaseTypeLookupId.Value);
+
+            if (model.DepositLocationLookupId.HasValue)
+                query = query.Where(x => x.DepositLocationLookupId == model.DepositLocationLookupId.Value);
+
+            if (model.RegistrationDateFrom.HasValue)
+                query = query.Where(x => x.RegistrationDate >= model.RegistrationDateFrom.Value);
+
+            if (model.RegistrationDateTo.HasValue)
+                query = query.Where(x => x.RegistrationDate <= model.RegistrationDateTo.Value);
+
+            return query;
+        }
+
         private async Task<EvidenceDepositViewModel> PopulateEvidenceModel(EvidenceDepositViewModel model)
         {
             model.CaseTypes = await SelectLookup("CaseType");

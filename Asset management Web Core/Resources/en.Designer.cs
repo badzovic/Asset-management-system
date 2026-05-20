@@ -142,6 +142,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Narcotics Item.
+        /// </summary>
+        public static string AddNarcoticsItem {
+            get {
+                return ResourceManager.GetString("AddNarcoticsItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add New.
         /// </summary>
         public static string AddNew {
@@ -502,6 +511,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirm Storage Order No.
+        /// </summary>
+        public static string ConfirmStorageOrderNo {
+            get {
+                return ResourceManager.GetString("ConfirmStorageOrderNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All Rights Reserved..
         /// </summary>
         public static string Copyright {
@@ -516,6 +534,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string Country {
             get {
                 return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created At.
+        /// </summary>
+        public static string CreatedAt {
+            get {
+                return ResourceManager.GetString("CreatedAt", resourceCulture);
             }
         }
         
@@ -642,6 +669,33 @@ namespace Asset_management_Web_Core.Resources {
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destruction Date.
+        /// </summary>
+        public static string DestructionDate {
+            get {
+                return ResourceManager.GetString("DestructionDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destruction Order Date.
+        /// </summary>
+        public static string DestructionOrderDate {
+            get {
+                return ResourceManager.GetString("DestructionOrderDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destruction Order No.
+        /// </summary>
+        public static string DestructionOrderNo {
+            get {
+                return ResourceManager.GetString("DestructionOrderNo", resourceCulture);
             }
         }
         
@@ -970,6 +1024,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Evidence Query Generator Description .
+        /// </summary>
+        public static string EvidenceQueryGeneratorDescription {
+            get {
+                return ResourceManager.GetString("EvidenceQueryGeneratorDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Evidence weapons.
         /// </summary>
         public static string EvidenceWeapon {
@@ -984,6 +1047,33 @@ namespace Asset_management_Web_Core.Resources {
         public static string EvidenceWeaponType {
             get {
                 return ResourceManager.GetString("EvidenceWeaponType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export CSV .
+        /// </summary>
+        public static string ExportCSV {
+            get {
+                return ResourceManager.GetString("ExportCSV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export Excel.
+        /// </summary>
+        public static string ExportExcel {
+            get {
+                return ResourceManager.GetString("ExportExcel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export PDF .
+        /// </summary>
+        public static string ExportPDF {
+            get {
+                return ResourceManager.GetString("ExportPDF", resourceCulture);
             }
         }
         
@@ -1020,6 +1110,33 @@ namespace Asset_management_Web_Core.Resources {
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forensic And Court Data.
+        /// </summary>
+        public static string ForensicAndCourtData {
+            get {
+                return ResourceManager.GetString("ForensicAndCourtData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forensic Report Date.
+        /// </summary>
+        public static string ForensicReportDate {
+            get {
+                return ResourceManager.GetString("ForensicReportDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forensic Report No.
+        /// </summary>
+        public static string ForensicReportNo {
+            get {
+                return ResourceManager.GetString("ForensicReportNo", resourceCulture);
             }
         }
         
@@ -1200,6 +1317,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string Layout {
             get {
                 return ResourceManager.GetString("Layout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Link To Order No.
+        /// </summary>
+        public static string LinkToOrderNo {
+            get {
+                return ResourceManager.GetString("LinkToOrderNo", resourceCulture);
             }
         }
         
@@ -1573,11 +1699,65 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Narcotic Composition.
+        /// </summary>
+        public static string NarcoticComposition {
+            get {
+                return ResourceManager.GetString("NarcoticComposition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Narcotics.
         /// </summary>
         public static string Narcotics {
             get {
                 return ResourceManager.GetString("Narcotics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Narcotics Items.
+        /// </summary>
+        public static string NarcoticsItems {
+            get {
+                return ResourceManager.GetString("NarcoticsItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Narcotics Management.
+        /// </summary>
+        public static string NarcoticsManagement {
+            get {
+                return ResourceManager.GetString("NarcoticsManagement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Narcotics Move History.
+        /// </summary>
+        public static string NarcoticsMoveHistory {
+            get {
+                return ResourceManager.GetString("NarcoticsMoveHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Narcotics Query Generator Description.
+        /// </summary>
+        public static string NarcoticsQueryGeneratorDescription {
+            get {
+                return ResourceManager.GetString("NarcoticsQueryGeneratorDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Narcotics Type.
+        /// </summary>
+        public static string NarcoticsType {
+            get {
+                return ResourceManager.GetString("NarcoticsType", resourceCulture);
             }
         }
         
@@ -1605,6 +1785,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string NewLocation {
             get {
                 return ResourceManager.GetString("NewLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Narcotics Deposit.
+        /// </summary>
+        public static string NewNarcoticsDeposit {
+            get {
+                return ResourceManager.GetString("NewNarcoticsDeposit", resourceCulture);
             }
         }
         
@@ -1789,6 +1978,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to OU Performed Seizure.
+        /// </summary>
+        public static string OUPerformedSeizure {
+            get {
+                return ResourceManager.GetString("OUPerformedSeizure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string Password {
@@ -1870,15 +2068,6 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Profile.
-        /// </summary>
-        public static string Profile {
-            get {
-                return ResourceManager.GetString("Profile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Prospective.
         /// </summary>
         public static string Prospective {
@@ -1902,6 +2091,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string Quantity {
             get {
                 return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity Unit.
+        /// </summary>
+        public static string QuantityUnit {
+            get {
+                return ResourceManager.GetString("QuantityUnit", resourceCulture);
             }
         }
         
@@ -1992,6 +2190,24 @@ namespace Asset_management_Web_Core.Resources {
         public static string Region {
             get {
                 return ResourceManager.GetString("Region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register Narcotics.
+        /// </summary>
+        public static string RegisterNarcotics {
+            get {
+                return ResourceManager.GetString("RegisterNarcotics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register Narcotics Description.
+        /// </summary>
+        public static string RegisterNarcoticsDescription {
+            get {
+                return ResourceManager.GetString("RegisterNarcoticsDescription", resourceCulture);
             }
         }
         
@@ -2505,6 +2721,24 @@ namespace Asset_management_Web_Core.Resources {
         public static string Users {
             get {
                 return ResourceManager.GetString("Users", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verdict Date.
+        /// </summary>
+        public static string VerdictDate {
+            get {
+                return ResourceManager.GetString("VerdictDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verdict No.
+        /// </summary>
+        public static string VerdictNo {
+            get {
+                return ResourceManager.GetString("VerdictNo", resourceCulture);
             }
         }
         

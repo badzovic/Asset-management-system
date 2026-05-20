@@ -1,0 +1,138 @@
+﻿@model List<AMS_data.Entities.Narcotics.NarcoticsDeposit>
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("NarcoticsDeposits", lang);
+}
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">
+                @ResourcesHelper.Translate("NarcoticsDeposits", lang)
+            </h4>
+
+            <p class="ams-page-subtitle">
+                @ResourcesHelper.Translate("NarcoticsDepositsDescription", lang)
+            </p>
+        </div>
+
+        <div class="d-flex gap-2">
+
+            <a asp-action="QueryGenerator"
+               class="ams-btn-secondary">
+                @ResourcesHelper.Translate("QueryGenerator", lang)
+            </a>
+
+            <a asp-action="Register"
+               class="rts-btn btn-primary">
+                @ResourcesHelper.Translate("RegisterNarcotics", lang)
+            </a>
+
+        </div>
+    </div>
+
+    <div class="user-profile-main-wrapper">
+
+        <div class="table-responsive">
+            <table class="table ams-table" id="narcoticsTable">
+
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                        <th>@ResourcesHelper.Translate("CaseNo", lang)</th>
+                        <th>@ResourcesHelper.Translate("CaseType", lang)</th>
+                        <th>@ResourcesHelper.Translate("DepositLocation", lang)</th>
+                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                        <th>@ResourcesHelper.Translate("CreatedAt", lang)</th>
+                        <th class="text-end">@ResourcesHelper.Translate("Actions", lang)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr class="ams-clickable-row"
+                            data-url="@Url.Action("Register", "Narcotics", new { area = "Admin", id = item.Id })">
+
+                            <td>@item.RegistrationNo</td>
+
+                            <td>@item.CaseNo</td>
+
+                            <td>@item.CaseTypeLookup?.Name</td>
+
+                            <td>@item.DepositLocationLookup?.Name</td>
+
+                            <td>
+                                <span class="ams-badge ams-badge-success">
+                                    @item.Status
+                                </span>
+                            </td>
+
+                            <td>
+                                @item.CreatedAt.ToString("dd.MM.yyyy")
+                            </td>
+
+                            <td class="text-end">
+
+                                <a asp-action="Register"
+                                   asp-route-id="@item.Id"
+                                   class="ams-btn-small">
+                                    @ResourcesHelper.Translate("Open", lang)
+                                </a>
+
+                                <form asp-action="DeleteDeposit"
+                                      method="post"
+                                      style="display:inline-block;"
+                                      onsubmit="return confirm('@ResourcesHelper.Translate("DeleteConfirmation", lang)');">
+
+                                    @Html.AntiForgeryToken()
+
+                                    <input type="hidden"
+                                           name="id"
+                                           value="@item.Id" />
+
+                                    <button type="submit"
+                                            class="ams-btn-small ms-1">
+                                        @ResourcesHelper.Translate("Delete", lang)
+                                    </button>
+
+                                </form>
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function () {
+
+            $('#narcoticsTable').DataTable({
+                pageLength: 25,
+                responsive: true
+            });
+
+            $('.ams-clickable-row').on('click', function (e) {
+
+                if ($(e.target).closest('a,button,form').length)
+                    return;
+
+                window.location = $(this).data('url');
+            });
+
+        });
+    </script>
+}

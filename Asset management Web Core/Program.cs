@@ -55,6 +55,8 @@ builder.Services.AddLocalization(options =>
 
 builder.Services.AddScoped<EvidencePdfService>();
 
+builder.Services.AddScoped<NarcoticsPdfService>();
+
 builder.Services
     .AddControllersWithViews()
     .AddViewLocalization()

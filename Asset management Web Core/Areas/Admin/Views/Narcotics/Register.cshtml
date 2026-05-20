@@ -1,0 +1,446 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Narcotics.NarcoticsDepositViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("RegisterNarcotics", lang);
+}
+
+<style>
+    .container-custom,
+    .user-profile-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ams-narcotics-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(0, .9fr);
+        gap: 24px;
+        align-items: start;
+    }
+
+    @@media (max-width: 1200px) {
+        .ams-narcotics-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("RegisterNarcotics", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("RegisterNarcoticsDescription", lang)</p>
+        </div>
+
+        <div class="d-flex gap-2">
+            <a asp-action="Index" class="ams-btn-secondary">
+                @ResourcesHelper.Translate("BackToList", lang)
+            </a>
+
+            <a asp-action="Register" class="rts-btn btn-primary">
+                @ResourcesHelper.Translate("NewNarcoticsDeposit", lang)
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success ams-alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <div class="ams-narcotics-grid">
+
+        <div>
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("DepositData", lang)</h5>
+
+                <form asp-action="Register" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" asp-for="Id" />
+
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="RegistrationNo">@ResourcesHelper.Translate("RegistrationNo", lang) <span class="ams-required">*</span></label>
+                            <input asp-for="RegistrationNo" readonly />
+                            <span asp-validation-for="RegistrationNo" class="text-danger"></span>
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="CaseNo">@ResourcesHelper.Translate("CaseNo", lang)</label>
+                            <input asp-for="CaseNo" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="CaseTypeLookupId">@ResourcesHelper.Translate("CaseType", lang)</label>
+                            <select asp-for="CaseTypeLookupId" asp-items="Model.CaseTypes" class="ams-select2">
+                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                            </select>
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="ReceivedDate">@ResourcesHelper.Translate("ReceivedDate", lang)</label>
+                            <input asp-for="ReceivedDate" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="OUPerformedSeizureLookupId">@ResourcesHelper.Translate("OUPerformedSeizure", lang)</label>
+                            <select asp-for="OUPerformedSeizureLookupId" asp-items="Model.OUPerformedSeizures" class="ams-select2">
+                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                            </select>
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="EvidenceIndicatorLookupId">@ResourcesHelper.Translate("EvidenceIndicator", lang)</label>
+                            <select asp-for="EvidenceIndicatorLookupId" asp-items="Model.EvidenceIndicators" class="ams-select2">
+                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="DepositLocationLookupId">@ResourcesHelper.Translate("DepositLocation", lang)</label>
+                            <select asp-for="DepositLocationLookupId" asp-items="Model.DepositLocations" class="ams-select2">
+                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                            </select>
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="StorageOrderNo">@ResourcesHelper.Translate("StorageOrderNo", lang)</label>
+                            <input asp-for="StorageOrderNo" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="StorageOrderDate">@ResourcesHelper.Translate("StorageOrderDate", lang)</label>
+                            <input asp-for="StorageOrderDate" type="date" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="LinkToOrderNo">@ResourcesHelper.Translate("LinkToOrderNo", lang)</label>
+                            <input asp-for="LinkToOrderNo" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="ConfirmStorageOrderNo">@ResourcesHelper.Translate("ConfirmStorageOrderNo", lang)</label>
+                            <input asp-for="ConfirmStorageOrderNo" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="SubmittedByOfficer">@ResourcesHelper.Translate("SubmittedByOfficer", lang)</label>
+                            <input asp-for="SubmittedByOfficer" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="HandlingOfficer">@ResourcesHelper.Translate("HandlingOfficer", lang)</label>
+                            <input asp-for="HandlingOfficer" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="CaseInfoFolderPath">@ResourcesHelper.Translate("CaseInfoFolderPath", lang)</label>
+                            <input asp-for="CaseInfoFolderPath" />
+                        </div>
+                    </div>
+
+                    <h5 class="ams-section-title mt--30">@ResourcesHelper.Translate("ForensicAndCourtData", lang)</h5>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="ForensicReportNo">@ResourcesHelper.Translate("ForensicReportNo", lang)</label>
+                            <input asp-for="ForensicReportNo" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="ForensicReportDate">@ResourcesHelper.Translate("ForensicReportDate", lang)</label>
+                            <input asp-for="ForensicReportDate" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="VerdictNo">@ResourcesHelper.Translate("VerdictNo", lang)</label>
+                            <input asp-for="VerdictNo" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="VerdictDate">@ResourcesHelper.Translate("VerdictDate", lang)</label>
+                            <input asp-for="VerdictDate" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="DestructionOrderNo">@ResourcesHelper.Translate("DestructionOrderNo", lang)</label>
+                            <input asp-for="DestructionOrderNo" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="DestructionOrderDate">@ResourcesHelper.Translate("DestructionOrderDate", lang)</label>
+                            <input asp-for="DestructionOrderDate" type="date" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="DestructionDate">@ResourcesHelper.Translate("DestructionDate", lang)</label>
+                            <input asp-for="DestructionDate" type="date" />
+                        </div>
+                    </div>
+
+                    <h5 class="ams-section-title mt--30">@ResourcesHelper.Translate("PersonData", lang)</h5>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="FirstName">@ResourcesHelper.Translate("FirstName", lang)</label>
+                            <input asp-for="FirstName" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="Surname">@ResourcesHelper.Translate("Surname", lang)</label>
+                            <input asp-for="Surname" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="PersonalIdNo">@ResourcesHelper.Translate("PersonalIdNo", lang)</label>
+                            <input asp-for="PersonalIdNo" />
+                        </div>
+
+                        <div class="single">
+                            <label asp-for="Address">@ResourcesHelper.Translate("Address", lang)</label>
+                            <input asp-for="Address" />
+                        </div>
+                    </div>
+
+                    <div class="half-input-wrapper">
+                        <div class="single">
+                            <label asp-for="Remarks">@ResourcesHelper.Translate("Remarks", lang)</label>
+                            <textarea asp-for="Remarks"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="ams-form-actions mt--20">
+                        <button type="submit" class="rts-btn btn-primary">
+                            @ResourcesHelper.Translate("SaveDeposit", lang)
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            @if (Model.Id != null)
+            {
+                <div class="user-profile-main-wrapper mt--30">
+                    <h5 class="ams-section-title">@ResourcesHelper.Translate("AddNarcoticsItem", lang)</h5>
+
+                    <form asp-action="AddItem" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="half-input-wrapper">
+                            <div class="single">
+                                <label asp-for="NarcoticsTypeLookupId">@ResourcesHelper.Translate("NarcoticsType", lang)</label>
+                                <select asp-for="NarcoticsTypeLookupId" asp-items="Model.NarcoticsTypes" class="ams-select2">
+                                    <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                                </select>
+                            </div>
+
+                            <div class="single">
+                                <label asp-for="CompositionLookupId">@ResourcesHelper.Translate("NarcoticComposition", lang)</label>
+                                <select asp-for="CompositionLookupId" asp-items="Model.Compositions" class="ams-select2">
+                                    <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="half-input-wrapper">
+                            <div class="single">
+                                <label asp-for="Quantity">@ResourcesHelper.Translate("Quantity", lang)</label>
+                                <input asp-for="Quantity" type="number" step="0.01" />
+                            </div>
+
+                            <div class="single">
+                                <label asp-for="QuantityUnitLookupId">@ResourcesHelper.Translate("QuantityUnit", lang)</label>
+                                <select asp-for="QuantityUnitLookupId" asp-items="Model.QuantityUnits" class="ams-select2">
+                                    <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ams-form-actions mt--20">
+                            <button type="submit" class="rts-btn btn-primary">
+                                @ResourcesHelper.Translate("AddItem", lang)
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="user-profile-main-wrapper mt--30">
+                    <h5 class="ams-section-title">@ResourcesHelper.Translate("NarcoticsItems", lang)</h5>
+
+                    <div class="table-responsive ams-active-weapons-scroll">
+                        <table class="table ams-table">
+                            <thead>
+                                <tr>
+                                    <th>@ResourcesHelper.Translate("NarcoticsType", lang)</th>
+                                    <th>@ResourcesHelper.Translate("NarcoticComposition", lang)</th>
+                                    <th>@ResourcesHelper.Translate("Quantity", lang)</th>
+                                    <th>@ResourcesHelper.Translate("Status", lang)</th>
+                                    <th class="text-end">@ResourcesHelper.Translate("Actions", lang)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Items)
+                                {
+                                    <tr>
+                                        <td>@item.NarcoticsTypeLookup?.Name</td>
+                                        <td>@item.CompositionLookup?.Name</td>
+                                        <td>@item.Quantity @item.QuantityUnitLookup?.Name</td>
+                                        <td>
+                                            <span class="ams-badge ams-badge-muted">@item.Status</span>
+                                        </td>
+                                        <td class="text-end">
+                                            <form asp-action="DeleteItem" method="post" style="display:inline-block;">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="id" value="@item.Id" />
+                                                <button type="submit" class="ams-btn-small">
+                                                    @ResourcesHelper.Translate("Delete", lang)
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+
+                                @if (!Model.Items.Any())
+                                {
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted py-4">
+                                            @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div>
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("RecentNarcoticsDeposits", lang)</h5>
+
+                <div class="ams-table-toolbar">
+                    <input type="text"
+                           id="recentNarcoticsSearch"
+                           class="ams-table-search"
+                           placeholder="@ResourcesHelper.Translate("Search", lang)" />
+                </div>
+
+                <div class="table-responsive ams-active-weapons-scroll">
+                    <table class="table ams-table" id="recentNarcoticsTable">
+                        <thead>
+                            <tr>
+                                <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                                <th>@ResourcesHelper.Translate("CaseNo", lang)</th>
+                                <th>@ResourcesHelper.Translate("CaseType", lang)</th>
+                                <th>@ResourcesHelper.Translate("Location", lang)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.RecentDeposits)
+                            {
+                                <tr class="ams-clickable-row"
+                                    data-url="@Url.Action("Register", "Narcotics", new { area = "Admin", id = item.Id })">
+                                    <td>@item.RegistrationNo</td>
+                                    <td>@item.CaseNo</td>
+                                    <td>@item.CaseTypeLookup?.Name</td>
+                                    <td>@item.DepositLocationLookup?.Name</td>
+                                </tr>
+                            }
+
+                            @if (!Model.RecentDeposits.Any())
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center text-muted py-4">
+                                        @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            @if (Model.Id != null)
+            {
+                <div class="user-profile-main-wrapper mt--30">
+                    <h5 class="ams-section-title">@ResourcesHelper.Translate("Actions", lang)</h5>
+
+                    <div class="ams-quick-actions">
+                        <a asp-action="PrintDeposit" asp-route-id="@Model.Id">
+                            <i class="fa-solid fa-print"></i>
+                            <span>@ResourcesHelper.Translate("PrintDeposit", lang)</span>
+                        </a>
+
+                        <a asp-action="Register" asp-route-id="@Model.Id">
+                            <i class="fa-solid fa-barcode"></i>
+                            <span>@ResourcesHelper.Translate("PrintLabel", lang)</span>
+                        </a>
+
+                        <a asp-action="MoveHistory" asp-route-id="@Model.Id">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>@ResourcesHelper.Translate("MoveHistory", lang)</span>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+            $('.ams-select2').select2({
+                width: '100%',
+                placeholder: '@ResourcesHelper.Translate("SelectOption", lang)',
+                allowClear: true
+            });
+
+            $('.ams-clickable-row').on('click', function () {
+                const url = $(this).data('url');
+                if (url) window.location.href = url;
+            });
+
+            $('#recentNarcoticsSearch').on('keyup', function () {
+                const value = $(this).val().toLowerCase();
+
+                $('#recentNarcoticsTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+}

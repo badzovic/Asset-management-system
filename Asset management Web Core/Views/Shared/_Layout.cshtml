@@ -309,6 +309,50 @@
 
                         </div>
                     }
+                    @if (User.IsInRole("Admin") || User.IsInRole("Dokazi"))
+                    {
+                        <div class="single-menu-wrapper">
+
+                            <a class="collapse-btn collapsed single-menu"
+                               data-bs-toggle="collapse"
+                               href="#narcoticsMenu"
+                               role="button"
+                               aria-expanded="false"
+                               aria-controls="narcoticsMenu">
+
+                                <div class="icon">
+                                    <i class="fa-solid fa-prescription-bottle-medical" style="color: rgb(240, 240, 240);"></i>
+                                </div>
+
+                                <p>@ResourcesHelper.Translate("NarcoticsManagement", lang)</p>
+                            </a>
+
+                            <div class="collapse" id="narcoticsMenu">
+                                <ul class="submenu rts-default-sidebar-list">
+
+                                    <li>
+                                        <a asp-area="Admin"
+                                           asp-controller="Narcotics"
+                                           asp-action="Index">
+                                            <i class="fa-solid fa-box-archive"></i>
+                                            <span>@ResourcesHelper.Translate("RegisterNarcotics", lang)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a asp-area="Admin"
+                                           asp-controller="Narcotics"
+                                           asp-action="QueryGenerator">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <span>@ResourcesHelper.Translate("QueryGenerator", lang)</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    }
                     @if (User.IsInRole("Admin") || User.IsInRole("Skladiste"))
                     {
                         <div class="single-menu-wrapper">

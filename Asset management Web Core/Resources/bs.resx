@@ -993,4 +993,88 @@
   <data name="CaseInfoFolderPath" xml:space="preserve">
     <value>Folder / putanja predmeta</value>
   </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Kreirano</value>
+  </data>
+  <data name="EvidenceQueryGeneratorDescription" xml:space="preserve">
+    <value>Generator upita za pretragu i izvještavanje depozita dokaza.</value>
+  </data>
+  <data name="ExportCSV" xml:space="preserve">
+    <value>Export CSV</value>
+  </data>
+  <data name="ExportPDF" xml:space="preserve">
+    <value>Export PDF</value>
+  </data>
+  <data name="RegisterNarcotics" xml:space="preserve">
+    <value>Registracija narkotika</value>
+  </data>
+  <data name="RegisterNarcoticsDescription" xml:space="preserve">
+    <value>Registracija i upravljanje privremeno oduzetim narkoticima.</value>
+  </data>
+  <data name="NewNarcoticsDeposit" xml:space="preserve">
+    <value>Novi depozit narkotika</value>
+  </data>
+  <data name="OUPerformedSeizure" xml:space="preserve">
+    <value>OU koji je izvršio zapljenu</value>
+  </data>
+  <data name="LinkToOrderNo" xml:space="preserve">
+    <value>Link na broj naredbe</value>
+  </data>
+  <data name="ConfirmStorageOrderNo" xml:space="preserve">
+    <value>Potvrda broja naredbe za čuvanje</value>
+  </data>
+  <data name="ForensicAndCourtData" xml:space="preserve">
+    <value>Forenzički i sudski podaci</value>
+  </data>
+  <data name="ForensicReportNo" xml:space="preserve">
+    <value>Broj nalaza vještačenja</value>
+  </data>
+  <data name="ForensicReportDate" xml:space="preserve">
+    <value>Datum nalaza vještačenja</value>
+  </data>
+  <data name="VerdictNo" xml:space="preserve">
+    <value>Broj presude</value>
+  </data>
+  <data name="VerdictDate" xml:space="preserve">
+    <value>Datum presude</value>
+  </data>
+  <data name="DestructionOrderNo" xml:space="preserve">
+    <value>Broj naredbe za uništenje</value>
+  </data>
+  <data name="DestructionOrderDate" xml:space="preserve">
+    <value>Datum naredbe za uništenje</value>
+  </data>
+  <data name="DestructionDate" xml:space="preserve">
+    <value>Datum uništenja</value>
+  </data>
+  <data name="AddNarcoticsItem" xml:space="preserve">
+    <value>Dodaj narkotik</value>
+  </data>
+  <data name="String1NarcoticsType" xml:space="preserve">
+    <value>Tip narkotika</value>
+  </data>
+  <data name="NarcoticComposition" xml:space="preserve">
+    <value>Sastav / oblik</value>
+  </data>
+  <data name="QuantityUnit" xml:space="preserve">
+    <value>Jedinica količine</value>
+  </data>
+  <data name="NarcoticsItems" xml:space="preserve">
+    <value>Narkotici</value>
+  </data>
+  <data name="RecentNarcoticsDeposits" xml:space="preserve">
+    <value>Nedavni depoziti narkotika</value>
+  </data>
+  <data name="NarcoticsManagement" xml:space="preserve">
+    <value>Upravljanje narkoticima</value>
+  </data>
+  <data name="NarcoticsMoveHistory" xml:space="preserve">
+    <value>Historija pomjeranja narkotika</value>
+  </data>
+  <data name="NarcoticsQueryGeneratorDescription" xml:space="preserve">
+    <value>Generator upita za pretragu i izvještavanje depozita narkotika.</value>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Export Excel</value>
+  </data>
 </root>

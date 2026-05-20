@@ -204,7 +204,62 @@ namespace AMS_services
                 });
             }).GeneratePdf();
         }
+        public byte[] GenerateEvidenceQueryPdf(List<EvidenceDeposit> data)
+        {
+            QuestPDF.Settings.License = LicenseType.Community;
 
+            return QuestPDF.Fluent.Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Size(PageSizes.A4.Landscape());
+                    page.Margin(25);
+                    page.DefaultTextStyle(x => x.FontSize(8));
+
+                    page.Header()
+                        .Text("Izvještaj depozita dokaza")
+                        .FontSize(18)
+                        .SemiBold();
+
+                    page.Content().PaddingTop(15).Table(table =>
+                    {
+                        table.ColumnsDefinition(columns =>
+                        {
+                            columns.RelativeColumn(1.2f);
+                            columns.RelativeColumn(1.2f);
+                            columns.RelativeColumn(1.5f);
+                            columns.RelativeColumn(1);
+                            columns.RelativeColumn(1.5f);
+                            columns.RelativeColumn(1.5f);
+                            columns.RelativeColumn(1);
+                        });
+
+                        Header(table, "Registracija");
+                        Header(table, "Broj predmeta");
+                        Header(table, "Vrsta predmeta");
+                        Header(table, "Datum");
+                        Header(table, "Lokacija");
+                        Header(table, "Indikator");
+                        Header(table, "Status");
+
+                        foreach (var x in data)
+                        {
+                            Cell(table, x.RegistrationNo);
+                            Cell(table, x.CaseNo);
+                            Cell(table, x.CaseTypeLookup?.Name);
+                            Cell(table, x.RegistrationDate.ToString("dd.MM.yyyy"));
+                            Cell(table, x.DepositLocationLookup?.Name);
+                            Cell(table, x.EvidenceIndicatorLookup?.Name);
+                            Cell(table, x.Status);
+                        }
+                    });
+
+                    page.Footer()
+                        .AlignCenter()
+                        .Text($"Generisano: {DateTime.Now:dd.MM.yyyy HH:mm}");
+                });
+            }).GeneratePdf();
+        }
         private static void Field(ColumnDescriptor c, string label, string? value, bool boldValue = false)
         {
             c.Item().PaddingBottom(4).Row(row =>

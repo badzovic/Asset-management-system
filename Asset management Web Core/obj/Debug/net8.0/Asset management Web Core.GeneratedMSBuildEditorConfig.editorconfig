@@ -62,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZpZGVuY2VcTW92ZUhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Evidence/QueryGenerator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXZpZGVuY2VcUXVlcnlHZW5lcmF0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Lookups/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTG9va3Vwc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -92,6 +96,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Manufacturers/_ManufacturerForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFudWZhY3R1cmVyc1xfTWFudWZhY3R1cmVyRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Narcotics/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmFyY290aWNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Narcotics/MoveHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmFyY290aWNzXE1vdmVIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Narcotics/QueryGenerator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmFyY290aWNzXFF1ZXJ5R2VuZXJhdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Narcotics/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmFyY290aWNzXFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/adzovic berin/Documents/GitHub/Asset-management-system/Asset management Web Core/Areas/Admin/Views/Users/Create.cshtml]

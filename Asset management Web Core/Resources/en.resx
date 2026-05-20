@@ -322,9 +322,6 @@
   <data name="Evidence" xml:space="preserve">
     <value>Evidence</value>
   </data>
-  <data name="Profile" xml:space="preserve">
-    <value>Profile</value>
-  </data>
   <data name="Logout" xml:space="preserve">
     <value>Logout</value>
   </data>
@@ -1008,5 +1005,86 @@
   </data>
   <data name="DeleteEvidenceDepositQuestion" xml:space="preserve">
     <value>Delete Evidence Deposit Question</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Created At</value>
+  </data>
+  <data name="EvidenceQueryGeneratorDescription" xml:space="preserve">
+    <value>Evidence Query Generator Description </value>
+  </data>
+  <data name="ExportCSV" xml:space="preserve">
+    <value>Export CSV </value>
+  </data>
+  <data name="ExportPDF" xml:space="preserve">
+    <value>Export PDF </value>
+  </data>
+  <data name="RegisterNarcotics" xml:space="preserve">
+    <value>Register Narcotics</value>
+  </data>
+  <data name="RegisterNarcoticsDescription" xml:space="preserve">
+    <value>Register Narcotics Description</value>
+  </data>
+  <data name="NewNarcoticsDeposit" xml:space="preserve">
+    <value>New Narcotics Deposit</value>
+  </data>
+  <data name="OUPerformedSeizure" xml:space="preserve">
+    <value>OU Performed Seizure</value>
+  </data>
+  <data name="LinkToOrderNo" xml:space="preserve">
+    <value>Link To Order No</value>
+  </data>
+  <data name="ConfirmStorageOrderNo" xml:space="preserve">
+    <value>Confirm Storage Order No</value>
+  </data>
+  <data name="ForensicAndCourtData" xml:space="preserve">
+    <value>Forensic And Court Data</value>
+  </data>
+  <data name="ForensicReportNo" xml:space="preserve">
+    <value>Forensic Report No</value>
+  </data>
+  <data name="ForensicReportDate" xml:space="preserve">
+    <value>Forensic Report Date</value>
+  </data>
+  <data name="VerdictNo" xml:space="preserve">
+    <value>Verdict No</value>
+  </data>
+  <data name="VerdictDate" xml:space="preserve">
+    <value>Verdict Date</value>
+  </data>
+  <data name="DestructionOrderNo" xml:space="preserve">
+    <value>Destruction Order No</value>
+  </data>
+  <data name="DestructionOrderDate" xml:space="preserve">
+    <value>Destruction Order Date</value>
+  </data>
+  <data name="DestructionDate" xml:space="preserve">
+    <value>Destruction Date</value>
+  </data>
+  <data name="AddNarcoticsItem" xml:space="preserve">
+    <value>Add Narcotics Item</value>
+  </data>
+  <data name="NarcoticsType" xml:space="preserve">
+    <value>Narcotics Type</value>
+  </data>
+  <data name="NarcoticComposition" xml:space="preserve">
+    <value>Narcotic Composition</value>
+  </data>
+  <data name="QuantityUnit" xml:space="preserve">
+    <value>Quantity Unit</value>
+  </data>
+  <data name="NarcoticsItems" xml:space="preserve">
+    <value>Narcotics Items</value>
+  </data>
+  <data name="NarcoticsManagement" xml:space="preserve">
+    <value>Narcotics Management</value>
+  </data>
+  <data name="NarcoticsMoveHistory" xml:space="preserve">
+    <value>Narcotics Move History</value>
+  </data>
+  <data name="NarcoticsQueryGeneratorDescription" xml:space="preserve">
+    <value>Narcotics Query Generator Description</value>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Export Excel</value>
   </data>
 </root>

@@ -1,0 +1,287 @@
+﻿@model Asset_management_Web_Core.Areas.Admin.ViewModels.Narcotics.NarcoticsQueryGeneratorViewModel
+@using Asset_management_Web_Core.Helpers
+
+@{
+    var lang = Context.Items["lang"]?.ToString() ?? "bs";
+    ViewData["Title"] = ResourcesHelper.Translate("QueryGenerator", lang);
+}
+
+<style>
+    .container-custom,
+    .user-profile-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ams-query-layout {
+        display: grid;
+        grid-template-columns: 380px minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+    }
+
+    @@media (max-width: 1200px) {
+        .ams-query-layout {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="user-profile-inner">
+
+    <div class="ams-page-header">
+        <div>
+            <h4 class="title mb-1">@ResourcesHelper.Translate("QueryGenerator", lang)</h4>
+            <p class="ams-page-subtitle">@ResourcesHelper.Translate("NarcoticsQueryGeneratorDescription", lang)</p>
+        </div>
+
+        <a asp-action="Index" class="ams-btn-secondary">
+            @ResourcesHelper.Translate("BackToList", lang)
+        </a>
+    </div>
+
+    <form asp-action="QueryGenerator" method="get">
+        <div class="ams-query-layout">
+
+            <div class="user-profile-main-wrapper">
+                <h5 class="ams-section-title">@ResourcesHelper.Translate("Filters", lang)</h5>
+
+                <div class="single mb-3">
+                    <label asp-for="RegistrationNo">@ResourcesHelper.Translate("RegistrationNo", lang)</label>
+                    <input asp-for="RegistrationNo" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="CaseNo">@ResourcesHelper.Translate("CaseNo", lang)</label>
+                    <input asp-for="CaseNo" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="CaseTypeLookupId">@ResourcesHelper.Translate("CaseType", lang)</label>
+                    <select asp-for="CaseTypeLookupId" asp-items="Model.CaseTypes" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="DepositLocationLookupId">@ResourcesHelper.Translate("DepositLocation", lang)</label>
+                    <select asp-for="DepositLocationLookupId" asp-items="Model.DepositLocations" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="OUPerformedSeizureLookupId">@ResourcesHelper.Translate("OUPerformedSeizure", lang)</label>
+                    <select asp-for="OUPerformedSeizureLookupId" asp-items="Model.OUList" class="ams-select2">
+                        <option value="">@ResourcesHelper.Translate("All", lang)</option>
+                    </select>
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="DateFrom">@ResourcesHelper.Translate("FromDate", lang)</label>
+                    <input asp-for="DateFrom" type="date" />
+                </div>
+
+                <div class="single mb-3">
+                    <label asp-for="DateTo">@ResourcesHelper.Translate("ToDate", lang)</label>
+                    <input asp-for="DateTo" type="date" />
+                </div>
+
+                <div class="ams-query-actions-vertical">
+                    <button type="submit" class="rts-btn btn-primary ams-query-action-btn">
+                        @ResourcesHelper.Translate("RunQuery", lang)
+                    </button>
+
+                    <button type="button"
+                            class="ams-btn-secondary ams-query-action-btn"
+                            onclick="window.location.href='@Url.Action("QueryGenerator", "Narcotics", new { area = "Admin" })'">
+                        @ResourcesHelper.Translate("Reset", lang)
+                    </button>
+                </div>
+
+                @if (Model.HasSearched)
+                {
+                    <p>&nbsp;</p>
+
+                    <div class="ams-query-export-actions">
+                        <button type="submit"
+                                formaction="@Url.Action("ExportQueryCsv", "Narcotics", new { area = "Admin" })"
+                                formmethod="get"
+                                class="ams-btn-secondary">
+                            <i class="fa-solid fa-file-excel"></i>
+                            @ResourcesHelper.Translate("ExportExcel", lang)
+                        </button>
+
+                        <button type="submit"
+                                formaction="@Url.Action("ExportQueryPdf", "Narcotics", new { area = "Admin" })"
+                                formmethod="get"
+                                class="ams-btn-secondary">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            @ResourcesHelper.Translate("ExportPDF", lang)
+                        </button>
+                    </div>
+                }
+            </div>
+
+            <div>
+                <div class="user-profile-main-wrapper">
+                    <div class="ams-card-title-row">
+                        <h5 class="ams-section-title">@ResourcesHelper.Translate("VisibleColumns", lang)</h5>
+                    </div>
+
+                    <div class="ams-column-picker">
+                        <label><input asp-for="ShowRegistrationNo" /> @ResourcesHelper.Translate("RegistrationNo", lang)</label>
+                        <label><input asp-for="ShowCaseNo" /> @ResourcesHelper.Translate("CaseNo", lang)</label>
+                        <label><input asp-for="ShowCaseType" /> @ResourcesHelper.Translate("CaseType", lang)</label>
+                        <label><input asp-for="ShowLocation" /> @ResourcesHelper.Translate("DepositLocation", lang)</label>
+                        <label><input asp-for="ShowOU" /> @ResourcesHelper.Translate("OUPerformedSeizure", lang)</label>
+                        <label><input asp-for="ShowStatus" /> @ResourcesHelper.Translate("Status", lang)</label>
+                        <label><input asp-for="ShowCreatedAt" /> @ResourcesHelper.Translate("CreatedAt", lang)</label>
+                    </div>
+                </div>
+
+                <div class="user-profile-main-wrapper mt--30">
+                    <div class="ams-card-title-row">
+                        <h5 class="ams-section-title">
+                            @ResourcesHelper.Translate("QueryResults", lang)
+                            @if (Model.HasSearched)
+                            {
+                                <span class="ams-result-count">(@Model.Results.Count)</span>
+                            }
+                        </h5>
+
+                        <div class="ams-table-toolbar">
+                            <input type="text"
+                                   id="queryResultsSearch"
+                                   class="ams-table-search"
+                                   placeholder="@ResourcesHelper.Translate("Search", lang)" />
+                        </div>
+                    </div>
+
+                    <div class="table-responsive ams-active-weapons-scroll">
+                        <table class="table ams-table" id="queryResultsTable">
+                            <thead>
+                                <tr>
+                                    @if (Model.ShowRegistrationNo)
+                                    {
+                                        <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                                    }
+                                    @if (Model.ShowCaseNo)
+                                    {
+                                        <th>@ResourcesHelper.Translate("CaseNo", lang)</th>
+                                    }
+                                    @if (Model.ShowCaseType)
+                                    {
+                                        <th>@ResourcesHelper.Translate("CaseType", lang)</th>
+                                    }
+                                    @if (Model.ShowLocation)
+                                    {
+                                        <th>@ResourcesHelper.Translate("DepositLocation", lang)</th>
+                                    }
+                                    @if (Model.ShowOU)
+                                    {
+                                        <th>@ResourcesHelper.Translate("OUPerformedSeizure", lang)</th>
+                                    }
+                                    @if (Model.ShowStatus)
+                                    {
+                                        <th>@ResourcesHelper.Translate("Status", lang)</th>
+                                    }
+                                    @if (Model.ShowCreatedAt)
+                                    {
+                                        <th>@ResourcesHelper.Translate("CreatedAt", lang)</th>
+                                    }
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.Results)
+                                {
+                                    <tr class="ams-clickable-row"
+                                        data-url="@Url.Action("Register", "Narcotics", new { area = "Admin", id = item.Id })">
+
+                                        @if (Model.ShowRegistrationNo)
+                                        {
+                                            <td>@item.RegistrationNo</td>
+                                        }
+                                        @if (Model.ShowCaseNo)
+                                        {
+                                            <td>@item.CaseNo</td>
+                                        }
+                                        @if (Model.ShowCaseType)
+                                        {
+                                            <td>@item.CaseTypeLookup?.Name</td>
+                                        }
+                                        @if (Model.ShowLocation)
+                                        {
+                                            <td>@item.DepositLocationLookup?.Name</td>
+                                        }
+                                        @if (Model.ShowOU)
+                                        {
+                                            <td>@item.OUPerformedSeizureLookup?.Name</td>
+                                        }
+                                        @if (Model.ShowStatus)
+                                        {
+                                            <td>
+                                                <span class="ams-badge ams-badge-success">
+                                                    @item.Status
+                                                </span>
+                                            </td>
+                                        }
+                                        @if (Model.ShowCreatedAt)
+                                        {
+                                            <td>@item.CreatedAt.ToString("dd.MM.yyyy")</td>
+                                        }
+                                    </tr>
+                                }
+
+                                @if (Model.HasSearched && !Model.Results.Any())
+                                {
+                                    <tr>
+                                        <td colspan="10" class="text-center text-muted py-4">
+                                            @ResourcesHelper.Translate("NoRecordsFound", lang)
+                                        </td>
+                                    </tr>
+                                }
+
+                                @if (!Model.HasSearched)
+                                {
+                                    <tr>
+                                        <td colspan="10" class="text-center text-muted py-4">
+                                            @ResourcesHelper.Translate("UseFiltersToRunQuery", lang)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.ams-select2').select2({
+                width: '100%',
+                placeholder: '@ResourcesHelper.Translate("All", lang)',
+                allowClear: true
+            });
+
+            $('#queryResultsSearch').on('keyup', function () {
+                const value = $(this).val().toLowerCase();
+
+                $('#queryResultsTable tbody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+
+            $('.ams-clickable-row').on('click', function () {
+                const url = $(this).data('url');
+                if (url) window.location.href = url;
+            });
+        });
+    </script>
+}
