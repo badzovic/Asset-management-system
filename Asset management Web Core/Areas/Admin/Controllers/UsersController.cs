@@ -40,6 +40,12 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateUserViewModel model)
         {
+            if (model.SelectedRoles == null || !model.SelectedRoles.Any())
+            {
+                ModelState.AddModelError(nameof(model.SelectedRoles), "Odaberite najmanje jednu rolu.");
+                model = await BuildModel(model);
+                return View(model);
+            }
             if (!ModelState.IsValid)
             {
                 model = await BuildModel(model);
@@ -73,8 +79,10 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 return View(model);
             }
 
-            await _userManager.AddToRoleAsync(user, model.RoleName);
-
+            if (model.SelectedRoles != null && model.SelectedRoles.Any())
+            {
+                await _userManager.AddToRolesAsync(user, model.SelectedRoles);
+            }
             await _auditLogService.LogAsync(
             action: "CREATE_USER",
             entityName: "ApplicationUser",
@@ -84,7 +92,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 user.UserName,
                 user.Ime,
                 user.Prezime,
-                Role = model.RoleName,
+                Roles = model.SelectedRoles,
                 user.OrganizacionaJedinicaId,
                 user.SkladisteId
             });
@@ -110,7 +118,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 UserName = user.UserName!,
                 Ime = user.Ime ?? "",
                 Prezime = user.Prezime ?? "",
-                RoleName = roles.FirstOrDefault() ?? "",
+                SelectedRoles = roles.ToList(),
                 OrganizacionaJedinicaId = user.OrganizacionaJedinicaId,
                 SkladisteId = user.SkladisteId,
                 Aktivan = user.Aktivan
@@ -125,6 +133,12 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(EditUserViewModel model)
         {
+            if (model.SelectedRoles == null || !model.SelectedRoles.Any())
+            {
+                ModelState.AddModelError(nameof(model.SelectedRoles), "Odaberite najmanje jednu rolu.");              
+                return View(model);
+            }
+
             if (!ModelState.IsValid)
             {
                 await PopulateEditModel(model);
@@ -149,7 +163,10 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
             await _userManager.RemoveFromRolesAsync(user, currentRoles);
 
-            await _userManager.AddToRoleAsync(user, model.RoleName);
+            if (model.SelectedRoles != null && model.SelectedRoles.Any())
+            {
+                await _userManager.AddToRolesAsync(user, model.SelectedRoles);
+            }
 
             TempData["SuccessMessage"] = "Korisnik uspješno izmijenjen.";
 
@@ -282,7 +299,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                     UserName = user.UserName,
                     Ime = user.Ime,
                     Prezime = user.Prezime,
-                    RoleName = roles.FirstOrDefault(),
+                    RoleName = string.Join(", ", roles),
                     OrganizacionaJedinica = user.OrganizacionaJedinicaId?.ToString(),
                     Skladiste = user.SkladisteId?.ToString(),
                     Aktivan = user.Aktivan

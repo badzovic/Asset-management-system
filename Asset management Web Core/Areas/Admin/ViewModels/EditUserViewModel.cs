@@ -16,7 +16,6 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels
         [Required]
         public string Prezime { get; set; } = string.Empty;
 
-        [Required]
         public string RoleName { get; set; } = string.Empty;
 
         public int? OrganizacionaJedinicaId { get; set; }
@@ -24,6 +23,7 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels
         public int? SkladisteId { get; set; }
 
         public bool Aktivan { get; set; }
+        public List<string> SelectedRoles { get; set; } = new();
 
         public List<SelectListItem> Roles { get; set; } = new();
         public List<SelectListItem> OrganizacioneJedinice { get; set; } = new();

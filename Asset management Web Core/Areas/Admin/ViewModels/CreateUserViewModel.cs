@@ -16,7 +16,7 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels
         [DataType(DataType.Password)]
         public string Password { get; set; } = string.Empty;
 
-        [Required]
+      
         public string RoleName { get; set; } = string.Empty;
 
         public int? OrganizacionaJedinicaId { get; set; }
@@ -24,6 +24,8 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels
         public int? SkladisteId { get; set; }
 
         public List<SelectListItem> Roles { get; set; } = new();
+
+        public List<string> SelectedRoles { get; set; } = new();
 
         public List<SelectListItem> OrganizacioneJedinice { get; set; } = new();
 

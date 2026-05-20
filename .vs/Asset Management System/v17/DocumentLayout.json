@@ -3,112 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\narcoticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\narcoticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\resources\\bs.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\resources\\bs.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\edituserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\edituserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\resources\\en.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\resources\\en.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\createuserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\createuserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams data\\entities\\narcotics\\narcoticsdeposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|solutionrelative:ams data\\entities\\narcotics\\narcoticsdeposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\narcotics\\narcoticsmoveviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\narcotics\\narcoticsmoveviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\narcotics\\querygenerator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\narcotics\\querygenerator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\narcotics\\narcoticsquerygeneratorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\narcotics\\narcoticsquerygeneratorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams data\\entities\\narcotics\\narcoticsmovehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|solutionrelative:ams data\\entities\\narcotics\\narcoticsmovehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\narcotics\\movehistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\narcotics\\movehistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\narcotics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\narcotics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams data\\entities\\evidence\\evidencedeposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|solutionrelative:ams data\\entities\\evidence\\evidencedeposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|solutionrelative:ams data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams data\\entities\\narcotics\\narcoticsdeposititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|solutionrelative:ams data\\entities\\narcotics\\narcoticsdeposititem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\evidencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\evidencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D04BA496-E2A2-4F24-8FB6-8C36A9F4984D}|AMS services\\AMS services.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams services\\evidencepdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D04BA496-E2A2-4F24-8FB6-8C36A9F4984D}|AMS services\\AMS services.csproj|solutionrelative:ams services\\evidencepdfservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\resources\\en.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\resources\\en.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\evidence\\evidencequerycolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\evidence\\evidencequerycolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\evidence\\querygenerator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\evidence\\querygenerator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\weapons\\querygenerator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\weapons\\querygenerator.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams data\\entities\\evidence\\evidencemovehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62EA2109-7F1B-44C6-90F9-04F125617398}|AMS data\\AMS data.csproj|solutionrelative:ams data\\entities\\evidence\\evidencemovehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\evidence\\evidencedepositviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\evidence\\evidencedepositviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\evidence\\deposit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\evidence\\deposit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\evidence\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\evidence\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\evidence\\movehistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\evidence\\movehistory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Migrations\\20260518101246_AddEvidenceDepositModule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AMS data\\Migrations\\20260518101246_AddEvidenceDepositModule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,355 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QueryGenerator.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\QueryGenerator.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\QueryGenerator.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\QueryGenerator.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\QueryGenerator.cshtml",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAQwB4BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T13:20:21.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NarcoticsQueryGeneratorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsQueryGeneratorViewModel.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsQueryGeneratorViewModel.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsQueryGeneratorViewModel.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsQueryGeneratorViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAcwCEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T13:18:39.409Z",
+              "DocumentIndex": 3,
+              "Title": "custom.css",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
+              "RelativeDocumentMoniker": "Asset management Web Core\\wwwroot\\css\\custom.css",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
+              "RelativeToolTip": "Asset management Web Core\\wwwroot\\css\\custom.css",
+              "ViewState": "AgIAAMQDAAAAAAAAAAAAAN0DAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-20T13:56:23.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "NarcoticsMoveViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsMoveViewModel.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsMoveViewModel.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsMoveViewModel.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Narcotics\\NarcoticsMoveViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T11:19:58.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NarcoticsController.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\NarcoticsController.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\NarcoticsController.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\NarcoticsController.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\NarcoticsController.cs",
-              "ViewState": "AgIAAOUAAAAAAAAAAAAIwPkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T10:46:32.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EvidenceDeposit.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Evidence\\EvidenceDeposit.cs",
-              "RelativeDocumentMoniker": "AMS data\\Entities\\Evidence\\EvidenceDeposit.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Evidence\\EvidenceDeposit.cs",
-              "RelativeToolTip": "AMS data\\Entities\\Evidence\\EvidenceDeposit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T10:33:45.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NarcoticsMoveHistory.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Narcotics\\NarcoticsMoveHistory.cs",
-              "RelativeDocumentMoniker": "AMS data\\Entities\\Narcotics\\NarcoticsMoveHistory.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Narcotics\\NarcoticsMoveHistory.cs",
-              "RelativeToolTip": "AMS data\\Entities\\Narcotics\\NarcoticsMoveHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T10:32:29.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NarcoticsDepositItem.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Narcotics\\NarcoticsDepositItem.cs",
-              "RelativeDocumentMoniker": "AMS data\\Entities\\Narcotics\\NarcoticsDepositItem.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Narcotics\\NarcoticsDepositItem.cs",
-              "RelativeToolTip": "AMS data\\Entities\\Narcotics\\NarcoticsDepositItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T10:32:15.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NarcoticsDeposit.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Narcotics\\NarcoticsDeposit.cs",
-              "RelativeDocumentMoniker": "AMS data\\Entities\\Narcotics\\NarcoticsDeposit.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Narcotics\\NarcoticsDeposit.cs",
-              "RelativeToolTip": "AMS data\\Entities\\Narcotics\\NarcoticsDeposit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T10:32:00.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EvidenceQueryColumns.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceQueryColumns.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceQueryColumns.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceQueryColumns.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceQueryColumns.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T12:33:02.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EvidencePdfService.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS services\\EvidencePdfService.cs",
-              "RelativeDocumentMoniker": "AMS services\\EvidencePdfService.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS services\\EvidencePdfService.cs",
-              "RelativeToolTip": "AMS services\\EvidencePdfService.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAkwAUBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T11:34:16.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "EvidenceMoveHistory.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Evidence\\EvidenceMoveHistory.cs",
-              "RelativeDocumentMoniker": "AMS data\\Entities\\Evidence\\EvidenceMoveHistory.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Entities\\Evidence\\EvidenceMoveHistory.cs",
-              "RelativeToolTip": "AMS data\\Entities\\Evidence\\EvidenceMoveHistory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T09:44:45.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADYBAAAAAAAAAAAgwGIBAAAVAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-15T12:20:31.212Z",
+              "WhenOpened": "2026-05-20T13:55:57.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\Index.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\Index.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\Index.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\Index.cshtml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAgwHcAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAF8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T10:47:20.266Z",
+              "WhenOpened": "2026-05-20T13:55:29.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "bs.resx",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\bs.resx",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\bs.resx",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\bs.resx",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\bs.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-05-15T12:23:45.411Z",
+              "Title": "EditUserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:48:55.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "en.resx",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.resx",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\en.resx",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.resx",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\en.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-05-15T12:23:46.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MoveHistory.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\MoveHistory.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\MoveHistory.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\MoveHistory.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Narcotics\\MoveHistory.cshtml",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAgwLgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T11:21:01.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Program.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Program.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Program.cs",
-              "RelativeToolTip": "Asset management Web Core\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADkAAAAyAAAAAAAAAA==",
+              "Title": "CreateUserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\CreateUserViewModel.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\CreateUserViewModel.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\CreateUserViewModel.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\CreateUserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T13:10:54.719Z",
+              "WhenOpened": "2026-05-20T13:46:59.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "QueryGenerator.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\QueryGenerator.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\QueryGenerator.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\QueryGenerator.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\QueryGenerator.cshtml",
-              "ViewState": "AgIAAAYBAAAAAAAAAAAgwD4BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T12:33:57.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Index.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Index.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Index.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Index.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAkwE4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T09:35:34.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Deposit.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Deposit.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Deposit.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Deposit.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Deposit.cshtml",
-              "ViewState": "AgIAAHoBAAAAAAAAAAAQwJYBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-18T10:29:10.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "EvidenceController.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\EvidenceController.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\EvidenceController.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\EvidenceController.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\EvidenceController.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAADwv8IAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAuwIkAAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T10:28:41.015Z",
+              "WhenOpened": "2026-05-20T13:44:51.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EvidenceDepositViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceDepositViewModel.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceDepositViewModel.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceDepositViewModel.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\Evidence\\EvidenceDepositViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwB4AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T10:18:57.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "20260518101246_AddEvidenceDepositModule.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Migrations\\20260518101246_AddEvidenceDepositModule.cs",
-              "RelativeDocumentMoniker": "AMS data\\Migrations\\20260518101246_AddEvidenceDepositModule.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\Migrations\\20260518101246_AddEvidenceDepositModule.cs",
-              "RelativeToolTip": "AMS data\\Migrations\\20260518101246_AddEvidenceDepositModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T10:12:47.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AMS data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "AMS data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwCgAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T10:12:04.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "QueryGenerator.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\QueryGenerator.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\QueryGenerator.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\QueryGenerator.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\QueryGenerator.cshtml",
-              "ViewState": "AgIAAJcBAAAAAAAAAAAgwLEBAABKAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAAAIYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T12:41:29.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "en.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.Designer.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\en.Designer.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.Designer.cs",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\en.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T13:01:50.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MoveHistory.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\MoveHistory.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\MoveHistory.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\MoveHistory.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\MoveHistory.cshtml",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAgwLgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-19T09:50:11.772Z",
+              "WhenOpened": "2026-05-20T13:40:48.446Z",
               "EditorCaption": ""
             }
           ]

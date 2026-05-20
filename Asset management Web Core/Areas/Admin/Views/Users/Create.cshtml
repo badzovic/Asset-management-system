@@ -74,17 +74,25 @@
             <div class="half-input-wrapper">
 
                 <div class="single">
-                    <label asp-for="RoleName">
-                        @ResourcesHelper.Translate("Role", lang)
-                    </label>
+                    <label>Role</label>
 
-                    <select asp-for="RoleName" asp-items="Model.Roles">
+                    <div class="ams-role-grid">
 
-                        <option value="">
-                            @ResourcesHelper.Translate("SelectRole", lang)
-                        </option>
+                        @foreach (var role in Model.Roles)
+                        {
+                            <label class="ams-role-option">
 
-                    </select>
+                                <input type="checkbox"
+                                       name="SelectedRoles"
+                                       value="@role.Value"
+                                       @(Model.SelectedRoles.Contains(role.Value ?? "") ? "checked" : null) />
+
+                                <span>@role.Text</span>
+
+                            </label>
+                        }
+
+                    </div>
                 </div>
 
                 <div class="single">
