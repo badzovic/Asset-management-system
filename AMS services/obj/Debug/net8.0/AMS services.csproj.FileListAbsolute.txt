@@ -13,12 +13,6 @@ C:\Users\adzovic berin\source\repos\Asset Management System\AMS services\obj\Deb
 C:\Users\adzovic berin\source\repos\Asset Management System\AMS services\obj\Debug\net8.0\refint\AMS services.dll
 C:\Users\adzovic berin\source\repos\Asset Management System\AMS services\obj\Debug\net8.0\AMS services.pdb
 C:\Users\adzovic berin\source\repos\Asset Management System\AMS services\obj\Debug\net8.0\ref\AMS services.dll
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.csproj.AssemblyReference.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.AssemblyInfoInputs.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.AssemblyInfo.cs
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.csproj.CoreCompileInputs.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.sourcelink.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
@@ -43,6 +37,12 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin\Debug\net8.0\AMS services.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin\Debug\net8.0\AMS data.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\bin\Debug\net8.0\AMS data.pdb
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.csproj.AssemblyReference.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.AssemblyInfoInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.AssemblyInfo.cs
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.csproj.CoreCompileInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.sourcelink.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS serv.CD42D7C2.Up2Date
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\AMS services.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS services\obj\Debug\net8.0\refint\AMS services.dll

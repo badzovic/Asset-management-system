@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9348222E-FB46-44F3-91F9-A00E3505F7B9}|AMS DeviceAgent\\AMS DeviceAgent.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams deviceagent\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9348222E-FB46-44F3-91F9-A00E3505F7B9}|AMS DeviceAgent\\AMS DeviceAgent.csproj|solutionrelative:ams deviceagent\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\edituserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\viewmodels\\edituserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9348222E-FB46-44F3-91F9-A00E3505F7B9}|AMS DeviceAgent\\AMS DeviceAgent.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\ams deviceagent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9348222E-FB46-44F3-91F9-A00E3505F7B9}|AMS DeviceAgent\\AMS DeviceAgent.csproj|solutionrelative:ams deviceagent\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\viewmodels\\createuserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,11 +42,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-22T08:53:25.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAIwE8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T08:09:49.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\appsettings.json",
+              "RelativeDocumentMoniker": "AMS DeviceAgent\\appsettings.json",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\appsettings.json",
+              "RelativeToolTip": "AMS DeviceAgent\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-21T07:44:23.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "custom.css",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
               "RelativeDocumentMoniker": "Asset management Web Core\\wwwroot\\css\\custom.css",
@@ -55,46 +98,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Edit.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T13:55:57.965Z",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAwwK8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T13:44:51.879Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\Form1.cs",
+              "RelativeDocumentMoniker": "AMS DeviceAgent\\Form1.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\AMS DeviceAgent\\Form1.cs [Design]",
+              "RelativeToolTip": "AMS DeviceAgent\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T07:22:39.366Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Users\\Create.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAF8AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-20T13:55:29.861Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditUserViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\ViewModels\\EditUserViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T13:48:55.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "CreateUserViewModel.cs",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\ViewModels\\CreateUserViewModel.cs",
               "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\ViewModels\\CreateUserViewModel.cs",
@@ -107,20 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAuwIkAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T13:44:51.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",

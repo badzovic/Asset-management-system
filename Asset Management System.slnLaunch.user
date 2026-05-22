@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Asset management Web Core\\Asset management Web Core.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AMS DeviceAgent\\AMS DeviceAgent.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

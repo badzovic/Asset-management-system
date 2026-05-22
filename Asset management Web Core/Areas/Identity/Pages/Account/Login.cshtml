@@ -14,6 +14,7 @@
 
     <div class="body">
         <form id="account" method="post">
+            <input asp-for="Input.DeviceLicensed" type="hidden" id="DeviceLicensed" />
             <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
             <div class="input-wrapper">
@@ -41,3 +42,48 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+
+            const form = document.querySelector("form");
+            const hidden = document.getElementById("DeviceLicensed");
+
+            try {
+
+                const response = await fetch("http://localhost:5055/device/license");
+
+                if (!response.ok) {
+                    alert("AMS Device Agent nije dostupan.");
+                    return;
+                }
+
+                const data = await response.json();
+
+                if (data.licensed === true) {
+                    hidden.value = "true";
+                }
+                else {
+                    alert("Licenca nije aktivna. Status: " + data.status);
+                }
+
+            } catch (e) {
+
+                alert("Device Agent nije pokrenut.");
+
+            }
+
+            form.addEventListener("submit", function (e) {
+
+                if (hidden.value !== "true") {
+
+                    e.preventDefault();
+
+                    alert("Login nije dozvoljen bez aktivne licence.");
+
+                }
+
+            });
+
+        });
+    </script>

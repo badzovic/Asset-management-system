@@ -291,19 +291,6 @@ C:\Users\adzovic berin\source\repos\Asset Management System\Asset management Web
 C:\Users\adzovic berin\source\repos\Asset Management System\Asset management Web Core\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\adzovic berin\source\repos\Asset Management System\Asset management Web Core\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\adzovic berin\source\repos\Asset Management System\Asset management Web Core\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.csproj.AssemblyReference.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset_management_Web_Core.Resources.bs.resources
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset_management_Web_Core.Resources.en.resources
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.csproj.GenerateResource.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.AssemblyInfoInputs.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.AssemblyInfo.cs
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.csproj.CoreCompileInputs.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.RazorAssemblyInfo.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.RazorAssemblyInfo.cs
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.sourcelink.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\bin\Debug\net8.0\appsettings.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\bin\Debug\net8.0\Asset management Web Core.staticwebassets.runtime.json
@@ -652,6 +639,20 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\bin\Debug\net8.0\AMS services.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\bin\Debug\net8.0\AMS data.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\bin\Debug\net8.0\AMS services.pdb
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.csproj.AssemblyReference.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset_management_Web_Core.Resources.bs.resources
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset_management_Web_Core.Resources.en.resources
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.csproj.GenerateResource.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.AssemblyInfoInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.AssemblyInfo.cs
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.csproj.CoreCompileInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.RazorAssemblyInfo.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.RazorAssemblyInfo.cs
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.sourcelink.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -670,4 +671,3 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.genruntimeconfig.cache
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\ref\Asset management Web Core.dll
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.MvcApplicationPartsAssemblyInfo.cs

@@ -1,9 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-
-#nullable disable
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -45,6 +40,7 @@ namespace Asset_management_Web_Core.Areas.Identity.Pages.Account
             [Required]
             [Display(Name = "Korisničko ime")]
             public string UserName { get; set; } = string.Empty;
+            public bool DeviceLicensed { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
@@ -80,6 +76,15 @@ namespace Asset_management_Web_Core.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager
                 .GetExternalAuthenticationSchemesAsync())
                 .ToList();
+
+            if (!Input.DeviceLicensed)
+            {
+                ModelState.AddModelError(
+                    string.Empty,
+                    "Licenca za ovaj računar nije aktivna ili AMS Device Agent nije pokrenut.");
+
+                return Page();
+            }
 
             if (ModelState.IsValid)
             {

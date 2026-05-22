@@ -70,6 +70,7 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.AssemblyInfo.cs
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.CoreCompileInputs.cache
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.sourcelink.json
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\appsettings.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\LatoFont\Lato-Bold.ttf
@@ -109,9 +110,15 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Identity.Core.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
@@ -129,9 +136,15 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\QuestPDF.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.CodeDom.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Management.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Net.Http.Json.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Text.Json.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
@@ -160,7 +173,9 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win-x86\native\zlib1.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\AMS data.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\AMS services.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\AMS data.pdb
