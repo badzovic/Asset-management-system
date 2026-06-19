@@ -76,7 +76,9 @@ app.UseSerilogRequestLogging();
 var supportedCultures = new[]
 {
     new CultureInfo("en"),
-    new CultureInfo("bs")
+    new CultureInfo("bs"),
+    new CultureInfo("it"),
+    new CultureInfo("de")
 };
 
 var localizationOptions = new RequestLocalizationOptions
@@ -102,10 +104,10 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseMiddleware<CultureMiddleware>();
 
 app.UseRouting();
-
+app.UseRequestLocalization(localizationOptions);
+app.UseMiddleware<CultureMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 

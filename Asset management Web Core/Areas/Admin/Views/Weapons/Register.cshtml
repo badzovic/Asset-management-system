@@ -154,7 +154,12 @@
 
                     <div class="single">
                         <label asp-for="ManufactureDate">@ResourcesHelper.Translate("ManufactureDate", lang)</label>
-                        <input asp-for="ManufactureDate" type="date" />
+                        <input id="ManufactureYear"
+                               type="number"
+                               min="1800"
+                               max="@DateTime.Now.Year"
+                               placeholder="" />
+                        <input asp-for="ManufactureDate" type="hidden" />
                     </div>
                 </div>
 
@@ -275,11 +280,12 @@
                         <label asp-for="InventoryNo">@ResourcesHelper.Translate("InventoryNo", lang)</label>
                         <input asp-for="InventoryNo" />
                     </div>
-
+                  @*
                     <div class="single">
                         <label asp-for="ImageFile">@ResourcesHelper.Translate("Image", lang)</label>
                         <input asp-for="ImageFile" type="file" accept=".jpg,.jpeg,.png,.webp" />
                     </div>
+                   *@
                 </div>
 
                 <div class="half-input-wrapper">
@@ -440,6 +446,9 @@
             $('#activeWeaponsTable tbody tr').filter(function () {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
             });
+        });
+            document.getElementById("ManufactureYear").addEventListener("change", function () {
+            document.getElementById("ManufactureDate").value = this.value + "-01-01";
         });
     </script>
 

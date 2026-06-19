@@ -23,6 +23,9 @@ namespace Asset_management_Web_Core.Helpers
             CultureInfo.CurrentCulture = cultureInfo;
             CultureInfo.CurrentUICulture = cultureInfo;
 
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
             context.Items["lang"] = lang;
 
             await _next(context);

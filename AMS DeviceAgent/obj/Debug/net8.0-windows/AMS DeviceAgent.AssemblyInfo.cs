@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AMS DeviceAgent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c083c9fcd0a09745cfe2b7b328c6d40a8ed3d68c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f9c54a4ad921d309086af63c7e21e1af498b936")]
 [assembly: System.Reflection.AssemblyProductAttribute("AMS DeviceAgent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AMS DeviceAgent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

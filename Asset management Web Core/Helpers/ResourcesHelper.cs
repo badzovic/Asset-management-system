@@ -12,6 +12,8 @@ namespace Asset_management_Web_Core.Helpers
             {
                 "en" => Asset_management_Web_Core.Resources.en.ResourceManager,
                 "bs" => Asset_management_Web_Core.Resources.bs.ResourceManager,
+                "de" => Asset_management_Web_Core.Resources.de.ResourceManager,
+                "it" => Asset_management_Web_Core.Resources.it.ResourceManager,
                 _ => Asset_management_Web_Core.Resources.bs.ResourceManager
             };
 

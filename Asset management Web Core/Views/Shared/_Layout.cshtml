@@ -51,22 +51,43 @@
 
                         <div class="header-right">
                             <div class="action-interactive-area__header">
-                                <div class="single_action__haeader language-switcher me-3">
-                                    <a asp-area=""
-                                       asp-controller="Language"
-                                       asp-action="ChangeLanguage"
-                                       asp-route-lang="bs"
-                                       class="btn btn-sm btn-outline-light @(lang == "bs" ? "active" : "")">
-                                        BHS
-                                    </a>
+                                <div class="single_action__haeader language-switcher me-3 dropdown">
+                                    <button class="btn btn-sm btn-outline-light dropdown-toggle"
+                                            type="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                        @(lang == "bs" ? "BHS" :
+                                                                            lang == "en" ? "ENG" :
+                                                                            lang == "de" ? "DE" :
+                                                                            lang == "it" ? "IT" : "Lang")
+                                </button>
 
-                                    <a asp-area=""
-                                       asp-controller="Language"
-                                       asp-action="ChangeLanguage"
-                                       asp-route-lang="en"
-                                       class="btn btn-sm btn-outline-light ms-2 @(lang == "en" ? "active" : "")">
-                                        ENG
-                                    </a>
+                                    <ul class="dropdown-menu ams-language-dropdown">
+                                        <li>
+                                            <a class="dropdown-item @(lang == "bs" ? "active" : "")"
+                                               asp-controller="Language"
+                                               asp-action="ChangeLanguage"
+                                               asp-route-lang="bs">BHS</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item @(lang == "en" ? "active" : "")"
+                                               asp-controller="Language"
+                                               asp-action="ChangeLanguage"
+                                               asp-route-lang="en">English</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item @(lang == "de" ? "active" : "")"
+                                               asp-controller="Language"
+                                               asp-action="ChangeLanguage"
+                                               asp-route-lang="de">Deutsch</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item @(lang == "it" ? "active" : "")"
+                                               asp-controller="Language"
+                                               asp-action="ChangeLanguage"
+                                               asp-route-lang="it">Italiano</a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <div class="single_action__haeader user_avatar__information openuptip" flow="down" tooltip="Profile">
                                     <div class="avatar">

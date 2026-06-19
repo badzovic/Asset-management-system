@@ -7,7 +7,9 @@ namespace Asset_management_Web_Core.Helpers
         private static readonly List<string> _cultures = new()
         {
             "bs",
-            "en"
+            "en",
+            "de",
+            "it"
         };
 
         public static bool IsCultureAvailable(string cultureName)

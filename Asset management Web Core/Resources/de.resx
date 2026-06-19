@@ -1,0 +1,1090 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NewUser" xml:space="preserve">
+    <value>Neuer Benutzer</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Benutzername</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Benutzernamen eingeben</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Passwort</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Passwort eingeben</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+  <data name="EnterFirstName" xml:space="preserve">
+    <value>Vorname eingeben</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="EnterLastName" xml:space="preserve">
+    <value>Nachname eingeben</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rolle</value>
+  </data>
+  <data name="SelectRole" xml:space="preserve">
+    <value>-- Rolle wählen --</value>
+  </data>
+  <data name="OrganizationalUnit" xml:space="preserve">
+    <value>Organisationseinheit</value>
+  </data>
+  <data name="NoOrganizationalUnit" xml:space="preserve">
+    <value>-- Keine Organisationseinheit --</value>
+  </data>
+  <data name="NoWarehouse" xml:space="preserve">
+    <value>-- Kein Lager --</value>
+  </data>
+  <data name="CreateUser" xml:space="preserve">
+    <value>Benutzer erstellen</value>
+  </data>
+  <data name="WeaponTypes" xml:space="preserve">
+    <value>Waffentypen</value>
+  </data>
+  <data name="WeaponTypesDescription" xml:space="preserve">
+    <value>Beschreibung der Waffentypen</value>
+  </data>
+  <data name="AddWeaponType" xml:space="preserve">
+    <value>Waffentyp hinzufügen</value>
+    <comment>Add Weapon Type</comment>
+  </data>
+  <data name="EditWeaponType" xml:space="preserve">
+    <value>Waffentyp bearbeiten</value>
+  </data>
+  <data name="WeaponTypeFormDescription" xml:space="preserve">
+    <value>Waffentyp Formularbeschreibung</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Neu hinzufügen</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Zurück zur Liste</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Änderungen speichern</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Name eingeben</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Code eingeben</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>Beschreibung eingeben</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inaktiv</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Ist aktiv</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="NoRecordsFound" xml:space="preserve">
+    <value>Keine Einträge gefunden</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="AllStatuses" xml:space="preserve">
+    <value>Alle Stati</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Zurücksetzen</value>
+  </data>
+  <data name="DataCapture" xml:space="preserve">
+    <value>Datenerfassung</value>
+  </data>
+  <data name="DataCaptureDescription" xml:space="preserve">
+    <value>Datenaufnahme Beschreibung</value>
+  </data>
+  <data name="WeaponData" xml:space="preserve">
+    <value>Waffendaten</value>
+  </data>
+  <data name="WeaponDataDescription" xml:space="preserve">
+    <value>Waffen-Datenbeschreibung</value>
+  </data>
+  <data name="OrganizationData" xml:space="preserve">
+    <value>Organisationsdaten</value>
+  </data>
+  <data name="OrganizationDataDescription" xml:space="preserve">
+    <value>Organisationsdatenbeschreibung</value>
+  </data>
+  <data name="MovementData" xml:space="preserve">
+    <value>Bewegungsdaten</value>
+  </data>
+  <data name="MovementDataDescription" xml:space="preserve">
+    <value>Beschreibung der Bewegungsdaten</value>
+  </data>
+  <data name="Manufacturers" xml:space="preserve">
+    <value>Hersteller</value>
+  </data>
+  <data name="Calibers" xml:space="preserve">
+    <value>Kaliber</value>
+  </data>
+  <data name="WeaponModels" xml:space="preserve">
+    <value>Waffenmodelle</value>
+  </data>
+  <data name="WeaponStatuses" xml:space="preserve">
+    <value>Waffenstatus</value>
+  </data>
+  <data name="OrganizationalUnits" xml:space="preserve">
+    <value>Organisationseinheiten</value>
+  </data>
+  <data name="Warehouses" xml:space="preserve">
+    <value>Lagerhäuser</value>
+  </data>
+  <data name="GovernmentAgencies" xml:space="preserve">
+    <value>Regierungsbehörden</value>
+  </data>
+  <data name="MovementActions" xml:space="preserve">
+    <value>Bewegungsaktionen</value>
+  </data>
+  <data name="MovementReasons" xml:space="preserve">
+    <value>Beweggründe für die Bewegung</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>Standorte</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Safe Stock</value>
+  </data>
+  <data name="AMSUser" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="WeaponsRegistration" xml:space="preserve">
+    <value>Waffenregistrierung</value>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>Identifikation</value>
+  </data>
+  <data name="Warehouse" xml:space="preserve">
+    <value>Lagerhaus</value>
+  </data>
+  <data name="Evidence" xml:space="preserve">
+    <value>Beweis</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Abmelden</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Alle Rechte vorbehalten.</value>
+  </data>
+  <data name="LookupItems" xml:space="preserve">
+    <value>Artikel suchen</value>
+  </data>
+  <data name="LookupItemsDescription" xml:space="preserve">
+    <value>Verwalten Sie Werte für die ausgewählte Nachschlagekategorie.</value>
+  </data>
+  <data name="AddLookupItem" xml:space="preserve">
+    <value>Element hinzufügen</value>
+  </data>
+  <data name="EditLookupItem" xml:space="preserve">
+    <value>Element bearbeiten</value>
+  </data>
+  <data name="BackToDataCapture" xml:space="preserve">
+    <value>Zurück zur Datenerfassung</value>
+  </data>
+  <data name="DisplayOrder" xml:space="preserve">
+    <value>Bestellnummer anzeigen</value>
+  </data>
+  <data name="EnterDisplayOrder" xml:space="preserve">
+    <value>Anzeige-Reihenfolge eingeben</value>
+  </data>
+  <data name="WeaponState" xml:space="preserve">
+    <value>Waffenstatus</value>
+  </data>
+  <data name="WeaponLegality" xml:space="preserve">
+    <value>Waffengesetzgebung</value>
+  </data>
+  <data name="WeaponItemType" xml:space="preserve">
+    <value>Waffentyp</value>
+  </data>
+  <data name="ManufactureYear" xml:space="preserve">
+    <value>Baujahr</value>
+  </data>
+  <data name="PurposeOfUse" xml:space="preserve">
+    <value>Verwendungszweck</value>
+  </data>
+  <data name="CheckState" xml:space="preserve">
+    <value>Status prüfen</value>
+  </data>
+  <data name="MoveStatus" xml:space="preserve">
+    <value>Status verschieben</value>
+  </data>
+  <data name="MovedWeaponLocation" xml:space="preserve">
+    <value>Verschobene Waffenpositionen</value>
+  </data>
+  <data name="MoveAuthoriserNames" xml:space="preserve">
+    <value>Autorisierernamen verschieben</value>
+  </data>
+  <data name="MoveEvidencePurpose" xml:space="preserve">
+    <value>Beweismittelzweck verschieben</value>
+  </data>
+  <data name="SearchOptions" xml:space="preserve">
+    <value>Suchoptionen</value>
+  </data>
+  <data name="EvidenceData" xml:space="preserve">
+    <value>Beweisdaten</value>
+  </data>
+  <data name="EvidenceDataDescription" xml:space="preserve">
+    <value>Daten für Beweise, Gegenstände, Waffen, Depotstandorte und Falltypen nachschlagen.</value>
+  </data>
+  <data name="EvidenceWeaponType" xml:space="preserve">
+    <value>Waffentypen des Beweismaterials</value>
+  </data>
+  <data name="EvidenceWeapon" xml:space="preserve">
+    <value>Beweiswaffen</value>
+  </data>
+  <data name="EvidenceIndicator" xml:space="preserve">
+    <value>Beweisanzeigen</value>
+  </data>
+  <data name="EvidenceDepositLocation" xml:space="preserve">
+    <value>Beweisablageorte</value>
+  </data>
+  <data name="CaseType" xml:space="preserve">
+    <value>Falltyp</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Geschlecht</value>
+  </data>
+  <data name="RegisterWeapon" xml:space="preserve">
+    <value>Waffe registrieren</value>
+  </data>
+  <data name="CheckWeaponStatus" xml:space="preserve">
+    <value>Waffenstatus überprüfen</value>
+  </data>
+  <data name="PrepareWeaponMove" xml:space="preserve">
+    <value>Waffe bewegen vorbereiten</value>
+  </data>
+  <data name="AuthoriseWeaponMove" xml:space="preserve">
+    <value>Waffenbewegung autorisieren</value>
+  </data>
+  <data name="QueryGenerator" xml:space="preserve">
+    <value>Abfragegenerator</value>
+  </data>
+  <data name="ManufacturersDescription" xml:space="preserve">
+    <value>Verwalten Sie die Waffenh Hersteller-Lookup-Daten.</value>
+  </data>
+  <data name="AddManufacturer" xml:space="preserve">
+    <value>Hersteller hinzufügen</value>
+  </data>
+  <data name="EditManufacturer" xml:space="preserve">
+    <value>Hersteller bearbeiten</value>
+  </data>
+  <data name="ManufacturerFormDescription" xml:space="preserve">
+    <value>Geben Sie grundlegende Herstellerinformationen ein.</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+  <data name="EnterCountry" xml:space="preserve">
+    <value>Land eingeben</value>
+  </data>
+  <data name="CalibersDescription" xml:space="preserve">
+    <value>Verwalten Sie die Kaliber-Suchdaten.</value>
+  </data>
+  <data name="AddCaliber" xml:space="preserve">
+    <value>Kaliber hinzufügen</value>
+  </data>
+  <data name="EditCaliber" xml:space="preserve">
+    <value>Kaliber bearbeiten</value>
+  </data>
+  <data name="CaliberFormDescription" xml:space="preserve">
+    <value>Grundlegende Kaliberinformationen eingeben.</value>
+  </data>
+  <data name="WeaponStatusesDescription" xml:space="preserve">
+    <value>Verwalten Sie die Waffenzustands-Nachschlagedaten.</value>
+  </data>
+  <data name="AddWeaponStatus" xml:space="preserve">
+    <value>Waffenstatus hinzufügen</value>
+  </data>
+  <data name="EditWeaponStatus" xml:space="preserve">
+    <value>Waffenstatus bearbeiten</value>
+  </data>
+  <data name="WeaponStatusFormDescription" xml:space="preserve">
+    <value>Geben Sie grundlegende Waffenstatusinformationen ein.</value>
+  </data>
+  <data name="WeaponModelsDescription" xml:space="preserve">
+    <value>Waffenmodelle, Hersteller, Kaliber und Bilder verwalten.</value>
+  </data>
+  <data name="AddWeaponModel" xml:space="preserve">
+    <value>Waffenmodell hinzufügen</value>
+  </data>
+  <data name="EditWeaponModel" xml:space="preserve">
+    <value>Waffenmodell bearbeiten</value>
+  </data>
+  <data name="WeaponModelFormDescription" xml:space="preserve">
+    <value>Geben Sie grundlegende Waffenmodellinformationen ein.</value>
+  </data>
+  <data name="WeaponType" xml:space="preserve">
+    <value>Waffentyp</value>
+  </data>
+  <data name="SelectWeaponType" xml:space="preserve">
+    <value>-- Waffentyp auswählen --</value>
+  </data>
+  <data name="Manufacturer" xml:space="preserve">
+    <value>Hersteller</value>
+  </data>
+  <data name="SelectManufacturer" xml:space="preserve">
+    <value>-- Hersteller auswählen --</value>
+  </data>
+  <data name="Caliber" xml:space="preserve">
+    <value>Kaliber</value>
+  </data>
+  <data name="SelectCaliber" xml:space="preserve">
+    <value>-- Kaliber auswählen --</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Bild</value>
+  </data>
+  <data name="CurrentImage" xml:space="preserve">
+    <value>Aktuelles Bild</value>
+  </data>
+  <data name="RegisterWeaponDescription" xml:space="preserve">
+    <value>Waffenbeschreibung registrieren</value>
+  </data>
+  <data name="RegistrationData" xml:space="preserve">
+    <value>Registrierungsdaten</value>
+  </data>
+  <data name="RegistrationNo" xml:space="preserve">
+    <value>Registrierungsnummer</value>
+  </data>
+  <data name="RegistrationDate" xml:space="preserve">
+    <value>Registrierungsdatum</value>
+  </data>
+  <data name="MarkLocation" xml:space="preserve">
+    <value>Standort markieren</value>
+  </data>
+  <data name="Region" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="GovernmentAgency" xml:space="preserve">
+    <value>Regierungsbehörde</value>
+  </data>
+  <data name="Prospective" xml:space="preserve">
+    <value>Potentiell</value>
+  </data>
+  <data name="WeaponIdentity" xml:space="preserve">
+    <value>Waffenkennung</value>
+  </data>
+  <data name="FactorySerial" xml:space="preserve">
+    <value>Werksnummer</value>
+  </data>
+  <data name="ConfirmSerial" xml:space="preserve">
+    <value>Seriennummer bestätigen</value>
+  </data>
+  <data name="WeaponModel" xml:space="preserve">
+    <value>Waffenmodell</value>
+  </data>
+  <data name="SelectWeaponModel" xml:space="preserve">
+    <value>Waffenmodell auswählen</value>
+  </data>
+  <data name="ManufacturerCountry" xml:space="preserve">
+    <value>Herstellerland</value>
+  </data>
+  <data name="ManufactureDate" xml:space="preserve">
+    <value>Herstellungsdatum</value>
+  </data>
+  <data name="ModelImage" xml:space="preserve">
+    <value>Modellbild</value>
+  </data>
+  <data name="OriginOwnership" xml:space="preserve">
+    <value>Ursprungsbesitz</value>
+  </data>
+  <data name="OriginalLocation" xml:space="preserve">
+    <value>Original Standort</value>
+  </data>
+  <data name="OriginIndicator" xml:space="preserve">
+    <value>Ursprungsindikator</value>
+  </data>
+  <data name="OriginalState" xml:space="preserve">
+    <value>Ursprünglicher Zustand</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Einheit</value>
+  </data>
+  <data name="Stock" xml:space="preserve">
+    <value>Lagerbestand</value>
+  </data>
+  <data name="BookkeepingBy" xml:space="preserve">
+    <value>Buchführung von</value>
+  </data>
+  <data name="PhysicalMarks" xml:space="preserve">
+    <value>Physische Markierungen</value>
+  </data>
+  <data name="BarrelMark" xml:space="preserve">
+    <value>Fassmarkierung</value>
+  </data>
+  <data name="SlideMark" xml:space="preserve">
+    <value>Markierung schieben</value>
+  </data>
+  <data name="ButtstockMark" xml:space="preserve">
+    <value>Schäftemarkierung</value>
+  </data>
+  <data name="IdType" xml:space="preserve">
+    <value>Id Typ</value>
+  </data>
+  <data name="IdNo" xml:space="preserve">
+    <value>Id Nr</value>
+  </data>
+  <data name="DateOfOwnership" xml:space="preserve">
+    <value>Datum des Eigentums</value>
+  </data>
+  <data name="HolderInfo" xml:space="preserve">
+    <value>Halterinformationen</value>
+  </data>
+  <data name="StatusAndAdditional" xml:space="preserve">
+    <value>Status und Ergänzend</value>
+  </data>
+  <data name="WeaponStatus" xml:space="preserve">
+    <value>Waffenstatus</value>
+  </data>
+  <data name="InventoryNo" xml:space="preserve">
+    <value>Inventarnummer</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notizen</value>
+  </data>
+  <data name="DonationTemporaryStock" xml:space="preserve">
+    <value>Spende vorübergehender Bestand</value>
+  </data>
+  <data name="TempStock" xml:space="preserve">
+    <value>Temporärer Bestand</value>
+  </data>
+  <data name="DonationDate" xml:space="preserve">
+    <value>Spendedatum</value>
+  </data>
+  <data name="DonorAgency" xml:space="preserve">
+    <value>Geberagentur</value>
+  </data>
+  <data name="DonorContractNo" xml:space="preserve">
+    <value>Spendervertrag Nr.</value>
+  </data>
+  <data name="SaveWeapon" xml:space="preserve">
+    <value>Waffe speichern</value>
+  </data>
+  <data name="ActiveWeapons" xml:space="preserve">
+    <value>Aktive Waffen</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>-- Option auswählen --</value>
+  </data>
+  <data name="MarkLocations" xml:space="preserve">
+    <value>Markiere Orte</value>
+  </data>
+  <data name="OriginalLocations" xml:space="preserve">
+    <value>Ursprüngliche Standorte</value>
+  </data>
+  <data name="OriginIndicators" xml:space="preserve">
+    <value>Herkunftsindikatoren</value>
+  </data>
+  <data name="OriginalStates" xml:space="preserve">
+    <value>Originalzustände</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>-- Land auswählen --</value>
+  </data>
+  <data name="CheckWeaponStatusDescription" xml:space="preserve">
+    <value>Waffenstatusbeschreibung überprüfen</value>
+  </data>
+  <data name="SelectedWeapon" xml:space="preserve">
+    <value>Ausgewählte Waffe</value>
+  </data>
+  <data name="SearchWeaponPlaceholder" xml:space="preserve">
+    <value>Waffe suchen Placeholder</value>
+  </data>
+  <data name="SelectWeaponFromList" xml:space="preserve">
+    <value>Waffe aus Liste auswählen</value>
+  </data>
+  <data name="WeaponCheckForm" xml:space="preserve">
+    <value>Waffenprüfungsformular</value>
+  </data>
+  <data name="CheckDate" xml:space="preserve">
+    <value>Prüfdatum</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Kommentare</value>
+  </data>
+  <data name="CheckHistory" xml:space="preserve">
+    <value>Verlauf überprüfen</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Instrumententafel</value>
+  </data>
+  <data name="DashboardDescription" xml:space="preserve">
+    <value>Dashboard Beschreibung</value>
+  </data>
+  <data name="TotalWeapons" xml:space="preserve">
+    <value>Gesamtwaffen</value>
+  </data>
+  <data name="MarkedWeapons" xml:space="preserve">
+    <value>Markierte Waffen</value>
+  </data>
+  <data name="UnmarkedWeapons" xml:space="preserve">
+    <value>Unmarkierte Waffen</value>
+  </data>
+  <data name="TotalChecks" xml:space="preserve">
+    <value>Gesamtprüfungen</value>
+  </data>
+  <data name="RecentWeapons" xml:space="preserve">
+    <value>Neueste Waffen</value>
+  </data>
+  <data name="RecentChecks" xml:space="preserve">
+    <value>Letzte Prüfungen</value>
+  </data>
+  <data name="QuickActions" xml:space="preserve">
+    <value>Schnelle Aktionen</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Benutzer bearbeiten</value>
+  </data>
+  <data name="EditUserDescription" xml:space="preserve">
+    <value>Benutzerbeschreibung bearbeiten</value>
+  </data>
+  <data name="PrepareWeaponMoveDescription" xml:space="preserve">
+    <value>Vorbereitung Waffenbewegung Beschreibung</value>
+  </data>
+  <data name="MoveHistory" xml:space="preserve">
+    <value>Verlauf der Bewegungen</value>
+  </data>
+  <data name="MoveData" xml:space="preserve">
+    <value>Daten verschieben</value>
+  </data>
+  <data name="MoveDate" xml:space="preserve">
+    <value>Umzugsdatum</value>
+  </data>
+  <data name="MoveAction" xml:space="preserve">
+    <value>Aktion verschieben</value>
+  </data>
+  <data name="NewLocation" xml:space="preserve">
+    <value>Neuer Standort</value>
+  </data>
+  <data name="OrderNo" xml:space="preserve">
+    <value>Bestellnummer</value>
+  </data>
+  <data name="AuthMoveNo" xml:space="preserve">
+    <value>Authentifizierungsverschiebung Nein</value>
+  </data>
+  <data name="MoveOrdinalNo" xml:space="preserve">
+    <value>Bestellnummer verschieben</value>
+  </data>
+  <data name="EndUserCertificate" xml:space="preserve">
+    <value>Endbenutzerzertifikat</value>
+  </data>
+  <data name="UserOrgName" xml:space="preserve">
+    <value>Benutzer-Org-Name</value>
+  </data>
+  <data name="AuthorisedBy" xml:space="preserve">
+    <value>Genehmigt von</value>
+  </data>
+  <data name="SaveOnly" xml:space="preserve">
+    <value>Nur speichern</value>
+  </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Aktueller Standort</value>
+  </data>
+  <data name="AuthoriseWeaponMoveDescription" xml:space="preserve">
+    <value>Beschreibung der Waffenbewegung autorisieren</value>
+  </data>
+  <data name="SelectedWeaponMove" xml:space="preserve">
+    <value>Ausgewählte Waffenbewegung</value>
+  </data>
+  <data name="SelectMoveFromList" xml:space="preserve">
+    <value>Aus Liste Verschieben Wählen</value>
+  </data>
+  <data name="AuthorisationData" xml:space="preserve">
+    <value>Autorisierungsdaten</value>
+  </data>
+  <data name="Authorise" xml:space="preserve">
+    <value>Autorisieren</value>
+  </data>
+  <data name="Reopen" xml:space="preserve">
+    <value>Wieder öffnen</value>
+  </data>
+  <data name="WeaponsAwaitingAuthorisation" xml:space="preserve">
+    <value>Waffen warten auf Genehmigung</value>
+  </data>
+  <data name="RecentlyAuthorisedMoves" xml:space="preserve">
+    <value>Kürzlich genehmigte Bewegungen</value>
+  </data>
+  <data name="AuthorisedAt" xml:space="preserve">
+    <value>Autorisiert um</value>
+  </data>
+  <data name="QueryGeneratorDescription" xml:space="preserve">
+    <value>Abfragegenerator Beschreibung</value>
+  </data>
+  <data name="Filters" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="VisibleColumns" xml:space="preserve">
+    <value>Sichtbare Spalten</value>
+  </data>
+  <data name="QueryResults" xml:space="preserve">
+    <value>Abfrageergebnisse</value>
+  </data>
+  <data name="RunQuery" xml:space="preserve">
+    <value>Abfrage ausführen</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>Von Datum</value>
+  </data>
+  <data name="ToDate" xml:space="preserve">
+    <value>Bis Datum</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="UseFiltersToRunQuery" xml:space="preserve">
+    <value>Filter verwenden, um Abfrage auszuführen</value>
+  </data>
+  <data name="MarkWeapon" xml:space="preserve">
+    <value>Waffe markieren</value>
+  </data>
+  <data name="MarkWeaponDescription" xml:space="preserve">
+    <value>Markierung der Waffenbeschreibung</value>
+  </data>
+  <data name="MarkingHistory" xml:space="preserve">
+    <value>Markierungshistorie</value>
+  </data>
+  <data name="MarkingData" xml:space="preserve">
+    <value>Markierungsdaten</value>
+  </data>
+  <data name="MarkingText1" xml:space="preserve">
+    <value>Markierungstext 1</value>
+  </data>
+  <data name="MarkingText2" xml:space="preserve">
+    <value>Kennzeichnungstext 2</value>
+  </data>
+  <data name="MarkingText3" xml:space="preserve">
+    <value>Markierungstext 3</value>
+  </data>
+  <data name="PrepareMarkingJob" xml:space="preserve">
+    <value>Markierungsauftrag vorbereiten</value>
+  </data>
+  <data name="Layout" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Narcotics" xml:space="preserve">
+    <value>Betäubungsmittel</value>
+  </data>
+  <data name="EvidenceManagement" xml:space="preserve">
+    <value>Beweismittelverwaltung</value>
+  </data>
+  <data name="EvidenceDeposit" xml:space="preserve">
+    <value>Beweismittelhinterlegung</value>
+  </data>
+  <data name="EvidenceMoveHistory" xml:space="preserve">
+    <value>Beweismittels Bewegungsverlauf</value>
+  </data>
+  <data name="BackToDeposit" xml:space="preserve">
+    <value>Zurück zur Einzahlung</value>
+  </data>
+  <data name="AddMovement" xml:space="preserve">
+    <value>Bewegung hinzufügen</value>
+  </data>
+  <data name="MovementHistory" xml:space="preserve">
+    <value>Bewegungsverlauf</value>
+  </data>
+  <data name="FromLocation" xml:space="preserve">
+    <value>Von Standort</value>
+  </data>
+  <data name="ToLocation" xml:space="preserve">
+    <value>Zum Zielort</value>
+  </data>
+  <data name="MovePurpose" xml:space="preserve">
+    <value>Verschiebungsgrund</value>
+  </data>
+  <data name="MovedBy" xml:space="preserve">
+    <value>Verschoben von</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>Genehmigt von</value>
+  </data>
+  <data name="NoMovementHistoryFound" xml:space="preserve">
+    <value>Keine Bewegungsverlauf gefunden</value>
+  </data>
+  <data name="CaseNo" xml:space="preserve">
+    <value>Aktenzeichen</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Bemerkungen</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Artikel</value>
+  </data>
+  <data name="EvidenceDepositDescription" xml:space="preserve">
+    <value>Nachweis-Einzahlungsbeschreibung</value>
+  </data>
+  <data name="NewEvidenceDeposit" xml:space="preserve">
+    <value>Neuer Beweis-Upload</value>
+  </data>
+  <data name="DepositData" xml:space="preserve">
+    <value>Einzahlungsdaten</value>
+  </data>
+  <data name="DepositLocation" xml:space="preserve">
+    <value>Einzahlungsort</value>
+  </data>
+  <data name="ReceivedDate" xml:space="preserve">
+    <value>Empfangsdatum</value>
+  </data>
+  <data name="StorageOrderNo" xml:space="preserve">
+    <value>Speicherbestellnummer</value>
+  </data>
+  <data name="StorageOrderDate" xml:space="preserve">
+    <value>Lagerbestelldatum</value>
+  </data>
+  <data name="SubmittedByOfficer" xml:space="preserve">
+    <value>Eingereicht von Officer</value>
+  </data>
+  <data name="HandlingOfficer" xml:space="preserve">
+    <value>Sachbearbeiter</value>
+  </data>
+  <data name="CaseInfoFolderPath" xml:space="preserve">
+    <value>Fallinfo-Ordnerpfad</value>
+  </data>
+  <data name="PersonData" xml:space="preserve">
+    <value>Personendaten</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="PersonalIdNo" xml:space="preserve">
+    <value>Personalausweisnummer</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="AgeBand" xml:space="preserve">
+    <value>Altersgruppe</value>
+  </data>
+  <data name="IsCoCriminalOffence" xml:space="preserve">
+    <value>Ist eine gemeinsame Straftat</value>
+  </data>
+  <data name="IsGenderBasedViolence" xml:space="preserve">
+    <value>Ist geschlechtsbasierte Gewalt</value>
+  </data>
+  <data name="SaveDeposit" xml:space="preserve">
+    <value>Anzahlung speichern</value>
+  </data>
+  <data name="AddEvidenceItem" xml:space="preserve">
+    <value>Beweismittel hinzufügen</value>
+  </data>
+  <data name="ItemType" xml:space="preserve">
+    <value>Artikeltyp</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="UnitPlaceholder" xml:space="preserve">
+    <value>EinheitPlatzhalter</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>Seriennummer</value>
+  </data>
+  <data name="MarkingLabelText" xml:space="preserve">
+    <value>Beschriftungstext</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>Artikel hinzufügen</value>
+  </data>
+  <data name="EvidenceItems" xml:space="preserve">
+    <value>Beweisstücke</value>
+  </data>
+  <data name="Serial" xml:space="preserve">
+    <value>Seriennummer</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="RecentEvidenceDeposits" xml:space="preserve">
+    <value>Neueste Evidence Deposits</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Registrierung</value>
+  </data>
+  <data name="Case" xml:space="preserve">
+    <value>Fall</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Standort</value>
+  </data>
+  <data name="PrintDeposit" xml:space="preserve">
+    <value>Einzahlungsbeleg drucken</value>
+  </data>
+  <data name="PrintLabel" xml:space="preserve">
+    <value>Etikett drucken</value>
+  </data>
+  <data name="EvidenceDeposits" xml:space="preserve">
+    <value>Beweismittel-Einlagen</value>
+  </data>
+  <data name="EvidenceDepositsDescription" xml:space="preserve">
+    <value>Beschreibung der Beweismittel-Einlagen</value>
+  </data>
+  <data name="NewDeposit" xml:space="preserve">
+    <value>Neue Einzahlung</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="DeleteEvidenceDepositQuestion" xml:space="preserve">
+    <value>Beweis-Einzahlung löschen Frage</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>Erstellt am</value>
+  </data>
+  <data name="EvidenceQueryGeneratorDescription" xml:space="preserve">
+    <value>Beschreibung des Evidence Query Generators</value>
+  </data>
+  <data name="ExportCSV" xml:space="preserve">
+    <value>CSV exportieren</value>
+  </data>
+  <data name="ExportPDF" xml:space="preserve">
+    <value>PDF exportieren</value>
+  </data>
+  <data name="RegisterNarcotics" xml:space="preserve">
+    <value>Betäubungsmittel registrieren</value>
+  </data>
+  <data name="RegisterNarcoticsDescription" xml:space="preserve">
+    <value>Beschreibung von Betäubungsmitteln registrieren</value>
+  </data>
+  <data name="NewNarcoticsDeposit" xml:space="preserve">
+    <value>Neue Betäubungsmittel-Einzahlung</value>
+  </data>
+  <data name="OUPerformedSeizure" xml:space="preserve">
+    <value>OU durchgeführte Sicherstellung</value>
+  </data>
+  <data name="LinkToOrderNo" xml:space="preserve">
+    <value>Verknüpfung mit Bestellnummer</value>
+  </data>
+  <data name="ConfirmStorageOrderNo" xml:space="preserve">
+    <value>Speichern Sie die Bestellnummer bestätigen</value>
+  </data>
+  <data name="ForensicAndCourtData" xml:space="preserve">
+    <value>Gerichts- und Forensische Daten</value>
+  </data>
+  <data name="ForensicReportNo" xml:space="preserve">
+    <value>Forensischer Bericht Nr.</value>
+  </data>
+  <data name="ForensicReportDate" xml:space="preserve">
+    <value>Datum des forensischen Berichts</value>
+  </data>
+  <data name="VerdictNo" xml:space="preserve">
+    <value>Urteil Nein</value>
+  </data>
+  <data name="VerdictDate" xml:space="preserve">
+    <value>Entscheidungsdatum</value>
+  </data>
+  <data name="DestructionOrderNo" xml:space="preserve">
+    <value>Vernichtungsauftrag Nr</value>
+  </data>
+  <data name="DestructionOrderDate" xml:space="preserve">
+    <value>Datum der Vernichtungsanordnung</value>
+  </data>
+  <data name="DestructionDate" xml:space="preserve">
+    <value>Zerstörungsdatum</value>
+  </data>
+  <data name="AddNarcoticsItem" xml:space="preserve">
+    <value>Narcotics-Artikel hinzufügen</value>
+  </data>
+  <data name="NarcoticsType" xml:space="preserve">
+    <value>Betäubungsmitteltyp</value>
+  </data>
+  <data name="NarcoticComposition" xml:space="preserve">
+    <value>Betäubungsmittelzusammensetzung</value>
+  </data>
+  <data name="QuantityUnit" xml:space="preserve">
+    <value>Mengen Einheit</value>
+  </data>
+  <data name="NarcoticsItems" xml:space="preserve">
+    <value>Betäubungsmittelartikel</value>
+  </data>
+  <data name="NarcoticsManagement" xml:space="preserve">
+    <value>Betäubungsmittelverwaltung</value>
+  </data>
+  <data name="NarcoticsMoveHistory" xml:space="preserve">
+    <value>Betäubungsmittel-Bewegungsverlauf</value>
+  </data>
+  <data name="NarcoticsQueryGeneratorDescription" xml:space="preserve">
+    <value>Beschreibung des Narcotics Query Generator</value>
+  </data>
+  <data name="ExportExcel" xml:space="preserve">
+    <value>Excel exportieren</value>
+  </data>
+</root>

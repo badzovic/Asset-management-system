@@ -494,20 +494,32 @@
         grid-template-columns: 1fr;
     }
 }
-.left-logo-area .logo {
-    height:  82px;
-    overflow: hidden;
+.left-logo-area {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
 }
 
-    .left-logo-area .logo img {
-        height: 112px;
-        width: auto;
-        object-fit: contain;
-        display: block;
-        margin-top: -18px;
+    .left-logo-area .logo {
+        height: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
     }
+
+        .left-logo-area .logo img {
+            height: 190px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+.left-side-open-clouse {
+    margin-top: 8px;
+}
 @media (max-width: 768px) {
 
     .left-logo-area .logo {
@@ -1004,3 +1016,68 @@
         height: 16px;
         margin: 0;
     }
+.header-inner-one {
+    min-height: 96px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.left-logo-area {
+    height: 86px !important;
+    width: 260px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow: hidden !important;
+}
+
+    .left-logo-area .logo.ams-main-logo {
+        height: 86px !important;
+        width: 200px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+    }
+
+        .left-logo-area .logo.ams-main-logo img {
+            max-height: 175px !important;
+            max-width: 185px !important;
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important;
+            transform: none !important;
+            margin: 5 !important;
+        }
+
+.left-side-open-clouse {
+    margin: 0 !important;
+    width: 36px !important;
+    height: 36px !important;
+    flex: 0 0 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.ams-language-dropdown {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+    .ams-language-dropdown .dropdown-item {
+        color: #e5e7eb;
+        border-radius: 8px;
+        font-weight: 700;
+        padding: 8px 12px;
+    }
+
+        .ams-language-dropdown .dropdown-item:hover,
+        .ams-language-dropdown .dropdown-item.active {
+            background: #4f8cff;
+            color: #fff;
+        }

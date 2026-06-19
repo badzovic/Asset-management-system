@@ -671,3 +671,5 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset management Web Core.genruntimeconfig.cache
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\ref\Asset management Web Core.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset_management_Web_Core.Resources.de.resources
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\Asset management Web Core\obj\Debug\net8.0\Asset_management_Web_Core.Resources.it.resources

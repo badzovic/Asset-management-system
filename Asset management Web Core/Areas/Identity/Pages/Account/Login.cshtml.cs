@@ -77,14 +77,7 @@ namespace Asset_management_Web_Core.Areas.Identity.Pages.Account
                 .GetExternalAuthenticationSchemesAsync())
                 .ToList();
 
-            if (!Input.DeviceLicensed)
-            {
-                ModelState.AddModelError(
-                    string.Empty,
-                    "Licenca za ovaj računar nije aktivna ili AMS Device Agent nije pokrenut.");
-
-                return Page();
-            }
+           
 
             if (ModelState.IsValid)
             {
