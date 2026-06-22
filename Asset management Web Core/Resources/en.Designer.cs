@@ -1348,6 +1348,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string login {
+            get {
+                return ResourceManager.GetString("login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logout.
         /// </summary>
         public static string Logout {
@@ -2955,6 +2964,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string WeaponTypesDescription {
             get {
                 return ResourceManager.GetString("WeaponTypesDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome back.
+        /// </summary>
+        public static string welcome {
+            get {
+                return ResourceManager.GetString("welcome", resourceCulture);
             }
         }
         

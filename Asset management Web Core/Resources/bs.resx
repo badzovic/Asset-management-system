@@ -1077,4 +1077,10 @@
   <data name="ExportExcel" xml:space="preserve">
     <value>Export Excel</value>
   </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Dobrodošli nazad</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Prijava</value>
+  </data>
 </root>

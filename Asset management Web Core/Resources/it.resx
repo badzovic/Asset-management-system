@@ -1087,4 +1087,10 @@
   <data name="ExportExcel" xml:space="preserve">
     <value>Esporta Excel</value>
   </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Ben tornato/a</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Accedi</value>
+  </data>
 </root>

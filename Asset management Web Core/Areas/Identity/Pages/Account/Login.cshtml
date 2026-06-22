@@ -1,18 +1,136 @@
 ﻿@page
 @model LoginModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Resources;
+@using System.Globalization;
+@using Microsoft.AspNetCore.Identity
+@using AMS_data.Entities
+@using Asset_management_Web_Core
+
+@using Asset_management_Web_Core.Helpers
+
+
+@inject IViewLocalizer L
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 @{
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_AuthLayout.cshtml";
+    var lang = ViewContext.HttpContext.Items["lang"]?.ToString() ?? "bs";
 }
 
-<div class="single-form-s-wrapper">
-    <div class="head">
-        <span>Dobrodošli nazad</span>
-        <h5 class="title">Prijava u AMS</h5>
-    </div>
+<style>
+    .lang-switch {
+        position: relative;
+    }
 
+    .lang-btn {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #fff;
+        padding: 6px 14px;
+        border-radius: 14px;
+        font-size: 13px;
+        font-weight: 500;
+        transition: all 0.25s ease;
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+
+    .lang-menu {
+        border-radius: 14px;
+        border: none;
+        padding: 6px;
+        min-width: 160px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        overflow: hidden;
+    }
+
+        .lang-menu .dropdown-item {
+            border-radius: 10px;
+            font-size: 13px;
+            padding: 8px 10px;
+            transition: all 0.2s ease;
+        }
+
+            .lang-menu .dropdown-item:hover {
+                background: #f3f6ff;
+            }
+
+            .lang-menu .dropdown-item.active {
+                background: #0d6efd;
+                color: white;
+            }
+</style>
+<div class="single-form-s-wrapper">
+  
     <div class="body">
+        <div class="lang-switch dropdown">
+
+            <button class="lang-btn dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+
+                <span class="lang-active">
+                    @(lang == "bs" ? "BHS" :
+                                        lang == "en" ? "ENG" :
+                                        lang == "de" ? "DE" :
+                                        lang == "it" ? "IT" : "LANG")
+                </span>
+
+            </button>
+
+            <ul class="dropdown-menu lang-menu">
+
+                <li>
+                    <a class="dropdown-item @(lang == "bs" ? "active" : "")"
+                       asp-area=""
+                       asp-controller="Language"
+                       asp-action="ChangeLanguage"
+                       asp-route-lang="bs">Bosanski</a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item @(lang == "en" ? "active" : "")"
+                       asp-area=""
+                       asp-controller="Language"
+                       asp-action="ChangeLanguage"
+                       asp-route-lang="en">English</a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item @(lang == "de" ? "active" : "")"
+                       asp-area=""
+                       asp-controller="Language"
+                       asp-action="ChangeLanguage"
+                       asp-route-lang="de">Deutsch</a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item @(lang == "it" ? "active" : "")"
+                       asp-area=""
+                       asp-controller="Language"
+                       asp-action="ChangeLanguage"
+                       asp-route-lang="it">Italiano</a>
+                </li>
+
+            </ul>
+        </div>
+        <p> </p>
+        <div class="head">
+            <span>@ResourcesHelper.Translate("welcome", lang) </span>
+
+        </div>
+
         <form id="account" method="post">
            
             <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
@@ -25,16 +143,10 @@
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
 
-            <div class="check-wrapper">
-                <div class="form-check">
-                    <input asp-for="Input.RememberMe" class="form-check-input" />
-                    <label asp-for="Input.RememberMe" class="form-check-label">
-                        Zapamti me
-                    </label>
-                </div>
-            </div>
+          
 
-            <button type="submit" class="rts-btn btn-primary">Prijavi se</button>
+            <button type="submit" class="rts-btn btn-primary">@ResourcesHelper.Translate("login", lang)
+            </button>
         </form>
     </div>
 </div>
