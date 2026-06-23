@@ -359,7 +359,7 @@
     <value>Weapon item type</value>
   </data>
   <data name="ManufactureYear" xml:space="preserve">
-    <value>Manufacture year</value>
+    <value>Year of Manufacture (Enter the year)</value>
   </data>
   <data name="PurposeOfUse" xml:space="preserve">
     <value>Purpose of use</value>
@@ -566,7 +566,7 @@
     <value>Stock</value>
   </data>
   <data name="BookkeepingBy" xml:space="preserve">
-    <value>Bookkeeping By</value>
+    <value>Inventory accounted </value>
   </data>
   <data name="PhysicalMarks" xml:space="preserve">
     <value>Physical Marks </value>
@@ -1092,5 +1092,8 @@
   </data>
   <data name="login" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="InventoryData" xml:space="preserve">
+    <value>Inventory Data</value>
   </data>
 </root>

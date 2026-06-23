@@ -59,8 +59,11 @@
 
                     <div class="single">
                         <label asp-for="CountryLookupId">@ResourcesHelper.Translate("Country", lang)</label>
-                        <select asp-for="CountryLookupId" asp-items="Model.Countries">
-                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        <input type="hidden" asp-for="CountryLookupId" />
+
+                        <select asp-for="CountryLookupId"
+                                asp-items="Model.Countries"
+                                disabled>
                         </select>
                     </div>
                 </div>
@@ -68,15 +71,21 @@
                 <div class="half-input-wrapper">
                     <div class="single">
                         <label asp-for="RegionLookupId">@ResourcesHelper.Translate("Region", lang)</label>
-                        <select asp-for="RegionLookupId" asp-items="Model.Regions">
-                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        <input type="hidden" asp-for="RegionLookupId" />
+
+                        <select asp-for="RegionLookupId"
+                                asp-items="Model.Regions"
+                                disabled>
                         </select>
                     </div>
 
                     <div class="single">
                         <label asp-for="GovernmentAgencyLookupId">@ResourcesHelper.Translate("GovernmentAgency", lang)</label>
-                        <select asp-for="GovernmentAgencyLookupId" asp-items="Model.GovernmentAgencies">
-                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        <input type="hidden" asp-for="GovernmentAgencyLookupId" />
+
+                        <select asp-for="GovernmentAgencyLookupId"
+                                asp-items="Model.GovernmentAgencies"
+                                disabled>
                         </select>
                     </div>
                 </div>
@@ -107,6 +116,12 @@
 
                 <div class="half-input-wrapper">
                     <div class="single">
+                        <label asp-for="WeaponTypeId">@ResourcesHelper.Translate("WeaponType", lang) <span class="ams-required">*</span></label>
+                        <select asp-for="WeaponTypeId" asp-items="Model.WeaponTypes" id="WeaponTypeId">
+                            <option value="">@ResourcesHelper.Translate("SelectWeaponType", lang)</option>
+                        </select>
+                    </div>
+                    <div class="single">
                         <label asp-for="WeaponModelId">@ResourcesHelper.Translate("WeaponModel", lang) <span class="ams-required">*</span></label>
                         <select asp-for="WeaponModelId"
                                 asp-items="Model.WeaponModels"
@@ -120,21 +135,10 @@
                         </select>
                     </div>
 
-                    <div class="single">
-                        <label asp-for="WeaponTypeId">@ResourcesHelper.Translate("WeaponType", lang) <span class="ams-required">*</span></label>
-                        <select asp-for="WeaponTypeId" asp-items="Model.WeaponTypes" id="WeaponTypeId">
-                            <option value="">@ResourcesHelper.Translate("SelectWeaponType", lang)</option>
-                        </select>
-                    </div>
+                    
                 </div>
 
                 <div class="half-input-wrapper">
-                    <div class="single">
-                        <label asp-for="ManufacturerId">@ResourcesHelper.Translate("Manufacturer", lang) <span class="ams-required">*</span></label>
-                        <select asp-for="ManufacturerId" asp-items="Model.Manufacturers" id="ManufacturerId">
-                            <option value="">@ResourcesHelper.Translate("SelectManufacturer", lang)</option>
-                        </select>
-                    </div>
 
                     <div class="single">
                         <label asp-for="CaliberId">@ResourcesHelper.Translate("Caliber", lang) <span class="ams-required">*</span></label>
@@ -142,6 +146,13 @@
                             <option value="">@ResourcesHelper.Translate("SelectCaliber", lang)</option>
                         </select>
                     </div>
+                    <div class="single">
+                        <label asp-for="ManufacturerId">@ResourcesHelper.Translate("Manufacturer", lang) <span class="ams-required">*</span></label>
+                        <select asp-for="ManufacturerId" asp-items="Model.Manufacturers" id="ManufacturerId">
+                            <option value="">@ResourcesHelper.Translate("SelectManufacturer", lang)</option>
+                        </select>
+                    </div>
+
                 </div>
 
                 <div class="half-input-wrapper">
@@ -162,7 +173,24 @@
                         <input asp-for="ManufactureDate" type="hidden" />
                     </div>
                 </div>
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="BarrelMark">@ResourcesHelper.Translate("BarrelMark", lang)</label>
+                        <input asp-for="BarrelMark" />
+                    </div>
 
+                    <div class="single">
+                        <label asp-for="SlideMark">@ResourcesHelper.Translate("SlideMark", lang)</label>
+                        <input asp-for="SlideMark" />
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="ButtstockMark">@ResourcesHelper.Translate("ButtstockMark", lang)</label>
+                        <input asp-for="ButtstockMark" />
+                    </div>
+                </div>
                 <div class="ams-image-preview-wrap" id="modelImageWrap" style="display:none;">
                     <span>@ResourcesHelper.Translate("ModelImage", lang)</span>
                     <img id="modelImagePreview" class="ams-image-preview" alt="weapon model" />
@@ -219,28 +247,13 @@
                         </select>
                     </div>
                 </div>
-            </div>
-
-            <div class="user-profile-main-wrapper">
+           
                 <h5 class="ams-section-title">@ResourcesHelper.Translate("PhysicalMarks", lang)</h5>
 
-                <div class="half-input-wrapper">
-                    <div class="single">
-                        <label asp-for="BarrelMark">@ResourcesHelper.Translate("BarrelMark", lang)</label>
-                        <input asp-for="BarrelMark" />
-                    </div>
-
-                    <div class="single">
-                        <label asp-for="SlideMark">@ResourcesHelper.Translate("SlideMark", lang)</label>
-                        <input asp-for="SlideMark" />
-                    </div>
-                </div>
+                
 
                 <div class="half-input-wrapper">
-                    <div class="single">
-                        <label asp-for="ButtstockMark">@ResourcesHelper.Translate("ButtstockMark", lang)</label>
-                        <input asp-for="ButtstockMark" />
-                    </div>
+                   
 
                     <div class="single">
                         <label asp-for="IdTypeLookupId">@ResourcesHelper.Translate("IdType", lang)</label>
@@ -270,31 +283,7 @@
                 </div>
             </div>
 
-            <div class="user-profile-main-wrapper">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("StatusAndAdditional", lang)</h5>
-
-                
-
-                <div class="half-input-wrapper">
-                    <div class="single">
-                        <label asp-for="InventoryNo">@ResourcesHelper.Translate("InventoryNo", lang)</label>
-                        <input asp-for="InventoryNo" />
-                    </div>
-                  @*
-                    <div class="single">
-                        <label asp-for="ImageFile">@ResourcesHelper.Translate("Image", lang)</label>
-                        <input asp-for="ImageFile" type="file" accept=".jpg,.jpeg,.png,.webp" />
-                    </div>
-                   *@
-                </div>
-
-                <div class="half-input-wrapper">
-                    <div class="single">
-                        <label asp-for="Notes">@ResourcesHelper.Translate("Notes", lang)</label>
-                        <textarea asp-for="Notes"></textarea>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="user-profile-main-wrapper">
                 <h5 class="ams-section-title">@ResourcesHelper.Translate("DonationTemporaryStock", lang)</h5>

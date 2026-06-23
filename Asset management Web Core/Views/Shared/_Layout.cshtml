@@ -25,10 +25,19 @@
     <link rel="stylesheet" href="~/assets/css/plugins/swiper.css">
     <link rel="stylesheet" href="~/assets/css/vendor/bootstrap.min.css">
     <link rel="stylesheet" href="~/assets/css/style.css">
-    <link rel="stylesheet" href="~/css/custom.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="~/css/custom.css">
     @RenderSection("Styles", required: false)
+
+        <script>
+               var storedTheme = localStorage.getItem('intellactai');
+        if (!storedTheme) {
+            storedTheme = "dark";
+            localStorage.setItem('intellactai', storedTheme);
+        }
+        document.documentElement.setAttribute('data-theme', storedTheme);
+    </script>
+
 </head>
 
 <body class="user-profile">
@@ -427,14 +436,7 @@
     <script src="~/assets/js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
-    <script>
-        var storedTheme = localStorage.getItem('intellactai');
-        if (!storedTheme) {
-            storedTheme = "dark";
-            localStorage.setItem('intellactai', storedTheme);
-        }
-        document.documentElement.setAttribute('data-theme', storedTheme);
-    </script>
+
 
     @await RenderSectionAsync("Scripts", required: false)
 

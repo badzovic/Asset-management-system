@@ -340,7 +340,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Knjigovodstveno vodi.
+        ///   Looks up a localized string similar to Inventar popisan.
         /// </summary>
         public static string BookkeepingBy {
             get {
@@ -1222,6 +1222,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Podaci o inventaru.
+        /// </summary>
+        public static string InventoryData {
+            get {
+                return ResourceManager.GetString("InventoryData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inventurni broj.
         /// </summary>
         public static string InventoryNo {
@@ -1411,7 +1420,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Godina proizvodnje.
+        ///   Looks up a localized string similar to Godina proizvodnje (Upisati godinu).
         /// </summary>
         public static string ManufactureYear {
             get {

@@ -359,7 +359,7 @@
     <value>Waffentyp</value>
   </data>
   <data name="ManufactureYear" xml:space="preserve">
-    <value>Baujahr</value>
+    <value>Baujahr (Jahr eingeben)</value>
   </data>
   <data name="PurposeOfUse" xml:space="preserve">
     <value>Verwendungszweck</value>
@@ -566,7 +566,7 @@
     <value>Lagerbestand</value>
   </data>
   <data name="BookkeepingBy" xml:space="preserve">
-    <value>Buchführung von</value>
+    <value>Inventar erfasst</value>
   </data>
   <data name="PhysicalMarks" xml:space="preserve">
     <value>Physische Markierungen</value>
@@ -1092,5 +1092,8 @@
   </data>
   <data name="login" xml:space="preserve">
     <value>Anmelden</value>
+  </data>
+  <data name="InventoryData" xml:space="preserve">
+    <value>Inventardaten</value>
   </data>
 </root>

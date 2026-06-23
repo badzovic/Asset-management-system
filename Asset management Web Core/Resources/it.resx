@@ -359,7 +359,7 @@
     <value>Tipo di arma</value>
   </data>
   <data name="ManufactureYear" xml:space="preserve">
-    <value>Anno di produzione</value>
+    <value>Anno di produzione (Inserire l'anno)</value>
   </data>
   <data name="PurposeOfUse" xml:space="preserve">
     <value>Scopo d’uso</value>
@@ -566,7 +566,7 @@
     <value>Stock</value>
   </data>
   <data name="BookkeepingBy" xml:space="preserve">
-    <value>Contabilità di</value>
+    <value>Inventario inventariato</value>
   </data>
   <data name="PhysicalMarks" xml:space="preserve">
     <value>Segni fisici</value>
@@ -1092,5 +1092,8 @@
   </data>
   <data name="login" xml:space="preserve">
     <value>Accedi</value>
+  </data>
+  <data name="InventoryData" xml:space="preserve">
+    <value>Dati dell'inventario</value>
   </data>
 </root>

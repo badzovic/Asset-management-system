@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\caliberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\caliberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\weapons\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\weapons\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\resources\\it.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
@@ -27,12 +23,24 @@
       "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\resources\\en.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\weapons\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\views\\weapons\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\weaponscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\weaponscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\caliberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\caliberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\views\\evidence\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\areas\\admin\\controllers\\weaponmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\areas\\admin\\controllers\\weaponmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|solutionrelative:asset management web core\\wwwroot\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{61D376A0-CE89-4359-AAAA-358799A2BF55}|Asset management Web Core\\Asset management Web Core.csproj|c:\\users\\adzovic berin\\documents\\github\\asset-management-system\\asset management web core\\helpers\\culturemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,20 +62,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\Register.cshtml",
               "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\Register.cshtml",
               "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\Register.cshtml",
               "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Views\\Weapons\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABYBAAAAAAAAAAApwB0BAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-06-19T10:41:44.601Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeaponsController.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\WeaponsController.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\WeaponsController.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\WeaponsController.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\WeaponsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAawC4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-23T13:14:46.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "custom.css",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
+              "RelativeDocumentMoniker": "Asset management Web Core\\wwwroot\\css\\custom.css",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
+              "RelativeToolTip": "Asset management Web Core\\wwwroot\\css\\custom.css",
+              "ViewState": "AgIAAIUEAAAAAAAAAAAAAJcEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-19T10:12:19.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAWwEsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-22T07:37:31.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "en.resx",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.resx",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\en.resx",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.resx",
+              "RelativeToolTip": "Asset management Web Core\\Resources\\en.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-06-22T07:33:50.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "bs.resx",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\bs.resx",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\bs.resx",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\bs.resx",
+              "RelativeToolTip": "Asset management Web Core\\Resources\\bs.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-06-22T07:33:49.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "de.resx",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\de.resx",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\de.resx",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\de.resx",
+              "RelativeToolTip": "Asset management Web Core\\Resources\\de.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-06-22T07:33:55.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "it.resx",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\it.resx",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\it.resx",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\it.resx",
+              "RelativeToolTip": "Asset management Web Core\\Resources\\it.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-06-22T07:33:52.421Z",
               "EditorCaption": ""
             },
             {
@@ -82,14 +173,27 @@
               "RelativeDocumentMoniker": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Asset management Web Core\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGUAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-06-22T07:50:41.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
+              "Title": "CalibersController.cs",
+              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
+              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
+              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
+              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAHQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T07:42:38.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Index.cshtml",
               "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Views\\Evidence\\Index.cshtml",
@@ -102,81 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CalibersController.cs",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Admin\\Controllers\\CalibersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T07:42:38.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Asset management Web Core\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAWwFMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-22T07:37:31.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "en.resx",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.resx",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\en.resx",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\en.resx",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\en.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-06-22T07:33:50.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "bs.resx",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\bs.resx",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\bs.resx",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\bs.resx",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\bs.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-06-22T07:33:49.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "de.resx",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\de.resx",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\de.resx",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\de.resx",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\de.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-06-22T07:33:55.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "it.resx",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\it.resx",
-              "RelativeDocumentMoniker": "Asset management Web Core\\Resources\\it.resx",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Resources\\it.resx",
-              "RelativeToolTip": "Asset management Web Core\\Resources\\it.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-06-22T07:33:52.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "WeaponModelsController.cs",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Areas\\Admin\\Controllers\\WeaponModelsController.cs",
               "RelativeDocumentMoniker": "Asset management Web Core\\Areas\\Admin\\Controllers\\WeaponModelsController.cs",
@@ -189,20 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "custom.css",
-              "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
-              "RelativeDocumentMoniker": "Asset management Web Core\\wwwroot\\css\\custom.css",
-              "ToolTip": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\wwwroot\\css\\custom.css",
-              "RelativeToolTip": "Asset management Web Core\\wwwroot\\css\\custom.css",
-              "ViewState": "AgIAABAEAAAAAAAAAAAAABAEAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-19T10:12:19.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CultureMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\adzovic berin\\Documents\\GitHub\\Asset-management-system\\Asset management Web Core\\Helpers\\CultureMiddleware.cs",
               "RelativeDocumentMoniker": "Asset management Web Core\\Helpers\\CultureMiddleware.cs",

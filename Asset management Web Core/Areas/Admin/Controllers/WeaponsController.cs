@@ -43,7 +43,9 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             model = await PopulateDropdowns(model);
 
             ViewBag.ActiveWeapons = await GetActiveWeapons();
-
+            model.CountryLookupId = 1;
+            model.RegionLookupId = 7;
+            model.GovernmentAgencyLookupId = 13;
             return View(model);
         }
 

@@ -349,7 +349,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bookkeeping By.
+        ///   Looks up a localized string similar to Inventory accounted .
         /// </summary>
         public static string BookkeepingBy {
             get {
@@ -1249,6 +1249,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inventory Data.
+        /// </summary>
+        public static string InventoryData {
+            get {
+                return ResourceManager.GetString("InventoryData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inventory No .
         /// </summary>
         public static string InventoryNo {
@@ -1438,7 +1447,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Manufacture year.
+        ///   Looks up a localized string similar to Year of Manufacture (Enter the year).
         /// </summary>
         public static string ManufactureYear {
             get {

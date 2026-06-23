@@ -355,7 +355,7 @@
     <value>Legalnost oružja</value>
   </data>
   <data name="ManufactureYear" xml:space="preserve">
-    <value>Godina proizvodnje</value>
+    <value>Godina proizvodnje (Upisati godinu)</value>
   </data>
   <data name="PurposeOfUse" xml:space="preserve">
     <value>Svrha korištenja</value>
@@ -562,7 +562,7 @@
     <value>Zaliha</value>
   </data>
   <data name="BookkeepingBy" xml:space="preserve">
-    <value>Knjigovodstveno vodi</value>
+    <value>Inventar popisan</value>
   </data>
   <data name="PhysicalMarks" xml:space="preserve">
     <value>Fizičke oznake</value>
@@ -1082,5 +1082,8 @@
   </data>
   <data name="login" xml:space="preserve">
     <value>Prijava</value>
+  </data>
+  <data name="InventoryData" xml:space="preserve">
+    <value>Podaci o inventaru</value>
   </data>
 </root>
