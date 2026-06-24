@@ -1090,7 +1090,7 @@
     <value>Inventurni broj</value>
   </data>
   <data name="holder" xml:space="preserve">
-    <value>Podaci o nositelju</value>
+    <value>Podaci o nositelju (Ime i prezime)</value>
   </data>
   <data name="Team" xml:space="preserve">
     <value>Tim</value>

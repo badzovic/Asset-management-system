@@ -1186,7 +1186,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Informationen zum Inhaber.
+        ///   Looks up a localized string similar to Informationen zum Inhaber (Vor- und Nachname).
         /// </summary>
         public static string holder {
             get {

@@ -1100,7 +1100,7 @@
     <value>Numero di inventario</value>
   </data>
   <data name="holder" xml:space="preserve">
-    <value>Informazioni sul titolare</value>
+    <value>Informazioni sul titolare (Nome e cognome)</value>
   </data>
   <data name="Team" xml:space="preserve">
     <value>Team</value>

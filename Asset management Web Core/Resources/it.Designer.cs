@@ -1186,7 +1186,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Informazioni sul titolare.
+        ///   Looks up a localized string similar to Informazioni sul titolare (Nome e cognome).
         /// </summary>
         public static string holder {
             get {

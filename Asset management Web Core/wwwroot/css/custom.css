@@ -4,7 +4,7 @@
 
 
 html {
-    zoom: 96%;
+    zoom: 92%;
 }
 
 .user-profile-main-wrapper {
@@ -636,7 +636,7 @@ html {
 }
 /* Full width samo za admin content */
 .user-profile-area .container-custom {
-    margin-top: 5%;
+    margin-top: 8%;
     max-width: 100% !important;
     width: 100% !important;
     padding-left: 30px !important;

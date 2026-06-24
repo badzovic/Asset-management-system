@@ -1168,7 +1168,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Podaci o nositelju.
+        ///   Looks up a localized string similar to Podaci o nositelju (Ime i prezime).
         /// </summary>
         public static string holder {
             get {

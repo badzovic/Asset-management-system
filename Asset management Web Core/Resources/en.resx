@@ -1100,7 +1100,7 @@
     <value>Inventory Number</value>
   </data>
   <data name="holder" xml:space="preserve">
-    <value>Holder informations</value>
+    <value>Holder Information (First and Last Name)</value>
   </data>
   <data name="Team" xml:space="preserve">
     <value>Team</value>
