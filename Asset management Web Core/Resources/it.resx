@@ -587,7 +587,7 @@
     <value>Id n.</value>
   </data>
   <data name="DateOfOwnership" xml:space="preserve">
-    <value>Data di proprietà</value>
+    <value>Data di assegnazione</value>
   </data>
   <data name="HolderInfo" xml:space="preserve">
     <value>Info detentore</value>
@@ -605,7 +605,7 @@
     <value>Note</value>
   </data>
   <data name="DonationTemporaryStock" xml:space="preserve">
-    <value>Donazione Stock Temporaneo</value>
+    <value>Stock provvisorio delle donazioni</value>
   </data>
   <data name="TempStock" xml:space="preserve">
     <value>Stock Temporaneo</value>
@@ -1095,5 +1095,14 @@
   </data>
   <data name="InventoryData" xml:space="preserve">
     <value>Dati dell'inventario</value>
+  </data>
+  <data name="invnum" xml:space="preserve">
+    <value>Numero di inventario</value>
+  </data>
+  <data name="holder" xml:space="preserve">
+    <value>Informazioni sul titolare</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
   </data>
 </root>

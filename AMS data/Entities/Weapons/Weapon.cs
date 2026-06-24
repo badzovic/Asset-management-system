@@ -100,5 +100,10 @@ namespace AMS_data.Entities.Weapons
 
         public DateTime? UpdatedAt { get; set; }
         public string? UpdatedBy { get; set; }
+
+        public int? TeamLookupId { get; set; }
+        public string? IdTypeOtherText { get; set; }
+
+        public virtual LookupItem? TeamLookup { get; set; }
     }
 }

@@ -587,7 +587,7 @@
     <value>Id No</value>
   </data>
   <data name="DateOfOwnership" xml:space="preserve">
-    <value>Date Of Ownership </value>
+    <value>Assignment Date</value>
   </data>
   <data name="HolderInfo" xml:space="preserve">
     <value>Holder Info </value>
@@ -605,7 +605,7 @@
     <value>Notes</value>
   </data>
   <data name="DonationTemporaryStock" xml:space="preserve">
-    <value>Donation Temporary Stock </value>
+    <value>Provisional Donation Stock</value>
   </data>
   <data name="TempStock" xml:space="preserve">
     <value>Temp Stock</value>
@@ -1095,5 +1095,14 @@
   </data>
   <data name="InventoryData" xml:space="preserve">
     <value>Inventory Data</value>
+  </data>
+  <data name="invnum" xml:space="preserve">
+    <value>Inventory Number</value>
+  </data>
+  <data name="holder" xml:space="preserve">
+    <value>Holder informations</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Team</value>
   </data>
 </root>

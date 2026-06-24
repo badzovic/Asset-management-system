@@ -96,6 +96,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 OriginalStateLookupId = model.OriginalStateLookupId,
 
                 UnitLookupId = model.UnitLookupId,
+                TeamLookupId = model.TeamLookupId,
                 StockLookupId = model.StockLookupId,
                 BookkeepingByLookupId = model.BookkeepingByLookupId,
 
@@ -104,6 +105,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 ButtstockMark = model.ButtstockMark,
 
                 IdTypeLookupId = model.IdTypeLookupId,
+                IdTypeOtherText = model.IdTypeOtherText,
                 IdNo = model.IdNo,
                 HolderInfo = model.HolderInfo,
                 DateOfOwnership = model.DateOfOwnership,
@@ -143,6 +145,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                     weapon.CurrentStatusId
                 });
 
+            TempData["SuccessMessage"] = "Weapon successfully registered.";
             return RedirectToAction(nameof(Register));
         }
 
@@ -1360,6 +1363,7 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             model.OriginIndicators = await SelectLookup("OriginIndicator");
             model.OriginalStates = await SelectLookup("OriginalState");
             model.Units = await SelectLookup("Unit");
+            model.Teams = await SelectLookup("Team");
             model.Stocks = await SelectLookup("Stock");
             model.BookkeepingByList = await SelectLookup("BookkeepingBy");
             model.IdTypes = await SelectLookup("IdType");

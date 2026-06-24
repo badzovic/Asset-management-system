@@ -610,7 +610,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Datum vlasništva.
+        ///   Looks up a localized string similar to Datum dodjele.
         /// </summary>
         public static string DateOfOwnership {
             get {
@@ -700,7 +700,7 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Donacija / privremena zaliha.
+        ///   Looks up a localized string similar to Privremene zalihe donacija.
         /// </summary>
         public static string DonationTemporaryStock {
             get {
@@ -1168,6 +1168,15 @@ namespace Asset_management_Web_Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Podaci o nositelju.
+        /// </summary>
+        public static string holder {
+            get {
+                return ResourceManager.GetString("holder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Informacije o držaocu.
         /// </summary>
         public static string HolderInfo {
@@ -1236,6 +1245,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string InventoryNo {
             get {
                 return ResourceManager.GetString("InventoryNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inventurni broj.
+        /// </summary>
+        public static string invnum {
+            get {
+                return ResourceManager.GetString("invnum", resourceCulture);
             }
         }
         
@@ -2595,6 +2613,15 @@ namespace Asset_management_Web_Core.Resources {
         public static string Surname {
             get {
                 return ResourceManager.GetString("Surname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tim.
+        /// </summary>
+        public static string Team {
+            get {
+                return ResourceManager.GetString("Team", resourceCulture);
             }
         }
         

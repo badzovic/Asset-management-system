@@ -22,7 +22,12 @@
         @Html.AntiForgeryToken()
 
         <div asp-validation-summary="All" class="text-danger mb-3"></div>
-
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success ams-alert mb-3">
+                @TempData["SuccessMessage"]
+            </div>
+        }
         <div class="ams-register-grid">
 
             <div class="user-profile-main-wrapper">
@@ -183,14 +188,12 @@
                         <label asp-for="SlideMark">@ResourcesHelper.Translate("SlideMark", lang)</label>
                         <input asp-for="SlideMark" />
                     </div>
-                </div>
-
-                <div class="half-input-wrapper">
                     <div class="single">
                         <label asp-for="ButtstockMark">@ResourcesHelper.Translate("ButtstockMark", lang)</label>
                         <input asp-for="ButtstockMark" />
                     </div>
                 </div>
+
                 <div class="ams-image-preview-wrap" id="modelImageWrap" style="display:none;">
                     <span>@ResourcesHelper.Translate("ModelImage", lang)</span>
                     <img id="modelImagePreview" class="ams-image-preview" alt="weapon model" />
@@ -234,6 +237,12 @@
 
                 <div class="half-input-wrapper">
                     <div class="single">
+                        <label asp-for="TeamLookupId">@ResourcesHelper.Translate("Team", lang)</label>
+                        <select asp-for="TeamLookupId" asp-items="Model.Teams">
+                            <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
+                        </select>
+                    </div>
+                    <div class="single">
                         <label asp-for="StockLookupId">@ResourcesHelper.Translate("Stock", lang)</label>
                         <select asp-for="StockLookupId" asp-items="Model.Stocks">
                             <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
@@ -248,17 +257,40 @@
                     </div>
                 </div>
            
-
-                
-
                 <div class="half-input-wrapper">
-                   
+                    <div class="single">
+                        <label asp-for="InventoryNo">@ResourcesHelper.Translate("invnum", lang)</label>
+                        <input asp-for="InventoryNo" />
+                    </div>
+
+                    
+                </div>
+                <div class="half-input-wrapper">
+                  
 
                     <div class="single">
+                        <label asp-for="HolderInfo">@ResourcesHelper.Translate("holder", lang)</label>
+                        <input asp-for="HolderInfo" />
+                    </div>
+                </div>
+                <div class="half-input-wrapper">
+                    <div class="single">
+                        <label asp-for="Notes">@ResourcesHelper.Translate("Notes", lang)</label>
+                        <textarea asp-for="Notes"></textarea>
+                    </div>
+                </div>
+
+                <div class="half-input-wrapper">
+                    <div class="single">
                         <label asp-for="IdTypeLookupId">@ResourcesHelper.Translate("IdType", lang)</label>
-                        <select asp-for="IdTypeLookupId" asp-items="Model.IdTypes">
+                        <select asp-for="IdTypeLookupId" asp-items="Model.IdTypes" id="IdTypeLookupId">
                             <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
                         </select>
+                    </div>
+
+                    <div class="single" id="IdTypeOtherTextWrap" style="display:none;">
+                        <label asp-for="IdTypeOtherText">@ResourcesHelper.Translate("OtherDocumentType", lang)</label>
+                        <input asp-for="IdTypeOtherText" id="IdTypeOtherText" />
                     </div>
                 </div>
 
@@ -274,12 +306,7 @@
                     </div>
                 </div>
 
-                <div class="half-input-wrapper">
-                    <div class="single">
-                        <label asp-for="HolderInfo">@ResourcesHelper.Translate("HolderInfo", lang)</label>
-                        <textarea asp-for="HolderInfo"></textarea>
-                    </div>
-                </div>
+                
             </div>
 
            
@@ -346,6 +373,8 @@
                         <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
                         <th>@ResourcesHelper.Translate("Manufacturer", lang)</th>
                         <th>@ResourcesHelper.Translate("Caliber", lang)</th>
+                        <th>@ResourcesHelper.Translate("HolderInfo", lang)</th>
+                        <th>@ResourcesHelper.Translate("IdNo", lang)</th>
                         <th>@ResourcesHelper.Translate("Status", lang)</th>
                     </tr>
                 </thead>
@@ -359,6 +388,8 @@
                             <td>@item.WeaponType?.Name</td>
                             <td>@item.Manufacturer?.Name</td>
                             <td>@item.Caliber?.Name</td>
+                            <td>@item.HolderInfo</td>
+                            <td>@item.IdNo</td>
                             <td>@item.CurrentStatus?.Name</td>
                         </tr>
                     }
@@ -366,7 +397,7 @@
                     @if (!activeWeapons.Any())
                     {
                         <tr>
-                            <td colspan="7" class="text-center text-muted py-4">
+                            <td colspan="9" class="text-center text-muted py-4">
                                 @ResourcesHelper.Translate("NoRecordsFound", lang)
                             </td>
                         </tr>
@@ -386,8 +417,8 @@
 
             $('.ams-select2').select2({
                 width: '100%',
-                placeholder: '-- Select --',
-                allowClear: true
+                placeholder: '--  --',
+                allowClear: true,
             });
 
             const imageWrap = document.getElementById("modelImageWrap");
@@ -427,6 +458,23 @@
                     });
             });
         });
+                function toggleOtherIdType() {
+            const selectedText = $('#IdTypeLookupId option:selected').text().toLowerCase();
+
+            if (
+                selectedText.includes('other') ||
+                selectedText.includes('drugi') ||
+                selectedText.includes('ostalo')
+            ) {
+                $('#IdTypeOtherTextWrap').show();
+            } else {
+                $('#IdTypeOtherTextWrap').hide();
+                $('#IdTypeOtherText').val('');
+            }
+        }
+
+        $('#IdTypeLookupId').on('change', toggleOtherIdType);
+        toggleOtherIdType();
 
         $('#activeWeaponsSearch').on('keyup', function () {
             const value = $(this).val().toLowerCase();

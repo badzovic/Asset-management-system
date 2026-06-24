@@ -583,7 +583,7 @@
     <value>ID broj</value>
   </data>
   <data name="DateOfOwnership" xml:space="preserve">
-    <value>Datum vlasništva</value>
+    <value>Datum dodjele</value>
   </data>
   <data name="HolderInfo" xml:space="preserve">
     <value>Informacije o držaocu</value>
@@ -601,7 +601,7 @@
     <value>Napomene</value>
   </data>
   <data name="DonationTemporaryStock" xml:space="preserve">
-    <value>Donacija / privremena zaliha</value>
+    <value>Privremene zalihe donacija</value>
   </data>
   <data name="TempStock" xml:space="preserve">
     <value>Privremena zaliha</value>
@@ -1085,5 +1085,14 @@
   </data>
   <data name="InventoryData" xml:space="preserve">
     <value>Podaci o inventaru</value>
+  </data>
+  <data name="invnum" xml:space="preserve">
+    <value>Inventurni broj</value>
+  </data>
+  <data name="holder" xml:space="preserve">
+    <value>Podaci o nositelju</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Tim</value>
   </data>
 </root>

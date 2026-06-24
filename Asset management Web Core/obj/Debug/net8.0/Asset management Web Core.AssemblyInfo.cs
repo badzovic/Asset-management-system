@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Asset management Web Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb2859e343f5f352323c7c9dd3baeb0a253e2b9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6772a713950d299f8ec00c6e469bf7cd00fe4252")]
 [assembly: System.Reflection.AssemblyProductAttribute("Asset management Web Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Asset management Web Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

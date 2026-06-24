@@ -163,7 +163,12 @@
                    asp-route-categoryKey="Unit">
                     @ResourcesHelper.Translate("Units", lang)
                 </a>
-
+                <a asp-area="Admin"
+                   asp-controller="Lookups"
+                   asp-action="Items"
+                   asp-route-categoryKey="Team">
+                    @ResourcesHelper.Translate("Team", lang)
+                </a>
                 <a asp-area="Admin"
                    asp-controller="Lookups"
                    asp-action="Items"

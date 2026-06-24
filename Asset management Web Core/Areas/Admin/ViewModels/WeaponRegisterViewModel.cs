@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel.DataAnnotations;
+using static QuestPDF.Helpers.Colors;
 
 namespace Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons
 {
@@ -93,7 +94,10 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons
         public IFormFile? ImageFile { get; set; }
 
         public string? ExistingImagePath { get; set; }
+        public int? TeamLookupId { get; set; }
+        public List<SelectListItem> Teams { get; set; } = new();
 
+        public string? IdTypeOtherText { get; set; }
         public List<SelectListItem> WeaponTypes { get; set; } = new();
 
         public List<SelectListItem> WeaponModels { get; set; } = new();

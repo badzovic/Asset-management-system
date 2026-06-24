@@ -136,10 +136,10 @@
             <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
             <div class="input-wrapper">
-                <input asp-for="Input.UserName" placeholder="Korisničko ime" autocomplete="username" />
+                <input asp-for="Input.UserName" placeholder=@ResourcesHelper.Translate("Username", lang) autocomplete="username" />
                 <span asp-validation-for="Input.UserName" class="text-danger"></span>
 
-                <input asp-for="Input.Password" placeholder="Lozinka" autocomplete="current-password" />
+                <input asp-for="Input.Password" placeholder=@ResourcesHelper.Translate("Password", lang) autocomplete="current-password" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
 

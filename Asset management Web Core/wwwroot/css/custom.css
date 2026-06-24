@@ -4,7 +4,7 @@
 
 
 html {
-    zoom: 77%;
+    zoom: 96%;
 }
 
 .user-profile-main-wrapper {
@@ -586,10 +586,7 @@ html {
     background: #2563eb !important;
 }
 
-.select2-search__field {
-    background: #111827 !important;
-    color: #151c2c !important;
-}
+
 .ams-required {
     color: #ff6b6b;
     font-weight: 800;
@@ -639,6 +636,7 @@ html {
 }
 /* Full width samo za admin content */
 .user-profile-area .container-custom {
+    margin-top: 5%;
     max-width: 100% !important;
     width: 100% !important;
     padding-left: 30px !important;

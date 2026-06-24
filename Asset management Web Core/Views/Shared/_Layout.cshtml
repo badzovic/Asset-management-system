@@ -74,24 +74,28 @@
                                     <ul class="dropdown-menu ams-language-dropdown">
                                         <li>
                                             <a class="dropdown-item @(lang == "bs" ? "active" : "")"
+                                               asp-area=""
                                                asp-controller="Language"
                                                asp-action="ChangeLanguage"
                                                asp-route-lang="bs">BHS</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item @(lang == "en" ? "active" : "")"
+                                               asp-area=""
                                                asp-controller="Language"
                                                asp-action="ChangeLanguage"
                                                asp-route-lang="en">English</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item @(lang == "de" ? "active" : "")"
+                                               asp-area=""
                                                asp-controller="Language"
                                                asp-action="ChangeLanguage"
                                                asp-route-lang="de">Deutsch</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item @(lang == "it" ? "active" : "")"
+                                               asp-area=""
                                                asp-controller="Language"
                                                asp-action="ChangeLanguage"
                                                asp-route-lang="it">Italiano</a>
@@ -427,7 +431,9 @@
     }
     else
     {
-        @RenderBody()
+        <div class="container-custom">
+            @RenderBody()
+        </div>
     }
 
     <script src="~/assets/js/plugins/jquery.min.js"></script>
