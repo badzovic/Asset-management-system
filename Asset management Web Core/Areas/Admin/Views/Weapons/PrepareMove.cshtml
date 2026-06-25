@@ -113,44 +113,6 @@
                 }
             </div>
 
-            <div class="user-profile-main-wrapper mt--30">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("MoveHistory", lang)</h5>
-
-                <div class="table-responsive ams-active-weapons-scroll">
-                    <table class="table ams-table">
-                        <thead>
-                            <tr>
-                                <th>@ResourcesHelper.Translate("MoveDate", lang)</th>
-                                <th>@ResourcesHelper.Translate("MoveAction", lang)</th>
-                                <th>@ResourcesHelper.Translate("NewLocation", lang)</th>
-                                <th>@ResourcesHelper.Translate("Status", lang)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model.MoveHistory)
-                            {
-                                <tr>
-                                    <td>@item.MoveDate.ToString("dd.MM.yyyy")</td>
-                                    <td>@item.MovementActionLookup?.Name</td>
-                                    <td>@item.NewLocationLookup?.Name</td>
-                                    <td>
-                                        <span class="ams-badge ams-badge-muted">@item.Status</span>
-                                    </td>
-                                </tr>
-                            }
-
-                            @if (!Model.MoveHistory.Any())
-                            {
-                                <tr>
-                                    <td colspan="4" class="text-center text-muted py-4">
-                                        @ResourcesHelper.Translate("NoRecordsFound", lang)
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
         </div>
 
         <div>
@@ -253,52 +215,54 @@
                 </form>
             </div>
 
-            <div class="user-profile-main-wrapper mt--30">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("ActiveWeapons", lang)</h5>
-
-                <div class="ams-table-toolbar">
-                    <input type="text"
-                           id="moveWeaponsTableSearch"
-                           class="ams-table-search"
-                           placeholder="@ResourcesHelper.Translate("Search", lang)" />
-                </div>
-
-                <div class="table-responsive ams-active-weapons-scroll">
-                    <table class="table ams-table" id="moveWeaponsTable">
-                        <thead>
-                            <tr>
-                                <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
-                                <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
-                                <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
-                                <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model.ActiveWeapons)
-                            {
-                                <tr class="ams-clickable-row"
-                                    data-url="@Url.Action("PrepareMove", "Weapons", new { area = "Admin", weaponId = item.Id, searchTerm = Model.SearchTerm })">
-                                    <td>@item.RegistrationNo</td>
-                                    <td>@item.FactorySerial</td>
-                                    <td>@item.WeaponModel?.Name</td>
-                                    <td>@item.WeaponType?.Name</td>
-                                </tr>
-                            }
-
-                            @if (!Model.ActiveWeapons.Any())
-                            {
-                                <tr>
-                                    <td colspan="4" class="text-center text-muted py-4">
-                                        @ResourcesHelper.Translate("NoRecordsFound", lang)
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           
         </div>
 
+    </div>
+
+    <div class="user-profile-main-wrapper mt--30">
+        <h5 class="ams-section-title">@ResourcesHelper.Translate("ActiveWeapons", lang)</h5>
+
+        <div class="ams-table-toolbar">
+            <input type="text"
+                   id="moveWeaponsTableSearch"
+                   class="ams-table-search"
+                   placeholder="@ResourcesHelper.Translate("Search", lang)" />
+        </div>
+
+        <div class="table-responsive ams-active-weapons-scroll">
+            <table class="table ams-table" id="moveWeaponsTable">
+                <thead>
+                    <tr>
+                        <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
+                        <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
+                        <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
+                        <th>@ResourcesHelper.Translate("WeaponType", lang)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.ActiveWeapons)
+                    {
+                        <tr class="ams-clickable-row"
+                            data-url="@Url.Action("PrepareMove", "Weapons", new { area = "Admin", weaponId = item.Id, searchTerm = Model.SearchTerm })">
+                            <td>@item.RegistrationNo</td>
+                            <td>@item.FactorySerial</td>
+                            <td>@item.WeaponModel?.Name</td>
+                            <td>@item.WeaponType?.Name</td>
+                        </tr>
+                    }
+
+                    @if (!Model.ActiveWeapons.Any())
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center text-muted py-4">
+                                @ResourcesHelper.Translate("NoRecordsFound", lang)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 

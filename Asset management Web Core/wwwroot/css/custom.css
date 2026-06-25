@@ -4,7 +4,7 @@
 
 
 html {
-    zoom: 92%;
+    zoom: 85%;
 }
 
 .user-profile-main-wrapper {
@@ -1171,3 +1171,14 @@ html[data-theme="light"] .select2-results__option--selected {
         color: #151c2c !important;
         border-color: #adb5bd !important;
     }
+.left-side-bar {
+    position: fixed !important;
+    height: 100vh !important;
+}
+
+.bottom-user {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 0 !important;
+    width: 100% !important;
+}
