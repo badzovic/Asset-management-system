@@ -23,7 +23,7 @@ namespace Asset_management_Web_Core.Areas.Admin.ViewModels.Weapons
         public List<SelectListItem> MarkingLayouts { get; set; } = new();
 
         public List<Weapon> Weapons { get; set; } = new();
-
+        public List<LaserJob> LaserJobs { get; set; } = new();
         public List<WeaponMarkingJob> MarkingHistory { get; set; } = new();
     }
 }

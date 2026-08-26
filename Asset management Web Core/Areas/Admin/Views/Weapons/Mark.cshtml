@@ -4,6 +4,10 @@
 @{
     var lang = Context.Items["lang"]?.ToString() ?? "bs";
     ViewData["Title"] = ResourcesHelper.Translate("MarkWeapon", lang);
+
+    var hasActiveJob = Model.LaserJobs.Any(x =>
+        x.Status == "READY" ||
+        x.Status == "PROCESSING");
 }
 
 <style>
@@ -15,48 +19,121 @@
 
     .ams-mark-grid {
         display: grid !important;
-        grid-template-columns: 1fr 1.6fr !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) !important;
         gap: 24px !important;
         width: 100% !important;
     }
 
-    .ams-mark-preview {
-        background: #f8fafc;
-        color: #111827;
-        border-radius: 16px;
-        min-height: 300px;
-        padding: 28px;
+    .ams-markmaster-card {
+        overflow: hidden;
+        background: #0f172a;
         border: 1px solid #334155;
+        border-radius: 14px;
     }
 
-    .ams-mark-label-box {
-        background: #fff;
-        border: 2px solid #111827;
-        min-height: 220px;
-        padding: 28px;
+    .ams-markmaster-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 20px;
+        border-bottom: 1px solid #334155;
+    }
+
+        .ams-markmaster-card-header > div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .ams-markmaster-card-header strong {
+            color: #f8fafc;
+            font-size: 17px;
+        }
+
+        .ams-markmaster-card-header > div > span {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+    .ams-markmaster-data {
         display: grid;
-        grid-template-columns: 90px 1fr;
-        gap: 22px;
-        align-items: start;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: #334155;
     }
 
-    .ams-mark-code {
-        width: 70px;
-        height: 70px;
-        background: repeating-linear-gradient( 45deg, #111 0, #111 4px, #fff 4px, #fff 8px );
-        border: 4px solid #111;
+        .ams-markmaster-data > div {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            min-width: 0;
+            padding: 18px 20px;
+            background: #111827;
+        }
+
+        .ams-markmaster-data small {
+            color: #94a3b8;
+            font-size: 12px;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        .ams-markmaster-data strong {
+            color: #f8fafc;
+            overflow-wrap: anywhere;
+        }
+
+    .ams-job-details {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        font-size: 13px;
     }
 
-    .ams-mark-text h3 {
-        margin: 0 0 10px;
-        font-size: 30px;
-        font-weight: 900;
+        .ams-job-details span {
+            color: inherit;
+        }
+
+        .ams-job-details small {
+            color: #64748b;
+        }
+
+    .ams-mark-status-ready {
+        color: #94a3b8;
     }
 
-    .ams-mark-text p {
-        margin: 6px 0;
-        font-size: 18px;
+    .ams-mark-status-processing {
+        color: #f59e0b;
+    }
+
+    .ams-mark-status-marked {
+        color: #22c55e;
+    }
+
+    .ams-mark-status-failed {
+        color: #ef4444;
+    }
+
+    .ams-selected-option {
         font-weight: 700;
+    }
+
+    @@media (max-width: 1100px) {
+        .ams-mark-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    @@media (max-width: 767px) {
+        .ams-markmaster-data {
+            grid-template-columns: 1fr;
+        }
+
+        .ams-markmaster-card-header {
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 </style>
 
@@ -64,8 +141,13 @@
 
     <div class="ams-page-header">
         <div>
-            <h4 class="title mb-1">@ResourcesHelper.Translate("MarkWeapon", lang)</h4>
-            <p class="ams-page-subtitle">@ResourcesHelper.Translate("MarkWeaponDescription", lang)</p>
+            <h4 class="title mb-1">
+                @ResourcesHelper.Translate("MarkWeapon", lang)
+            </h4>
+
+            <p class="ams-page-subtitle">
+                @ResourcesHelper.Translate("MarkWeaponDescription", lang)
+            </p>
         </div>
     </div>
 
@@ -80,17 +162,30 @@
 
         <div>
             <div class="user-profile-main-wrapper">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("SelectedWeapon", lang)</h5>
+                <h5 class="ams-section-title">
+                    @ResourcesHelper.Translate("SelectedWeapon", lang)
+                </h5>
 
                 <div class="mb-3">
                     <select id="weaponMarkSearchSelect" class="ams-select2">
-                        <option value="">@ResourcesHelper.Translate("SearchWeaponPlaceholder", lang)</option>
+                        <option value="">
+                            @ResourcesHelper.Translate("SearchWeaponPlaceholder", lang)
+                        </option>
 
                         @foreach (var item in Model.Weapons)
                         {
-                            <option value="@item.Id">
-                                @item.RegistrationNo - @item.FactorySerial - @item.WeaponModel?.Name
-                            </option>
+                            if (Model.SelectedWeaponId == item.Id)
+                            {
+                                <option value="@item.Id" selected>
+                                    @item.RegistrationNo - @item.FactorySerial - @item.WeaponModel?.Name
+                                </option>
+                            }
+                            else
+                            {
+                                <option value="@item.Id">
+                                    @item.RegistrationNo - @item.FactorySerial - @item.WeaponModel?.Name
+                                </option>
+                            }
                         }
                     </select>
                 </div>
@@ -99,45 +194,83 @@
                 {
                     <div class="ams-weapon-summary">
                         <div>
-                            <strong>@ResourcesHelper.Translate("RegistrationNo", lang)</strong>
+                            <strong>
+                                @ResourcesHelper.Translate("RegistrationNo", lang)
+                            </strong>
                             <span>@Model.SelectedWeapon.RegistrationNo</span>
                         </div>
 
                         <div>
-                            <strong>@ResourcesHelper.Translate("FactorySerial", lang)</strong>
-                            <span>@Model.SelectedWeapon.FactorySerial</span>
+                            <strong>
+                                @ResourcesHelper.Translate("FactorySerial", lang)
+                            </strong>
+                            <span>@(Model.SelectedWeapon.FactorySerial ?? "-")</span>
                         </div>
 
                         <div>
-                            <strong>@ResourcesHelper.Translate("WeaponModel", lang)</strong>
-                            <span>@Model.SelectedWeapon.WeaponModel?.Name</span>
+                            <strong>
+                                @ResourcesHelper.Translate("WeaponModel", lang)
+                            </strong>
+                            <span>@(Model.SelectedWeapon.WeaponModel?.Name ?? "-")</span>
                         </div>
 
                         <div>
-                            <strong>@ResourcesHelper.Translate("WeaponType", lang)</strong>
-                            <span>@Model.SelectedWeapon.WeaponType?.Name</span>
+                            <strong>
+                                @ResourcesHelper.Translate("WeaponType", lang)
+                            </strong>
+                            <span>@(Model.SelectedWeapon.WeaponType?.Name ?? "-")</span>
                         </div>
 
                         <div>
-                            <strong>@ResourcesHelper.Translate("Manufacturer", lang)</strong>
-                            <span>@Model.SelectedWeapon.Manufacturer?.Name</span>
+                            <strong>
+                                @ResourcesHelper.Translate("Manufacturer", lang)
+                            </strong>
+                            <span>@(Model.SelectedWeapon.Manufacturer?.Name ?? "-")</span>
                         </div>
 
                         <div>
-                            <strong>@ResourcesHelper.Translate("Caliber", lang)</strong>
-                            <span>@Model.SelectedWeapon.Caliber?.Name</span>
+                            <strong>
+                                @ResourcesHelper.Translate("Caliber", lang)
+                            </strong>
+                            <span>@(Model.SelectedWeapon.Caliber?.Name ?? "-")</span>
                         </div>
 
                         <div>
-                            <strong>@ResourcesHelper.Translate("RegMarked", lang)</strong>
+                            <strong>
+                                @ResourcesHelper.Translate("RegMarked", lang)
+                            </strong>
+
                             <span>
                                 @if (Model.SelectedWeapon.IsMarked)
                                 {
-                                    <span class="ams-badge ams-badge-success">@ResourcesHelper.Translate("Yes", lang)</span>
+                                    <span class="ams-badge ams-badge-success">
+                                        @ResourcesHelper.Translate("Yes", lang)
+                                    </span>
                                 }
                                 else
                                 {
-                                    <span class="ams-badge ams-badge-muted">@ResourcesHelper.Translate("No", lang)</span>
+                                    <span class="ams-badge ams-badge-muted">
+                                        @ResourcesHelper.Translate("No", lang)
+                                    </span>
+                                }
+                            </span>
+                        </div>
+
+                        <div>
+                            <strong>Aktivni posao</strong>
+
+                            <span>
+                                @if (hasActiveJob)
+                                {
+                                    <span class="ams-badge ams-badge-warning">
+                                        Da
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="ams-badge ams-badge-muted">
+                                        Ne
+                                    </span>
                                 }
                             </span>
                         </div>
@@ -152,7 +285,9 @@
             </div>
 
             <div class="user-profile-main-wrapper mt--30">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("MarkingHistory", lang)</h5>
+                <h5 class="ams-section-title">
+                    @ResourcesHelper.Translate("MarkingHistory", lang)
+                </h5>
 
                 <div class="table-responsive ams-active-weapons-scroll">
                     <table class="table ams-table">
@@ -161,51 +296,92 @@
                                 <th>@ResourcesHelper.Translate("Date", lang)</th>
                                 <th>@ResourcesHelper.Translate("Layout", lang)</th>
                                 <th>@ResourcesHelper.Translate("Status", lang)</th>
-                                <th>@ResourcesHelper.Translate("Actions", lang)</th>
+                                <th>Detalji</th>
                             </tr>
                         </thead>
+
                         <tbody>
-                            @foreach (var item in Model.MarkingHistory)
+                            @foreach (var item in Model.LaserJobs)
                             {
+                                var badgeClass = item.Status switch
+                                {
+                                    "READY" => "ams-badge-muted",
+                                    "PROCESSING" => "ams-badge-warning",
+                                    "MARKED" => "ams-badge-success",
+                                    "FAILED" => "ams-badge-danger",
+                                    _ => "ams-badge-muted"
+                                };
+
+                                var statusClass = item.Status switch
+                                {
+                                    "READY" => "ams-mark-status-ready",
+                                    "PROCESSING" => "ams-mark-status-processing",
+                                    "MARKED" => "ams-mark-status-marked",
+                                    "FAILED" => "ams-mark-status-failed",
+                                    _ => string.Empty
+                                };
+
                                 <tr>
-                                    <td>@item.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td>
-                                    <td>@item.MarkingLayout?.Name</td>
-                                    <td><span class="ams-badge ams-badge-muted">@item.Status</span></td>
                                     <td>
-                                        @if (item.Status == "Prepared")
-                                        {
-                                            <form asp-action="SendMarkingJob" method="post" style="display:inline-block;">
-                                                @Html.AntiForgeryToken()
-                                                <input type="hidden" name="id" value="@item.Id" />
-                                                <button type="submit" class="ams-btn-small">
-                                                    Send
-                                                </button>
-                                            </form>
-                                        }
+                                        @item.CreatedOn.ToString("dd.MM.yyyy HH:mm:ss")
+                                    </td>
 
-                                        @if (item.Status == "Prepared" || item.Status == "SentToMarker")
-                                        {
-                                            <form asp-action="CompleteMarkingJob" method="post" style="display:inline-block;">
-                                                @Html.AntiForgeryToken()
-                                                <input type="hidden" name="id" value="@item.Id" />
-                                                <button type="submit" class="ams-btn-small ms-2">
-                                                    Complete
-                                                </button>
-                                            </form>
+                                    <td>
+                                        @item.LayoutCode
+                                    </td>
 
-                                            <form asp-action="FailMarkingJob" method="post" style="display:inline-block;">
-                                                @Html.AntiForgeryToken()
-                                                <input type="hidden" name="id" value="@item.Id" />
-                                                <button type="submit" class="ams-btn-small ms-2">
-                                                    Failed
-                                                </button>
-                                            </form>
-                                        }
+                                    <td>
+                                        <span class="ams-badge @badgeClass">
+                                            @item.Status
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="ams-job-details @statusClass">
+                                            @if (item.Status == "READY")
+                                            {
+                                                <span>Čeka preuzimanje u MarkMasteru</span>
+                                            }
+                                            else if (item.Status == "PROCESSING")
+                                            {
+                                                <span>Markiranje je u toku</span>
+
+                                                @if (item.StartedOn.HasValue)
+                                                {
+                                                    <small>
+                                                        Započeto:
+                                                        @item.StartedOn.Value.ToString("dd.MM.yyyy HH:mm:ss")
+                                                    </small>
+                                                }
+                                            }
+                                            else if (item.Status == "MARKED")
+                                            {
+                                                <span>Markiranje je uspješno završeno</span>
+
+                                                @if (item.MarkedOn.HasValue)
+                                                {
+                                                    <small>
+                                                        Završeno:
+                                                        @item.MarkedOn.Value.ToString("dd.MM.yyyy HH:mm:ss")
+                                                    </small>
+                                                }
+                                            }
+                                            else if (item.Status == "FAILED")
+                                            {
+                                                <span>
+                                                    @(item.ErrorMessage ?? "Markiranje nije uspjelo.")
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span>@item.Status</span>
+                                            }
+                                        </div>
                                     </td>
                                 </tr>
                             }
 
-                            @if (!Model.MarkingHistory.Any())
+                            @if (!Model.LaserJobs.Any())
                             {
                                 <tr>
                                     <td colspan="4" class="text-center text-muted py-4">
@@ -221,94 +397,124 @@
 
         <div>
             <div class="user-profile-main-wrapper">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("MarkingData", lang)</h5>
+                <h5 class="ams-section-title">
+                    @ResourcesHelper.Translate("MarkingData", lang)
+                </h5>
 
-                <form asp-action="Mark" method="post">
-                    @Html.AntiForgeryToken()
+                @if (Model.SelectedWeapon != null)
+                {
+                    <form asp-action="Mark" method="post">
+                        @Html.AntiForgeryToken()
 
-                    <input type="hidden" asp-for="SelectedWeaponId" />
+                        <input type="hidden"
+                               name="SelectedWeaponId"
+                               value="@Model.SelectedWeapon.Id" />
 
-                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+                        <div asp-validation-summary="All"
+                             class="text-danger mb-3"></div>
 
-                    <div class="half-input-wrapper">
-                        <div class="single">
-                            <label asp-for="MarkingLayoutId">
-                                @ResourcesHelper.Translate("Layout", lang) <span class="ams-required">*</span>
-                            </label>
-                            <select asp-for="MarkingLayoutId"
-                                    asp-items="Model.MarkingLayouts"
-                                    class="ams-select2"
-                                    id="MarkingLayoutId">
-                                <option value="">@ResourcesHelper.Translate("SelectOption", lang)</option>
-                            </select>
-                            <span asp-validation-for="MarkingLayoutId" class="text-danger"></span>
+                        @if (Model.SelectedWeapon.IsMarked)
+                        {
+                            <div class="alert alert-warning ams-alert mb-3">
+                                Ovo oružje je već ranije markirano. Možeš ga ponovo poslati u MarkMaster.
+                            </div>
+                        }
+
+                        @if (hasActiveJob)
+                        {
+                            <div class="alert alert-info ams-alert mb-3">
+                                Za ovo oružje već postoji aktivan posao koji čeka obradu ili se trenutno obrađuje.
+                            </div>
+                        }
+
+                        <div class="ams-markmaster-card">
+                            <div class="ams-markmaster-card-header">
+                                <div>
+                                    <strong>MarkMaster posao</strong>
+                                    <span>Registracija oružja</span>
+                                </div>
+
+                                <span class="ams-badge ams-badge-muted">
+                                    REGISTER_WEAPON
+                                </span>
+                            </div>
+
+                            <div class="ams-markmaster-data">
+                                <div>
+                                    <small>MarkMaster layout</small>
+                                    <strong>AMS Register weapon dot peen</strong>
+                                </div>
+
+                                <div>
+                                    <small>
+                                        @ResourcesHelper.Translate("RegistrationNo", lang)
+                                    </small>
+                                    <strong>@Model.SelectedWeapon.RegistrationNo</strong>
+                                </div>
+
+                                <div>
+                                    <small>
+                                        @ResourcesHelper.Translate("FactorySerial", lang)
+                                    </small>
+                                    <strong>
+                                        @(Model.SelectedWeapon.FactorySerial ?? "-")
+                                    </strong>
+                                </div>
+
+                                <div>
+                                    <small>Prethodno markirano</small>
+
+                                    @if (Model.SelectedWeapon.IsMarked)
+                                    {
+                                        <strong class="text-success">Da</strong>
+                                    }
+                                    else
+                                    {
+                                        <strong>Ne</strong>
+                                    }
+                                </div>
+
+                                <div>
+                                    <small>
+                                        @ResourcesHelper.Translate("WeaponModel", lang)
+                                    </small>
+                                    <strong>
+                                        @(Model.SelectedWeapon.WeaponModel?.Name ?? "-")
+                                    </strong>
+                                </div>
+
+                                <div>
+                                    <small>
+                                        @ResourcesHelper.Translate("Manufacturer", lang)
+                                    </small>
+                                    <strong>
+                                        @(Model.SelectedWeapon.Manufacturer?.Name ?? "-")
+                                    </strong>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="single">
-                            <label asp-for="DataMatrixValue">Data Matrix</label>
-                            <input asp-for="DataMatrixValue" id="DataMatrixValue" />
+                        <div class="ams-form-actions mt--20">
+                            <button type="submit"
+                                    class="rts-btn btn-primary"
+                                    disabled="@hasActiveJob">
+                                Pošalji u MarkMaster
+                            </button>
                         </div>
+                    </form>
+                }
+                else
+                {
+                    <div class="alert alert-info ams-alert">
+                        @ResourcesHelper.Translate("SelectWeaponFromList", lang)
                     </div>
-
-                    <div class="half-input-wrapper">
-                        <div class="single">
-                            <label asp-for="MarkingText1">@ResourcesHelper.Translate("MarkingText1", lang)</label>
-                            <input asp-for="MarkingText1" id="MarkingText1" />
-                        </div>
-
-                        <div class="single">
-                            <label asp-for="MarkingText2">@ResourcesHelper.Translate("MarkingText2", lang)</label>
-                            <input asp-for="MarkingText2" id="MarkingText2" />
-                        </div>
-                    </div>
-
-                    <div class="half-input-wrapper">
-                        <div class="single">
-                            <label asp-for="MarkingText3">@ResourcesHelper.Translate("MarkingText3", lang)</label>
-                            <input asp-for="MarkingText3" id="MarkingText3" />
-                        </div>
-
-                        <div class="single">
-                            <label asp-for="QrValue">QR</label>
-                            <input asp-for="QrValue" id="QrValue" />
-                        </div>
-                    </div>
-
-                    <div class="ams-mark-preview mt--20">
-                        <div class="ams-mark-preview-header">
-                            <strong>Layout preview</strong>
-                            <span id="layoutPreviewName">No layout selected</span>
-                        </div>
-
-                        <div class="ams-layout-preview-wrap">
-                            <svg id="markLayoutPreview"
-                                 viewBox="0 0 100 80"
-                                 preserveAspectRatio="xMidYMid meet"
-                                 class="ams-mark-layout-svg">
-
-                                <rect x="0"
-                                      y="0"
-                                      width="100"
-                                      height="80"
-                                      fill="#ffffff"
-                                      stroke="#111827"
-                                      stroke-width="0.3" />
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="ams-form-actions mt--20">
-                        <button type="submit"
-                                class="rts-btn btn-primary"
-                                @(Model.SelectedWeapon == null ? "disabled" : "")>
-                            @ResourcesHelper.Translate("PrepareMarkingJob", lang)
-                        </button>
-                    </div>
-                </form>
+                }
             </div>
 
             <div class="user-profile-main-wrapper mt--30">
-                <h5 class="ams-section-title">@ResourcesHelper.Translate("ActiveWeapons", lang)</h5>
+                <h5 class="ams-section-title">
+                    @ResourcesHelper.Translate("ActiveWeapons", lang)
+                </h5>
 
                 <div class="ams-table-toolbar">
                     <input type="text"
@@ -321,28 +527,50 @@
                     <table class="table ams-table" id="markWeaponsTable">
                         <thead>
                             <tr>
-                                <th>@ResourcesHelper.Translate("RegistrationNo", lang)</th>
-                                <th>@ResourcesHelper.Translate("FactorySerial", lang)</th>
-                                <th>@ResourcesHelper.Translate("WeaponModel", lang)</th>
-                                <th>@ResourcesHelper.Translate("RegMarked", lang)</th>
+                                <th>
+                                    @ResourcesHelper.Translate("RegistrationNo", lang)
+                                </th>
+                                <th>
+                                    @ResourcesHelper.Translate("FactorySerial", lang)
+                                </th>
+                                <th>
+                                    @ResourcesHelper.Translate("WeaponModel", lang)
+                                </th>
+                                <th>
+                                    @ResourcesHelper.Translate("RegMarked", lang)
+                                </th>
                             </tr>
                         </thead>
+
                         <tbody>
                             @foreach (var item in Model.Weapons)
                             {
                                 <tr class="ams-clickable-row"
-                                    data-url="@Url.Action("Mark", "Weapons", new { area = "Admin", weaponId = item.Id })">
-                                    <td>@item.RegistrationNo</td>
-                                    <td>@item.FactorySerial</td>
-                                    <td>@item.WeaponModel?.Name</td>
+                                    data-url="@Url.Action(
+                                                                            "Mark",
+                                                                            "Weapons",
+                                                                            new
+                                                                            {
+                                                                                area = "Admin",
+                                                                                weaponId = item.Id
+                                                                            })">
+
+                                <td>@item.RegistrationNo</td>
+                                <td>@(item.FactorySerial ?? "-")</td>
+                                <td>@(item.WeaponModel?.Name ?? "-")</td>
+
                                     <td>
-                                        @if (item.IsMarked)
+                                    @if (item.IsMarked)
                                         {
-                                            <span class="ams-badge ams-badge-success">@ResourcesHelper.Translate("Yes", lang)</span>
+                                            <span class="ams-badge ams-badge-success">
+                                                @ResourcesHelper.Translate("Yes", lang)
+                                            </span>
                                         }
                                         else
                                         {
-                                            <span class="ams-badge ams-badge-muted">@ResourcesHelper.Translate("No", lang)</span>
+                                            <span class="ams-badge ams-badge-muted">
+                                                @ResourcesHelper.Translate("No", lang)
+                                            </span>
                                         }
                                     </td>
                                 </tr>
@@ -351,7 +579,8 @@
                             @if (!Model.Weapons.Any())
                             {
                                 <tr>
-                                    <td colspan="4" class="text-center text-muted py-4">
+                                    <td colspan="4"
+                                        class="text-center text-muted py-4">
                                         @ResourcesHelper.Translate("NoRecordsFound", lang)
                                     </td>
                                 </tr>
@@ -368,222 +597,134 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 
+    @{
+        var deviceAgentJobId = TempData["DeviceAgentJobId"];
+    }
+
     <script>
-               $(document).ready(function () {
-                    $('.ams-select2').select2({
+        $(document).ready(function () {
+
+            $('.ams-select2').select2({
                 width: '100%',
                 placeholder: '-- Select --',
                 allowClear: true
             });
-            const previewSvg = document.getElementById('markLayoutPreview');
-const previewName = document.getElementById('layoutPreviewName');
 
-const variableValues = {
-    RegistrationNo: '@(Model.SelectedWeapon?.RegistrationNo ?? "")',
-    FactorySerial: '@(Model.SelectedWeapon?.FactorySerial ?? "")',
-    WeaponModel: '@(Model.SelectedWeapon?.WeaponModel?.Name ?? "")',
-    WeaponType: '@(Model.SelectedWeapon?.WeaponType?.Name ?? "")',
-    Manufacturer: '@(Model.SelectedWeapon?.Manufacturer?.Name ?? "")',
-    Caliber: '@(Model.SelectedWeapon?.Caliber?.Name ?? "")',
-    MarkingText1: $('#MarkingText1').val() || '',
-    MarkingText2: $('#MarkingText2').val() || '',
-    MarkingText3: $('#MarkingText3').val() || '',
-    DataMatrixValue: $('#DataMatrixValue').val() || '',
-    QrValue: $('#QrValue').val() || ''
-};
-
-function resolveVariable(name) {
-    if (!name) return '';
-    return variableValues[name] || '[' + name + ']';
-}
-
-function clearPreview(width, height) {
-    previewSvg.innerHTML = '';
-
-    previewSvg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-
-    const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    bg.setAttribute('x', 0);
-    bg.setAttribute('y', 0);
-    bg.setAttribute('width', width);
-    bg.setAttribute('height', height);
-    bg.setAttribute('fill', '#fff');
-    bg.setAttribute('stroke', '#111827');
-    bg.setAttribute('stroke-width', '0.3');
-
-    previewSvg.appendChild(bg);
-}
-
-function renderLayoutPreview(layout) {
-    const width = parseFloat(layout.widthMm || 100);
-    const height = parseFloat(layout.heightMm || 80);
-
-    clearPreview(width, height);
-
-    if (previewName) {
-        previewName.innerText = layout.name || '';
-    }
-
-    if (layout.backgroundFilePath &&
-        (
-            layout.backgroundFilePath.endsWith('.png') ||
-            layout.backgroundFilePath.endsWith('.jpg') ||
-            layout.backgroundFilePath.endsWith('.jpeg') ||
-            layout.backgroundFilePath.endsWith('.svg')
-        )) {
-        const img = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-        img.setAttribute('href', layout.backgroundFilePath);
-        img.setAttribute('x', 0);
-        img.setAttribute('y', 0);
-        img.setAttribute('width', width);
-        img.setAttribute('height', height);
-        img.setAttribute('opacity', '0.35');
-        previewSvg.appendChild(img);
-    }
-
-       const layoutObjects = layout.objects || layout.Objects || [];
-
-        console.log("LAYOUT:", layout);
-        console.log("OBJECTS:", layoutObjects);
-
-        layoutObjects.forEach(obj => {
-        let el;
-
-        const type = obj.objectType || obj.ObjectType;
-        const x = parseFloat(obj.x ?? obj.X ?? 0);
-        const y = parseFloat(obj.y ?? obj.Y ?? 0);
-        const w = parseFloat(obj.width ?? obj.Width ?? 20);
-        const h = parseFloat(obj.height ?? obj.Height ?? 8);
-        const fontSize = parseFloat(obj.fontSize ?? obj.FontSize ?? 4);
-        const strokeWidth = parseFloat(obj.strokeWidth ?? obj.StrokeWidth ?? 0.2);
-
-        if (type === 'Text' || type === 'VariableText') {
-            el = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            el.setAttribute('x', x);
-            el.setAttribute('y', y);
-            el.setAttribute('font-size', fontSize);
-            el.setAttribute('fill', '#111827');
-            el.setAttribute('font-weight', obj.isBold ? '700' : '400');
-
-            if (type === 'VariableText') {
-                el.textContent = resolveVariable(obj.variableName || obj.VariableName);
-            } else {
-        el.textContent = obj.textValue || obj.TextValue || 'TEXT';            }
-        }
-        else if (type === 'QRCode') {
-            el = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-
-            const outer = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-            outer.setAttribute('x', x);
-            outer.setAttribute('y', y);
-            outer.setAttribute('width', w);
-            outer.setAttribute('height', h);
-            outer.setAttribute('fill', '#fff');
-            outer.setAttribute('stroke', '#111827');
-            outer.setAttribute('stroke-width', strokeWidth);
-
-            const inner = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            inner.setAttribute('x', x + 2);
-            inner.setAttribute('y', y + h / 2);
-            inner.setAttribute('font-size', Math.max(2, h / 5));
-            inner.setAttribute('fill', '#111827');
-            inner.textContent = 'QR';
-
-            el.appendChild(outer);
-            el.appendChild(inner);
-        }
-        else if (type === 'DataMatrix') {
-            el = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-
-            const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-            rect.setAttribute('x', x);
-            rect.setAttribute('y', y);
-            rect.setAttribute('width', w);
-            rect.setAttribute('height', h);
-            rect.setAttribute('fill', '#111827');
-            rect.setAttribute('opacity', '0.85');
-
-            const txt = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-            txt.setAttribute('x', x + 1);
-            txt.setAttribute('y', y + h + 3);
-            txt.setAttribute('font-size', '2.5');
-            txt.setAttribute('fill', '#111827');
-            txt.textContent = 'DM';
-
-            el.appendChild(rect);
-            el.appendChild(txt);
-        }
-        else {
-            el = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-            el.setAttribute('x', x);
-            el.setAttribute('y', y);
-            el.setAttribute('width', w);
-            el.setAttribute('height', h);
-            el.setAttribute('fill', 'transparent');
-            el.setAttribute('stroke', '#111827');
-            el.setAttribute('stroke-width', strokeWidth);
-        }
-
-        previewSvg.appendChild(el);
-    });
-}
-
-function loadSelectedLayoutPreview() {
-    const layoutId = $('#MarkingLayoutId').val();
-
-    if (!layoutId) {
-        clearPreview(100, 80);
-        if (previewName) previewName.innerText = 'No layout selected';
-        return;
-    }
-
-    fetch(`/Admin/Weapons/GetLayoutPreview?id=${layoutId}`)
-        .then(response => response.json())
-        .then(data => renderLayoutPreview(data));
-}
-
-$('#MarkingLayoutId').on('change', function () {
-    loadSelectedLayoutPreview();
-});
-
-$('#MarkingText1, #MarkingText2, #MarkingText3, #DataMatrixValue, #QrValue').on('input', function () {
-    variableValues.MarkingText1 = $('#MarkingText1').val() || '';
-    variableValues.MarkingText2 = $('#MarkingText2').val() || '';
-    variableValues.MarkingText3 = $('#MarkingText3').val() || '';
-    variableValues.DataMatrixValue = $('#DataMatrixValue').val() || '';
-    variableValues.QrValue = $('#QrValue').val() || '';
-
-    loadSelectedLayoutPreview();
-});
-
-loadSelectedLayoutPreview();
-
-         
             $('#weaponMarkSearchSelect').on('change', function () {
                 const weaponId = $(this).val();
 
-                if (!weaponId)
+                if (!weaponId) {
                     return;
+                }
 
-                window.location.href = '/Admin/Weapons/Mark?weaponId=' + weaponId;
+                window.location.href =
+                    '/Admin/Weapons/Mark?weaponId=' + weaponId;
             });
 
             $('.ams-clickable-row').on('click', function () {
                 const url = $(this).data('url');
 
-                if (url)
+                if (url) {
                     window.location.href = url;
+                }
             });
 
             $('#markWeaponsTableSearch').on('keyup', function () {
                 const value = $(this).val().toLowerCase();
 
                 $('#markWeaponsTable tbody tr').filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                    $(this).toggle(
+                        $(this).text().toLowerCase().indexOf(value) > -1
+                    );
                 });
             });
 
-         
+            // =====================================================
+            // DEVICE AGENT + AUTO REFRESH STATUSA
+            // =====================================================
+
+            @if (deviceAgentJobId != null)
+            {
+                    <text>
+                    const deviceAgentJobId = @deviceAgentJobId;
+
+                    // 1. Otvori MarkMaster Open Layout preko lokalnog agenta
+                    fetch('http://localhost:5055/device/mark', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            jobId: deviceAgentJobId
+                        })
+                    })
+                    .then(async response => {
+                        const result = await response.json();
+
+                        if (!response.ok) {
+                            throw new Error(
+                                result.error || 'Device Agent error.'
+                            );
+                        }
+
+                        if (!result.success) {
+                            throw new Error(
+                                result.markMaster || 'MarkMaster error.'
+                            );
+                        }
+
+                        console.log('Device Agent:', result);
+                    })
+                    .catch(error => {
+                        console.error('Device Agent error:', error);
+
+                        alert(
+                            'Posao je kreiran, ali nije moguće otvoriti MarkMaster. ' +
+                            'Provjerite da li su AMS Device Agent, MarkMaster i Layout Editor pokrenuti.\n\n' +
+                            error.message
+                        );
+                    });
+
+                    // 2. Provjeravaj status joba svake 2 sekunde
+                    const markingStatusInterval = setInterval(function () {
+
+                        fetch('@Url.Action("GetMarkingJobStatus", "Weapons", new { area = "Admin" })?jobId=' + deviceAgentJobId)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(
+                                        'Status posla nije dostupan.'
+                                    );
+                                }
+
+                                return response.json();
+                            })
+                            .then(result => {
+                                console.log(
+                                    'Marking status:',
+                                    result.status
+                                );
+
+                                // Kad završi ili padne,
+                                // osvježi stranicu
+                                if (
+                                    result.status === 'MARKED' ||
+                                    result.status === 'FAILED'
+                                ) {
+                                    clearInterval(markingStatusInterval);
+
+                                    window.location.reload();
+                                }
+                            })
+                            .catch(error => {
+                                console.error(
+                                    'Marking status error:',
+                                    error
+                                );
+                            });
+
+                    }, 2000);
+                    </text>
+            }
         });
     </script>
 }

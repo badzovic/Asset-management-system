@@ -39,5 +39,34 @@ namespace AMS_data
         public DbSet<NarcoticsDeposit> NarcoticsDeposits { get; set; }
         public DbSet<NarcoticsDepositItem> NarcoticsDepositItems { get; set; }
         public DbSet<NarcoticsMoveHistory> NarcoticsMoveHistories { get; set; }
+        public DbSet<LaserJob> LaserJobs { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<LaserJob>(entity =>
+            {
+                entity.ToTable("LASER_JOBS");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+                entity.Property(e => e.WeaponId).HasColumnName("WEAPON_ID");
+                entity.Property(e => e.LayoutCode).HasColumnName("LAYOUT_CODE").HasMaxLength(100).IsRequired();
+                entity.Property(e => e.RegistrationNo).HasColumnName("REGISTRATION_NO").HasMaxLength(100);
+                entity.Property(e => e.FactorySerial).HasColumnName("FACTORY_SERIAL").HasMaxLength(100);
+                entity.Property(e => e.Status).HasColumnName("STATUS").HasMaxLength(30).IsRequired();
+                entity.Property(e => e.CreatedOn).HasColumnName("CREATED_ON");
+                entity.Property(e => e.StartedOn).HasColumnName("STARTED_ON");
+                entity.Property(e => e.MarkedOn).HasColumnName("MARKED_ON");
+                entity.Property(e => e.ErrorMessage).HasColumnName("ERROR_MESSAGE").HasMaxLength(1000);
+
+                entity.HasOne(e => e.Weapon)
+                    .WithMany()
+                    .HasForeignKey(e => e.WeaponId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+        }
     }
 }

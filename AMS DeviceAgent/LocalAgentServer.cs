@@ -68,6 +68,7 @@ namespace AMS_DeviceAgent
             {
                 AddCorsHeaders(context.Response);
 
+                // CORS
                 if (context.Request.HttpMethod == "OPTIONS")
                 {
                     context.Response.StatusCode = 204;
@@ -75,6 +76,7 @@ namespace AMS_DeviceAgent
                     return;
                 }
 
+                // LICENSE
                 if (context.Request.Url?.AbsolutePath == "/device/license")
                 {
                     var client = new DeviceLicenseClient(_configuration);
@@ -92,7 +94,55 @@ namespace AMS_DeviceAgent
                     return;
                 }
 
+                // MARK
+                if (context.Request.Url?.AbsolutePath == "/device/mark"
+                    && context.Request.HttpMethod == "POST")
+                {
+                    using var reader = new StreamReader(
+                        context.Request.InputStream,
+                        context.Request.ContentEncoding);
+
+                    var body = await reader.ReadToEndAsync();
+
+                    var request = JsonSerializer.Deserialize<MarkRequest>(
+                        body,
+                        new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+
+                    if (request == null || request.JobId <= 0)
+                    {
+                        context.Response.StatusCode = 400;
+
+                        await WriteJson(context.Response, new
+                        {
+                            success = false,
+                            error = "JobId is required."
+                        });
+
+                        return;
+                    }
+
+                    var markMaster =
+                        new MarkMasterAutomation(_configuration);
+
+                    var markMasterResult =
+                        markMaster.OpenLayout();
+
+                    await WriteJson(context.Response, new
+                    {
+                        success = markMasterResult.Success,
+                        jobId = request.JobId,
+                        markMaster = markMasterResult.Message
+                    });
+
+                    return;
+                }
+
+                // NOT FOUND
                 context.Response.StatusCode = 404;
+
                 await WriteJson(context.Response, new
                 {
                     error = "Not found"
@@ -109,27 +159,49 @@ namespace AMS_DeviceAgent
             }
         }
 
-        private static void AddCorsHeaders(HttpListenerResponse response)
+        private class MarkRequest
         {
-            response.Headers.Add("Access-Control-Allow-Origin", "*");
-            response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-            response.Headers.Add("Access-Control-Allow-Headers", "Content-Type");
+            public int JobId { get; set; }
         }
 
-        private static async Task WriteJson(HttpListenerResponse response, object data)
+        private static void AddCorsHeaders(
+            HttpListenerResponse response)
+        {
+            response.Headers.Add(
+                "Access-Control-Allow-Origin",
+                "*");
+
+            response.Headers.Add(
+                "Access-Control-Allow-Methods",
+                "GET, POST, OPTIONS");
+
+            response.Headers.Add(
+                "Access-Control-Allow-Headers",
+                "Content-Type");
+        }
+
+        private static async Task WriteJson(
+            HttpListenerResponse response,
+            object data)
         {
             response.ContentType = "application/json";
 
-            var json = JsonSerializer.Serialize(data, new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            });
+            var json = JsonSerializer.Serialize(
+                data,
+                new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy =
+                        JsonNamingPolicy.CamelCase
+                });
 
             var buffer = Encoding.UTF8.GetBytes(json);
 
             response.ContentLength64 = buffer.Length;
 
-            await response.OutputStream.WriteAsync(buffer, 0, buffer.Length);
+            await response.OutputStream.WriteAsync(
+                buffer,
+                0,
+                buffer.Length);
 
             response.OutputStream.Close();
         }

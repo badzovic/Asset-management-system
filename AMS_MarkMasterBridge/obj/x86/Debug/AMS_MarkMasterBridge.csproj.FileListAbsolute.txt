@@ -1,0 +1,13 @@
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\obj\x86\Debug\AMS_MarkMasterBridge.csproj.AssemblyReference.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\obj\x86\Debug\AMS_MarkMasterBridge.csproj.CoreCompileInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\AMS_MarkMasterBridge.exe.config
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\AMS_MarkMasterBridge.exe
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\AMS_MarkMasterBridge.pdb
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\Common.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\DataCapture.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\LayoutObjects.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\obj\x86\Debug\AMS_Mark.C67F7AB2.Up2Date
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\obj\x86\Debug\AMS_MarkMasterBridge.exe
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\obj\x86\Debug\AMS_MarkMasterBridge.pdb
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS_MarkMasterBridge\obj\x86\Debug\AMS_MarkMasterBridge.exe.config

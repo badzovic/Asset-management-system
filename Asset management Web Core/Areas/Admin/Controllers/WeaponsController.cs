@@ -669,57 +669,122 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetMarkingJobStatus(int jobId)
+        {
+            var job = await _db.LaserJobs
+                .FirstOrDefaultAsync(x => x.Id == jobId);
+
+            if (job == null)
+            {
+                return NotFound();
+            }
+
+            return Json(new
+            {
+                status = job.Status
+            });
+        }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Mark(WeaponMarkingViewModel model)
+        //{
+        //    if (model.SelectedWeaponId == null)
+        //        ModelState.AddModelError(nameof(model.SelectedWeaponId), "Please select a weapon.");
+
+        //    if (!ModelState.IsValid)
+        //    {
+        //        model = await PopulateMarkingModel(model);
+        //        return View(model);
+        //    }
+
+        //    var weapon = await _db.Weapons
+        //        .Include(x => x.WeaponModel)
+        //        .Include(x => x.WeaponType)
+        //        .Include(x => x.Manufacturer)
+        //        .Include(x => x.Caliber)
+        //        .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
+
+        //    if (weapon == null)
+        //        return NotFound();
+
+        //    var job = new WeaponMarkingJob
+        //    {
+        //        WeaponId = weapon.Id,
+        //        MarkingLayoutId = model.MarkingLayoutId,
+        //        JobDate = DateTime.UtcNow,
+        //        Status = "Prepared",
+
+        //        RegistrationNo = weapon.RegistrationNo,
+        //        FactorySerial = weapon.FactorySerial,
+        //        WeaponModel = weapon.WeaponModel?.Name,
+        //        WeaponType = weapon.WeaponType?.Name,
+        //        Manufacturer = weapon.Manufacturer?.Name,
+        //        Caliber = weapon.Caliber?.Name,
+
+        //        MarkingText1 = model.MarkingText1,
+        //        MarkingText2 = model.MarkingText2,
+        //        MarkingText3 = model.MarkingText3,
+        //        DataMatrixValue = model.DataMatrixValue,
+        //        QrValue = model.QrValue,
+
+        //        CreatedByUserId = User.FindFirstValue(ClaimTypes.NameIdentifier),
+        //        CreatedAt = DateTime.UtcNow
+        //    };
+
+        //    _db.WeaponMarkingJobs.Add(job);
+        //    await _db.SaveChangesAsync();
+
+        //    TempData["SuccessMessage"] = "Marking job je uspješno pripremljen.";
+
+        //    return RedirectToAction(nameof(Mark), new { weaponId = weapon.Id });
+        //}
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Mark(WeaponMarkingViewModel model)
         {
-            if (model.SelectedWeaponId == null)
-                ModelState.AddModelError(nameof(model.SelectedWeaponId), "Please select a weapon.");
-
-            if (!ModelState.IsValid)
+            if (!model.SelectedWeaponId.HasValue)
             {
+                ModelState.AddModelError(string.Empty, "Oružje nije odabrano.");
                 model = await PopulateMarkingModel(model);
                 return View(model);
             }
 
-            var weapon = await _db.Weapons
-                .Include(x => x.WeaponModel)
-                .Include(x => x.WeaponType)
-                .Include(x => x.Manufacturer)
-                .Include(x => x.Caliber)
-                .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
+            var weapon = await  _db.Weapons
+                .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId.Value && !x.IsDeleted);
 
             if (weapon == null)
                 return NotFound();
 
-            var job = new WeaponMarkingJob
+            var activeJobExists = await _db.LaserJobs.AnyAsync(x =>
+             x.LayoutCode == "REGISTER_WEAPON" &&
+             (x.Status == "READY" || x.Status == "PROCESSING"));
+
+            if (activeJobExists)
+            {
+                ModelState.AddModelError(string.Empty, "Već postoji aktivan posao markiranja. Završite postojeći posao prije slanja novog.");
+                model = await PopulateMarkingModel(model);
+                return View(model);
+            }
+
+            var laserJob = new LaserJob
             {
                 WeaponId = weapon.Id,
-                MarkingLayoutId = model.MarkingLayoutId,
-                JobDate = DateTime.UtcNow,
-                Status = "Prepared",
-
+                LayoutCode = "REGISTER_WEAPON",
                 RegistrationNo = weapon.RegistrationNo,
                 FactorySerial = weapon.FactorySerial,
-                WeaponModel = weapon.WeaponModel?.Name,
-                WeaponType = weapon.WeaponType?.Name,
-                Manufacturer = weapon.Manufacturer?.Name,
-                Caliber = weapon.Caliber?.Name,
-
-                MarkingText1 = model.MarkingText1,
-                MarkingText2 = model.MarkingText2,
-                MarkingText3 = model.MarkingText3,
-                DataMatrixValue = model.DataMatrixValue,
-                QrValue = model.QrValue,
-
-                CreatedByUserId = User.FindFirstValue(ClaimTypes.NameIdentifier),
-                CreatedAt = DateTime.UtcNow
+                Status = "READY",
+                CreatedOn = DateTime.Now
             };
 
-            _db.WeaponMarkingJobs.Add(job);
-            await _db.SaveChangesAsync();
-
-            TempData["SuccessMessage"] = "Marking job je uspješno pripremljen.";
+             _db.LaserJobs.Add(laserJob);
+            await  _db.SaveChangesAsync();
+            TempData["DeviceAgentJobId"] = laserJob.Id;
+            TempData["SuccessMessage"] = weapon.IsMarked
+            ? "Oružje je već ranije bilo markirano. Novi posao markiranja je poslan u MarkMaster."
+            : "Posao markiranja je poslan u MarkMaster.";
 
             return RedirectToAction(nameof(Mark), new { weaponId = weapon.Id });
         }
@@ -1049,16 +1114,6 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
 
         private async Task<WeaponMarkingViewModel> PopulateMarkingModel(WeaponMarkingViewModel model)
         {
-            model.MarkingLayouts = await _db.MarkingLayouts
-                .Where(x => x.IsActive)
-                .OrderBy(x => x.Name)
-                .Select(x => new SelectListItem
-                {
-                    Value = x.Id.ToString(),
-                    Text = x.Name + " (" + x.LayoutType + ")"
-                })
-                .ToListAsync();
-
             model.Weapons = await _db.Weapons
                 .Include(x => x.WeaponModel)
                 .Include(x => x.WeaponType)
@@ -1069,30 +1124,25 @@ namespace Asset_management_Web_Core.Areas.Admin.Controllers
                 .Take(100)
                 .ToListAsync();
 
-            if (model.SelectedWeaponId != null)
+            if (!model.SelectedWeaponId.HasValue)
             {
-                model.SelectedWeapon = await _db.Weapons
-                    .Include(x => x.WeaponModel)
-                    .Include(x => x.WeaponType)
-                    .Include(x => x.Manufacturer)
-                    .Include(x => x.Caliber)
-                    .FirstOrDefaultAsync(x => x.Id == model.SelectedWeaponId && !x.IsDeleted);
-
-                if (model.SelectedWeapon != null)
-                {
-                    model.MarkingText1 ??= model.SelectedWeapon.RegistrationNo;
-                    model.MarkingText2 ??= model.SelectedWeapon.FactorySerial;
-                    model.MarkingText3 ??= model.SelectedWeapon.WeaponModel?.Name;
-                    model.DataMatrixValue ??= model.SelectedWeapon.RegistrationNo;
-                    model.QrValue ??= model.SelectedWeapon.RegistrationNo;
-                }
-
-                model.MarkingHistory = await _db.WeaponMarkingJobs
-                    .Include(x => x.MarkingLayout)
-                    .Where(x => x.WeaponId == model.SelectedWeaponId && !x.IsDeleted)
-                    .OrderByDescending(x => x.CreatedAt)
-                    .ToListAsync();
+                model.LaserJobs = new List<LaserJob>();
+                return model;
             }
+
+            model.SelectedWeapon = await _db.Weapons
+                .Include(x => x.WeaponModel)
+                .Include(x => x.WeaponType)
+                .Include(x => x.Manufacturer)
+                .Include(x => x.Caliber)
+                .FirstOrDefaultAsync(x =>
+                    x.Id == model.SelectedWeaponId.Value &&
+                    !x.IsDeleted);
+
+            model.LaserJobs = await _db.LaserJobs
+                .Where(x => x.WeaponId == model.SelectedWeaponId.Value)
+                .OrderByDescending(x => x.CreatedOn)
+                .ToListAsync();
 
             return model;
         }

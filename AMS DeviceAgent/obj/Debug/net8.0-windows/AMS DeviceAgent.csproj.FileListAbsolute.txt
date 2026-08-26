@@ -62,14 +62,6 @@ C:\Users\adzovic berin\source\repos\Asset Management System\AMS DeviceAgent\bin\
 C:\Users\adzovic berin\source\repos\Asset Management System\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\adzovic berin\source\repos\Asset Management System\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\adzovic berin\source\repos\Asset Management System\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.AssemblyReference.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS_DeviceAgent.Form1.resources
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.GenerateResource.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.AssemblyInfoInputs.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.AssemblyInfo.cs
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.CoreCompileInputs.cache
-C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.sourcelink.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\appsettings.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
@@ -180,9 +172,27 @@ C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\AMS services.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\AMS data.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\AMS services.pdb
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.AssemblyReference.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS_DeviceAgent.Form1.resources
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.GenerateResource.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.AssemblyInfoInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.AssemblyInfo.cs
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.csproj.CoreCompileInputs.cache
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.sourcelink.json
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS Devi.5226BFD7.Up2Date
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\refint\AMS DeviceAgent.dll
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.pdb
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\AMS DeviceAgent.genruntimeconfig.cache
 C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\obj\Debug\net8.0-windows\ref\AMS DeviceAgent.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\FlaUI.Core.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\FlaUI.UIA3.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\Interop.UIAutomationClient.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\adzovic berin\Documents\GitHub\Asset-management-system\AMS DeviceAgent\bin\Debug\net8.0-windows\FlaUI.UIA2.dll
